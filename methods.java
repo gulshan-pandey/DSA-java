@@ -238,27 +238,6 @@ public static void reverseNumber(){
 
 
 
-// WAP to check the input number is palindrome or not 
-
-public static void palindrome(){  //equalize the number with its reverse number is called palindrome
-    Scanner sc = new Scanner(System.in);
-    System.out.println("enter the number in order to check it is palindrome or not ");
-    int num= sc.nextInt();
-    int ognum= num;  //copy number
-    int rev= 0;
-    while(ognum>0){
-        rev= (rev*10) + ognum%10;
-        ognum/=10;
-
-    }
-    if(rev==num){
-        System.out.println(num + " is an palindrome number " );
-    } else System.out.println(num + " is not a plaindrome");
-
-    sc.close();
-}
-
-
 
 
 
