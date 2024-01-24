@@ -213,8 +213,8 @@ System.out.println("\n\n");
 //---------------------------IMP QUE --------------------------------
 
 // int [] arr ={1,2,3,4,5,6,7,8,9,10};
-// int n =Math.floorDiv(arr.length,2); //this will return the greatest inter of the array.length/2 means the middle number till which the swapping will happen
-// int temp; //creating the temp storeage so that the data lose will not happen and swapped esaily
+// int n =Math.floorDiv(arr.length,2); //this will return the greatest integer of the array.length/2 means the middle number till which the swapping will happen
+// int temp; //creating the temp storage so that the data lose will not happen and swapped esaily
 // int l= arr.length;
 // for(int i=0;i<=n;i++){
 //     temp= arr[i];
@@ -231,29 +231,29 @@ System.out.println("\n\n");
 
 
 // int [] arr={24,6,2,89,73,90};
-//         int temp= arr[0];
+//         int max= arr[0];
         
 //         for(int i=0;i<arr.length;i++){
-//             if(arr[i]>temp){
-//                 temp=arr[i];
+//             if(arr[i]>max){
+//                 max=arr[i];
 //             }
           
 //         }
-//         System.out.println(temp);
+//         System.out.println(max);
         
 //alternatively-----------------------------------------------------
 
 
 // int [] arr={24,6,2,89,73,90};
-//         int temp= 0;
+//         int max= 0;
         
-//         for(int i: arr){
-//             if(i>temp){
-//                 temp=i;
+//         for(int i: arr){      //done by using forEach loop
+//             if(i>max){
+//                 max=i;
 //             }
           
 //         }
-//         System.out.println(temp);
+//         System.out.println(max);
 
 
 
@@ -280,8 +280,10 @@ boolean isSorted = true; // Assume the array is sorted initially
 for (int i = 0; i < ary.length - 1; i++) {
     if (ary[i] > ary[i + 1]) {
         isSorted = false;
+        break;
       // If an unsorted pair is found, no need to continue checking
     }
+    
 }
 
 if(isSorted){
