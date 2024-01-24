@@ -1,0 +1,34 @@
+class constr extends Thread {
+    public constr(String name) {
+        super(name);
+    }
+
+    public void run() {
+
+        String name = "gullu yadav";
+        System.out.println(" hii my name is " + name);
+
+        for (int i = 0; i < 200; i++) {
+            System.out.println("I will be your top suppoter!");
+        }
+    }
+
+}
+
+public class ConstructorInThreads {
+    public static void main(String[] args) {
+
+        constr c = new constr("chacha");
+        constr c2 = new constr("uncle");
+
+        c.start();
+
+        System.out.println("the Id of my Thread is : " + c.getId());
+        System.out.println("the name of my Thread is : " + c.getName());
+
+        c2.start();
+
+        System.out.println("the id of c2 is : " + c2.getId());
+         System.out.println("the name of my Thread is : " + c2.getName());
+    }
+}
