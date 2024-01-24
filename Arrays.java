@@ -5,7 +5,7 @@ public class Arrays {
      
         //there are 3 main ways to create an array in java
     //   1.  Declaration and memory allocation
-        // int [] marks =new int[5];
+        // int [] marks =new int[5]; //here 5 is the array size
         
 // 2 declaration and then memory allocation
         // int [] marks ;
@@ -32,8 +32,8 @@ public class Arrays {
         
         
         // String [] names ={"golu","molu","uday","rohan","ronak","guri"};
-        // System.out.println("the element of  name array is : " + names[2]);
-        // System.out.println("and the length of th names array is  " + names.length);
+        // System.out.println("the element of  name array is : " + names[2]);  //uday
+        // System.out.println("and the length of th names array is  " + names.length);  //5
         
      
         
