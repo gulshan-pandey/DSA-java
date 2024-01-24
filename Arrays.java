@@ -56,10 +56,10 @@ public class Arrays {
             System.out.println( i + " :" + marks[i]);
         }
 
-        System.out.println("\nforEach loop in java ---------------------------------------------");
+        System.out.println("\nforEach loop ---------------------------------------------");
 
         // Print the elements of the array using forEach loop
-        for (int a : marks) {
+        for (int a : marks) {  //that a will iterate over each elements of the array
             System.out.print(a + " ");
         }
         System.out.println("\nArray class name: " + marks.getClass().getName());
@@ -111,7 +111,7 @@ for(float elements :numbs){
 System.out.println("the sum of float array is : " + sum);
 
 
-//WAP to findout weather a given interger is present in an array or not
+//WAP to findout weather a given integer is present in an array or not
 
 int [] ar= {11,22,33,44,66,77};
 int numm=44;
@@ -129,11 +129,11 @@ System.out.println(found);
 
 // int [] mark={8,58,68,69,76,97};
 // float sum =0;
-// for(int g: mark){
+// for(int g: mark){ //forEach loop
 // sum=sum+ g;
 
 // }
-// System.out.println("the avh is : " + sum/mark.length);
+// System.out.println("the avg is : " + sum/mark.length);
 
 
 
@@ -162,7 +162,9 @@ int[][] result={{0,0,0},
 
  
 // Scanner sc= new Scanner(System.in);
-// int [] arey= new int[5];
+// System.out.println("enter the size of the array : ");
+// int size = sc.nextInt();
+// int [] arey= new int[size];
 // for (int i=0; i<arey.length;i++){
 //     System.out.println("enter the element of array");
 //     arey[i]=sc.nextInt();
@@ -174,6 +176,19 @@ int[][] result={{0,0,0},
 // System.out.print(j + " ");
     
 // }
+
+
+System.out.println("taking input the elements of the array by using utility class: this is done by making an another utility class of array at different file and then call that class's method");
+
+int [] numArray =arrayUtility.inputArray();
+
+for(int i=0;i<numArray.length;i++){
+System.out.print( numArray[i] + " ");
+}
+
+
+
+
 System.out.println("\n\n");
 
 
