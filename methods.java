@@ -294,6 +294,38 @@ public static void sort(boolean a,boolean b){
 }
 
 
+//WAP to return a new array deleting a specific element
+
+
+// public static void giveModifiedArray(int[] arr, int delete){
+//     int occurences =0;
+//     for(int element : arr){
+//        if(element == delete){
+//         occurences++;
+//        }
+//     }
+
+//     int[] modifiedArray = new int[arr.length-occurences];
+//     int i=0,j=0;
+//     while(i<arr.length){
+//         if(arr[i]!=delete){
+//           modifiedArray[j]=arr[i];
+//           j++;
+//         }
+//         i++;
+//     }
+//     System.out.println("the modified array is : " );
+
+//     for(int entity : modifiedArray){
+//         System.out.print(entity + " ");
+//     }
+
+// }
+
+
+
+
+
 
 
 
@@ -365,6 +397,14 @@ public static void sort(boolean a,boolean b){
         sorted(isSortedArray);
 
 
+
+        // int[] newArray = arrayUtility.inputArray();
+        // arrayUtility.displayArray(newArray);
+
+        // System.out.println("Enter the element you want to delete : ");
+        // Scanner input = new Scanner(System.in);
+        // int delete = input.nextInt();
+        // giveModifiedArray(newArray,delete);
 
     }
 }

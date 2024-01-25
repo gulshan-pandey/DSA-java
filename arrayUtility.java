@@ -17,6 +17,15 @@ public class arrayUtility {
         return arey;
     }
 
+    public static void displayArray(int [] numArray){
+        int z =0;
+        while(z<numArray.length){
+            System.out.print(numArray[z] + " ");
+            z++;
+        }
+
+    }
+
     public static void main(String[] args) {
 
     }
