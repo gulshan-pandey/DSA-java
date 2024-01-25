@@ -348,6 +348,29 @@ public static void sort(boolean a,boolean b){
 
 
 
+//WAP to find the element in the 2D array
+
+// public static void Search2DArray(int [][] arr){
+        
+//     System.out.println("enter the element to search in 2d Array");
+//     Scanner sc = new Scanner(System.in);
+//     int num = sc.nextInt();
+//     boolean isfound = false;
+    
+//     for(int i=0;i<arr.length;i++){
+//         for(int j=0;j<arr[i].length;j++){
+//             if(arr[i][j] == num ){
+//              isfound=true;
+//             }
+//         }
+//     }
+
+//     System.out.println("the element found :" +isfound);
+
+// }
+
+
+
 
 
 
@@ -440,6 +463,11 @@ public static void sort(boolean a,boolean b){
  
         // palindromeArray(palinArray);
 
+
+        
+        // int[][] var = arrayUtility.input2DArray();
+
+        // Search2DArray(var);
 
 
     }
