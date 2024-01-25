@@ -249,7 +249,7 @@ public class Arrays {
         boolean isSorted = true; // Assume the array is sorted initially
 
         for (int i = 0; i < ary.length - 1; i++) {
-            if (ary[i] >= ary[i + 1]) {
+            if (ary[i] > ary[i + 1]) {
                 isSorted = false;
                 break;
                 // If an unsorted pair is found, no need to continue checking

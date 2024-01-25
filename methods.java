@@ -12,18 +12,26 @@ public class methods {
         }
         return z;
     }
+
+
     // 2nd fn
     static void telljoke(){
         System.out.println("🥲I dont have any...");
     }
+
+
     //3rd fn
     static void change(int i){
         i=100;
     }
+
+
     //4th fn
     static void change2(int [] arr){
         arr[1]=555;
     }
+
+
     //5th fn
     static void hurr(){
         System.out.println("love you ");
@@ -88,7 +96,7 @@ public class methods {
         while(true){
             if((value%num==0) && (value%num2==0)){
                 
-                System.out.println(value);
+                System.out.println(" the LCM of  " + num + " and " + num2 + " is : "+ value);
                 break;
             }
             value++;
@@ -106,7 +114,7 @@ public class methods {
         //     }
         //     i++;
         // }
-        sc.close();
+        
 
 }
 
@@ -126,13 +134,13 @@ static void GCD(){
     while(true){
 
         if(num2%value ==0 && num%value==0){
-            System.out.println(value);
+            System.out.println(" the GCD of  " + num + " and " + num2 + " is : "+ value);
             break;
         }
          value--;
     }
 
-    sc.close();
+    
 }
 
 
@@ -175,7 +183,7 @@ public static void reverseNumber(){
      numb/=10;
     }
     System.out.println("your number is : "+ reversed);
-    sc.close();
+    
   }
 
 
@@ -198,7 +206,7 @@ public static void reverseNumber(){
          second= temp;
 
         }
-        input.close();
+        
     }
 
 
@@ -223,7 +231,7 @@ public static void reverseNumber(){
         } else
             System.out.println("it is not armstrong number");
 
-            input.close();
+            
     }
 
     public static int counting(int n) {
@@ -255,7 +263,7 @@ public static void palindrome(){  //equalize the number with its reverse number 
         System.out.println(num + " is an palindrome number " );
     } else System.out.println(num + " is not a plaindrome");
 
-    sc.close();
+    
 }
 
 
@@ -271,7 +279,7 @@ public static void sorted(int[] arr) {
         if (arr[i] > arr[i + 1]) {
             isAscending = false; 
         }
-        if(arr[i] < arr[i + 1]){
+        else if(arr[i] < arr[i + 1]){
           isDecending=false;
         }
     }
