@@ -158,8 +158,8 @@ public class Arrays {
 
         // }
 
-        System.out.println(
-                "taking input the elements of the array by using utility class: this is done by making an another utility class of array at different file and then call that class's method");
+      
+     // "taking input the elements of the array by using utility class: this is done by making an another utility class of array at different file and then call that class's method"
 
         int[] numArray = arrayUtility.inputArray();
 
@@ -310,6 +310,34 @@ public class Arrays {
         }
         System.out.println("the no. of occurences of ur number is : " + occurences);
 
+
+        
+        //WAP for to find the minimum and the maximum elements of the array
+
+
+        // int[] minMax = arrayUtility.inputArray();
+
+        // int minEle = minMax[0];
+        // int i = 0;
+        // while (i < minMax.length) {
+        //     if (minEle > minMax[i]) {
+        //         minEle = minMax[i];
+        //     }
+        //     i++;
+        // }
+        // System.out.println("the minimum element is : " + minEle);
+        
+        // int maxEle = minMax[minMax.length-1];
+        // int j= minMax.length-1;
+        // while(j>0){
+
+        //     if(maxEle<minMax[j]){
+        //         maxEle=minMax[j];
+        //     }
+        //     j--;
+
+        // }
+        // System.out.println("the max element of the array is :" + maxEle);
 
 
 
