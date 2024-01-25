@@ -14,7 +14,7 @@ public class methods {
     }
     // 2nd fn
     static void telljoke(){
-        System.out.println("ye dekho fir programming krne aagya...");
+        System.out.println("🥲I dont have any...");
     }
     //3rd fn
     static void change(int i){
@@ -259,7 +259,31 @@ public static void palindrome(){  //equalize the number with its reverse number 
 }
 
 
+//check if the array is sorted or not
 
+
+
+public static void sorted(int[] arr) {
+    boolean isAscending = true;
+    boolean isDecending = true;
+
+    for (int i = 0; i < arr.length - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+            isAscending = false; 
+        }
+        if(arr[i] < arr[i + 1]){
+          isDecending=false;
+        }
+    }
+    sort(isAscending,isDecending);
+
+}
+
+public static void sort(boolean a,boolean b){
+    if(a ||b ){
+        System.out.println("your array is sorted !");
+    } else System.out.println("your array is not sorted !");
+}
 
 
 
@@ -329,6 +353,8 @@ public static void palindrome(){  //equalize the number with its reverse number 
         palindrome();//😎😎😎😎😎😎😎
 
 
+        int[] isSortedArray = arrayUtility.inputArray();
+        sorted(isSortedArray);
 
 
 
