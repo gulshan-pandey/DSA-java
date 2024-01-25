@@ -324,6 +324,28 @@ public static void sort(boolean a,boolean b){
 
 
 
+// WAP to check the input array is palindrome or not
+
+
+// public static void palindromeArray(int[] arr){
+//     int l=arr.length;
+//     boolean palindrome = true;
+//      for(int i=0;i<=l/2;i++){
+//         if(arr[i]!=arr[l-1-i]){
+//          palindrome=false;
+//         }
+//         i++;
+     
+//      }
+     
+//      if(palindrome){
+//          System.out.println("ur array is palindrome !");
+//      } else System.out.println("ur array is not palindrome");
+     
+ 
+//  }
+
+
 
 
 
@@ -405,6 +427,20 @@ public static void sort(boolean a,boolean b){
         // Scanner input = new Scanner(System.in);
         // int delete = input.nextInt();
         // giveModifiedArray(newArray,delete);
+
+
+
+//palindrome checker
+
+        // System.out.println("welcome to plaindromwe checker! ");
+
+        // int [] palinArray=arrayUtility.inputArray();
+     
+        // arrayUtility.displayArray(palinArray);
+ 
+        // palindromeArray(palinArray);
+
+
 
     }
 }
