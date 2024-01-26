@@ -2,6 +2,12 @@ import java.util.Scanner;
 
 public class arrayUtility {
 
+    // here we dumped all the methods static means that we will be able to access those methods without making the object of the arrayUtility class ,we can call it just by writing the name of this class followed by . and write the name of the name of the methods
+
+
+    // these are the type of the procedural programming in which it is shared between the classes,so dont use it too much in OOPs
+
+    //just like we call this utility class in another classes without making the object of this utility class the  JVM does this too to run our all programs  calling it like { class's name.main}!!!
     public static int[] inputArray() {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the size of the array : ");
@@ -37,17 +43,16 @@ public class arrayUtility {
         int[][] arey = new int[rows][columns];
 
         for (int i = 0; i < rows; i++) {
-            for(int j =0;j<columns;j++){
-            System.out.println("enter the element rows "+  " , column: " );
-            
-            arey[i][j] = sc.nextInt();
+            for (int j = 0; j < columns; j++) {
+                System.out.println("enter the element rows " + " , column: ");
+
+                arey[i][j] = sc.nextInt();
             }
-            
+
         }
         display2DArray(arey);
         return arey;
     }
-
 
     public static void display2DArray(int[][] array2D) {
         for (int i = 0; i < array2D.length; i++) {
@@ -57,7 +62,6 @@ public class arrayUtility {
             System.out.println(); // Move to the next line for a new row
         }
     }
-
 
     public static void main(String[] args) {
 
