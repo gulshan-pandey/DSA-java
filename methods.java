@@ -294,6 +294,8 @@ public static void sort(boolean a,boolean b){
 }
 
 
+
+
 //WAP to return a new array deleting a specific element
 
 
@@ -440,6 +442,9 @@ public static void sort(boolean a,boolean b){
 
         int[] isSortedArray = arrayUtility.inputArray();
         sorted(isSortedArray);
+
+
+         // array deleter
 
 
 
