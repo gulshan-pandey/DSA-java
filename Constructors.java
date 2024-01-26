@@ -71,7 +71,7 @@ class Car {
     }
 
     // the static block runs first of all !!
-    // static is code block and it is called only once doesnt matter how mant
+    // static is code block and it is called only once doesnt matter how many
     // objects u have made
     static {
         noOfCarSold = 0;
