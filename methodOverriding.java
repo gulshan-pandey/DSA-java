@@ -9,7 +9,7 @@ class A {
     }
 }
 
-class B extends A {
+class B extends A { //inheritance
     @Override // it is a good practice to write @overide as it helps for less errors
     public void meth2() { //the return type of overriden method must be the same ,and the acces level must not be restricted in any class
         System.out.println("this is the seconnd method of class B");
