@@ -85,8 +85,12 @@ public class Constructors {
         System.out.println("the default slary of empl1 is  : " + empl1.getSalary());
 
         Car swift = new Car("red");
+        Car thar = new Car();
+
+
 
         System.out.println(swift.color);
+        System.out.println(thar.color);
     }
 
 }
