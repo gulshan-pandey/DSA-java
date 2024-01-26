@@ -97,7 +97,7 @@ public class Constructors {
         System.out.println(person2.getName() + " : " + person2.getAge());
 
         worker empl1 = new worker();
-        System.out.println("the default slary of empl1 is  : " + empl1.getSalary());
+        System.out.println("the default slary of empl1 is  : " + empl1.getSalary() +" \n\n");
 
         Car swift = new Car("red");
         Car thar = new Car();
