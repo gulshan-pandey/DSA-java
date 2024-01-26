@@ -8,6 +8,7 @@ class Book {
     private boolean isborrowed;
     
     public void borrowBook() {
+    
         if (isborrowed) {
             System.out.println(title + " : the book is already borrowed");
         } else {
@@ -40,13 +41,13 @@ class Book {
         return totalNoOfBooks;
     }
     
-    Book(String isbn, String title, String author) {
+    Book(String isbn, String title, String author) {  //constructor
         this.isbn = isbn;
         this.title = title;
         this.author = author;
     }
 
-    Book(String isbn) {
+    Book(String isbn) {  //constructor
         this(isbn, "unknown", "unknown"); // constructor chaining!
     }
 }
