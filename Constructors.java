@@ -51,6 +51,8 @@ class Car {
     int noOfSeats;
     float fuel;
 
+    static int noOfCarSold;  // this is static that how much car has been sold 
+
     Car(String color) {
         this.color = color;
         noOfSeats = 5;
@@ -65,6 +67,19 @@ class Car {
                        // get the work done ,and all the properties of the another constructor will be
                        // set
         fuel = 5; // default constructor caller will get 5 ltr of fuel
+    }
+      
+    //the static block runs first of all !!
+     //static is code block and it is called only once doesnt matter how mant objects u have made
+    static{  
+     noOfCarSold=0;
+     System.out.println(" I am in static block,and run only once");
+    }
+
+    //normal codeblock will run as many times as the objects has been made
+    { //normal code block
+      noOfCarSold++;
+      System.out.println("I am in initialization block,and i will run as many times as much objects it has");
     }
 
 }
