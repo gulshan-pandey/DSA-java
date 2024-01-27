@@ -95,6 +95,7 @@ public class Constructors {
 
     public static void main(String[] args) {
 
+
         human person = new human();
         System.out.println(person.getName() + " : " + person.getAge());
 
