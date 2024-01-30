@@ -1,5 +1,9 @@
 import java.util.*;
 public class iterations {
+
+
+
+
     public static void main(String[] args) {
        
     //while loop-------------------------------------
@@ -244,9 +248,42 @@ System.out.println("the rev is : " + rev);
 
 // -------------------------------------------------------
 
+  passChecker();
+
+ }
 
 
-    }
+  // password manager 
+  public static void passChecker(){
+           
+    System.out.println("welcome to password checker !");
+
+    System.out.println("please Set your password : ");
+    Scanner sc = new Scanner(System.in);
+    int pass = sc.nextInt();
+    int pas;
+
+    System.out.println("now in order to unlock ur fone ,");
+    do{
+      System.out.println("enter your password : ");
+      pas = sc.nextInt();
+
+      if(pas!=pass){
+        System.out.println("oops you entered wrong password ! , try again");
+      }
+      else{
+        System.out.println("fone is unlocked");
+        break;
+      }
+
+    }while(true);
+
+
+
+  }
+
+
+    
 
 
 
