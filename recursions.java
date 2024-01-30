@@ -1,3 +1,5 @@
+//wap for calculating factorial
+
 public class recursions {
 
     static int fact(int x) {
@@ -7,6 +9,8 @@ public class recursions {
             return x * fact(x - 1);
         }
     }
+
+   //iteratively 
 
     static int factIterative(int y) {
         if (y == 0 || y == 1) {
@@ -19,6 +23,8 @@ public class recursions {
             return product;
         }
     }
+
+    //WAP to find febonnaci series using recursion
 
     static void febo(int n){
         int x=0;

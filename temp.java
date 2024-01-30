@@ -2,10 +2,11 @@ import java.util.*;
 
 public class temp{
   public static long factorial(long num){
-    if(num==0){
+    if(num==1){
         return 1;
     }
     else{
+      System.out.println("fn called for : "+ num);
         num= num*factorial(num-1);
         return num;
     }
