@@ -11,6 +11,7 @@ public class Arrays {
         // int [] marks ;
         // marks =new int[5];
 
+        
         // Initialization
         // marks[0]=100;
         // marks[1]=102;
