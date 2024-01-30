@@ -277,6 +277,7 @@ System.out.println("the rev is : " + rev);
       }
 
     }while(true);
+    //tip --- we can make some constrains for passwords by defining some methods(by making there return type as bool ) and by puting as the condition in while loop 
 
 
 
