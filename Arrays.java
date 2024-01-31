@@ -126,9 +126,9 @@ public class Arrays {
         // Create a java program to add 2 matrix of sixe 2X3
 
         int[][] mat1 = { { 2, 7, 3 }, // 2 rows and 3 columns
-                { 7, 4, 9 } };
+                         { 7, 4, 9 } };
         int[][] mat2 = { { 5, 8, 3 },
-                { 9, 3, 1 } };
+                         { 9, 3, 1 } };
 
         int[][] result = { { 0, 0, 0 },
                 { 0, 0, 0 } };
@@ -190,10 +190,8 @@ public class Arrays {
 
         // int [] arr ={1,2,3,4,5,6,7,8,9,10};
         // int n =Math.floorDiv(arr.length,2); //this will return the greatest integer
-        // of the array.length/2 means the middle number till which the swapping will
-        // happen
-        // int temp; //creating the temp storage so that the data lose will not happen
-        // and swapped esaily
+        // of the array.length/2 means the middle number till which the swapping will happen
+        // int temp; //creating the temp storage so that the data lose will not happen and swapped esaily
         // int l= arr.length;
         // for(int i=0;i<=n;i++){
         // temp= arr[i];
@@ -208,7 +206,7 @@ public class Arrays {
         // QUestion WAP to find the maximum element in an array
 
         // int [] arr={24,6,2,89,73,90};
-        // int max= arr[0];
+        // int max= integer.MIN_VALUE;
 
         // for(int i=0;i<arr.length;i++){
         // if(arr[i]>max){
@@ -221,7 +219,7 @@ public class Arrays {
         // alternatively-----------------------------------------------------
 
         // int [] arr={24,6,2,89,73,90};
-        // int max= 0;
+        // int max= integer.MIN_VALUE;
 
         // for(int i: arr){ //done by using forEach loop
         // if(i>max){
@@ -233,8 +231,9 @@ public class Arrays {
 
         // for finding the smallest in array
 
+
         // int [] arr={24,6,2,89,73,90};
-        // int temp= arr[0];
+        // int temp= Integer.MAX_VALUE;
 
         // for(int i=0;i<arr.length;i++){
         // if(arr[i]<temp){
@@ -243,7 +242,7 @@ public class Arrays {
 
         // }
         // System.out.println(temp);
-
+     
         // QUE to test weather the given array is sorted of not
 
         int[] ary = { 24, 142, 5, 125, 36, 7, 3, 783 };
@@ -341,6 +340,26 @@ public class Arrays {
         // System.out.println("the max element of the array is :" + maxEle);
 
 
+
+        //WAP in which you keep entering the words and the loop continues untile you enter exit
+
+        //in this problem we cannot use == operator as it is a refrence type variable se we'll have to use {.equals("value")}
+
+
+        // System.out.println("letz play a game : ");
+
+        // do{
+        //   System.out.println("please enter a 4 character word");
+        //   String value = sc.next();
+
+        //   if (value.equals("exit")) {
+        //     System.out.println("now you can exit the game ,nice playing with you !");
+        //     break;
+        //   }
+        //   else{
+        //     System.out.println("lets play one more time :");
+        //   }
+        // } while(true);
 
          
     }
