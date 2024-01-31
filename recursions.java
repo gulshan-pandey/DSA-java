@@ -1,5 +1,7 @@
+
 //wap for calculating factorial
 import java.util.*;
+
 public class recursions {
 
     static int fact(int x) {
@@ -25,7 +27,7 @@ public class recursions {
         }
     }
 
-    // WAP to find febonnaci series using loops 
+    // WAP to find febonnaci series using loops
 
     static void febo(int n) {
         int x = 0;
@@ -33,7 +35,7 @@ public class recursions {
         for (int i = 1; i <= n; i++) {
 
             int temp = x + y;
-            System.out.println(x );
+            System.out.println(x);
             x = y;
             y = temp;
 
@@ -53,21 +55,35 @@ public class recursions {
         }
     }
 
+    // WAP to check the input string is palindrome or not
 
-    // WAP to check the input string is palindrome or not 
+    // iteration method
 
-    //iteration method
-    
-
-  public static boolean isPalindromeStr(String str) {
-    int l = str.length() - 1;
-    for (int i = 0; i <= l / 2; i++) {
-      if (str.charAt(i) != str.charAt(l - i)) {
-        return false;
-      }
+    public static boolean isPalindromeStr(String str) {
+        int l = str.length() - 1;
+        for (int i = 0; i <= l / 2; i++) {
+            if (str.charAt(i) != str.charAt(l - i)) {
+                return false;
+            }
+        }
+        return true;
     }
-    return true;
-  }
+
+    // RECURSION METHOD
+
+    public static boolean palinStr(String str) {
+
+        if (str.length() <= 1) {
+            return true;
+        }
+        int length = str.length() - 1;
+        if (str.charAt(0) != str.charAt(length)) {
+            return false;
+        }
+        String strng = str.substring(1, length); // the length is inclusive
+        return palinStr(strng);
+
+    }
 
     public static void main(String[] args) {
 
@@ -79,27 +95,27 @@ public class recursions {
         int m = 7;
         febo(m);
 
+        // iteraive approach
+        System.out.println("enter the number upto which u want to get the fibonnac numbers...");
+        Scanner sc = new Scanner(System.in);
+        int count = sc.nextInt();
+
+        for (int i = 0; i <= count; i++) {
+            System.out.println(fib(i) + " ");
+        }
+
+        // string palindrome
+
+        System.out.println("Enter the string to check if it is a palindrome:");
+        String word = sc.next();
+        System.out.println((isPalindromeStr(word)) ? ("It is a palindrome") : ("It is not a palindrome"));
 
 
+        //RECURSIVE APPROACH
         
-    System.out.println("enter the number upto which u want to get the fibonnac numbers...");
-    Scanner sc = new Scanner(System.in);
-    int count = sc.nextInt();
-  
-    for( int i= 0; i<=count; i++){
-      System.out.println(fib(i) + " ");
-    }
-
-
-
-
-    //string palindrome
-    
-    System.out.println("Enter the string to check if it is a palindrome:");
-    String word = sc.next();
-    System.out.println((isPalindromeStr(word)) ? ("It is a palindrome") : ("It is not a palindrome"));
-
-
-
+        System.out.println(
+                "weclome to String palindrome checker ! \n\n please enter the word to check if it is palindrome ");
+        String wrd = sc.next();
+        System.out.println("your word is " + ((palinStr(wrd)) ? " palindrome" : "not a palindrome word"));
     }
 }
