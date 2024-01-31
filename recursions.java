@@ -6,6 +6,7 @@ public class recursions {
         if (x == 0 || x == 1) {
             return 1;
         } else {
+            System.out.println("fn called for : " + x);
             return x * fact(x - 1);
         }
     }
@@ -24,7 +25,7 @@ public class recursions {
         }
     }
 
-    // WAP to find febonnaci series using recursion
+    // WAP to find febonnaci series using loops 
 
     static void febo(int n) {
         int x = 0;
@@ -32,14 +33,14 @@ public class recursions {
         for (int i = 1; i <= n; i++) {
 
             int temp = x + y;
-            System.out.println(x);
+            System.out.println(x );
             x = y;
             y = temp;
 
         }
     }
 
-    // finding fibonacci of n numbers
+    // finding fibonacci of n numbers using recursions
 
     public static int fib(int n) {
         System.out.print(".");
@@ -56,6 +57,7 @@ public class recursions {
 
         int n = 5;
         System.out.println("the factorial is : " + fact(n));
+
         System.out.println("the factorial by using iterative approach is : " + factIterative(n));
 
         int m = 7;
