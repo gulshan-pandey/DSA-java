@@ -105,6 +105,20 @@ String Invitation = " Dear Gulshan, This Java Course is Amazing. Thanks!";
         System.out.println(" Dear Gulshan,\n\t This Java Course is Amazing.\n\t Thanks!" ); //these are escape sequecer
 
 
+    // use printf over concatination as concat method uses too much memory 
+
+    String animal= "dog";
+    int regNo=24732;
+    System.out.printf("hello %s ,your roll no is %d \n" ,animal,regNo);
+   
+    System.out.printf("hello %S ,your roll no is %d \n" ,animal,regNo);
+   
+    System.out.printf("hello %10S ,your roll no is %10d \n" ,animal,regNo);
+    
+    System.out.printf("hello %10S ,your roll no is %010d \n" ,animal,regNo);
+    
+    System.out.printf("hello %10S ,your roll no is %0,10d \n" ,animal,regNo);
+    
 
 
     }
