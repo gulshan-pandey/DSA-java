@@ -76,7 +76,7 @@ public class iterations {
 // for(int m =0;m<5;m++){
 //     System.out.println("hiii,i am in a loop" +m);
 //     if(m==3){
-//         System.out.println("loop is broken");
+//         System.out.println("loop is broken at : " + m);
 //         break;
 //     }
 
@@ -117,7 +117,7 @@ public class iterations {
 
 //wap to print reverse star pattern
 
-// for(int f=4;f>0;f--){  //f stands for rows and j stands for column
+// for(int f=5;f>0;f--){  //f stands for rows and j stands for column
 //     for(int j=1;j<=f;j++){
 //         System.out.print("*");
 //     }
@@ -213,16 +213,6 @@ public class iterations {
 // System.out.println(fact);
 
 
-//Alternatively
-
-// int n=5;
-// int i=1;
-// int fact =1;
-// while(i<=n){
-//     fact =fact*i;
-//     i++;
-// }
-// System.out.println(fact);
 
 // ---------------------------------------------------------------------
 
