@@ -53,6 +53,22 @@ public class recursions {
         }
     }
 
+
+    // WAP to check the input string is palindrome or not 
+
+    //iteration method
+    
+
+  public static boolean isPalindromeStr(String str) {
+    int l = str.length() - 1;
+    for (int i = 0; i <= l / 2; i++) {
+      if (str.charAt(i) != str.charAt(l - i)) {
+        return false;
+      }
+    }
+    return true;
+  }
+
     public static void main(String[] args) {
 
         int n = 5;
@@ -73,5 +89,17 @@ public class recursions {
     for( int i= 0; i<=count; i++){
       System.out.println(fib(i) + " ");
     }
+
+
+
+
+    //string palindrome
+    
+    System.out.println("Enter the string to check if it is a palindrome:");
+    String word = sc.next();
+    System.out.println((isPalindromeStr(word)) ? ("It is a palindrome") : ("It is not a palindrome"));
+
+
+
     }
 }
