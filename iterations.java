@@ -272,6 +272,22 @@ System.out.println("the rev is : " + rev);
     //tip --- we can make some constrains for passwords by defining some methods(by making there return type as bool ) and by puting as the condition in while loop 
 
 
+    //WAP to add the natural numbers entered by the user,skip any negative number.
+
+    System.out.println("Welcome to add numbers machine \n enter any numbers in array to add them : ");
+
+    int[] number = arrayUtility.inputArray();
+    int sum = 0;
+    for (int element : number) {
+      if (element >= 0) {
+        sum = sum + element;
+      } else {
+        continue;
+      }
+    }
+
+    System.out.println("ur total number is : " + sum);
+
 
   }
 
