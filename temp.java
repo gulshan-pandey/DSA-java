@@ -20,7 +20,6 @@ public class temp {
     // long total = factorial(fac);
     // System.out.println(total);
 
-  
   }
 
 }
