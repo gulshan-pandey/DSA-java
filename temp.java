@@ -28,6 +28,12 @@ public class temp{
         System.out.println(total);
         
       
+        
+System.out.print("enter the no. how much u want to print the odd no.: ");
+int y= sc.nextInt();
+for(int z=1;z<y;z=z+2){
+    System.out.println(z);
+}
 
     
 

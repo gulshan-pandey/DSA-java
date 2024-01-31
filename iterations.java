@@ -51,15 +51,17 @@ public class iterations {
 
 //wap to print first n odd no.s using for loop
 
-
+        
 // System.out.print("enter the no. how much u want to print the odd no.: ");
 // int y= sc.nextInt();
-// for(int z=1;z<y;z=z+1){
-//     System.out.println(2*z+1);
+// for(int z=1;z<y;z=z+2){
+//     System.out.println(z);
 // }
+
 
 // also 2n= Even no
 // and 2n+1 is odd no.
+
 
 // wap to print first n natural no. in reverse order
 // System.out.println("Enter the number of natural numbers you want to print in reverse order:");
