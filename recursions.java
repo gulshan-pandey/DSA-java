@@ -55,6 +55,7 @@ public class recursions {
         }
     }
 
+
     // WAP to check the input string is palindrome or not
 
     // iteration method
@@ -81,6 +82,8 @@ public class recursions {
             return false;
         }
         String strng = str.substring(1, length); // the length is inclusive
+        System.out.print("*" + " "); //this is for checking that how many time the recursion is called
+
         return palinStr(strng);
 
     }
@@ -112,7 +115,7 @@ public class recursions {
 
 
         //RECURSIVE APPROACH
-        
+
         System.out.println(
                 "weclome to String palindrome checker ! \n\n please enter the word to check if it is palindrome ");
         String wrd = sc.next();
