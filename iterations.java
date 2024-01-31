@@ -240,53 +240,56 @@ System.out.println("the rev is : " + rev);
 
 // -------------------------------------------------------
 
-  passChecker();
+  // passChecker();
+
+
+  
+    //WAP to add the natural numbers entered by the user,skip any negative number.
+
+    // System.out.println("Welcome to add numbers machine \n enter any numbers in array to add them : ");
+
+    // int[] number = arrayUtility.inputArray();
+    // int sum = 0;
+    // for (int element : number) {
+    //   if (element >= 0) {
+    //     sum = sum + element;
+    //   } else {
+    //     continue;
+    //   }
+    // }
+
+    // System.out.println("ur total number is : " + sum);
+
+
 
  }
 
 
   // password manager 
-  public static void passChecker(){
+  // public static void passChecker(){
            
-    System.out.println("welcome to password checker !");
+  //   System.out.println("welcome to password checker !");
 
-    System.out.println("please Set your password : ");
-    Scanner sc = new Scanner(System.in);
-    int pass = sc.nextInt();
-    int pas;
+  //   System.out.println("please Set your password : ");
+  //   Scanner sc = new Scanner(System.in);
+  //   int pass = sc.nextInt();
+  //   int pas;
 
-    System.out.println("now in order to unlock ur fone ,");
-    do{
-      System.out.println("enter your password : ");
-      pas = sc.nextInt();
+  //   System.out.println("now in order to unlock ur fone ,");
+  //   do{
+  //     System.out.println("enter your password : ");
+  //     pas = sc.nextInt();
 
-      if(pas!=pass){
-        System.out.println("oops you entered wrong password ! , try again");
-      }
-      else{
-        System.out.println("fone is unlocked");
-        break;
-      }
+  //     if(pas!=pass){
+  //       System.out.println("oops you entered wrong password ! , try again");
+  //     }
+  //     else{
+  //       System.out.println("fone is unlocked");
+  //       break;
+  //     }
 
-    }while(true);
+  //   }while(true);
     //tip --- we can make some constrains for passwords by defining some methods(by making there return type as bool ) and by puting as the condition in while loop 
-
-
-    //WAP to add the natural numbers entered by the user,skip any negative number.
-
-    System.out.println("Welcome to add numbers machine \n enter any numbers in array to add them : ");
-
-    int[] number = arrayUtility.inputArray();
-    int sum = 0;
-    for (int element : number) {
-      if (element >= 0) {
-        sum = sum + element;
-      } else {
-        continue;
-      }
-    }
-
-    System.out.println("ur total number is : " + sum);
 
 
   }
@@ -296,7 +299,7 @@ System.out.println("the rev is : " + rev);
 
 
 
-    }
+    
 
     
 
