@@ -5,6 +5,8 @@ class Kar {
         String name;
         int maxSpeed;
         
+        final int MARKS = 99; //now rhis final keyword means that the variable ha became constant and cant be changed now,the convention of writing the variable of final keyword is by making them "CAPITAL_AND_ADDED_BY_THESE_DASHES"
+
         public Kar(int noOfDoors, int wheels, String name, int maxSpeed) {
             this.noOfDoors = noOfDoors;
             this.wheels = wheels;
@@ -27,6 +29,7 @@ class Kar {
 
         //so what if we define our own toString mthod it will just imply our toString method
         System.out.println(cr);
+
 
         
 
