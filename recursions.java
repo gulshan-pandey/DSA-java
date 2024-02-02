@@ -15,7 +15,7 @@ public class recursions {
 
     // iteratively
 
-    static int factIterative(int y) {
+    static int factIterative(int y) { 
         if (y == 0 || y == 1) {
             return 1;
         } else {
