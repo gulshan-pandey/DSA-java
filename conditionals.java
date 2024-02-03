@@ -225,7 +225,7 @@ public class conditionals {
         int syswin = 0;
         int uwin = 0;
 
-        for (int i = 0; i < 6; i++) {
+        for (int q = 0; q < 6; q++) {
             int numb = ran.nextInt(3 - 1 + 1) + 1;
             String play;
             if (numb == 1) {
