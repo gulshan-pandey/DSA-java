@@ -9,7 +9,7 @@ public class AccessBike {
         bike.color= "green";
         bike.tyres = 2;
         bike.model=123;
-
+        // bike.coseOfPurchase =1; // it is private so it is not accessible
         System.out.println(bike);
 
 
