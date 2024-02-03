@@ -21,6 +21,30 @@ class Kar {
 
        
     }
+
+
+    // make another class student and by the help of toString method prints his credentials
+
+    class Students {
+        String name;
+        int age;
+        int roll;
+        String house;
+        public Students(String name, int age, int roll) {
+            this.name = name;
+            this.age = age;
+            this.roll = roll;
+        }
+       
+        @Override
+        public String toString(){
+            return "Student-details :{name:" +  name
+                     +" , age: "+ age
+                     +" , roll: "+ roll+" }";
+                    
+        }
+        
+    }
     
     public class ToString {
     public static void main(String[] args) {
@@ -31,6 +55,10 @@ class Kar {
         System.out.println(cr);
 
 
+        
+		Students stu = new Students("goul" ,12,15);
+
+		System.out.println(stu);  //toString will called
         
 
     }

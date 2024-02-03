@@ -20,14 +20,17 @@ public class strings {
         // for taking the string as an input
         // greetings
 
-        System.out.println("hello how are you");
+        System.out.println("\n hello how are you");
         Scanner s = new Scanner(System.in);
         String ans = s.nextLine();
         System.out.println(ans + "  as well");
 
 
+
         //use string builder to make a string
-        //string builder is better than the string making method,is it fastest ,reduces memory storage...
+        //string builder is better than the string making method,is it fastest ,reduces memory storage, it is mutable, its a class defind by the java and we have to make its object in order to use it...
+
+
         StringBuilder sb = new StringBuilder("this the demo");
         sb.append(53);
         sb.append(" i am the destroyer");

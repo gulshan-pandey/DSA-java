@@ -2,6 +2,7 @@ import java.util.*;
 
 public class conditionals {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         int age = 15;
         if (age > 18) {
             System.out.println("\n \nyes boy you can drive!");
@@ -34,7 +35,6 @@ public class conditionals {
 
         // Else-if statement----------------------------------
         System.out.println("Enter your age below: ");
-        Scanner sc = new Scanner(System.in);
         int ag = sc.nextInt();
         if (ag < 15) {
             System.out.println("you are too young to start programming");
@@ -71,7 +71,53 @@ public class conditionals {
                 System.out.println("your number is not special");
         }
         System.out.println("\n");
+      
 
+        //another switch case unique example
+           double i;
+		char j = 'b';
+
+		switch (j) {
+		case 'a':
+		case 'A':
+			i = 7.5;
+			break;
+		case 'b':
+		case 'B':
+			i = 5.5;
+			break;
+
+		case 'c':
+		case 'C':
+			i = 2.5;
+			break;
+
+		default:
+			i = 0.5;
+		}
+		System.out.println(i);
+	    
+
+            //   int k = 1;
+          
+            //   switch (k) {
+          
+            //     default:
+            //       System.out.println("Have");
+          
+            //     case 'a':
+            //       System.out.println("A");
+          
+            //     case 'b':
+            //       System.out.println("Good Day");
+          
+            //   } 
+            //output -- have a good day
+          
+            
+          
+          
+          
         // Questions-----------------------------------------------------------
 
         // wap to find out weather a stu is pass of fail if it requires total 40% and at
