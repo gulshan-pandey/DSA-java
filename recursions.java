@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class recursions {
+public class Recursions {
 
     static int fact(int x) {
         if (x == 0 || x == 1) {

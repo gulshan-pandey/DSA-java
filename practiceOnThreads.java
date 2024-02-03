@@ -54,7 +54,7 @@ class que21 extends Thread{
 }
 
 
-public class practiceOnThreads {
+public class PracticeOnThreads {
     public static void main(String[] args) {
         
         gm g = new gm();

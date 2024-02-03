@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class strings {
+public class Strings {
     public static void main(String[] args) {
         String name = "rohan";
         String name2 = new String("munna"); // another way to define string

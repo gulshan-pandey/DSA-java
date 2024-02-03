@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class operators {
+public class Operators {
     public static void main(String[] args) {
         //precidence and associativity(if two operators have same precidence than  use left to right)
         int a=6*5-34/2;

@@ -1,4 +1,4 @@
-public class literal {
+public class Literal {
 //    the value which can be assigned to the variable is called literal
     public static void main(String[] args) {
         byte age = 110;

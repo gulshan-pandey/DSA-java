@@ -74,7 +74,7 @@ class SmartPhone2 extends myCellPhone0 implements camera, wifi0, player0 {
     // }
 }
 
-public class interfaces2 {
+public class Interfaces2 {
     public static void main(String[] args) {
         SmartPhone2 myPhone = new SmartPhone2();
 

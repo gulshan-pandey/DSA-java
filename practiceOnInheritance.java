@@ -74,7 +74,7 @@ class rectangle {
 
 }
 
-public class practiceOnInheritance {
+public class PracticeOnInheritance {
     public static void main(String[] args) {
 
         circle1 cc = new circle1();

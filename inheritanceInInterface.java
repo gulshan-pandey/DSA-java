@@ -27,7 +27,7 @@ class kl implements If2{
 
 
 
-public class inheritanceInInterface {
+public class InheritanceInInterface {
     public static void main(String[] args) {
         
         kl klas = new kl();

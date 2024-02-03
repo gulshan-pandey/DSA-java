@@ -1,4 +1,4 @@
-public class practiceOnFunctions {
+public class PracticeOnFunctions {
     // tables
     static void tables(int n) {
 

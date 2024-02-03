@@ -124,7 +124,7 @@ class TV implements SmartTVremote{
 
 
 
-public class practiceOnPolymorph {
+public class PracticeOnPolymorph {
 
     public static void main(String[] args) {
         

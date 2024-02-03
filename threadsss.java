@@ -26,7 +26,7 @@ class mythread2 extends Thread{
 }
 
 
-public class threadsss {
+public class Threadsss {
     //the threads is used for multi tasking but it does one task at a time  and then after sometime it executes another task
  public static void main(String[] args) {
     

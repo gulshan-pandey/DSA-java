@@ -21,7 +21,7 @@ class smartPhone extends phone{
 }
 
 
-public class dynamicMethodDispatch {
+public class DynamicMethodDispatch {
     
     public static void main(String[] args) {
         

@@ -45,7 +45,7 @@ class guessingGame {
 
 }
 
-public class guessTheNumber {
+public class GuessTheNumber {
     public static void main(String[] args) {
 
         guessingGame guess = new guessingGame();

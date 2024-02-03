@@ -21,7 +21,7 @@ class Employee {
     }
 }
 
-public class accessModifiers1 {
+public class AccessModifiers1 {
     public static void main(String[] args) {
 
         Employee chetan = new Employee();

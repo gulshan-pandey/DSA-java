@@ -8,7 +8,7 @@ System.out.println(v + "  by using sout");
 }
 
 }
-public class builtins {
+public class Builtins {
   public static void main(String[] args) {
     
     print p = new print();

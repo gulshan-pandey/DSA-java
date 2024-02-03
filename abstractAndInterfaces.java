@@ -31,7 +31,7 @@ abstract class child3 extends father{ //it must have the father's greeting and p
 
 }
 
-public class abstractAndInterfaces {
+public class AbstractAndInterfaces {
     public static void main(String[] args) {
         
     

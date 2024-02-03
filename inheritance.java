@@ -93,7 +93,7 @@ class dog extends Animal{
 }
 
 
-public class inheritance {
+public class Inheritance {
     public static void main(String[] args) {
 
         // creating the object of base class

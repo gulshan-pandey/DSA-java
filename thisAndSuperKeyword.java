@@ -22,7 +22,7 @@ class klass2 extends klass{
     }
 }
 
-public class thisAndSuperKeyword {
+public class ThisAndSuperKeyword {
     public static void main(String[] args) {
         
         klass k = new klass(5);

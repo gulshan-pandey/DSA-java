@@ -71,7 +71,7 @@ class SmartPhone1 extends myCellPhone implements camera, wifi, player { //child 
 
 
 
-public class polymorphism {
+public class Polymorphism {
     public static void main(String[] args) {
         camera cam = new SmartPhone1(); //This is a smartphone but,use it as a camera...otherwise u will get the error
         // cam.getNetwork(); --> not allowed

@@ -1,7 +1,7 @@
 import javax.crypto.spec.PSource;
 import java.util.concurrent.Callable;
 
-public class resultingDatatype {
+public class ResultingDatatype {
     public static void main(String[] args) {
         byte x = 5;
         int y = 6;

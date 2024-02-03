@@ -62,7 +62,7 @@ class Swordigo{
 }
 
 
-public class createClass {
+public class CreateClass {
     public static void main(String[] args) {
     System.out.println("creating class");
 

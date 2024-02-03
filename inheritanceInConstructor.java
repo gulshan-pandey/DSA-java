@@ -34,7 +34,7 @@ class childOfDerived1 extends Derived1{
     }
 }
 
-public class inheritanceInConstructor {
+public class InheritanceInConstructor {
 
     public static void main(String[] args) {
 

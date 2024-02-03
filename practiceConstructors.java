@@ -71,7 +71,7 @@ class cylinder{
 
 
 
-public class practiceConstructors {
+public class PracticeConstructors {
     public static void main(String[] args) {
         
     cylinder mycylinder =new cylinder(7,10);
