@@ -7,6 +7,9 @@ public class Bike {
     private int fuelLevel;
     int costOfPurchase;
 
+    public int getModel(){
+    return model;
+    }
     public Bike(){
 
     }
