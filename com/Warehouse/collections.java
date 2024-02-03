@@ -16,6 +16,13 @@ public class collections {
 
         System.out.println(splender);
 
+
+        com.company.AccessBike acc = new com.company.AccessBike(); // it is accessible
+
+        // com.company.Default def = new com.company.Default();  
+        // it is not accessible because it is default,which is not accessible in another package...default classes are only accessible within its own package!!!
+
+
     }
 
     

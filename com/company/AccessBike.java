@@ -1,5 +1,9 @@
 package com.company;
 
+class Default{
+int i;
+}
+
 public class AccessBike {
     
     public static void main(String[] args) {

@@ -25,7 +25,12 @@ public class Bike {
                 + ", costOfPurchase=" + costOfPurchase + "]";
     }
 
+  public static void main(String[] args) {
+    
+    com.company.Default def = new com.company.Default(); //default class are accesible within its own package but its not accissable in different packages
 
+
+  }
     
 }
 
