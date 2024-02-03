@@ -38,6 +38,18 @@ public class strings {
         System.out.println(sb.toString());
 
 
+       //WAP take an array of word and concatinate them into a single string using string builder
+
+
+        String [] array = new String[] {"task","to",
+									    "create","an","array","of","strings",
+									    "using","StringBuilder"};
+		StringBuilder builder = new StringBuilder();
+
+		for (String element : array) {
+			builder.append(element + " ");
+		}
+		System.out.println(builder);
 
     }
 
