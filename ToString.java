@@ -46,6 +46,26 @@ class Kar {
         
     }
     
+
+    class Dice{
+
+        double value;
+    
+        double roll(){
+            value = Math.ceil(Math.random() * 6);
+    
+            return value;
+        }
+        @Override
+        public String toString() {
+            return "Dice [value=" + value + "]";
+        }
+    
+        
+    }
+
+    
+
     public class ToString {
     public static void main(String[] args) {
         Kar cr = new Kar(4, 4, "maruti", 120);
@@ -58,8 +78,13 @@ class Kar {
         
 		Students stu = new Students("goul" ,12,15);
 
-		System.out.println(stu);  //toString will called
+		System.out.println(stu + "\n\n");  //toString will called
         
+
+
+        Dice die = new Dice();
+     	System.out.println(die.roll());
+        System.out.println(die);
 
     }
 }
