@@ -1,5 +1,4 @@
 
-//wap for calculating factorial
 import java.util.*;
 
 public class recursions {
@@ -15,7 +14,7 @@ public class recursions {
 
     // iteratively
 
-    static int factIterative(int y) { 
+    static int factIterative(int y) {
         if (y == 0 || y == 1) {
             return 1;
         } else {
@@ -81,8 +80,8 @@ public class recursions {
         if (str.charAt(0) != str.charAt(length)) {
             return false;
         }
-        String strng = str.substring(1, length); // the length is inclusive
-        System.out.print("*" + " "); //this is for checking that how many time the recursion is called
+        String strng = str.substring(1, length);  // the length is exclusive
+        System.out.print("*" + " "); //this is for checking that how many time thi recursion is called
 
         return palinStr(strng);
 
