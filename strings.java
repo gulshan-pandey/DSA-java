@@ -37,6 +37,17 @@ public class strings {
         sb.append(3000.3000);
         System.out.println(sb.toString());
 
+
+        //one unique thing about sout is ...
+       
+        
+		int number =99;
+		int num2 = 11;
+		 
+		System.out.println("\n\n your number is "+number+" and another number is  "+num2+" " );
+	
+
+
     }
 
 }
