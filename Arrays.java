@@ -162,7 +162,7 @@ public class Arrays {
       
      // "taking input the elements of the array by using utility class: this is done by making an another utility class of array at different file and then call that class's method"
 
-        int[] numArray = arrayUtility.inputArray();
+        int[] numArray = ArrayUtility.inputArray();
 
         for (int i = 0; i < numArray.length; i++) {
             System.out.print(numArray[i] + " ");
@@ -296,7 +296,7 @@ public class Arrays {
         // WAP to input an array and find the number of occurences of the input element
         // in that array
 
-        int[] occArray = arrayUtility.inputArray();
+        int[] occArray = ArrayUtility.inputArray();
 
         System.out.println("now enter the number you want to find: ");
         Scanner sc = new Scanner(System.in);

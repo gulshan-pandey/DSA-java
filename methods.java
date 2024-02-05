@@ -440,7 +440,7 @@ public static void sort(boolean a,boolean b){
         palindrome();//😎😎😎😎😎😎😎
 
 
-        int[] isSortedArray = arrayUtility.inputArray();
+        int[] isSortedArray = ArrayUtility.inputArray();
         sorted(isSortedArray);
 
 

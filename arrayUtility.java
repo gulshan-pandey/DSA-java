@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class arrayUtility {
+public class ArrayUtility {
 
     // here we dumped all the methods static means that we will be able to access those methods without making the object of the arrayUtility class ,we can call it just by writing the name of this class followed by . and write the name of the name of the methods
 
