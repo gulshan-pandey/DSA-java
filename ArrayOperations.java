@@ -25,7 +25,7 @@ public class ArrayOperations {
     
     public static void main(String[] args) {
         
-        ArrayOperations A = new ArrayOperations(new int[] {22,335,5,63,7});
+        ArrayOperations A = new ArrayOperations(new int[] {22,335,5,63,7});  //insertion of  array in constructor is like this
 
         ArrayOperations.Statistic sc = A.new Statistic(); //here we need to associate the object of Array operation to the Statistic nested class
         System.out.println(sc.mean());
