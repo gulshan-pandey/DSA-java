@@ -1,6 +1,6 @@
-class pri extends Thread{
+class prior extends Thread{
    
-    public pri(String name){
+    public prior(String name){
         super(name);
         
 
@@ -20,12 +20,12 @@ class pri extends Thread{
 public class ThreadPriority{
     public static void main(String[] args) {
         
-        pri h1 = new pri("nonu1");
-        pri h2 = new pri("nonu2");
-        pri h3 = new pri("nonu3");
-        pri h4 = new pri("nonu4 (most Important)");
-        pri h5 = new pri("nonu5");
-        pri h6 = new pri("nonu6");
+        prior h1 = new prior("nonu1");
+        prior h2 = new prior("nonu2");
+        prior h3 = new prior("nonu3");
+        prior h4 = new prior("nonu4 (most Important)"); //just named it as most important
+        prior h5 = new prior("nonu5");
+        prior h6 = new prior("nonu6");
 
         h4.setPriority(Thread.MAX_PRIORITY);
         h1.setPriority(Thread.MIN_PRIORITY);
