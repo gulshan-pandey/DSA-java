@@ -7,6 +7,9 @@ class A {
     public void meth2() {
         System.out.println("this is the second method of class A");
     }
+
+    public class Statistic {
+    }
 }
 
 class B extends A { //inheritance
