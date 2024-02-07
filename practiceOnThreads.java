@@ -29,7 +29,7 @@ class que2 extends Thread{
 
     public void run(){ 
         int i =0;
-        while(i<300){
+        while(true){
             try{
                 Thread.sleep(400); // just to  delay the output of this 
             }
@@ -46,7 +46,13 @@ class que21 extends Thread{
 
     public void run(){
          int j=0;
-        while(j<300){
+        while(true){
+            try{
+                Thread.sleep(200); // just to  delay the output of this 
+            }
+            catch(Exception e){
+                System.out.println(e);
+            }
             System.out.println("bad luck !");
           j++;
         }
@@ -71,7 +77,7 @@ public class PracticeOnThreads {
          que21 q21= new que21();
          
          q21.start();
-        //  q2.start();
+         q2.start();
         System.out.println( q2.getState()); //this will tell the state of the porgram as we discussed in theory part
         System.out.println( q21.currentThread()); //gives the current info of the current thread 
         
