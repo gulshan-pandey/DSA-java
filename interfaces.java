@@ -1,55 +1,62 @@
-interface bicycle{
-    int a =99; //we can create properties in interfaces
+interface Bicycle {
+    int a = 99; // We can create properties in interfaces
     void applyBrake(int decrement);
     void speedUp(int increment);
-
 }
-interface bike{
-    int y=0; //remember they all are already public by deault
+
+interface Bike {
+    int y = 0; // Remember they all are already public by default
     void applyDiskBrake();
-    void Acclerate();
-
+    void Accelerate();
 }
 
-// we can implement 2 or more interfaces in class
-class Ranger implements bicycle,bike{
+// We can implement 2 or more interfaces in a class
+class Ranger implements Bicycle, Bike {
 
-    //  int a=999;  //se we can sort of modify the variables of interfaces indeed but should not overwrite them
-    void blowHorn(){
-      System.out.println("pee peeee...dhoom machale");
-    }
-    
-    //defining all the mehtods of interface
-    public void applyBrake(int decrement){
-       System.out.println("applying brakes by :" + decrement);
-    }
-    public void speedUp(int increment){
-     System.out.println("stopping by : " + increment);
+    // int a = 999; // We can sort of modify the variables of interfaces indeed but should not overwrite them
+    void blowHorn() {
+        System.out.println("pee peeee...dhoom machale");
     }
 
-     public void applyDiskBrake(){
-        System.out.println("applying diskbrake...");
-     }
-    public void Acclerate(){
+    // Defining all the methods of interface
+    public void applyBrake(int decrement) {
+        System.out.println("applying brakes by: " + decrement);
+    }
+
+    public void speedUp(int increment) {
+        System.out.println("speeding up by: " + increment);
+    }
+
+    public void applyDiskBrake() {
+        System.out.println("applying disk brake...");
+    }
+
+    public void Accelerate() {
         System.out.println("pulling the accelerator!");
     }
 }
 
-class interfaces {
+
+
+
+
+public class Interfaces {
     public static void main(String[] args) {
-        
-        Ranger mericycle = new Ranger();
-        mericycle.applyBrake(6);
-        mericycle.speedUp(9);
 
-        System.out.println(mericycle.a);
-        //we can create the properties in Interfaces
+        Ranger myBicycle = new Ranger();
+        myBicycle.applyBrake(6);
+        myBicycle.speedUp(9);
 
-        //we cannot modify the propertis in Interfaces as they are final
-        // mericycle.a =1; ---error
+        System.out.println(myBicycle.a); // We can access properties in Interfaces
 
-        mericycle.applyDiskBrake();
-        mericycle.Acclerate();
+        // We cannot modify the properties in Interfaces as they are final
+        // myBicycle.a = 1; ---error
+
+        myBicycle.applyDiskBrake();
+        myBicycle.Accelerate();
+
+      
+
+
     }
-
 }
