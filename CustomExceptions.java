@@ -34,7 +34,7 @@ public static void main(String[] args) {
     //  int a = sc.nextInt();
     //  if(a<9){
     //     try {
-    //         throw new myException();
+    //         throw new myException();  //throw keyword is used to throw an exception explicitly by the programmer
     //     } 
     //     catch (Exception e) {
     //        System.out.println(e.getMessage()); 
@@ -54,7 +54,7 @@ public static void main(String[] args) {
 
      if(age>125 || age<1){
         try{
-       throw new MaxAgeException();
+       throw new MaxAgeException();   //throw keyword is used to throw an exception explicitly by the programmer
      }catch(Exception e){
         System.out.println(e.getMessage());
         System.out.println(e.toString());

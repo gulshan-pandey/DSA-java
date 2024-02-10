@@ -75,7 +75,7 @@ public class Exceptions{
         
         boolean flag = true;
         while (flag) {
-            System.out.println("enter index: ");
+            System.out.println("enter index of the array to show elements : ");
             try {
             int ind = sc.nextInt();
                 System.out.println("welcome");
