@@ -27,71 +27,95 @@ public class Exceptions{
 
         //handling multiple Exceptions
 
-        int [] marks = new int [3];
-        marks[0]=44;
-        marks[1]=44;
-        marks[2]=44;
+        // int [] marks = new int [3];
+        // marks[0]=44;
+        // marks[1]=44;
+        // marks[2]=44;
 
         Scanner sc = new Scanner(System.in);
         
-        try{
-        System.out.println("enter the index of the Array : " );
-        int i=sc.nextInt();
+        // try{
+        // System.out.println("enter the index of the Array : " );
+        // int i=sc.nextInt();
 
-        System.out.println("enter the number U want to divide the value with : " );
-        int num= sc.nextInt();
+        // System.out.println("enter the number U want to divide the value with : " );
+        // int num= sc.nextInt();
 
 
         
-        System.out.println("your value is : " + marks[i]);
-        System.out.println("your divided value is : " + marks[i]/num);
-        }
+        // System.out.println("your value is : " + marks[i]);
+        // System.out.println("your divided value is : " + marks[i]/num);
+        // }
      
 
-        catch(ArrayIndexOutOfBoundsException e ){
-            System.out.println("Array out of bound  "  + e);
-        }
-        catch(InputMismatchException e ){
-            System.out.println("Input mismatch "  + e);
-        }
-        catch(Exception e){
-            System.out.println("other erroe occured");
-        }
+        // catch(InputMismatchException e ){
+        //     System.out.println("Input mismatch "  + e);
+        //     sc.next();
+        // }
+        // catch(ArrayIndexOutOfBoundsException e ){
+        //     System.out.println("Array out of bound  "  + e);
+        // }
+        // catch(Exception e){ // this it the generic exception which can collect all the exceptins
+        //     System.out.println("other erroe occured");
+        // }
     
 
 
- //WAP to keep enter the index fromt he user until get correct index
+ //WAP to keep enter the index from the user until get correct index
  
 
 
-        int[] arr = new int[3];
+        // int[] arr = new int[4];
         
-        arr[0] = 44;
-        arr[1] = 44;
-        arr[2] = 45;
+        // arr[0] = 44;
+        // arr[1] = 44;
+        // arr[2] = 45;
+        // arr[3] = 90;
      
-        boolean flag = true;
-        while (flag) {
-            System.out.println("Enter an index:");
-            int ind = sc.nextInt();
-            try {
-                System.out.println("Welcome");
-                try {
-                    System.out.println(arr[ind]);
-                 flag = false; // Set flag to false to exit the loop
-                } catch (ArrayIndexOutOfBoundsException e) {
-                    System.out.println("Array out of bounds");
+        
+        // for (int i =0;i<5;i++){
+        //     try {
+        //     System.out.println("Enter an index:");
+        //     int ind = sc.nextInt();
+        //         System.out.println("Welcome");
+        //         try {
+        //             System.out.println(arr[ind]);
+        //         } catch (ArrayIndexOutOfBoundsException e) {
+        //             System.out.println("Array out of bounds");
+        //         }
+        //     }catch (InputMismatchException e) {
+        //         System.out.println("Input mismatch occurred. Please enter an integer value.");
+        //         // Clearing the invalid input
+        //         sc.next();
+        //     }
+            
+        //     System.out.println("Thanks");
+        // }
 
-            }catch (InputMismatchException e) {
-                System.out.println("Input mismatch occurred. Please enter an integer value.");
-                // Clearing the invalid input
-                sc.nextLine();}
-            } catch (Exception e) {
-                System.out.println("Another exception occurred");
+    
+            for(int i =0;i<5;i++){
+            
+            System.out.println("enter the number1 : ");
+            try{
+            int x = sc.nextInt();
+            System.out.println("enter the second number : ");
+            int y = sc. nextInt();
+        
+            int caluclate = a/b;
+        
+            System.out.println("the vlaue is : " + caluclate);}
+            catch(InputMismatchException Exception ){
+                System.out.println("please provide required input!");
+                sc.next();
+        
             }
-            System.out.println("Thanks");
+            catch(ArithmeticException Exception){
+                System.out.println("oops you divdied it by zero!");
+            }
+        
+            }
         }
-    }
-}
+        
+        }
 
     
