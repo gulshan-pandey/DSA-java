@@ -93,6 +93,9 @@ public class Exceptions{
                 sc.next(); //it prevents the infinite loop 
                 
             }
+            if(i>=5){
+                System.out.println("maximum limit exeeded!");
+            }
         }
         System.out.println("thanks for coding");
     }
