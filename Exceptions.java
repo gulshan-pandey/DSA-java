@@ -1,4 +1,4 @@
-import java.util.InputMismatchException;
+
 import java.util.Scanner;
 
 public class Exceptions{
@@ -25,7 +25,7 @@ public class Exceptions{
 
 
 
-        //handling multiple Exceptions
+        // handling multiple Exceptions
 
         // int [] marks = new int [3];
         // marks[0]=44;
@@ -56,12 +56,12 @@ public class Exceptions{
         //     System.out.println("Array out of bound  "  + e);
         // }
         // catch(Exception e){ // this it the generic exception which can collect all the exceptins
-        //     System.out.println("other erroe occured");
+        //     System.out.println("other error occured");
         // }
     
 
 
- //WAP to keep enter the index from the user until get correct index
+ //WAP to keep enter the index from the user and if it is incorrect 5 times ,the program exits
 
 
 
@@ -74,7 +74,8 @@ public class Exceptions{
      
         
         boolean flag = true;
-        while (flag) {
+        int i=0;
+        while (flag && i<5) {
             System.out.println("enter index of the array to show elements : ");
             try {
             int ind = sc.nextInt();
@@ -84,9 +85,11 @@ public class Exceptions{
                     flag = false;
                 } catch (ArrayIndexOutOfBoundsException e) {
                     System.out.println("exception occured " + e);
+                    i++;
                 }
             } catch (Exception e) {
                 System.out.println("other exception occured level 1 " + e);
+                i++;
                 sc.next(); //it prevents the infinite loop 
                 
             }
