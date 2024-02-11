@@ -1,6 +1,6 @@
 import java.io.FileWriter;
 
-public class FileHandlin {
+public class FIleHandlingWriter {
 
     public static void main(String[] args) {
 
