@@ -1,6 +1,7 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
-public class Arrays {
+public class ARRAYS {
     public static void main(String[] args) {
 
         // there are 3 main ways to create an array in java
@@ -162,13 +163,15 @@ public class Arrays {
       
      // "taking input the elements of the array by using utility class: this is done by making an another utility class of array at different file and then call that class's method"
 
-        int[] numArray = ArrayUtility.inputArray();
+        // int[] numArray = ArrayUtility.inputArray();
 
-        for (int i = 0; i < numArray.length; i++) {
-            System.out.print(numArray[i] + " ");
-        }
+        // for (int i = 0; i < numArray.length; i++) {
+        //     System.out.print(numArray[i] + " ");
+        // }
 
-        System.out.println("\n\n");
+        // System.out.println("\n\n");
+
+
 
         // WAP to reverse an array
 
@@ -245,70 +248,76 @@ public class Arrays {
      
         // QUE to test weather the given array is sorted of not
 
-        int[] ary = { 24, 142, 5, 125, 36, 7, 3, 783 };
-        boolean isSorted = true; // Assume the array is sorted initially
+        // int[] ary = { 24, 142, 5, 125, 36, 7, 3, 783 };
+        // boolean isSorted = true; // Assume the array is sorted initially
 
-        for (int i = 0; i < ary.length - 1; i++) {
-            if (ary[i] > ary[i + 1]) {
-                isSorted = false;
-                break;
-                // If an unsorted pair is found, no need to continue checking
-            }
+        // for (int i = 0; i < ary.length - 1; i++) {
+        //     if (ary[i] > ary[i + 1]) {
+        //         isSorted = false;
+        //         break;
+        //         // If an unsorted pair is found, no need to continue checking
+        //     }
 
-        }
+        // }
 
-        if (isSorted) {
-            System.out.println("yes this array is sorted");
-        } else {
-            System.out.println("this array is not sorted");
-        }
+        // if (isSorted) {
+        //     System.out.println("yes this array is sorted");
+        // } else {
+        //     System.out.println("this array is not sorted");
+        // }
+
+
 
         // WAP to take the input the numbers in the aaray and reverse those numbers
 
-        Scanner scanner = new Scanner(System.in);
+        // Scanner scanner = new Scanner(System.in);
 
-        // Input the size of the array
-        System.out.print("Enter the size of the array: ");
-        int size = scanner.nextInt();
+        // // Input the size of the array
+        // System.out.print("Enter the size of the array: ");
+        // int size = scanner.nextInt();
 
-        // Create an empty array
-        int[] numbers = new int[size];
+        // // Create an empty array
+        // int[] numbers = new int[size];
 
-        // Input numbers into the array
-        System.out.println("Enter " + size + " numbers:");
-        for (int i = 0; i < size; i++) {
-            numbers[i] = scanner.nextInt();
-        }
+        // // Input numbers into the array
+        // System.out.println("Enter " + size + " numbers:");
+        // for (int i = 0; i < size; i++) {
+        //     numbers[i] = scanner.nextInt();
+        // }
+
+
 
         // Reverse the numbers based on the index of the array
-        for (int i = 0; i < size / 2; i++) {
-            int temp = numbers[i];
-            numbers[i] = numbers[size - 1 - i];
-            numbers[size - 1 - i] = temp;
-        }
+        // for (int i = 0; i < size / 2; i++) {
+        //     int temp = numbers[i];
+        //     numbers[i] = numbers[size - 1 - i];
+        //     numbers[size - 1 - i] = temp;
+        // }
 
-        // Print the reversed array
-        System.out.println("Reversed array:");
-        for (int number : numbers) {
-            System.out.print(number + " ");
-        }
+        // // Print the reversed array
+        // System.out.println("Reversed array:");
+        // for (int number : numbers) {
+        //     System.out.print(number + " ");
+        // }
+
+
 
         // WAP to input an array and find the number of occurences of the input element
         // in that array
 
-        int[] occArray = ArrayUtility.inputArray();
+        // int[] occArray = ArrayUtility.inputArray();
 
-        System.out.println("now enter the number you want to find: ");
-        Scanner sc = new Scanner(System.in);
-        int inputNumber = sc.nextInt();
-        int occurences = 0;
-        for (int element : occArray) {
-            if (element == inputNumber) {
-                occurences++;
-            }
+        // System.out.println("now enter the number you want to find: ");
+        // Scanner sc = new Scanner(System.in);
+        // int inputNumber = sc.nextInt();
+        // int occurences = 0;
+        // for (int element : occArray) {
+        //     if (element == inputNumber) {
+        //         occurences++;
+        //     }
 
-        }
-        System.out.println("the no. of occurences of ur number is : " + occurences);
+        // }
+        // System.out.println("the no. of occurences of ur number is : " + occurences);
 
 
         
@@ -362,6 +371,30 @@ public class Arrays {
         // } while(true);
 
          
+
+        // WAP a program to delete an element form an array using Arrays.copy method 
+
+        int[] originalArray = {1, 2, 3, 4, 5};
+        int indexToDelete = 2; // Index of the element to delete
+
+        System.out.println("Original Array: " + Arrays.toString(originalArray));
+
+        int[] newArray = deleteElement(originalArray, indexToDelete);
+
+        System.out.println("Array after deleting element at index " + indexToDelete + ": " + Arrays.toString(newArray));
+    }
+
+
+    public static int[] deleteElement(int[] arr, int index) {
+        if (index < 0 || index >= arr.length) {
+            return arr; // return the original array if index is out of bounds
+        }
+
+        int[] result = new int[arr.length - 1];
+        System.arraycopy(arr, 0, result, 0, index);
+        System.arraycopy(arr, index + 1, result, index, arr.length - index - 1);
+
+        return result;
     }
 
 }
