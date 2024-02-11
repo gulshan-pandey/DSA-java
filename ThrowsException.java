@@ -31,7 +31,7 @@ public class ThrowsException {
         return result;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
 
         try{
         System.out.println(divide(2,0));
@@ -48,7 +48,10 @@ public class ThrowsException {
            System.out.println(e.getMessage()); 
            e.printStackTrace();
            System.out.println(e.toString());
-        }
+         
+        }finally{
+            System.out.println(" \n \n finally block is always executed regardless of any try catch block ecxcuted or not,further more finally is generally used for closing resource like files or database ");
+         }
     }
 
 }

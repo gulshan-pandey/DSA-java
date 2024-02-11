@@ -14,6 +14,10 @@ class myException extends Exception { // here i created my own exception class
     
 }
 
+
+
+
+
 class MaxAgeException extends Exception {
     @Override
     public String toString() {
@@ -58,9 +62,10 @@ public static void main(String[] args) {
      }catch(Exception e){
         System.out.println(e.getMessage());
         System.out.println(e.toString());
-
-
+     }finally{
+        System.out.println(" \n \n finally block is always executed regardless of any try catch block ecxcuted or not,further more finally is generally used for closing resource like files or database ");
      }
+
     }
 
 
