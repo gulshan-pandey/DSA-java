@@ -3,12 +3,19 @@ import java.util.List;
 
 public class Temp {
 
+   
     public static void main(String[] args) {
 
-        List strlist = new ArrayList(); //list is interface so its proper object cannot be formed
+       List strlist = new ArrayList(); //list is interface so its proper object cannot be formed
+       
+      //If we want the list to contain specific type of elements then put it in <> on left side 
+      // List <String> strlist = new ArrayList<>();  
+
+      
+
         strlist.add("Indian"); // this is the 0th index;
         strlist.add("league");// this is 1st index
-        strlist.add(1);// it can add different datatypes as well !!!
+       strlist.add(1);// it can add different datatypes as well if we dont mention <datatype> during object creation !!!
 
         System.out.println(strlist.get(0)); //accessing the element
 
@@ -51,12 +58,16 @@ public class Temp {
       
         System.out.println(" \n\n " + "size of the list is : " + strlist.size());
 
-        
+
         System.out.println("list.contains(object): checks weather the list contains the object or not");
 
-        System.out.println("strlist.contains(premier) : "+ strlist.contains("premier"));
+        if(strlist.contains("Nepal")){
+            System.out.println("Nepal exists");
+            System.out.println("at index = " + strlist.indexOf("Nepal"));
+        }
 
 
+ 
     }
 
     
