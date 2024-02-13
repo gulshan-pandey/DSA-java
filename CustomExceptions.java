@@ -4,12 +4,12 @@ class myException extends Exception { // here i created my own exception class b
     
     @Override
     public String toString() { // now overriding the methods to show when the exception occurs :if we dont override the toString,it will just print the class name
-        return super.toString() + "i am toString()";
+        return super.toString() + "i am toString()";  // it just prints the class name
     }
     
     @Override
     public String getMessage() { //if we dont override the getMessage then null will be printed, indicates you havent properly defined your custom exception class! 
-        return super.getMessage() + " this is get messsage";
+        return super.getMessage() + " this is get messsage"; //it will print the message on the console
     }
     
 }
@@ -25,10 +25,11 @@ class MaxAgeException extends Exception {
     }
     
     @Override
-    public String getMessage() {   //if we dont obverride the getMessage then null will be printed which indicatesthat you havent properly defined your custom exception class! 
+    public String getMessage() {   //if we dont override the getMessage then null will be printed which indicatesthat you havent properly defined your custom exception class! 
         return "age cannot be less than 0 or greater than 125!!!";
     }
 }
+
 
 
 class MaxRetriesException extends Exception{
@@ -58,6 +59,7 @@ public static void main(String[] args) {
     //         throw new myException();  //throw keyword is used to throw an exception explicitly by the programmer
     //     } 
     //     catch (Exception e) {
+    //         System.out.println(e);
     //        System.out.println(e.getMessage()); 
     //        System.out.println(e.toString()); 
     //        e.printStackTrace();
@@ -95,7 +97,7 @@ public static void main(String[] args) {
 
 
  int[] arr = new int[4];
-        
+        // 
  arr[0] = 44;
  arr[1] = 44;
  arr[2] = 45;
