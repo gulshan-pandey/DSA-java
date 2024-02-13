@@ -1,4 +1,5 @@
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Exceptions{
@@ -22,6 +23,7 @@ public class Exceptions{
         }
  
         System.out.println("program ends here");
+
 
 
 
@@ -63,8 +65,6 @@ public class Exceptions{
 
  //WAP to keep enter the index from the user and if it is incorrect 5 times ,the program exits
 
-
-
         int[] arr = new int[4];
         
         arr[0] = 44;
@@ -78,14 +78,14 @@ public class Exceptions{
         while (flag && i<5) {
             System.out.println("enter index of the array to show elements : ");
             try {
-            int ind = sc.nextInt();
+                int ind = sc.nextInt();
                 System.out.println("welcome");
                 try {
                     System.out.println(arr[ind]);
                     flag = false;
                 } catch (ArrayIndexOutOfBoundsException e) {
                     System.out.println("exception occured " + e);
-                    i++;
+                    i++; //there are only 5 wrong inputs allowed
                 }
             } catch (Exception e) {
                 System.out.println("other exception occured level 1 " + e);
@@ -94,36 +94,38 @@ public class Exceptions{
                 
             }
             if(i>=5){
-                System.out.println("maximum limit exeeded!");
+                System.out.println("maximum limit exeeded you have entred wrong keys 5times!");
             }
-        }
+        } //while loop ended
         System.out.println("thanks for coding");
     }
 
     
-        //     for(int i =0;i<5;i++){
+            // for(int i =0;i<5;i++){
             
-        //     System.out.println("enter the number1 : ");
-        //     try{
-        //     int x = sc.nextInt();
-        //     System.out.println("enter the second number : ");
-        //     int y = sc. nextInt();
+            // System.out.println("enter the number1 : ");
+            // try{
+            // int x = sc.nextInt();
+            // System.out.println("enter the second number : ");
+            // int y = sc. nextInt();
         
-        //     int caluclate = a/b;
+            // int caluclate = a/b;
         
-        //     System.out.println("the vlaue is : " + caluclate);}
-        //     catch(InputMismatchException Exception ){
-        //         System.out.println("please provide required input!");
-        //         sc.next();
+            // System.out.println("the vlaue is : " + caluclate);}
+            // catch(InputMismatchException Exception ){
+            //     System.out.println("please provide required input!");
+            //     sc.next();
         
-        //     }
-        //     catch(ArithmeticException Exception){
-        //         System.out.println("oops you divdied it by zero!");
-        //     }
+            // }
+            // catch(ArithmeticException Exception){
+            //     System.out.println("oops you divdied it by zero!");
+            // }
         
-        //     }
-        // }
-        
+            // }
+
+
         }
+        
+        
 
     

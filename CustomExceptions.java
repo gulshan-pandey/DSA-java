@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class myException extends Exception { // here i created my own exception class
+class myException extends Exception { // here i created my own exception class by extending Exception class
     
     @Override
     public String toString() { // now overriding the methods to show when the exception occurs :if we dont override the toString,it will just print the class name
@@ -8,7 +8,7 @@ class myException extends Exception { // here i created my own exception class
     }
     
     @Override
-    public String getMessage() { //if we dont obverride the getMessage then null will be printed indicates you havent properly definde your custom exception class! 
+    public String getMessage() { //if we dont override the getMessage then null will be printed, indicates you havent properly defined your custom exception class! 
         return super.getMessage() + " this is get messsage";
     }
     
