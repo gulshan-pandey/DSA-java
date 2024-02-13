@@ -71,21 +71,21 @@ public static void main(String[] args) {
   
     //Suppose i am making the project which evaluates the maximum age of the human ,so in that case age must in 1-125 and if somebody enter it incorrectly then the exception must be thrown 
 
-    //  System.out.println("Enter the  age");
+     System.out.println("Enter the  age");
      Scanner sc = new Scanner( System.in);
-    //  int age = sc.nextInt();
+     int age = sc.nextInt();
 
-    //  if(age>125 || age<1){
-    //     try{
-    //    throw new MaxAgeException();   //throw keyword is used to throw an exception explicitly by the programmer
-    //  }catch(Exception e){
-    //     System.out.println(e.getMessage());
-    //     System.out.println(e.toString());
-    //  }finally{
-    //     System.out.println(" \n \n finally block is always executed regardless of any try catch block ecxcuted or not,further more finally is generally used for closing resource like files or database ");
-    //  }
+     if(age>125 || age<1){
+        try{
+       throw new MaxAgeException();   //throw keyword is used to throw an exception explicitly by the programmer and this is done by maiking customException's object
+     }catch(Exception e){
+        System.out.println(e.getMessage());
+        System.out.println(e.toString());
+     }finally{
+        System.out.println(" \n \n finally block is always executed regardless of any try catch block ecxcuted or not,further more finally is generally used for closing resource like files or database ");
+     }
 
-    // }
+    }
 
 
     
