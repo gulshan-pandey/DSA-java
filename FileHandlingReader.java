@@ -50,6 +50,29 @@ public class FileHandlingReader {
 
 
 
+        
+        String nameOfFile = "output.txt"; // File name to read from
+
+        try {
+            FileReader reader = new FileReader(nameOfFile);
+            int character;
+            StringBuilder content = new StringBuilder();
+
+            while ((character = reader.read()) != -1) {
+                content.append((char) character);
+            }
+
+            reader.close();
+            System.out.println("Contents of " + filename + ":\n" + content.toString());
+        } catch (IOException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+            e.printStackTrace();
+        }
+
+
+
+
+
 
   
         }
