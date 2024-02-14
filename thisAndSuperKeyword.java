@@ -18,7 +18,7 @@ class klass2 extends klass{
     }
     public klass2(int c){
        super(c); // immediate parent class jisme int input ho rha ho usko ko refer krne k lia ,if we remove it from here ,it wont be able to call the parent class and hence throw error
-       System.out.println("I am the constructor of klass2");
+       System.out.println("I am the overloaded constructor of klass2");
     }
 }
 

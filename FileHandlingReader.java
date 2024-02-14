@@ -9,11 +9,11 @@ public class FileHandlingReader {
         
         String filename = "file.txt";
 
-        try(FileReader reader = new FileReader(filename);){
-            int read =0; //initially it is zero
+        try(FileReader reader = new FileReader(filename);){ //it is called {try with resource}
+            int read ; //initially it is zero or we can just initialise the read variable as it will read on the basis of integer
             do{
                 read = reader.read();  //reader object will start to read the file
-                System.out.println((char)read); //now converting the read from int to char
+                System.out.print((char)read); //now converting the read from int to char
             }while (read !=-1); //here -1 means read till there is nothing left
 
             

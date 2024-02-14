@@ -12,7 +12,11 @@ class NegativeRadiusException extends Exception {
 }
 
 
+
+
+
 public class ThrowsException {
+
 
     public static int divide(int a, int b)
             throws ArithmeticException {
@@ -20,16 +24,17 @@ public class ThrowsException {
         return result;
     }
    
- //the throws keyword does 2 thing ...1 it indicates the fellow caller to get prepare for the exception and handle it accordingly...2nd after writing throws to a mehtod,that merhod dont have to define the try and catch statements!
+ //the throws keyword  does 2 thing ...1 it indicates the fellow caller to get prepare for the exception and handle it accordingly...2nd after writing throws to a mehtod,that method dont have to define the try and catch statements!
 
     public static double circum(double r)
             throws  NegativeRadiusException {
-                if(r<0){ //it is necessary to put this condtion otherwise jvm will claculate the -ve circumfence
+                if(r<0){ //it is necessary to put this condition otherwise jvm will claculate the -ve circumfence!!!
                   throw new NegativeRadiusException();
                 }
         double result = Math.PI *2*r;
         return result;
     }
+
 
     public static void main(String[] args)  {
 
