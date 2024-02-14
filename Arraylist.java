@@ -120,7 +120,7 @@ public class Arraylist {
             System.out.println(i);
            }
            
-
+         CollectionUtility.print(l1);  //this is the collection utility used to print all the elements of the collection
           
            }
     
