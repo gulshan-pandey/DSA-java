@@ -8,9 +8,9 @@ public class FileHandlingReader {
     public static void main(String[] args) {
         
         String filename = "file.txt";
-
+        //the filereader work/reads on the basis of integers
         try(FileReader reader = new FileReader(filename);){ //it is called {try with resource}
-            int read ; //initially it is zero or we can just initialise the read variable as it will read on the basis of integer
+            int read =0; //initially it is zero or we can just initialise the read variable as it will read on the basis of integer
             do{
                 read = reader.read();  //reader object will start to read the file
                 System.out.print((char)read); //now converting the read from int to char
