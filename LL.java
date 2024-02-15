@@ -1,7 +1,7 @@
 
 public class LL {
     
-    class Node{
+   public static class Node{
         int data;
         Node next;
 
@@ -13,6 +13,8 @@ public class LL {
     public static Node head;
     public static Node tail;
     
+   
+
     
     //add -first,last
     public void addFirst(int data){
@@ -48,19 +50,27 @@ public class LL {
         }
         Node temp = head;
         while(temp !=null){
-            System.out.println(temp.data);
+            System.out.print(temp.data+ "->");
             temp = temp.next;
         }
-        System.out.println();
+        System.out.println("null");
     }
+
+
+
+
         public static void main(String[] args) {
             LL list = new LL();
-            list.addFirst(1);
-            list.addFirst(2);
-            list.addLast(3);
-            list.addLast(4);
-        
             list.print();
+            list.addFirst(1);
+            list.print();
+            list.addFirst(2);
+            list.print();
+            list.addLast(3);
+            list.print();
+            list.addLast(4);
+            list.print();
+        
         
     }
 }

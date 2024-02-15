@@ -1,4 +1,4 @@
-public class Temp {
+public class FinalizeGC {
  String name ;
  int roll;
 @Override
@@ -8,9 +8,9 @@ protected void finalize() throws Throwable {
     
 public static void main(String[] args) {
     
-  Temp obj;
+  FinalizeGC obj;
   for(int i =0;i<1000000;i++){
-    obj = new Temp();
+    obj = new FinalizeGC();
   }
 
    
