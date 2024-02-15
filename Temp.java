@@ -1,17 +1,18 @@
 public class Temp {
-
+ String name ;
+ int roll;
+@Override
+protected void finalize() throws Throwable {
+    System.out.println("the memory cleared by GC");
+}
     
 public static void main(String[] args) {
     
-    int a =10;
-    int b =0;
+  Temp obj;
+  for(int i =0;i<1000000;i++){
+    obj = new Temp();
+  }
 
-    try{
-        int c= a/b;
-        System.out.println(c);
-    }
-    catch(Exception e){
-        System.out.println(e.toString());
-    }
+   
 }
 }
