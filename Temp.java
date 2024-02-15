@@ -3,7 +3,7 @@ public class Temp {
  int roll;
 @Override
 protected void finalize() throws Throwable {
-    System.out.println("the memory cleared by GC");
+    System.out.println("the memory was cleared by Garbage collection!");
 }
     
 public static void main(String[] args) {
