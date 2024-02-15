@@ -1,5 +1,6 @@
 import java.util.*;
 public class Methods {
+    //all the methods must be defined in a class
     
     //1st fn
     static int logic(int x,int y){ //it works as a function in java also static is used for sarvjanik function else we will have to create the new object to access this function

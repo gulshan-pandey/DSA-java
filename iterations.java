@@ -110,6 +110,18 @@ public class Iterations {
 // }
 
 
+
+//wap to print numbers triangle
+
+// int nums =10;
+// for(int i=0;i<=nums;i++){
+//     for(int j=0;j<=i;j++){
+//         System.out.print(j + " ");
+//     }
+//     System.out.println();
+// }
+    
+
 // System.out.println("\n\n");
 
 

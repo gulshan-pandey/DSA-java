@@ -16,10 +16,12 @@ public class FoodOrder {
 			wantToAddFoodItem = sc.next().charAt(0); // Accepting input from the customer
            
 		}
-
-		
 		if(wantToAddFoodItem =='n' || wantToAddFoodItem =='N'){
 			System.out.println("your total amount is : " + totalCost);
 		}
+
+
+
 	}
 }
+
