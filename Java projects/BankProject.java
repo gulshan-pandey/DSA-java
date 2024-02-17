@@ -58,7 +58,7 @@ public class BankProject {
          System.out.println(account.accountHolder + "  \'s money is : " + account .balance);
 
          account .withdraw();
-         System.out.println("showing account balance : " + account.balance);
+         System.out.println("account balance : " + account.balance);
 
          
 
