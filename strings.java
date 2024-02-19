@@ -51,6 +51,29 @@ public class Strings {
 		}
 		System.out.println(builder);
 
+
+        //WAP to allign the special characters at the last and the words at the starting
+        
+
+        String str = "He@#$llo!*&";
+        System.out.println(moveSpecialCharacters(str));
+
     }
+
+
+        public static String moveSpecialCharacters(String str){
+            String word ="" ;
+            String extra ="";
+            for(int i =0; i<str.length();i++){
+                char ch = str.charAt(i);
+                if(Character.isLetterOrDigit(ch)){
+                    word += ch;
+                }else extra += ch;
+            }
+            str = word + extra;
+            return str;
+        }
+        
+    
 
 }
