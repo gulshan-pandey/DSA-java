@@ -55,11 +55,12 @@ public class Strings {
         //WAP to allign the special characters at the last and the words at the starting
         
 
-        String str = "He@#$llo!*&";
+        String str = "He@#$lloThere!*&";
         System.out.println(moveSpecialCharacters(str));
 
     }
 
+    //WAP to allign the special characters at the last and the words at the starting
 
         public static String moveSpecialCharacters(String str){
             String word ="" ;
