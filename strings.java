@@ -60,7 +60,7 @@ public class Strings {
 
         //WAP to find the highest number of occurences in the given string
         String strng = "hello";
-                int highestCount = findHighestOccurrence(str);
+                int highestCount = findHighestOccurrence(strng);
                 System.out.println("The highest number of occurrences in '" + strng + "' is " + highestCount);
 
     }
@@ -70,8 +70,8 @@ public class Strings {
         public static String moveSpecialCharacters(String str){
             String word ="" ;
             String extra ="";
-            for(int i =0; i<str.length();i++){
-                char ch = str.charAt(i);
+            for(char ch : str.toCharArray()){
+            
                 if(Character.isLetterOrDigit(ch)){
                     word += ch;
                 }else extra += ch;
@@ -94,6 +94,7 @@ public class Strings {
                     for (char d : str.toCharArray()) {
                         if (c == d) {
                             count++;
+                            
                         }
                     }
                     if (count > maxCount) {
