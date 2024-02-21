@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Strings {
     public static void main(String[] args) {
         String name = "rohan";
-        String name2 = new String("munna"); // another way to define string
+        String name2 = new String("kartik"); // another way to define string
         // System.out.print("the name is: ");
         // System.out.print(name );
         // here remember that the println is used for the printing next words with new
@@ -12,18 +12,18 @@ public class Strings {
         // in the same line
 
         // more diff ways to print things
-        int m = 66;
-        float n = 55.333f;
-        System.out.printf("the values of m was %d and the value of n is %8.3f", m, n);
-        // same as C lang ryt remember that here %8.3f is mean that the number will
-        // occupy 8 digit spaces and the .3 is mean that it will upto 3 decimal point???
-        // for taking the string as an input
-        // greetings
+        
+        // int m = 66;
+        // float n = 55.333f;
+        // System.out.printf("the values of m was %d and the value of n is %8.3f", m, n);
+        // here %8.3f is mean that the number will occupy 8 digit spaces and the .3 is mean that it will upto 3 decimal point!
 
-        System.out.println("\n hello how are you");
-        Scanner s = new Scanner(System.in);
-        String ans = s.nextLine();
-        System.out.println(ans + "  as well");
+        // for taking the string as an input greetings
+
+        // System.out.println("\n hello how are you");
+        // Scanner s = new Scanner(System.in);
+        // String ans = s.nextLine();
+        // System.out.println(ans + "  as well");
 
 
 
@@ -53,14 +53,19 @@ public class Strings {
 
 
         //WAP to allign the special characters at the last and the words at the starting
-        
 
         String str = "He@#$lloThere!*&";
         System.out.println(moveSpecialCharacters(str));
 
+
+        //WAP to find the highest number of occurences in the given string
+        String strng = "hello";
+                int highestCount = findHighestOccurrence(str);
+                System.out.println("The highest number of occurrences in '" + strng + "' is " + highestCount);
+
     }
 
-    //WAP to allign the special characters at the last and the words at the starting
+    //allign the special characters at the last and the words at the starting --method
 
         public static String moveSpecialCharacters(String str){
             String word ="" ;
@@ -75,6 +80,31 @@ public class Strings {
             return str;
         }
         
-    
+
+
+
+        //WAP to find the highest number of occurences in the given string
+
+
+            public static int findHighestOccurrence(String str) {
+                int maxCount = 0;
+                char maxChar = '\0';
+                for (char c : str.toCharArray()) {
+                    int count = 0;
+                    for (char d : str.toCharArray()) {
+                        if (c == d) {
+                            count++;
+                        }
+                    }
+                    if (count > maxCount) {
+                        maxCount = count;
+                        maxChar = c;
+                    }
+                }
+                return maxCount;
+            
+
+        }
+        
 
 }
