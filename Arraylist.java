@@ -16,7 +16,7 @@ public class Arraylist {
         strlist.add("Indian"); // this is the 0th index;
         strlist.add("league");// this is 1st index
        strlist.add(1);// it can add different datatypes as well if we dont mention <datatype> during object creation !!!
-
+ 
         System.out.println(strlist.get(0)); //accessing the element
 
         for(int i =0;i<strlist.size();i++){     // accessing elements via forloop
@@ -79,7 +79,7 @@ public class Arraylist {
 
         
         ArrayList<Integer> l1 = new ArrayList<>();  //<Integer> depects only integers are allowed
-        ArrayList<Integer> l2 = new ArrayList<>(5); //can be modified by manupulatig elements
+        ArrayList<Integer> l2 = new ArrayList<>(5); //size can be modified by manupulating elements
             l1.add(3);
             l1.add(4);
             l1.add(5);
