@@ -1,32 +1,34 @@
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Queues {
-    
+
+    //First in first out
+
     public static void main(String[] args) {
         
-        Queue <Integer>queue = new LinkedList<>();  //Queue is an interface, LinkedList is a class
+        Queue<Integer> queue = new LinkedList<>();
 
-        queue.add(1); //can give error if elements cannot be added
-        queue.offer(2); 
+        queue.add(1);
+        queue.offer(2);
+        queue.offer(3);
+        queue.offer(4);
+        queue.offer(5);
 
-        CollectionUtility.print(queue); //calling the utility class which will print all the elements of the collection
+        for(Integer i:queue){
+            System.out.print(i +  " " );
+        }
+        System.out.println("\n");
 
-        System.out.println(queue.peek());  // the head of the queue is 1 because 1 entered earliest  ( fist in first out)
-        System.out.println(queue.element());  // peek and element both used to view the head element but  element could give Exception but peek cannot
-
-        System.out.println(queue.remove()); //remove can throw Exception of the Queue is empty
-
-       System.out.println("elements in queue after deletion : "  ); CollectionUtility.print(queue);
-
-       System.out.println("deleted element : " + queue.poll());
-       CollectionUtility.print(queue); //empty
+        System.out.println(queue.peek()); //will see throught eh element  at the tail and cannot give exception
+ 
+        System.out.println(queue.element());//can give exception if the queue is empty
+        
+        System.out.println(queue.remove()); //will remove 1 from the end
+        System.out.println(queue.poll()); //will remove 2 from the end and return null if empty queue
+        CollectionUtility.print(queue);  //is a utility class to print collections
 
 
-       //System.out.println(queue.remove()); //throws Exception
 
-       System.out.println(queue.poll()); //doesnot throw Exception...will print null if the que is empty!
-
-       
-     
     }
 }
