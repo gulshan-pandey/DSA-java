@@ -105,6 +105,17 @@ public class Strings {
                 return maxCount;
             
 
+                //WAP to concatinate no of Strings into a single string
+
+                // public static String concatinated(String ...a){
+                //     StringBuilder sb = new StringBuilder();
+                //     for (String str : a) {
+                //         sb.append(str).append(" ");
+                //     }
+                //     return sb.toString();
+                //  }
+             
+
         }
         
 
