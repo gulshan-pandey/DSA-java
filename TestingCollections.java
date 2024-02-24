@@ -32,7 +32,26 @@ public class TestingCollections {
       // unchangable.add(78); //throws Exception
 
 
+      //creating a list shorthand
+     
+      List <Integer> list2 =new ArrayList<>();
+      Collections.addAll(list2,2,3,3,45,5,77,9999999);
+      System.out.println(list2);
 
+
+
+     //finding max and min in the list
+    
+     int max = Collections.max(numList);
+
+     int min = Collections.min(numList);
+     System.out.println("max : " + max + "   min: " + min);
+     
+
+     //Reversing the list
+
+    Collections.reverse(list2);
+    System.out.println("reversed of the list is : " + list2);
 
 
     }
