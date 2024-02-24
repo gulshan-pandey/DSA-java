@@ -80,9 +80,7 @@ System.out.println(list);
         }
 
         // System.out.println(unique.toString());
-        System.out.println("the unique characters are : " + unique);
-
-
+        System.out.println("the unique characters are : " + unique + " and the size is " + unique.size());
 
 
     } 
