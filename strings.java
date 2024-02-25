@@ -151,7 +151,7 @@ public class Strings {
 
             //     public static String reverseEachWord(String str) {
             //         String res = "";
-            //         for (String s: str.split(" ")) {
+            //         for (String s: str.split(" ")) {       //str.spilit(" ") is used to break the sentence on the basis of white spaces and convet them into individual word to an array
             //             res = res + " " + reverseWord(s);
             //         }
             //         return res.trim();

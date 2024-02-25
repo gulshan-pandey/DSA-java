@@ -121,6 +121,35 @@ String Invitation = " Dear Gulshan, This Java Course is Amazing. Thanks!";
     
 
 
+
+    // WAP to remove the duplicate elements from the string
+
+    // String str = "object oriented programming";
+    // System.out.println(removeDuplicatesandSpaces(str));
+
+
     }
+
+
+
+
+
+
+    //methods----------------------------------------------------------------------
+
+//program to remove the dupicate the elements from the string
+
+    public static String removeDuplicatesandSpaces(String str) {
+        StringBuilder noDupes = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            // Check if character is not a space and not already in noDupes
+            if (ch != ' ' && noDupes.indexOf(String.valueOf(ch)) == -1) {
+                noDupes.append(ch);
+            }
+        }
+        return noDupes.toString();
+    }
+
         }
 
