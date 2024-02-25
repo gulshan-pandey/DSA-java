@@ -39,13 +39,19 @@ public class ARRAYS {
         // System.out.println("marks[2]: " + marks[2]);
         // System.out.println("the length of the array is : " + marks.length);
 
-        // accessing the array
 
+
+        
+        // accessing the array
 
         // System.out.println("  accessing the array using the forloop");
         // for (int i = 0; i < marks.length; i++) {
         //     System.out.print(marks[i] + " ");
         // }
+
+
+
+
 
         // Print the elements of the array in reverse order
 
@@ -56,7 +62,11 @@ public class ARRAYS {
 
         // System.out.println("\nforEach loop ---------------------------------------------");
 
-        // // Print the elements of the array using forEach loop
+
+
+
+
+        // Print the elements of the array using forEach loop
         // for (int a : marks) { // that a will iterate over each elements of the array
         //     System.out.print(a + " ");
         // }
@@ -119,6 +129,11 @@ public class ARRAYS {
         }
         System.out.println("the sum of float array is : " + sum);
 
+
+
+
+
+
         // WAP to findout weather a given integer is present in an array or not
 
         int[] ar = { 11, 22, 33, 44, 66, 77 };
@@ -132,6 +147,10 @@ public class ARRAYS {
         }
         System.out.println(found);
 
+
+
+
+
         // Question calculate the avg marks from an array containg marks of all
         // staudents in physics using forEach loop
 
@@ -142,6 +161,10 @@ public class ARRAYS {
 
         // }
         // System.out.println("the avg is : " + sum/mark.length);
+
+
+
+
 
         // Create a java program to add 2 matrix of sixe 2X3
 
@@ -161,6 +184,11 @@ public class ARRAYS {
             }
             System.out.println();
         }
+        
+        
+        
+
+
 
         // WAP to take the input and make them into an array
 
@@ -191,6 +219,11 @@ public class ARRAYS {
 
         // System.out.println("\n\n");
 
+
+
+
+
+
         // WAP to reverse an array
 
         // int [] ary = { 22,33,44,55,66,77,88,99};
@@ -207,14 +240,19 @@ public class ARRAYS {
 
         // WAP to reverse an array---SWAP method
 
+
+
+
+
         // ---------------------------IMP QUE --------------------------------
 
+
+
+
+
         // int [] arr ={1,2,3,4,5,6,7,8,9,10};
-        // int n =Math.floorDiv(arr.length,2); //this will return the greatest integer
-        // of the array.length/2 means the middle number till which the swapping will
-        // happen
-        // int temp; //creating the temp storage so that the data lose will not happen
-        // and swapped esaily
+        // int n =Math.floorDiv(arr.length,2); //this will return the greatest integer of the array.length/2 means the middle number till which the swapping will happen
+        // int temp; //creating the temp storage so that the data lose will not happen and swapped esaily
         // int l= arr.length;
         // for(int i=0;i<=n;i++){
         // temp= arr[i];
@@ -225,6 +263,11 @@ public class ARRAYS {
         // for(int element : arr){
         // System.out.print(element + " " );
         // }
+
+
+
+
+
 
         // QUestion WAP to find the maximum element in an array
 
@@ -239,7 +282,16 @@ public class ARRAYS {
         // }
         // System.out.println(max);
 
+
+
+
         // alternatively-----------------------------------------------------
+
+
+
+
+
+
 
         // int [] arr={24,6,2,89,73,90};
         // int max= integer.MIN_VALUE;
@@ -265,6 +317,10 @@ public class ARRAYS {
         // }
         // System.out.println(temp);
 
+
+
+
+
         // QUE to test weather the given array is sorted of not
 
         // int[] ary = { 24, 142, 5, 125, 36, 7, 3, 783 };
@@ -284,6 +340,10 @@ public class ARRAYS {
         // } else {
         // System.out.println("this array is not sorted");
         // }
+
+
+
+
 
         // WAP to take the input the numbers in the aaray and reverse those numbers
 
@@ -315,6 +375,10 @@ public class ARRAYS {
         // System.out.print(number + " ");
         // }
 
+
+
+
+
         // WAP to input an array and find the number of occurences of the input element
         // in that array
 
@@ -331,6 +395,11 @@ public class ARRAYS {
 
         // }
         // System.out.println("the no. of occurences of ur number is : " + occurences);
+
+
+
+
+
 
         // WAP for to find the minimum and the maximum elements of the array
 
@@ -358,8 +427,11 @@ public class ARRAYS {
         // }
         // System.out.println("the max element of the array is :" + maxEle);
 
-        // WAP in which you keep entering the words and the loop continues untile you
-        // enter exit
+
+
+
+
+        // WAP in which you keep entering the words and the loop continues until you enter exit
 
         // in this problem we cannot use == operator as it is a refrence type variable
         // se we'll have to use {.equals("value")}
@@ -379,6 +451,10 @@ public class ARRAYS {
         // }
         // } while(true);
 
+
+
+
+
         // WAP a program to delete an element form an array using Arrays.copy method
 
         int[] originalArray = { 1, 2, 3, 4, 5 };
@@ -390,6 +466,10 @@ public class ARRAYS {
 
         System.out.println("Array after deleting element at index " + indexToDelete + ": " + Arrays.toString(newArray));
     }
+
+
+
+
 
     public static int[] deleteElement(int[] arr, int index) {
         if (index < 0 || index >= arr.length) {

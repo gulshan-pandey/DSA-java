@@ -38,6 +38,9 @@ public class Strings {
         System.out.println(sb.toString());
 
 
+
+        
+
        //WAP take an array of word and concatinate them into a single string using string builder
 
 
@@ -52,10 +55,14 @@ public class Strings {
 		System.out.println(builder);
 
 
+
+
         //WAP to allign the special characters at the last and the words at the starting
 
         String str = "He@#$lloThere!*&";
         System.out.println(moveSpecialCharacters(str));
+
+
 
 
         //WAP to find the highest number of occurences in the given string
@@ -63,7 +70,30 @@ public class Strings {
                 int highestCount = findHighestOccurrence(strng);
                 System.out.println("The highest number of occurrences in '" + strng + "' is " + highestCount);
 
+
+        //WAP to reverse all the words in the string
+
+        // String str = "all Cows eat grass";
+        // System.out.println(reverseEachWord(str));
+
+
     }
+
+
+
+   
+
+
+
+
+
+
+
+
+
+    //methodssss----------------------------------------------
+
+
 
     //allign the special characters at the last and the words at the starting --method
 
@@ -79,7 +109,6 @@ public class Strings {
             str = word + extra;
             return str;
         }
-        
 
 
 
@@ -114,7 +143,27 @@ public class Strings {
                 //     }
                 //     return sb.toString();
                 //  }
-             
+            
+                
+
+
+                //program to reverse each word in a given sentence
+
+            //     public static String reverseEachWord(String str) {
+            //         String res = "";
+            //         for (String s: str.split(" ")) {
+            //             res = res + " " + reverseWord(s);
+            //         }
+            //         return res.trim();
+            //     }
+            //     private static String reverseWord(String s) {
+            //         String res = "";
+            //         for (int i = s.length() - 1; i >= 0; i--) res = res + s.charAt(i);
+            //         return res;
+                
+            //   }
+
+
 
         }
         
