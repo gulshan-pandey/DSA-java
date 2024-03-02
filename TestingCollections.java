@@ -17,17 +17,17 @@ public class TestingCollections {
         numList.add(-76);
         numList.add(9);
 
-        System.out.println(numList); //we cannot print the elements like this in conventional array
+        System.out.println(numList); //we cannot print the elements like this in conventional array!
 
-       Collections.sort(numList); //it is the Collention Interface's static method to sort things ,obviously it will not work on sets!
+       Collections.sort(numList); //it is the Collention's static method to sort things ,obviously it will not work on sets!
        CollectionUtility.print(numList); //after sorting happened
 
-
+       Collections.unmodifiableList(numList);
        //in order to make your list unmodifiable
-       List<Integer> unchangable = Collections.unmodifiableList(numList);
+       List<Integer> unchangable = Collections.unmodifiableList(numList); //creating new list which is unmodifiable
 
 
-       System.out.println(unchangable); // this list is unmodifiable/unchangable
+       System.out.println("the unchangable list is " + unchangable); // this list is unmodifiable/unchangable
 
       // unchangable.add(78); //throws Exception
 

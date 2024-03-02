@@ -53,7 +53,7 @@ System.out.println(list);
         //WAP to reverse the list
         List<Integer> numlist = new ArrayList<>();
 
-        Collections.addAll(numlist,43,53,65,68,97,99,100);
+        Collections.addAll(numlist,43,53,65,68,97,99,100); //addAll takes varargs and make them list
         // System.out.println(numlist);
         // Collections.reverse(numlist);
         // System.out.println(numlist);;
