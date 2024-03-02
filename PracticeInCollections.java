@@ -55,7 +55,9 @@ System.out.println(list);
         // Collections.reverse(numlist);
         // System.out.println(numlist);;
 
-        // rev(numlist);
+       
+
+        rev(numlist);
 
 
         // WAP that takes a String and returns the number of unique characters using set
@@ -79,7 +81,7 @@ System.out.println(list);
 
         int j=li.size();
         for(int i=0;i<j/2;i++){
-           PracticeInCollections.swap(li,i,j-i-1);
+           PracticeInCollections.swap(li,i,j-i-1);       //recalling the swap method ,and this method will be called list.size()/2 times
         }
     }
 }
