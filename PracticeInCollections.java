@@ -65,7 +65,7 @@ System.out.println(list);
         // Set<Character> unique =new HashSet<>();
         // Scanner sc = new Scanner(System.in);
         // System.out.println("Enter your string ");
-        // String str = sc.next();
+        // String str = sc.nextLine();
 
         // for (Character ch : str.toCharArray()) {
         //     unique.add(ch);
