@@ -20,11 +20,13 @@ public class Queues {
         }
         System.out.println("\n");
 
-        System.out.println(queue.peek()); //will see throught eh element  at the tail and cannot give exception
+        CollectionUtility.print(queue);
+
+        System.out.println(queue.peek()); //will see throught the element  at the head and cannot give exception
  
         System.out.println(queue.element());//can give exception if the queue is empty
         
-        System.out.println(queue.remove()); //will remove 1 from the end
+        System.out.println(queue.remove()); //will remove 1 from the end(head) ,can also throw exception
         System.out.println(queue.poll()); //will remove 2 from the end and return null if empty queue
         CollectionUtility.print(queue);  //is a utility class to print collections
 

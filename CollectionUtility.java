@@ -1,8 +1,6 @@
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Set;
+import java.util.*;
  
-//this is the utility class which is used to print all the elements to the specified collcetion and can be used by any class
+//this is the utility class to print all the elements to the specified collection and can be used by any class
 
 public class CollectionUtility {
     
@@ -16,14 +14,24 @@ public class CollectionUtility {
 
     
     public static void main(String[] args) {
-        
+          
         // Collection<String> names = Arrays.asList("Alice", "Bob", "Charlie");
         // Collection<Integer> ages = Set.of(25, 30, 35);
 
         // CollectionUtility.print(names);  // Output: Alice Bob Charlie
         // CollectionUtility.print(ages);
 
-    
+        // Queue<Integer> queue = new LinkedList<>();
+
+        // queue.add(1);
+        // queue.offer(2);
+        // queue.offer(3);
+        // queue.offer(4);
+        // queue.offer(5);
+
+
+        // CollectionUtility.print(queue);
+
 
     }
 
