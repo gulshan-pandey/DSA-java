@@ -122,7 +122,7 @@ public class Strings {
                     int count = 0;
                     for (char d : str.toCharArray()) {
                         if (c == d) {
-                            count++;
+                            count++;  
                             
                         }
                     }
@@ -132,7 +132,7 @@ public class Strings {
                     }
                 }
                 return maxCount;
-            
+            }
 
                 //WAP to concatinate no of Strings into a single string
 
@@ -165,7 +165,7 @@ public class Strings {
 
 
 
-        }
+        
         
 
 }

@@ -1,5 +1,7 @@
 package com.Warehouse;
 
+import java.util.List;
+
 import com.company.Bike;
 
 public class collections {
@@ -28,6 +30,11 @@ public class collections {
         
 
 
+    }
+
+    public static void reverse(List<String> list) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'reverse'");
     }
 
     
