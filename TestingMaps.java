@@ -7,7 +7,7 @@ public class TestingMaps {
     
  Map<String,Integer> map =new HashMap<>(); //map is also an interface ,and takes 2 datatypes for key and value
 
- //putting the values in map
+ //putting the keys and values in map
  map.put("mohan", 65);
  map.put("raju", 45);
  map.put("john", 62);
@@ -22,9 +22,9 @@ public class TestingMaps {
 
  System.out.println(map.size()); 
 
- System.out.println(map.get("addy"));  // will give the value of the perticular key
+ System.out.println(map.get("addy"));  // will give the value of the corresponding key
 
- System.out.println(map.containsKey("raja")); 
+ System.out.println(map.containsKey("raja")); //checks if the map contans the perticular key
 
  System.out.println(map.remove("john"));  //will remove the perticular record
 
