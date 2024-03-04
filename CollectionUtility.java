@@ -15,7 +15,10 @@ public class CollectionUtility {
     
     public static void main(String[] args) {
           
-        // Collection<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+        
+        // Collection<String> names = Arrays.asList("Alice", "Bob", "Charlie");       //this method is used to convert an array into a fixed-size list
+
+        // System.out.println("class name is : "  + names.getClass());  //ArrayList
         // Collection<Integer> ages = Set.of(25, 30, 35);
 
         // CollectionUtility.print(names);  // Output: Alice Bob Charlie

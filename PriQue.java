@@ -7,7 +7,7 @@ public class PriQue {
         
         // making the object with custom comparator
         PriorityQueue <Student> queue = new PriorityQueue<>(new Comparator<Student>() {
-            
+
             public int compare(Student student , Student t1){
               return student.getGrade() - t1.getGrade();
             }

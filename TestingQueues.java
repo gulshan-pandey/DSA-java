@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Queues {
+public class TestingQueues {
 
     //First in first out
 
@@ -20,7 +20,7 @@ public class Queues {
         }
         System.out.println("\n");
 
-        CollectionUtility.print(queue);
+        CollectionUtility.print(queue);  //A utility class to print any collection
 
         System.out.println(queue.peek()); //will see throught the element  at the head and cannot give exception
  

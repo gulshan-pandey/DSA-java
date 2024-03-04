@@ -43,6 +43,8 @@ class worker {
     }
 }
 
+
+
 class Car {
     int noOfWheels;
     String color;
@@ -52,7 +54,7 @@ class Car {
 
     static int noOfCarSold; // this is static that how much car has been sold
 
-    Car(String color) {
+    Car(String color) {  //constructor 
         this.color = color;
         noOfSeats = 5;
         noOfWheels = 4;
@@ -70,7 +72,7 @@ class Car {
     // static is code block and it is called only once per class and doesnt matter how many objects u have instantiated
     static {
         noOfCarSold = 0;
-        System.out.println(" I am in static block,and run only once");
+        System.out.println(" I am in static block,and run only once per class");
     }
 
     // normal codeblock will run as many times as the objects has been made
