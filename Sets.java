@@ -12,7 +12,7 @@ public class Sets {
         names.add("golu");
         System.out.println(names.add("golu")); //will print false as it has been already added previously
 
-        CollectionUtility.print(names); //remember set is unordered so it may print unordered names
+        CollectionUtility.print(names); //remember set is unordered so it may print unordered stuff
         System.out.println("the size is :"+names.size());
         System.out.println(names.contains("golu")); //will print true, note : the searching,inserting,removing in the set is the FASTEST and can be done in the constant time!!!
 
