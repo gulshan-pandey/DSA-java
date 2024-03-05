@@ -15,7 +15,7 @@ class Ranger implements Bicycle, Bike {
 
     // int a = 999; // We can sort of modify the variables of interfaces indeed but should not overwrite them
     void blowHorn() {
-        System.out.println("pee peeee...dhoom machale");
+        System.out.println("pee peeee...");
     }
 
     // Defining all the methods of interface
@@ -45,7 +45,7 @@ public class Interfaces {
 
         Ranger myBicycle = new Ranger();
         myBicycle.applyBrake(6);
-        myBicycle.speedUp(9);
+        myBicycle.speedUp(9); 
 
         System.out.println(myBicycle.a); // We can access properties in Interfaces
 
