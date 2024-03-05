@@ -39,6 +39,28 @@ System.out.println("\n\n all the values in the map is : ");
   
 
 
+ // quest: WAP to ask the user which country to get its capital and if not present answer accordingly
+
+//  Map <String,String> countrymap = new HashMap <> ();
+
+//  countrymap.put("India","New Delhi");
+//  countrymap.put("China","Beijing");
+//  countrymap.put("Pak","islamabad");
+//  countrymap.put("England","london");
+//  countrymap.put("France","paris");
+//  countrymap.put("Nepal","kathmandu");
+
+//  Scanner sc = new Scanner(System.in);
+//  System.out.println("enter the name of the country to get its capital: ");
+//  String name = sc.next();
+
+//  if(countrymap.containsKey(name)){
+//      System.out.println("the capital is : "+ countrymap.get(name));
+//  }
+//  else System.out.printf("sorry I dont have the capital of %s",name);
+
+
+
 
   }
 }
