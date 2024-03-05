@@ -14,6 +14,33 @@ enum Color {
     A, B, C, D, F
   }
   
+
+
+  enum Day{
+    MONDAY("weekday"),  //we can also say that it is the initialization of oject of enum
+    TUESDAY("weekday"),
+    WENSDAY("weekday"),
+    THURSDAY("weekday"),
+    FRIDAY("weekday"),
+    SATURDAY("weekend"),
+    SUNDAY("weekend");
+
+   private final String ocassion ;
+
+   private Day(String dayz){
+     this.ocassion = dayz;
+   }
+
+   public String getDay(){
+    return ocassion;
+   }
+
+
+  }
+
+
+
+
   public class enumsss {   //enum is very similar to class
  
     public static void main(String[] args) {
@@ -53,9 +80,31 @@ enum Color {
       String sig = greenLight.getSignal();
       System.out.println("\n\nthe signal is : " + sig);
       
+
+
+
+
+
+
+System.out.println("\n\n printing all the days in the week");
+
+      for (Day d: Day.values()) {
+
+        System.out.printf("%s : %s\n",d,d.getDay());
+      }
+
+    
+
+
+      
   
     }
   
+
+
+
+
+
     enum TrafficLight {
       RED("stop"),   //some constant to store in enum
       GREEN("go"),
