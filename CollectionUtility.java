@@ -7,7 +7,7 @@ public class CollectionUtility {
     public static <E> void print(Collection <E> collection){  //here E is generic
        System.out.print("the Collection is : ");
         for (E obj : collection) {
-            System.out.print(obj + " ");
+            System.out.print(obj + "  ");
         }
         System.out.println("\n");
     }

@@ -8,19 +8,20 @@ public class PriQue {
         // making the object with custom comparator
         PriorityQueue <Student> queue = new PriorityQueue<>(new Comparator<Student>() {
 
-            public int compare(Student student , Student t1){
+            public int compare(Student student , Student t1){  //this is the custom comparator
               return student.getGrade() - t1.getGrade();
             }
         });
 
         queue.offer(new Student("ram",'B'));
+        queue.offer(new Student("john",'D'));
         queue.offer(new Student("kaka",'C'));
         queue.offer(new Student("bob",'A'));
         queue.offer(new Student("himanshu",'A'));
-        queue.offer(new Student("john",'D'));
 
         System.out.println("to string is : " + queue);
 
+        System.out.println(" \n initially the the priority queue is not organised ,but it will,when we do operation on them! \n");
         System.out.println(queue.poll());
         System.out.println(queue.poll());
         System.out.println(queue.poll());
