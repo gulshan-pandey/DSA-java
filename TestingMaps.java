@@ -39,7 +39,7 @@ System.out.println("\n\n all the values in the map is : ");
   
 
 
- // quest: WAP to ask the user which country to get its capital and if not present answer accordingly
+ // quest: WAP to ask the user for country name to get its capital and if not present ,answer accordingly
 
 //  Map <String,String> countrymap = new HashMap <> ();
 
@@ -55,7 +55,7 @@ System.out.println("\n\n all the values in the map is : ");
 //  String name = sc.next();
 
 //  if(countrymap.containsKey(name)){
-//      System.out.println("the capital is : "+ countrymap.get(name));
+//     System.out.printf("the capital of %s is :  %s ",name,countrymap.get(name));
 //  }
 //  else System.out.printf("sorry I dont have the capital of %s",name);
 
