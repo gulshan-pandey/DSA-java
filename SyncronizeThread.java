@@ -14,7 +14,7 @@ class Counter {
 
 class Runcounter extends Thread {
 
-    Counter counter;
+    private Counter counter;
 
     public Runcounter(Counter counter) {
         this.counter = counter;
