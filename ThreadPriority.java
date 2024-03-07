@@ -1,6 +1,6 @@
 class prior extends Thread{
    
-    public prior(String name){
+    public prior(String name){ //constructor
         super(name);
         
 
@@ -23,7 +23,7 @@ public class ThreadPriority{
         prior h1 = new prior("nonu1");
         prior h2 = new prior("nonu2");
         prior h3 = new prior("nonu3");
-        prior h4 = new prior("nonu4 (most Important)"); //just named it as most important
+        prior h4 = new prior("nonu4 (most Important)"); //just named it as most important ,nothing specific done
         prior h5 = new prior("nonu5");
         prior h6 = new prior("nonu6");
 

@@ -23,6 +23,7 @@ class Cabin {
 		Cabin c1 = new Cabin(121);
 		Professor p1 = new Professor("Ronald", c1);
 		Professor p2 = new Professor("Bonnie", c1);
+		System.out.println(p1.name);
 		Cabin c2 = new Cabin(122);
 		p1.updateCabin(c2);
 		System.out.println(p1.cabin.cabinNumber);
