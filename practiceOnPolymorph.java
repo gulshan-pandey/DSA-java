@@ -1,4 +1,4 @@
-//create an abstravt class pen with methods write() and refill() as abstract methods.
+//create an abstract class pen with methods write() and refill() as abstract methods.
 
 // abstract class working {
 //     public working() {
@@ -53,7 +53,8 @@ interface BasicAnimal {
     void eat();
 
     void sleep();
-    default void move(){
+
+    default void move(){  //default method
      System.out.println("they can move here and there");
     }
 }
@@ -148,7 +149,11 @@ public class PracticeOnPolymorph {
          h.sleep();
          h.speak();
 
-         monkey m1 =new Human(); //running polymorphism (making human as a monkey)
+
+         System.out.println("\n\n");
+
+
+         monkey m1 =new Human(); //running polymorphism (making human as a monkey(in actuality the m1 is of monkey type))
           m1.bite();
           m1.jump();
         //   m1.speak(); --> cannot use method because the refrence is monkey which does not have speak method
@@ -156,7 +161,7 @@ public class PracticeOnPolymorph {
         BasicAnimal keeda = new Human();
         keeda.move();
         System.out.println("\n\n\n");
-        // keeda.speak(); --> it is an animal from animak class it cannot posess the human capablities;
+        // keeda.speak(); --> it is an animal from animal class it cannot posess the human capablities;
         
         
         

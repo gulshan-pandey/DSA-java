@@ -17,7 +17,7 @@ interface player0 {
     private void greetings() { //declaring private method
         System.out.println("good mrng");
     }
-
+ 
     default void play() { // this default method doesnot need to implement in the concrete class
                           // introduced in java8
         greetings();
