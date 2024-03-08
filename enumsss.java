@@ -1,12 +1,8 @@
 
-// import static org.junit.jupiter.api.Assertions.assertEquals;
-
-// import org.junit.jupiter.api.Test;
 
 enum Color {
     RED,
     GREEN,
-    BLUE,
     YELLOW;
   }
   
@@ -17,9 +13,9 @@ enum Color {
 
 
   enum Day{
-    MONDAY("weekday"),  //we can also say that it is the initialization of oject of enum
+    MONDAY("weekday"),  //we can also say that it is the initialization of object of enum
     TUESDAY("weekday"),
-    WENSDAY("weekday"),
+    WEDNUSDAY("weekday"),
     THURSDAY("weekday"),
     FRIDAY("weekday"),
     SATURDAY("weekend"),
@@ -41,7 +37,7 @@ enum Color {
 
 
 
-  public class enumsss {   //enum is very similar to class
+  public class enumsss {   //enum is very similar to class but it contains constants
  
     public static void main(String[] args) {
   
@@ -64,14 +60,18 @@ enum Color {
 
       Grade gr = Grade.B;
 
-      System.out.println("Values of Grade enum:");
+      System.out.println("\n Values of Grade enum:");
       for (Grade grd : Grade.values()) {
         System.out.println("the grade is " + grd);
       }
 
       Grade marks = Grade.valueOf("B");  // .valueOf() method is used to convert a String into an enum constant itself.
-
       System.out.println("marks : "+ (marks));
+
+      Grade m = Grade.C;
+      System.out.println("the grade is :    "+m);
+
+
 
 
 
@@ -90,13 +90,9 @@ System.out.println("\n\n printing all the days in the week");
 
       for (Day d: Day.values()) {
 
-        System.out.printf("%s : %s\n",d,d.getDay());
+        System.out.printf("%s : %s\n",d,d.getDay());  //smooth
       }
 
-    
-
-
-      
   
     }
   
