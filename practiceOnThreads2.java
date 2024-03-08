@@ -13,16 +13,43 @@ class ques1 extends Thread{
     }
 }
 
+
+//WAP to start the Thread and print its each state(creation,starting and termination) use Thread.sleep() to simulate long running tasks and Thread.getState to print the thread's state
+
+class ques2 extends Thread{
+
+public void run(){
+    try {
+        Thread.sleep(3000);
+    } catch (InterruptedException e) {
+        throw new RuntimeException(e);
+    }
+    System.out.println("from inside the run: " + getState());
+
+
+}
+
+}
+
+
+
 public class practiceOnThreads2 extends Thread{
-   
-   
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         
-      ques1 p1 = new ques1(1);
-      ques1 p2 = new ques1(2);
+      //ques1  
+    //   ques1 p1 = new ques1(1);
+    //   ques1 p2 = new ques1(2);
+    //   p1.start();
+    //   p2.start();
 
-      p1.start();
-      p2.start();
+
+    //ques2
+     ques2 q2 = new ques2();
+     System.out.println("creation of thread : " + q2.getState());
+     q2.start();
+     q2.join();
+     System.out.println("Thread finished : " + q2.getState());
+
+
     }
 }
