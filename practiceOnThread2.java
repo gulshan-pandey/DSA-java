@@ -54,7 +54,7 @@ class ques3 extends Thread {
 // ques4 : WAP to create 3 threads representing 3 signals RED ,GREEN,BLUE .Each signal should be for a cretain time,then switch to next signal in order.Use sleep fot timing and syncronize to kae sure only one sgnal is active at a time
 
 class Ques4 extends Thread{
-   public final TrafficColor tr;
+   public final TrafficColor tr; //TrafficColor is an enum type
 
     public Ques4(TrafficColor tr){
         this.tr = tr;
@@ -75,7 +75,7 @@ class Ques4 extends Thread{
 //initilizing enum for traffic light
     enum TrafficColor{
 
-        RED(5000) ,YELLOW(2000) ,GREEN(1000);
+        RED(5000) ,YELLOW(3000) ,GREEN(2000);
 
        private int tim;
 
