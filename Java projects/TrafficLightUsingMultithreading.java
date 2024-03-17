@@ -1,19 +1,19 @@
 
 class Traffic extends Thread{
-    public final TrafficColor tr;
+    public final TrafficColor sig;  // using enum---TrafficColor has became like a datatype here
  
      public Traffic(TrafficColor tr){
-         this.tr = tr;
+         this.sig = tr;
      }
      
      public synchronized void run(){
-         System.out.printf("Its %s light please have some patience \n",tr );
+         System.out.printf("Its %s light please have some patience \n",sig );
          try {
-             Thread.sleep(tr.getTim());
+             Thread.sleep(sig.getTim());
          } catch (InterruptedException e) {
              System.out.println(e);
          }
-         System.out.printf("%s light over\n",tr);
+         System.out.printf("%s light over\n",sig);
      }
  
  }
@@ -21,7 +21,7 @@ class Traffic extends Thread{
  //initilizing enum for traffic light
      enum TrafficColor{
  
-         RED(5000) ,YELLOW(2000) ,GREEN(1000);
+         RED(4000) ,YELLOW(2000) ,GREEN(1000);
  
         private int tim;
  
