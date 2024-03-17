@@ -29,7 +29,7 @@
 
 // }
 
-// ques3: wap to ensure that the 2nd thread starts only after the first thread ends and the thired thread starts only aftre second thread snds using the join mehtod.Each thread should print its start and end along with its name
+// ques3: wap to ensure that the 2nd thread starts only after the first thread ends and the third thread starts only after second thread ends using the join mehtod.Each thread should print its start and end along with its name
 
 
 class ques3 extends Thread {
