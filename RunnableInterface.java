@@ -15,6 +15,23 @@ class RunnThread2 implements Runnable {
     }
 }
 
+// pattern through multithreading: note:- a real multithreading will ruin the patterns
+
+class patterns implements Runnable{
+    private String name;
+    public patterns(String name){
+      this.name = name;
+    }
+      public void run(){
+        for(int i=0;i<=20;i++){
+        for(int j=0;j<=i;j++){
+          System.out.print(name);
+        }
+          System.out.println(i);
+        }
+        System.out.println(Thread.currentThread().getName()+ " " +" completed");
+      }
+  }
 public class RunnableInterface {
     public static void main(String[] args) {
 
@@ -36,5 +53,19 @@ public class RunnableInterface {
         System.out.println("my first thread name is : " + gun1.getName() );
         System.out.println("my first thread is is : " + gun2.getId() );
         System.out.println("my first thread name is : " + gun2.getName() );
+
+
+
+        //pattern through multithreading
+        patterns task1 = new patterns ("*");
+        patterns task2 = new patterns ("#");
+
+        Thread func= new Thread(task1);
+        Thread func2= new Thread(task2);
+        func.start();
+        func2.start();
+
+
+        
     }
 }
