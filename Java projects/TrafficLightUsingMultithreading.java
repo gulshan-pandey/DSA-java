@@ -1,3 +1,4 @@
+import Multithreading.TrafficColor;
 
 class Traffic extends Thread{
     public final TrafficColor sig;  // using enum---TrafficColor has became like a datatype here

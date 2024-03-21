@@ -1,3 +1,4 @@
+package Multithreading;
 class Counter {
     private int count = 0;
 
@@ -59,7 +60,7 @@ public class SyncronizeThread {
         System.out.printf("%d : time-taken  %f", c1.getCount(), (endTime - startTime));
 
 
-        
+
     }
 
 }

@@ -1,3 +1,4 @@
+package Multithreading;
 // WAP that creates 2 threads,each thread should print "hello from Thread X".whree X is the number of the thread(1 0r 2),ten times,then terminate
 
 // class ques1 extends Thread {

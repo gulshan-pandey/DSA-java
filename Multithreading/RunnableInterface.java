@@ -1,3 +1,4 @@
+package Multithreading;
 class RunnThread implements Runnable {
     // runnable interface me run method ko define krna hota hai
     public void run() {
