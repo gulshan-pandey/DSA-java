@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class ProblemSet2 {
+public class Calculations {
     public static void main(String[] args) {
         //result of float a= 7/4*0/2
         float a=7/4*9/2;
