@@ -58,6 +58,8 @@ public class SyncronizeThread {
 
         System.out.printf("%d : time-taken  %f", c1.getCount(), (endTime - startTime));
 
+
+        
     }
 
 }
