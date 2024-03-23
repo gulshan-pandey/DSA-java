@@ -5,9 +5,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 class FetchName implements Callable<String>{
-    private final String name;
 
-    
+    private final String name;
 
     public FetchName(String name) {
         this.name = name;
@@ -17,7 +16,7 @@ class FetchName implements Callable<String>{
 
     @Override
     public String call() throws Exception {
-        System.out.println("calling the server...to get details");
+        System.out.println("calling the server using future...to get details");
         Thread.sleep(2000);
         return name + " programmer";
     }
@@ -39,8 +38,8 @@ public class ReturningFutures {
         Future<String> name2 =  services.submit(task2);
         Future<String> name3 =  services.submit(task3);
         Future<String> name4 =  services.submit(task4);
-
-        System.out.println(name1.get());  //now the  program will stop to get the name form the call method(or from the server)
+ 
+        System.out.println(name1.get());  //now the  program will stop further executing in order to get the name form the call method(or from the server)
         System.out.println(name2.get());
         System.out.println(name3.get());
         System.out.println(name4.get());

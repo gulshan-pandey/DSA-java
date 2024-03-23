@@ -2,6 +2,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+// Executor service is a framework use to manage and execute threads without manually managing the thread lifecycle 
+
 class Executor implements Runnable {
     private String sign;
 
@@ -48,8 +50,9 @@ public class ExecutorMultithreading {
 
         // for multiple threads---------
 
-        double stim= System.currentTimeMillis();
-        ExecutorService multiple = Executors.newFixedThreadPool(10);
+        double starttim= System.currentTimeMillis();
+
+        ExecutorService multiple = Executors.newFixedThreadPool(10);    //initialized threadpool
         for(int i= 0;i<10;i++){
             Executor work = new Executor((i+"a"));
             multiple.submit(work);

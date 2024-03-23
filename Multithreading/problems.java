@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
  
 //Wap create a fixed thred pool with a specified number of threads using fixedThread,submit multiple tasks to the executor,where each task should print the current thread's name and sleep for a random time between 100 and 500 millisec.
+
 class que2 implements Runnable{
 private int number;
 
