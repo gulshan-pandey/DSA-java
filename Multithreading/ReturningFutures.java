@@ -13,7 +13,6 @@ class FetchName implements Callable<String>{
     }
 
 
-
     @Override
     public String call() throws Exception {
         System.out.println("calling the server using future...to get details");
@@ -34,6 +33,10 @@ public class ReturningFutures {
 
 
         // Future:  represents the result of an asynchronous computation. It provides a way to obtain the result of a task that is being executed concurrently.and informaton is retrieved using the "get()" method
+
+
+        // Future is a datatype in Java. It is a placeholder for the result of an asynchronous computation. A Future object can be used to check if the computation is complete, and to retrieve the result when it is available,generic class, which means that it can be used to represent the result of any type of computation. 
+        
         Future<String> name1 =  services.submit(task1);
         Future<String> name2 =  services.submit(task2);
         Future<String> name3 =  services.submit(task3);

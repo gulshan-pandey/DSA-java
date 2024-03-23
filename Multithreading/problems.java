@@ -1,4 +1,6 @@
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -36,82 +38,92 @@ class que2 implements Runnable {
 
 }
 
+// Que2-- WAP uses an executor service to execute multiple Callable tasks.Each
+// task should calculate and return the factorial of a number provided to it.Use
+// Future objects to receive th results of the calcultaiopns.Aftwer all tasks
+// are submitted,retrieve the result from the future,print them,and ensure the
+// execurtor service sutsdown correctly!
 
-// Que2-- WAP uses an executor service to execute multiple Callable tasks.Each task should calculate and return the factorial of a number provided to it.Use Future objects to receive th results of the calcultaiopns.Aftwer all tasks are submitted,retrieve the result from the future,print them,and ensure the execurtor service sutsdown correctly!
+class FetchFactorial implements Callable<Integer> {
 
+    private final int num;
 
-
-
-class FetchFactorial implements Callable<Integer>{
-    
-    private int num;
-    
-    public FetchFactorial(int n){
-        this.num= n;
+    public FetchFactorial(int n) {
+        this.num = n;
     }
-    
-    public int fact(int num){
-        int fact =1;
-        for(int i=num;i>=1;i--){
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-            }
-            fact= num *(num-1);
+
+    public int fact(int num)  {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        int fact = 1;
+        for (int i = 1; i <= num; i++) {
+            fact *= i;
         }
         return fact;
     }
+    
 
-   @Override
-    public Integer call() throws InterruptedException{
-       
-  
-        System.out.println("getting the factorial from the server "+ num+ ":");
-        Thread.sleep(100);
+    @Override
+    public Integer call() throws InterruptedException {
+        
+        Thread.sleep(1000);
         return fact(num);
     }
 
 }
 
-
-
-
-
-
 public class problems {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
-        // try {
-        //     ExecutorService executor = Executors.newFixedThreadPool(5);
-        //     for (int i = 0; i < 10; i++) {
-        //         que2 task = new que2(i);
-        //         executor.submit(task);
-        //     }
-        //     // this is wrapped in try with resoucess in which twe dont need to shutdown the
-        //     // executor ...try with resourse will take care of this
-        //     if (!executor.awaitTermination(4, TimeUnit.SECONDS)) {
-        //         System.out.println("emergency shuttingdown");
-        //         executor.shutdownNow();
-        //     }
+        // try (
+        // ExecutorService executor = Executors.newFixedThreadPool(5)){
+        // for (int i = 0; i < 10; i++) {
+        // que2 task = new que2(i);
+        // executor.submit(task);
+        // }
+        // // this is wrapped in try with resoucess in which twe dont need to shutdown
+        // the
+        // // executor ...try with resourse will take care of this
+        // if (!executor.awaitTermination(4, TimeUnit.SECONDS)) {
+        // System.out.println("emergency shuttingdown");
+        // executor.shutdownNow();
+        // }
         // } catch (Error e) {
-        //     throw new RuntimeErrorException(e);
+        // throw new RuntimeErrorException(e);
         // }
 
 
 
 
-       ExecutorService services =Executors.newFixedThreadPool(5);
-       int j=19;
-       while(j>2){
-          FetchFactorial fxt = new FetchFactorial(j);
-          Future<Integer> answer= services.submit(fxt);
-          System.out.println(answer.get());
-          j=j-2;
-       }
 
-       services.shutdown();
-       
-      
 
+
+        try(ExecutorService services = Executors.newFixedThreadPool(3)){
+            System.out.println("printing the factorial of 19,17,15,13,11,9,7,5,3");
+         List<Future<Integer>> list =  new ArrayList<>();
+        int j = 19;
+        while (j > 2) {
+            FetchFactorial fxt = new FetchFactorial(j);
+            list.add(services.submit(fxt));
+            j = j - 2;
+        }
+        for (Future<Integer> future : list) {
+            System.out.printf("\n Result of factorial is : %d ",future.get());
+        }
+
+        services.shutdown();
+ 
+        if(!services.awaitTermination(3,TimeUnit.SECONDS)){
+            System.out.println("enough timeout shutting down");
+            services.shutdownNow();
+        }
+        
+    } catch(Exception e){
+        System.out.println(e);
+    }
+     
     }
 }
