@@ -30,6 +30,10 @@ class human {
     }
 }
 
+
+
+
+
 class worker {
     private int salary;
     private String name;
@@ -99,7 +103,7 @@ public class Constructors {
         human person3 = new human("gaurav");
         System.out.println(person3.getName() + " : " + person3.getAge());
 
-        human person2 = new human(18, "ghoda");
+        human person2 = new human(18, "john");
         System.out.println(person2.getName() + " : " + person2.getAge());
 
         worker empl1 = new worker();

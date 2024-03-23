@@ -26,11 +26,13 @@ public class ThisAndSuperKeyword {
     public static void main(String[] args) {
         
         klass k = new klass(5);
-        klass2 k2= new klass2(9);
         System.out.println(k.getA());
+        klass2 k2= new klass2(9);
+        System.out.println(k2.getA());
         System.out.println("\n\n\n");
 
         klass2 k3= new klass2();
+        System.out.println(k3.getA());
 
     }
     
