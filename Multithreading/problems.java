@@ -8,8 +8,10 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
+import javax.management.RuntimeErrorException;
 
-//Wap create a fixed thred pool with a specified number of threads using fixedThread,submit multiple tasks to the executor,where each task should print the current thread's name and sleep for a random time between 100 and 500 millisec.
+
+//Wap create a fixed thred pool with a specified number of threads using fixedThread,submit multiple tasks to the executor,where each task should print the current thread's name and sleep for a random time between 1 and 5000 millisec.
 
 class que2 implements Runnable {
     private int number;
@@ -63,36 +65,39 @@ class FetchFactorial implements Callable<Integer> {
         }
         return fact;
     }
-    
+
 
     @Override
     public Integer call() throws InterruptedException {
-        
+
         Thread.sleep(1000);
         return fact(num);
     }
 
 }
 
+
+
+
+
+
+
 public class problems {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
-        // try (
-        // ExecutorService executor = Executors.newFixedThreadPool(5)){
+        
+        // ExecutorService executor = Executors.newFixedThreadPool(5);
         // for (int i = 0; i < 10; i++) {
         // que2 task = new que2(i);
         // executor.submit(task);
         // }
-        // // this is wrapped in try with resoucess in which twe dont need to shutdown
-        // the
-        // // executor ...try with resourse will take care of this
+        // // this is wrapped in try with resoucess in which twe dont need to shutdown the executor ...try with resourse will take care of this
         // if (!executor.awaitTermination(4, TimeUnit.SECONDS)) {
         // System.out.println("emergency shuttingdown");
         // executor.shutdownNow();
         // }
-        // } catch (Error e) {
-        // throw new RuntimeErrorException(e);
-        // }
+    
+        
 
 
 
@@ -100,7 +105,9 @@ public class problems {
 
 
 
-        try(ExecutorService services = Executors.newFixedThreadPool(3)){
+
+
+        ExecutorService services = Executors.newFixedThreadPool(3);
             System.out.println("printing the factorial of 19,17,15,13,11,9,7,5,3");
          List<Future<Integer>> list =  new ArrayList<>();
         int j = 19;
@@ -114,15 +121,16 @@ public class problems {
         }
 
         services.shutdown();
- 
+
         if(!services.awaitTermination(3,TimeUnit.SECONDS)){
             System.out.println("enough timeout shutting down");
             services.shutdownNow();
         }
-        
-    } catch(Exception e){
-        System.out.println(e);
+
+    
     }
-     
-    }
+
+    
+
 }
+

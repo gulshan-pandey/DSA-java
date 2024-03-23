@@ -5,10 +5,10 @@ import java.util.*;
 
 public class PracticeInCollections{
 
-public static void sortSting(List<String> list){
+public static void ReverseSortSting(List<String> list){
 
-    Collections.sort(list);
-    Collections.reverse(list); //to reverse the sorted list
+    Collections.sort(list); //edit the list
+    Collections.reverse(list); // reverse the sorted list
 }
 
 
@@ -30,7 +30,7 @@ System.out.println(list);
         List <String> list = Arrays.asList("lion","tiger" ,"ant","parrot"); //this takes Arrays.asList by taking varargs
         System.out.println(list);
        
-        // sortSting(list);
+        //  ReverseSortSting(list);
         // System.out.println(list);
 
 
@@ -42,7 +42,7 @@ System.out.println(list);
         
         //  System.out.println("the frequency of 3 is : " + Collections.frequency(li, 3));
 
-        // swap(li,3,6); //swapping the element
+        // swap(li,3,6); //swapping the 3rd and 6th index
 
 
 
@@ -60,19 +60,21 @@ System.out.println(list);
         rev(numlist);
 
 
+
         // WAP that takes a String and returns the number of unique characters using set
 
-        // Set<Character> unique =new HashSet<>();
-        // Scanner sc = new Scanner(System.in);
-        // System.out.println("Enter your string ");
-        // String str = sc.nextLine();
+        Set<Character> unique =new HashSet<>();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your string to find its unique characters");
+        String str = sc.nextLine();
 
-        // for (Character ch : str.toCharArray()) {
-        //     unique.add(ch);
-        // }
+        for (Character ch : str.toCharArray()) {   //converted the string into the character array
+            unique.add(ch);
+        }
 
-        // System.out.println(unique.toString());
-        // System.out.println("the unique characters are : " + unique + " and the size is " + unique.size());
+        System.out.println(unique.toString());
+        System.out.println("the unique characters are : " + unique + " and the size is " + unique.size());
+
 
 
     } 
