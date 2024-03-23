@@ -35,20 +35,21 @@ public class ExecutorMultithreading {
         // ExecutorService single = Executors.newSingleThreadExecutor(); //initializing only single thread to print the pattern correctly
         // single.submit(work);
         // single.submit(work2);
+        // single.submit(work3);
         // single.shutdown();
 
 
 
-        //for 3 threads------------
+        // for multiple threads---------
+    
 
-        // ExecutorService single = Executors.newFixedThreadPool(3);
+        // ExecutorService single = Executors.newFixedThreadPool(3);  //3 threads
         // single.submit(work); 
         // single.submit(work2); 
         // single.submit(work3); 
         // single.shutdown();
         // single.shutdown();
 
-        // for multiple threads---------
 
         double starttim= System.currentTimeMillis();
 
@@ -60,18 +61,18 @@ public class ExecutorMultithreading {
     
         multiple.shutdown();
 
-        // multiple.awaitTermination(Long.MAX_VALUE, TimeUnit.MILLISECONDS); // this code is used as Thread.join() in exector's sence
-        // double etim= System.currentTimeMillis();   
+        multiple.awaitTermination(Long.MAX_VALUE, TimeUnit.MILLISECONDS); // this code is used as Thread.join() in exector's sence
+        double etim= System.currentTimeMillis();   
 
-        // System.out.println(etim-stim);
+        System.out.println("total time taken by the program : " + (etim-starttim));
 
 
 
         //suppose we want all task to be done in specific period of time and othervise shutdown anyway
 
-        if(!multiple.awaitTermination(2, TimeUnit.SECONDS)){
-           multiple.shutdownNow();
-           System.out.println("time-out hogya ji");
+        // if(!multiple.awaitTermination(2, TimeUnit.SECONDS)){
+        //    multiple.shutdownNow();
+        //    System.out.println("time-out hogya ji");
         //    double etim= System.currentTimeMillis();   
 
         //    System.out.println(etim-stim);
@@ -82,5 +83,5 @@ public class ExecutorMultithreading {
 
     }
 
-}
+
 
