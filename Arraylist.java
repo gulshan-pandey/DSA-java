@@ -122,6 +122,23 @@ public class Arraylist {
            
          CollectionUtility.print(l1);  //this is the collection utility used to print all the elements of the collection
           
+
+
+
+
+         
+
+         List<Integer> numbers = new ArrayList<>(List.of(1, 2, 3, 4, 5));
+
+         // Using List.replaceAll() to update each element
+         numbers.replaceAll(num -> num * 2);
+ 
+         // Printing the updated list
+         numbers.forEach(System.out::println);
+ // -------------------------------------OR-----------------------------
+         System.out.println(numbers);
+
+
            }
     
 
