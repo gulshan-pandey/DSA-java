@@ -26,7 +26,7 @@ public class TestingReduce {
 
         //using lambda
 
-       int sum = number.stream().reduce(0,(a,b)->a+b);    //means ki numbers ki stream bnana ,usko reduce krna fir everytime saare elements ko a+b krte jana fir final result return krna
+       int sum = number.stream().reduce(0,(a,b)->a+b);    //means ki numbers ki stream bnana ,usko reduce krna fir everytime saare elements ko a+b krte jana fir final result return krna... ps: is a default value it is used to store the temporary returned value and in the end this default value will be returned
        System.out.println("\nsum using reduce is: " + sum);
 
        //---------------OR -------------------------------------
@@ -48,7 +48,7 @@ public class TestingReduce {
 
     strings.stream()
     .filter(s -> s.length() > 3)
-    .map(String::toUpperCase)
+    .map(String::toUpperCase)                              //this line means this   .map(s -> s.toUpperCase())
     .reduce((s1, s2) -> s1 + ", " + s2)
     .ifPresent(System.out::println);
 

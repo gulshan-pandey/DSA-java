@@ -51,7 +51,7 @@ System.out.println("printing using the Streams,and redefining accept method:--")
 
 
 
-    List<Integer> numbers = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6));      // this list.of() method under the ArrayList() makes the list mutable 
+    List<Integer> numbers = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6));      // this list.of() method under the ArrayList() makes the list mutable because ArrayList() produces mutable list
 
     
     List<Integer> evenNumbers = numbers.stream()
