@@ -45,6 +45,10 @@ System.out.println("printing using the Streams,and redefining accept method:--")
     System.out.println("\n filtering the fruits:");
     fruits.stream().filter(fruit->fruit.endsWith("a")).forEach(fruit->System.out.println(fruit));
 
+
+
+
+
     List<Integer> numbers = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6));
 
     
@@ -52,12 +56,21 @@ System.out.println("printing using the Streams,and redefining accept method:--")
                                        .map(num -> num * num)
                                        .collect(Collectors.toList());   //collect is terminal method,Accumulates the elements of this stream into a List
     
-    for (Integer num : evenNumbers) {
-        System.out.println(num);
-    }
+    // for (Integer num : evenNumbers) {
+    //     System.out.println(num);
+    // }
+
+    System.out.println(evenNumbers);
+
+    // -----------------------------OR-----------------------
+
+    System.out.println( numbers.stream()
+                                    .map(num -> num * num).collect(Collectors.toList()));  
 
     System.out.println("\n using only forEach:");
     numbers.stream().forEach(number->System.out.println(number*2));
+
+    
 
 
 
