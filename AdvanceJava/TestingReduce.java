@@ -6,10 +6,11 @@ import java.util.List;
 
 public class TestingReduce {
     
+    //Reduce itself is a Terminal method
 
     public static void main(String[] args) {
         
-        List<Integer> number = new ArrayList<>(List.of(1,2,3,4,5,6,7));
+        List<Integer> number = new ArrayList<>(List.of(1,2,3,4,5,99,6,7,9));
         System.out.println("number: "+ number);
 
 
@@ -24,13 +25,17 @@ public class TestingReduce {
 
         //using lambda
 
-       int sum = number.stream().reduce(0,(a,b)->a+b);
-       System.out.println("sum using reduce is: " + sum);
+       int sum = number.stream().reduce(0,(a,b)->a+b);    //means ki numbers ki stream bnana ,usko reduce krna fir everytime saare elements ko a+b krte jana fir final result return krna
+       System.out.println("\nsum using reduce is: " + sum);
 
        //---------------OR -------------------------------------
 
     //    System.out.println(number.stream().reduce(0,(a,b)->a+b));
 
+
+       int max = number.stream().reduce((Integer.MIN_VALUE),(a,b)->(a>b? a :b) );
+
+       System.out.println("\n the maximum element using reduce is : " + max + " \n");
 
 
 
