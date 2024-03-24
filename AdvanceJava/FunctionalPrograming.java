@@ -19,7 +19,7 @@ public class FunctionalPrograming {
 
 System.out.println("printing using the Streams,and redefining accept method:--");
 
-    fruits.stream().forEach(new Consumer<String>(){    //here we defined the anonymous inner class of Consumer interface and overrided the accept method
+    fruits.stream().forEach(new Consumer<String>(){    //here we defined the anonymous inner class of Consumer interface and overriding the accept method
         @Override
         public void accept(String fruit){       // accept method is used to perform any operation on the given input
             System.out.println(fruit);
@@ -32,17 +32,18 @@ System.out.println("printing using the Streams,and redefining accept method:--")
    
     //the above accept() method can be used as lambda expression for simplicity
     
-    System.out.println("\n printing using lambda expression within th e:");
+    System.out.println("\n printing using lambda expression :");
 
     fruits.stream().forEach(fruit->System.out.println(fruit));     // here forEach is a terminal operation,Without a terminal operation, intermediate operations will not be executed, and the stream will not perform any processing. 
     
     
-    System.out.println("\n printing using lambda expression within th e:");
+    System.out.println("\n printing uppercase using lambda expression :");
 
     fruits.stream().forEach(fruit->System.out.println(fruit.toUpperCase()));
 
 
-
+    System.out.println("\n filtering the fruits:");
+    fruits.stream().filter(fruit->fruit.endsWith("a")).forEach(fruit->System.out.println(fruit));
 
     List<Integer> numbers = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6));
 
@@ -54,5 +55,12 @@ System.out.println("printing using the Streams,and redefining accept method:--")
     for (Integer num : evenNumbers) {
         System.out.println(num);
     }
+
+    System.out.println("\n using only forEach:");
+    numbers.stream().forEach(number->System.out.println(number*2));
+
+
+
+
 }
 }
