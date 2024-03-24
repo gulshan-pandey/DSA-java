@@ -19,12 +19,12 @@ public class FunctionalPrograming {
 
 System.out.println("printing using the Streams,and redefining accept method:--");
 
-    fruits.stream().forEach(new Consumer<String>(){    //here we defined the anonymous inner class of Consumer interface and overriding the accept method
+    fruits.stream().forEach(new Consumer<String>(){    //forEach is a Terminal operation it includes consumer ...here we defined the anonymous inner class of Consumer interface and overriding the accept method
         @Override
         public void accept(String fruit){       // accept method is used to perform any operation on the given input
             System.out.println(fruit);
         }
-    });  //forEach expects the object of the consumer interface which has only one medthod called {accept()} which is a generic method
+    });           // forEach expects the object of the consumer interface which has method called {accept()} which is a generic method
 
 
 
@@ -51,14 +51,14 @@ System.out.println("printing using the Streams,and redefining accept method:--")
 
 
 
-    List<Integer> numbers = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6));
+    List<Integer> numbers = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6));      // this list.of() method under the ArrayList() makes the list mutable 
 
     
     List<Integer> evenNumbers = numbers.stream()
                                        .map(num -> num * num)
                                        .collect(Collectors.toList());   //collect is terminal method,Accumulates the elements of this stream into a List
     
-    // for (Integer num : evenNumbers) {
+    // for (Integer num : evenNumbers) {   
     //     System.out.println(num);
     // }
 

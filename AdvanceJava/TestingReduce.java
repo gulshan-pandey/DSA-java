@@ -10,7 +10,8 @@ public class TestingReduce {
 
     public static void main(String[] args) {
         
-        List<Integer> number = new ArrayList<>(List.of(1,2,3,4,5,99,6,7,9));
+        List<Integer> number = new ArrayList<>(List.of(1,2,3,4,5,99,6,7,9));       // this list.of() method under the ArrayList() makes the list mutable 
+
         System.out.println("number: "+ number);
 
 
