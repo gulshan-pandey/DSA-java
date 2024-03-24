@@ -10,7 +10,7 @@ public class FunctionalPrograming {
     
     public static void main(String[] args) {
         
-    List <String> fruits = List.of("apple","banana","grapes","peach","orange","date");
+    List <String> fruits = List.of("apple","banana","grapes","peach","orange","date");   // this list.of() method makes the immutable list!!!
 
     // for(String fruit: fruits){                   //traditional way
     //     System.out.println(fruit);
@@ -44,6 +44,8 @@ System.out.println("printing using the Streams,and redefining accept method:--")
 
     System.out.println("\n filtering the fruits:");
     fruits.stream().filter(fruit->fruit.endsWith("a")).forEach(fruit->System.out.println(fruit));
+
+
 
 
 
