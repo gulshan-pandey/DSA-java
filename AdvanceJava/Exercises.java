@@ -1,5 +1,7 @@
  package AdvanceJava;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.BinaryOperator;
 
 public class Exercises {
@@ -10,7 +12,7 @@ public class Exercises {
 
     //method 1
     BinaryOperator<Integer> prod = (a,b)->a*b;    //generally we dont do these kind of programs and storing the function in variable
-    int answer = prod.apply(22,2);
+    int answer = prod.apply(22,2);           //.apply() method should be remembered
     System.out.println("\nthe product of 22,2 is : " + answer);
 
 
@@ -20,14 +22,25 @@ public class Exercises {
 
     int result = multiplier.multiply(4, 6);     //variable.builtinMethods() <is a by default notion> ,,,here we are doing the same using interfaces ==> Interface'sVariable.InterfaceMethod()==>result
     System.out.println("The result of 4 * 6 is: " + result);
+    System.out.println();
 
-
-
-
-    // Que2: Convert an array of Strings into a Stream.Then,use the stream to print each string to the console
 
     
 
+    // Que2: Convert an array of Strings into a Stream.Then,use the stream to print each string have length greater than 3 to the console
+
+
+
+
+   List <String> lis= new ArrayList<>(List.of("dog","cow","monkey","goat","deer","donkey","lion","tiger","leopard","cat","rabbit"));
+
+        lis.stream().filter(li->li.length()>3).forEach(li->System.out.println(li));
+
+
+
+
+
+    //Que:- Given a list of string of string,use stream operation to filter out strings that have length of 10 or more and then concatinate to remaining strings
 
 
 
