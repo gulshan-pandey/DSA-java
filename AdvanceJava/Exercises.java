@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.BinaryOperator;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Exercises {
 
@@ -45,8 +47,7 @@ public class Exercises {
 
 
 
-                // Que2: Convert an array of Strings into a Stream.Then,use the stream to print
-                // each string have length greater than 3 to the console
+                // Que2: Convert an array of Strings into a Stream.Then,use the stream to print each string have length greater than 3 to the console
 
                 List<String> lis = new ArrayList<>(
                                 List.of("dog", "cow", "monkey", "goat", "deer", "donkey", "lion", "tiger", "leopard",
@@ -54,28 +55,31 @@ public class Exercises {
 
                 lis.stream().filter(li -> li.length() > 3).forEach(li -> System.out.println(li));
 
-                // Que:- Given a list of string of string,use stream operation to filter out
-                // strings that have length of 10 or more and then concatinate to remaining
-                // strings
+
+
+
+
+                // Que:- Given a list of strings ,use stream operation to filter out strings that have length of 10 or more and then concatinate them into new string
 
                 List<String> list = Arrays.asList("game", "gully cricket", "marval universe", "ironman", "technology",
-                                "computer system", "motorcycle", "airplane mode", "Quaintumphysics", "conspiracy");
+                                "computer science", "motorcycle", "airplane mode", "Quaintum physics", "conspiracy");
                 System.out.println("the list of string is : " + list + "\n");
 
-                String agg = list.stream().filter(li -> li.length() > 10).reduce("", (a, b) -> a + " " + b);
+                String agg = list.stream().filter(li -> li.length() > 10).reduce("", (a, b) -> a + " " + b);      //reduce is a terminal operation!
                 System.out.println("reduced string is : " + agg);
 
                 // method 2:
 
                 StringBuilder sb = list.stream()
                                 .filter(str -> str.length() > 10)
-                                .reduce(new StringBuilder(), (stringBuilder, str) -> stringBuilder.append(str),
-                                                StringBuilder::append);
+                                .reduce(new StringBuilder(), (stringBuilder, str) -> stringBuilder.append(str),StringBuilder::append);
 
                 System.out.println(sb.toString());
 
-                StringBuilder sol = list.stream().filter(str -> str.length() > 10)
-                                .reduce(new StringBuilder(), StringBuilder::append, StringBuilder::append);
+
+
+                //method 3--------------------------------------------
+                String sol = list.stream().filter(str -> str.length() > 10).collect(Collectors.joining());
 
                 System.out.println("\nusing method 3 : " + sol.toString());
 
