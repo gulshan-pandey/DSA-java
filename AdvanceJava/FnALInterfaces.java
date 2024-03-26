@@ -1,20 +1,100 @@
 package AdvanceJava;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.function.BinaryOperator;
+import java.util.function.Function;
+
 public class FnALInterfaces {
-    
+    //functional interfaces has only one abstracted metjod,however it can have static or default methods in them ...example  runnable,callable,BinaryOperator,comparator,Consumer  interfaces
 
     public static void main(String[] args) {
-        Runnable runnable = () -> {            // using lambda expression in runnable interface
-            for (int i = 0; i < 5; i++) {
-                System.out.println("Hello, World!");
+
+        //runnable interface
+
+        Runnable runnable = ()->{    //initializing variable1 for multithreading  
+      
+            for(int i=0;i<10;i++){
+                System.out.println(i);
+            
+           }
+         };
+
+         Runnable runnable2 = ()->{    //initializing variable1 for multithreading 
+          
+            for(int j=90;j<100;j++){
+                System.out.println(j);
+            
+           }
+         };
+    
+         Thread thread = new Thread(runnable);
+         thread.start();
+         Thread thread2 = new Thread(runnable2);
+         thread2.start();
+    
+
+
+
+ 
+        //Callable interface
+
+          Callable<Integer> callable = () -> {
+            int sum = 0;
+            for (int i = 1; i <= 10; i++) {
+                sum += i;
             }
+            return sum;
         };
 
-        Thread thread = new Thread(runnable);
-        thread.start();
+        try {
+            int result = callable.call();
+            System.out.println("Sum: " + result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
 
+        //BinaryOperator
+        BinaryOperator<Integer> add = (a, b) -> a + b;          //we can also make the variable of the BinaryOperator and indulce the lambda expression on it
+    
+        BinaryOperator<Integer> multiply = (a, b) -> a * b;
 
+        int result1 = add.apply(5, 3);
+        int result2 = multiply.apply(5, 3);
+
+        System.out.println("Addition: " + result1);
+        System.out.println("Multiplication: " + result2);
+
+
+
+        //function functional interface
+        Function<Integer, Integer> square = n -> n * n;           //functional interface Function takes 2 generics <T, R> uses apply method
+        int result = square.apply(5);
+        System.out.println(result);
+
+
+        //consumer interface(which is used in forEach)
+        List<String> names = Arrays.asList("John", "Alice", "Bob");
+        names.forEach(name -> System.out.println("Hello, " + name));
+
+
+
+        //Comparator
+         List<String> fruits = new ArrayList<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Chrry");
+        fruits.add("Orange");
+
+        Comparator<String> lengthComparator = (str1, str2) -> str1.length() - str2.length();
+
+        fruits.sort(lengthComparator);
+
+        System.out.println("Sorted fruits: " + fruits);
     }
 }
