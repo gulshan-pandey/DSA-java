@@ -43,6 +43,16 @@ public class OptionalClasses {
 
         
 
+
+        List <Integer> numlist = List.of(31,45,34,6,3,52);
+
+        Optional<Integer> minnum= numlist.stream().min(Integer::compareTo);
+        System.out.println(minnum);
+        System.out.println(minnum.get());
+        
+        Optional<Integer> maxnum = numlist.stream().max((a,b) -> a.compareTo(b));
+        maxnum.ifPresent(System.out::print);
+        
         
 
 
