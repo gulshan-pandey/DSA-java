@@ -62,7 +62,7 @@ public class FnALInterfaces {
 
 
         //BinaryOperator
-        BinaryOperator<Integer> add = (a, b) -> a + b;          //we can also make the variable of the BinaryOperator and indulce the lambda expression on it
+        BinaryOperator<Integer> add = (a, b) -> a + b;          //we can make the variable of the BinaryOperator and indulge the lambda expression on it
     
         BinaryOperator<Integer> multiply = (a, b) -> a * b;
 
@@ -75,7 +75,7 @@ public class FnALInterfaces {
 
 
         //function functional interface
-        Function<Integer, Integer> square = n -> n * n;           //functional interface Function takes 2 generics <T, R> uses apply method
+        Function<Integer, Integer> square = n -> n * n;           //functional interface Function takes 2 generics <T, R> uses apply method and same as Binary Operator
         int result = square.apply(5);
         System.out.println(result);
 
@@ -96,18 +96,19 @@ public class FnALInterfaces {
 
         Comparator<String> lengthComparator = (str1, str2) -> str1.length() - str2.length();
 
-        fruits.sort(lengthComparator);
+        fruits.sort(lengthComparator);    //inserting the variable of Comparator into sort method
 
         System.out.println("Sorted fruits: " + fruits);
 
 
-         List<String> strings = new ArrayList<>();
+
+        List<String> strings = new ArrayList<>();
         strings.add("banana");
         strings.add("apple");
         strings.add("cherry");
         strings.add("date");
 
-        Collections.sort(strings, (s1, s2) -> s1.compareTo(s2));
+        Collections.sort(strings, (s1, s2) -> s1.compareTo(s2));   //using Collections methods
 
         System.out.println(strings);
 
