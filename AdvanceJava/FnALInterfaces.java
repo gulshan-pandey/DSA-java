@@ -2,6 +2,7 @@ package AdvanceJava;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.Callable;
@@ -9,7 +10,7 @@ import java.util.function.BinaryOperator;
 import java.util.function.Function;
 
 public class FnALInterfaces {
-    //functional interfaces has only one abstracted metjod,however it can have static or default methods in them ...example  runnable,callable,BinaryOperator,comparator,Consumer  interfaces
+    //functional interfaces has only one abstracted metjod,however it can have static or default methods in them ...example  runnable,callable,BinaryOperator,comparator,Consumer  interfaces,Function
 
     public static void main(String[] args) {
 
@@ -44,6 +45,7 @@ public class FnALInterfaces {
 
           Callable<Integer> callable = () -> {
             int sum = 0;
+            Thread.sleep(1000);
             for (int i = 1; i <= 10; i++) {
                 sum += i;
             }
@@ -52,7 +54,7 @@ public class FnALInterfaces {
 
         try {
             int result = callable.call();
-            System.out.println("Sum: " + result);
+            System.out.println("Sum using callable is  : " + result);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -78,6 +80,7 @@ public class FnALInterfaces {
         System.out.println(result);
 
 
+
         //consumer interface(which is used in forEach)
         List<String> names = Arrays.asList("John", "Alice", "Bob");
         names.forEach(name -> System.out.println("Hello, " + name));
@@ -96,5 +99,19 @@ public class FnALInterfaces {
         fruits.sort(lengthComparator);
 
         System.out.println("Sorted fruits: " + fruits);
+
+
+         List<String> strings = new ArrayList<>();
+        strings.add("banana");
+        strings.add("apple");
+        strings.add("cherry");
+        strings.add("date");
+
+        Collections.sort(strings, (s1, s2) -> s1.compareTo(s2));
+
+        System.out.println(strings);
+
+
+        
     }
 }
