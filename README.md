@@ -11,7 +11,10 @@ This repo contains Java programs demonstrating language basics and OOP concepts,
 - OOP (classes, objects)
 - File I/O
 - Exception handling
+- Collections framework
 - Multi-threading
+- Lambda-expressions
+- Functional-programming
 
 ## DSA Implementations
 
