@@ -2,6 +2,7 @@ package AdvanceJava;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 @FunctionalInterface
 interface calculation{
@@ -30,7 +31,7 @@ public class Exercise2 {
         System.out.println(calculate.var(71));
         
 
-        
+
         
         //applying the method of functional interface
         
@@ -40,8 +41,40 @@ public class Exercise2 {
        System.out.println("filtered list is : "+ newList);
 
 
+
+
+
+
+
+
+
+       //WAP to find the factorial using functional programming and by procedural programming
+
+       int number = 9;
+
+        System.out.println("\n\nthe factorial of 9 using procedural programming is : " +fact(number));
+
+        
+        //factorial using functional proggramming
+
+        System.out.println("\n\nfactorial using functional programming:-- ");
+        IntStream.rangeClosed(2,number).reduce((a,b) -> a*b).ifPresent(System.out::print);       //here we didnt provided the default value so the value will be of Optional class type's and hence we called ifPresent method of the Optional class
+
+
+        // IntStream :used to perform operations on sequences of integer values
+        IntStream stream1 = IntStream.of(1, 2, 3, 4, 5);
+        IntStream stream2 = IntStream.range(1, 6); // Stream of 1, 2, 3, 4, 5
+
     
 
     
+    }
+//factorial calculator
+    public static int fact(int n){
+        if(n<=1){
+            return 1;
+        }
+        int factorial = n*fact(n-1);
+        return factorial;
     }
 }
