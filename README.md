@@ -2,7 +2,7 @@
 
 # Java and DSA Repository
 
-This repo contains Java programs demonstrating language basics and OOP concepts as well as implementations of common data structures and algorithms.
+This repo contains Java programs demonstrating language basics and OOP concepts,Advance java as well as implementations of common data structures and algorithms along with some minor projects.
 
 ## Java Programs
 
@@ -11,7 +11,10 @@ This repo contains Java programs demonstrating language basics and OOP concepts 
 - OOP (classes, objects)
 - File I/O
 - Exception handling
+- Collections framework
 - Multi-threading
+- Lambda-expressions
+- Functional-programming
 
 ## DSA Implementations
 
