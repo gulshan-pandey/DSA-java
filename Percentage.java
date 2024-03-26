@@ -1,6 +1,6 @@
 
 import java.util.Scanner;
-public class Problem1 {
+public class Percentage {
     public static void main(String[] args) {
         /*write a program to calculate percent of a given student in VBSE board exam .his marks from 5 subjests must be taken as input from the keyboard out of 100 marks */
 

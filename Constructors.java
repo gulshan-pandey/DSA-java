@@ -3,9 +3,7 @@ class human {
     private String name;
     private int age;
 
-    public human() { // this is constructor and it calls itself whenever the new object is and has no
-                     // return type
-                     // initialized
+    public human() { // this is constructor and it calls itself whenever the new object is and has no return type initialized
         name = "kaliaa"; // the constructors helps us to give the default values
         age = 21;
     }
@@ -32,6 +30,10 @@ class human {
     }
 }
 
+
+
+
+
 class worker {
     private int salary;
     private String name;
@@ -45,6 +47,8 @@ class worker {
     }
 }
 
+
+
 class Car {
     int noOfWheels;
     String color;
@@ -54,7 +58,7 @@ class Car {
 
     static int noOfCarSold; // this is static that how much car has been sold
 
-    Car(String color) {
+    Car(String color) {  //constructor 
         this.color = color;
         noOfSeats = 5;
         noOfWheels = 4;
@@ -64,18 +68,15 @@ class Car {
     }
 
     Car() {
-        this("Black"); // it is constructor chaining ,in which the constructor call its own version to
-                       // get the work done ,and all the properties of the another constructor will be
-                       // set
-        fuel = 5; // default constructor caller will get 5 ltr of fuel
+        this("Black"); // it is constructor chaining ,in which the constructor call its own version to get the work done ,and all the properties of the another constructor will be set
+        fuel = 10; // default constructor caller will get 10 ltr of fuel
     }
 
     // the static block runs first of all !!
-    // static is code block and it is called only once doesnt matter how many
-    // objects u have made
+    // static is code block and it is called only once per class and doesnt matter how many objects u have instantiated
     static {
         noOfCarSold = 0;
-        System.out.println(" I am in static block,and run only once");
+        System.out.println(" I am in static block,and run only once per class");
     }
 
     // normal codeblock will run as many times as the objects has been made
@@ -102,12 +103,15 @@ public class Constructors {
         human person3 = new human("gaurav");
         System.out.println(person3.getName() + " : " + person3.getAge());
 
-        human person2 = new human(18, "ghoda");
+        human person2 = new human(18, "john");
         System.out.println(person2.getName() + " : " + person2.getAge());
 
         worker empl1 = new worker();
         System.out.println("the default slary of empl1 is  : " + empl1.getSalary() + " \n\n");
 
+
+
+        
         Car swift = new Car("red");
         Car thar = new Car();
 

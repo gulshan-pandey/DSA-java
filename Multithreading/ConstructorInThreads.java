@@ -5,11 +5,11 @@ class constr extends Thread {
 
     public void run() {
 
-        String name = "gullu yadav";
+        String name = "john";
         System.out.println(" hii my name is " + name);
 
         for (int i = 0; i < 200; i++) {
-            System.out.println("I will be your top suppoter!");
+            System.out.println("I am your top suppoter!");
         }
     }
 

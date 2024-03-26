@@ -14,7 +14,7 @@ class smartPhone extends phone{
     System.out.println("playing th music...");
     }
     
-    
+    @Override
     public void on(){
         System.out.println("the smartphone is turning on...");
     }

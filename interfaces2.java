@@ -13,10 +13,11 @@ interface wifi0 {
 interface player0 {
     String playMusic(String song);
 
+
     private void greetings() { //declaring private method
         System.out.println("good mrng");
     }
-
+ 
     default void play() { // this default method doesnot need to implement in the concrete class
                           // introduced in java8
         greetings();
@@ -55,7 +56,7 @@ class SmartPhone2 extends myCellPhone0 implements camera, wifi0, player0 {
     }
 
     public String playMusic(String song) {
-        return song;
+        return "playing  : " + song;
     }
 
     public void callNumber(int number) {
@@ -66,10 +67,7 @@ class SmartPhone2 extends myCellPhone0 implements camera, wifi0, player0 {
         System.out.println("picking the phone");
     }
 
-    // public void play(){ //however it wasnt needed to address this method ,as it
-    // was default in the interface ,but when we implement it in concrete class then
-    // the new object of that class will be running this method not the interface's
-    // code
+    // public void play(){ //however it wasnt needed to address this method ,as it was default in the interface ,but when we implement it in concrete class then the new object of that class will be running this method not the interface's code
     // System.out.println("here i was playing my favourite singer\'s song...");
     // }
 }
@@ -90,5 +88,7 @@ public class Interfaces2 {
 
         // myPhone.greetings(); --error as it is private in interface
         myPhone.play(); //it is the default method in the player0 interface therefore it will runn
+
+       System.out.println(myPhone.playMusic("die for me")); 
     }
 }

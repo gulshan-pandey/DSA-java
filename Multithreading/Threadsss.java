@@ -1,9 +1,10 @@
 //extending the thread class
 class mythread extends Thread{
-  
-   public void run(){
 
-        for(int i =0;i<4000;i++){
+  @Override
+   public void run(){  //multi threading is acheived by overriding the run method
+
+        for(int i =0;i<400;i++){
             System.out.println("i am cooking!!!");
       
         }
@@ -16,7 +17,7 @@ class mythread2 extends Thread{
    public void run(){  //run keyword is necessary for thread
    
 
-        for(int i =0;i<4000;i++){
+        for(int i =0;i<400;i++){
             System.out.println("i am chattinggggg!!!");
      
         }
@@ -29,7 +30,7 @@ class mythread2 extends Thread{
 public class Threadsss {
     //the threads is used for multi tasking but it does one task at a time  and then after sometime it executes another task
  public static void main(String[] args) {
-    
+    double startTime = System.currentTimeMillis();
 
   mythread myt =new mythread();
   
@@ -39,5 +40,8 @@ public class Threadsss {
 
   myth.start();
 
+  double endTime = System.currentTimeMillis();
+
+  System.out.printf("the time taken is : %f",endTime-startTime);
  }
 }

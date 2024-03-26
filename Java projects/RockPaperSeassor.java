@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Game {
+public class RockPaperSeassor {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);

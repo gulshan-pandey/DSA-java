@@ -12,7 +12,7 @@ public class AccessBike {
 
         bike.color= "green";
         bike.tyres = 2;
-        bike.model=123;
+        bike.model=123; //default can be accessed within package
         // bike.coseOfPurchase =1; // it is private so it is not accessible
         System.out.println(bike);
 
