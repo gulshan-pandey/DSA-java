@@ -1,6 +1,7 @@
 package AdvanceJava;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -67,6 +68,19 @@ public class Exercise2 {
 
     
 
+
+
+        //QUE 3 - Write a function that accepts astring and returnes an Optional<String>.If the string is empty or null,return an empty Optional,otherwise,return an Optional contiaining the uppercase version of the string
+
+        System.out.println(toOptional(null));
+        
+        System.out.println(toOptional(""));
+
+        System.out.println(toOptional("mukesh"));
+
+
+
+
     
     }
 //factorial calculator
@@ -76,5 +90,16 @@ public class Exercise2 {
         }
         int factorial = n*fact(n-1);
         return factorial;
+    }
+
+
+
+
+     //QUESTION 3--------------------------------------------------
+     public static Optional<String> toOptional(String str){
+       if(str==null ||str.isEmpty()  ){
+        return Optional.empty();
+       }
+       return Optional.of(str.toUpperCase());
     }
 }

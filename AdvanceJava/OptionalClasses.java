@@ -11,7 +11,7 @@ public class OptionalClasses {
     public static void main(String[] args) {
         
         List <Integer> numbers = List.of(2,1,4,8,3,7,3,9);
-        Optional<Integer> res = numbers.stream().reduce((a,b)->a+b);   //here res is of Optional class bcz if it was of null answer then it cannot be of int type (or else provide the default int value to the reduce method if not then make it of optional class )
+        Optional<Integer> res = numbers.stream().reduce((a,b)->a+b);   //here res is of Optional class(it takes a generic type in it) bcz if the answer is null then it cannot be of int type (or else provide the default int value to the reduce method if not then make it of optional class )
 
 
         if(res.isPresent()){
@@ -25,7 +25,7 @@ public class OptionalClasses {
 
   
         Optional<String> optionalEmpty = Optional.empty();
-        Optional<String> value = Optional.of("hello world");    //create an Optional object that contains the value "hello world".
+        Optional<String> value = Optional.of("hello world");    //Optional.of is used to create an Optional object that is present and contains the specified value in thic case...create an Optional object that contains the value "hello world".  
         Optional<String> opNull = Optional.ofNullable(null);
 
         //checking for values
