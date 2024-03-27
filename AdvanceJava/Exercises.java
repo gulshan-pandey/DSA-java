@@ -134,8 +134,8 @@ public class Exercises {
     
     //WAP to create a list of employees with nama and salary fields,write a comparator that sorts employees by salary.then use this comparator to sort your list using the sort stream operation
     class Men{
-        String name;
-        int sal;
+        private final String name;
+        private final int sal;
     
         public Men(String name,int sal){
           this.name = name;
