@@ -88,7 +88,7 @@ System.out.println("printing using the Streams,and redefining accept method:--")
 
 
 
-}
-//WAP to create a list of employees with nama and salary fields,write a comparator that sorts employees by salary.then use this comparator to sort your list using the sort stream operation
 
-}
+
+    }}
+    

@@ -2,6 +2,7 @@ package AdvanceJava;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.function.BinaryOperator;
@@ -96,6 +97,57 @@ public class Exercises {
                 System.out.println("list of odd numbers : " + newlist);
                 System.out.println(newlist.getClass().getName());
 
-        }
 
-}
+
+
+                
+    Men emp10= new Men("shivam",90000);
+    Men emp3= new Men("ram",2500);
+    Men emp1= new Men("kaka",2000);
+    Men emp2= new Men("bravo",5000);
+    Men emp5= new Men("krish",3000);
+    Men emp7= new Men("kd",900);
+    Men emp8= new Men("soni",6000);
+    
+    List <Men> menwage = List.of(emp1,emp3,emp2,emp5,emp10,emp7,emp8);
+    
+    System.out.println("\n\n list of factory workers : "+ menwage);
+    
+    Comparator<? super Men> comparer = (a,b)-> a.getSal() - b.getSal() ;
+    
+    List <Men> sortedWages = menwage.stream().sorted(comparer).collect(Collectors.toList());
+    
+    System.out.println("\nsorted on basis of wages : " + sortedWages);
+    
+    
+    
+    }
+    
+    }
+    
+    
+    //WAP to create a list of employees with nama and salary fields,write a comparator that sorts employees by salary.then use this comparator to sort your list using the sort stream operation
+    class Men{
+        String name;
+        int sal;
+    
+        public Men(String name,int sal){
+          this.name = name;
+          this.sal = sal;
+        }
+    
+        public String getName() {
+            return name;
+        }
+    
+        public int getSal() {
+            return sal;
+        }
+    
+        
+        @Override
+        public String toString(){
+         return name + " " + sal 
+         + " ";}
+    }
+    
