@@ -107,15 +107,15 @@ public class Exercises {
 
     //Que ---Sorting on the basis of wages of the labour
                 
-    Men emp10= new Men("shivam",90000);
-    Men emp3= new Men("ram",2500);
-    Men emp1= new Men("kaka",2000);
-    Men emp2= new Men("bravo",5000);
-    Men emp5= new Men("krish",3000);
-    Men emp7= new Men("kd",900);
-    Men emp8= new Men("soni",6000);
+   
     
-    List <Men> menwage = List.of(emp1,emp3,emp2,emp5,emp10,emp7,emp8);
+    List <Men> menwage = List.of(new Men("shivam",90000),
+                                new Men("ram",2500),
+                                new Men("kaka",2000),
+                                new Men("bravo",5000),
+                                new Men("krish",3000),
+                                new Men("kd",900),
+                                new Men("soni",6000));
     
     System.out.println("\n\n list of factory workers : "+ menwage);
     
