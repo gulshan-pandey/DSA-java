@@ -122,15 +122,59 @@ public class Exercises {
     Comparator<? super Men> comparer = (a,b)-> a.getSal() - b.getSal() ;        // here <? super Men> is a wild card comparator(?)...
     
     List <Men> sortedWages = menwage.stream().sorted(comparer).collect(Collectors.toList());
+
     
     System.out.println("\nsorted on basis of wages : " + sortedWages);
     
+    // System.out.println("\n\n\n  Alternate way");
+    // // menwage.stream().sorted((emp1,emp2) ->Integer.compare(emp1.getSal(),emp2.getSal())).forEach(System.out::println);
     
+
+
+
+
+
+
+
+
+
+    // Question : Create a list of Strings represention numbers("1","2","3","4"...).Convert each string to number ,then calculate the squares of each number using the map opertion and sum up the resulting integers
+
+
+    List <String> strNumbers = List.of("1","2","3",
+    "4","5","6","7","8","9","10","11","12","13","14");
+
+    int filteredlist = strNumbers.stream().mapToInt(Integer::parseInt).reduce(0,(a,b)->a+b);
+
+    System.out.println("\n\n the sum of the square of the elements of the list is : " + filteredlist);
+    
+    strNumbers.stream().mapToInt(str -> Integer.parseInt(str)).map(n -> n*n).reduce((a,b) -> a+b).ifPresent(System.out::println);
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
     
     }
     
     }
     
+
+
+
+
+
+
+
     
     //WAP to create a list of employees with nama and salary fields,write a comparator that sorts employees by salary.then use this comparator to sort your list using the sort stream operation
     class Men{
