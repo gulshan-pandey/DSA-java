@@ -100,6 +100,12 @@ public class Exercises {
 
 
 
+
+
+
+
+
+    //Que ---Sorting on the basis of wages of the labour
                 
     Men emp10= new Men("shivam",90000);
     Men emp3= new Men("ram",2500);
@@ -113,7 +119,7 @@ public class Exercises {
     
     System.out.println("\n\n list of factory workers : "+ menwage);
     
-    Comparator<? super Men> comparer = (a,b)-> a.getSal() - b.getSal() ;
+    Comparator<? super Men> comparer = (a,b)-> a.getSal() - b.getSal() ;        // here <? super Men> is a wild card comparator(?)...
     
     List <Men> sortedWages = menwage.stream().sorted(comparer).collect(Collectors.toList());
     
