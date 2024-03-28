@@ -144,11 +144,11 @@ public class Exercises {
     List <String> strNumbers = List.of("1","2","3",
     "4","5","6","7","8","9","10","11","12","13","14");
 
-    int filteredlist = strNumbers.stream().mapToInt(Integer::parseInt).reduce(0,(a,b)->a+b);
+    int filteredlist = strNumbers.stream().mapToInt(Integer::parseInt).map(n -> n*n).reduce(0,(a,b)->a+b);
 
     System.out.println("\n\n the sum of the square of the elements of the list is : " + filteredlist);
     
-    strNumbers.stream().mapToInt(str -> Integer.parseInt(str)).map(n -> n*n).reduce((a,b) -> a+b).ifPresent(System.out::println);
+    strNumbers.stream().mapToInt(str -> Integer.parseInt(str)).map(n -> n*n).reduce((a,b) -> a+b).ifPresent(System.out::println);       //final type will be optional class
 
 
 
