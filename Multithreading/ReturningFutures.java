@@ -40,7 +40,7 @@ public class ReturningFutures {
         Future<String> name1 =  services.submit(task1);
         Future<String> name2 =  services.submit(task2);
         Future<String> name3 =  services.submit(task3);
-        Future<String> name4 =  services.submit(task4);
+        var name4 =  services.submit(task4);          // introduced in java 10 !
  
         System.out.println(name1.get());  //now the  program will stop further executing in order to get the name form the call method(or from the server)
         System.out.println(name2.get());
