@@ -9,6 +9,30 @@ import java.util.function.BinaryOperator;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+
+class Movieslist{
+    private String movienames;
+    private int likes;
+    
+    public Movieslist(String movienames, int likes) {
+        this.movienames = movienames;
+        this.likes = likes;
+    }
+
+    public String getMovienames() {
+        return movienames;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    
+
+}
+
+
+
 public class Exercises {
 
         @FunctionalInterface // functional interface is an interface that contains exactly one abstract
@@ -155,6 +179,35 @@ public class Exercises {
 
 
     
+
+
+
+    List <Movieslist> movie = List.of(              // List <Movieslist> can be replaced with "var"  as per java 10
+        new Movieslist("terminator",10),
+        new Movieslist("inception",5),
+        new Movieslist("tenet",15),
+        new Movieslist("alean",19),
+        new Movieslist("ironman",100),
+        new Movieslist("ironman2",14),
+        new Movieslist("ironman3",1),
+        new Movieslist("hulk",7),
+        new Movieslist("superman",3),
+        new Movieslist("batmen",16));
+
+
+     movie.stream()
+                  .map(movies -> movies.getMovienames()) 
+                  .forEach(name -> System.out.println(name));
+
+     System.out.println("\n\n\n" );
+
+
+     //movies more than 10 likes
+     movie.stream()
+                  .filter(movies -> movies.getLikes()>10) 
+                  .forEach(name -> System.out.println(name.getMovienames()));
+    
+   
 
 
 
