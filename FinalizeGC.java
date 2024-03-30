@@ -9,9 +9,12 @@ protected void finalize() throws Throwable {
 public static void main(String[] args) {
     
   FinalizeGC obj;
-  for(int i =0;i<1000000;i++){
+  for(int i =0;i<10;i++){
     obj = new FinalizeGC();
+    // obj = null;               // maakin the object unrefrenced ,this is optional to do
   }
+
+  // System.gc();    // the method to forcefully run the garbage collection , this is 
 
    
 }
