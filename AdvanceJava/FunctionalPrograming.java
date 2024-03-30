@@ -3,6 +3,7 @@ import java.time.format.SignStyle;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -89,6 +90,18 @@ System.out.println("printing using the Streams,and redefining accept method:--")
 
 
 
+    // using Stream 
 
+    System.out.println("printing random numbers using stream: ");
+    var stream = Stream.generate(()->Math.random());       // var was introduced in java 10    also ,here Stream.generate generates the infinite data items but we have to limit it!
+
+    stream.limit(5).forEach((n)-> System.out.println(n));
+
+
+    //Alternatively
+ 
+    // Random random = new Random();
+    // Stream<Double> stream2 = Stream.generate(random::nextDouble);
+    // stream2.limit(5).forEach(System.out::println);
     }}
     
