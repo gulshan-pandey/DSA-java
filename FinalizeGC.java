@@ -14,7 +14,7 @@ public static void main(String[] args) {
     // obj = null;               // maakin the object unrefrenced ,this is optional to do
   }
 
-  // System.gc();    // the method to forcefully run the garbage collection , this is 
+  // System.gc();    // the method to forcefully run the garbage collection , this is also optional to do bcz jvm do this automatically
 
    
 }
