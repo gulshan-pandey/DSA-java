@@ -40,7 +40,7 @@ public class FileHandlingReader {
       
         System.out.print((char)compare);
         };
-    }
+       }
         catch(FileNotFoundException e){
             System.out.printf("%s not found!! " , file);
         }
@@ -52,7 +52,7 @@ public class FileHandlingReader {
 
 
         
-        String nameOfFile = "output.txt"; // File name to read from
+        String nameOfFile = "IOstream/output.txt"; // File name to read from
 
         try {
             FileReader reader = new FileReader(nameOfFile);
