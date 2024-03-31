@@ -229,7 +229,7 @@ public class Exercises {
 
 
     
-    //WAP to create a list of employees with nama and salary fields,write a comparator that sorts employees by salary.then use this comparator to sort your list using the sort stream operation
+    //WAP to create a list of employees with name and salary fields,write a comparator that sorts employees by salary.then use the comparator to sort your list using the sort stream operation
     class Men{
         private final String name;
         private final int sal;
