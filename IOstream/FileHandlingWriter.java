@@ -1,4 +1,4 @@
-package AdvanceJava.IOstream;
+package IOstream;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

@@ -1,8 +1,8 @@
-package AdvanceJava.IOstream;
+package IOstream;
 
 import java.io.IOException;
 
-public class ReadInputs {
+public class ByteStreamss {
      
     //two types of io streams -->byte streams  and character streams
 
