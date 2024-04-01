@@ -124,7 +124,7 @@ System.out.println("printing using the Streams,and redefining accept method:--")
     var lis = Stream.of(List.of(1,2,3),List.of(4,5,6),List.of(7,8,9));
     // lis.peek(m -> System.out.println("using peek:" +m)).forEach(System.out::print);  // peek method is used to peek at the element of what operation is going on 
 
-    // lis.flatMap(l -> l.stream()).forEach(System.out::print);    
+    lis.flatMap(l -> l.stream()).forEach(System.out::print);    
 
 
 
