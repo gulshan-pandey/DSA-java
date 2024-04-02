@@ -10,9 +10,9 @@ public class ByteStreamss {
 
         // let us see how to print the array of bytes that we get from our keyboard
 
-        byte data[] = new byte[10];
+        byte data[] = new byte[10];   //initialized the 10 sized byte elements array
         System.out.println("enter some chars: ");
-        System.in.read(data); // for reading whatever is being passed by our console,,, throws exception as sometimes its not possible to read inputs (due to keyboard issues stuff...)
+        System.in.read(data); // for reading whatever is being passed in our console,,, throws exception as sometimes its not possible to read inputs (due to keyboard issues stuff...)
         System.out.print("you entered: ");
 
         for (int i = 0; i < data.length; i++) {

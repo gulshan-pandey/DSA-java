@@ -1,5 +1,2 @@
-package IOstream;
-
-public class Text {
-    
-}
+hello world
+hello earth

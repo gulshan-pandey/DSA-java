@@ -11,22 +11,24 @@ public class ReadingAndWriting {
         
         try(FileInputStream fileInputStream = new FileInputStream(file)){    // using try with resource   
             
-            System.out.println("Total size to read in bytes is : "+ fileInputStream.available());    //this available method used to return the number of bytes(tells the size of words)
+            System.out.println("Total size to read in bytes is : "+ fileInputStream.available());    //available method used to return the number of bytes(tells the size of words)
 
             // in order to read the content of a file using io
-            int content;
-            while((content = fileInputStream.read()) != -1){       //read method returns -1 when the end is reached
-                System.out.print((char) content);
-            }
+           int content;
+        
+           while((content = fileInputStream.read()) != -1){       //read method returns -1 when the end is reached
+               System.out.print((char) content);
+           }
+
+
+           
 
         } catch(Exception e){
             System.out.println("exception occured");
             e.printStackTrace();
         }
         
-        
-        
-        
+     
         
         // to print the file details
      
