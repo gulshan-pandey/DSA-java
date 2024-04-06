@@ -20,6 +20,7 @@ public class FileHandlingReader {
                 System.out.print((char) read); // now converting the read from int to char
             } while (read != -1); // here -1 means read till there is nothing left
 
+            reader.close();
         } catch (IOException exception) {
             System.out.println("exception occcured");
         }
@@ -37,23 +38,26 @@ public class FileHandlingReader {
         Scanner sc = new Scanner(System.in);
         System.out.println(" \n enter the fileName: ");
         String file = sc.nextLine(); // copy any filename alongwith its path name to access them and paste
-
+        sc.close();
         try (FileReader readed = new FileReader(file);) { // try with resource
             int compare;
             while ((compare = readed.read()) != -1) {
 
                 System.out.print((char) compare);
-            }
-            ;
+            };
+            readed.close();
         } catch (FileNotFoundException e) {
             System.out.printf("%s not found!! ", file);
         } catch (IOException e) {
             System.out.printf("file not found %s", e);
         }
+    
 
         finally {
             System.out.println("\n\n\nprogram ended");
+            
         }
+
 
         /// alternatively by using bufferReader////////////////////
 
