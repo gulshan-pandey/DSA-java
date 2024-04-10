@@ -13,11 +13,11 @@ public class ByteStreamss {
         byte data[] = new byte[10];   //initialized the 10 sized byte elements array
         System.out.println("enter some chars: ");
         System.in.read(data); // for reading whatever is being passed in our console,,, throws exception as sometimes its not possible to read inputs (due to keyboard issues stuff...)
-        System.out.print("you entered: ");
+        // System.out.print("you entered: ");
 
         for (int i = 0; i < data.length; i++) {
-            System.out.print(data[i] + " "); // will print char into binaries
-            System.out.print((char) data[i] + " ");
+            System.out.print(((char) data[i]) + "--"  +data[i]  + ", "); // will print char into Ascii values
+           
         }
 
     }

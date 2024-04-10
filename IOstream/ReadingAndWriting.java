@@ -33,7 +33,7 @@ public class ReadingAndWriting {
         // to print the file details
      
     if (file.exists()) {
-        System.out.println("File name: " + file.getName());
+        System.out.println("\n \n File name: " + file.getName());
         System.out.println("Absolute path: " + file.getAbsolutePath());
         System.out.println("Size: " + file.length() + " bytes");
         System.out.println("Readable: " + file.canRead());

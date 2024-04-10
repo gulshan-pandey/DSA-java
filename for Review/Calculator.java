@@ -28,11 +28,11 @@ class Calculator implements ActionListener {
 		jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jfrm.setSize(450,600);
 		jfrm.setLayout(null);
-		jfrm.getContentPane().setBackground(Color.pink);
+		jfrm.getContentPane().setBackground(java.awt.Color.pink);
 		
 		//border settings
-		Border blackline=BorderFactory.createLineBorder(Color.black);
-		Border blueline=BorderFactory.createLineBorder(Color.blue);
+		Border blackline=BorderFactory.createLineBorder(java.awt.Color.black);
+		Border blueline=BorderFactory.createLineBorder(java.awt.Color.blue);
 		
 		//font settings
 		Font f1=new Font(Font.SERIF, Font.BOLD, 20);   //top head
@@ -49,7 +49,7 @@ class Calculator implements ActionListener {
 		
 		menu=new JLabel(" ", JLabel.RIGHT);
 		menu.setBounds(100,80,250,40);
-		menu.setBackground(Color.white);
+		menu.setBackground(java.awt.Color.white);
 		menu.setBorder(blackline);	
 		menu.setFont(f1);
 		

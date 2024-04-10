@@ -46,11 +46,9 @@ public class FileHandlingReader {
                 System.out.print((char) compare);
             };
             readed.close();
-        } catch (FileNotFoundException e) {
-            System.out.printf("%s not found!! ", file);
-        } catch (IOException e) {
-            System.out.printf("file not found %s", e);
-        }
+        } catch (Throwable e) {
+            System.out.print(e);
+        } 
     
 
         finally {

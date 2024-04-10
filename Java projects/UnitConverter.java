@@ -2,6 +2,7 @@
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,12 +19,19 @@ public class UnitConverter {
         frame.setSize(400, 320);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
+    
+        // frame.setBackground(new Color(177, 252, 3));       ------------ XXXXXXXXXXXX-------------
+
+
+        frame.getContentPane().setBackground(new Color(110, 250, 241));      // v r explicitly setting the background color of the content pane, which is the container that holds all the components within the frame. This ensures that the background color affects the entire area where components are displayed, 
 
         input = new JLabel("Input: ");
         intext = new JTextField(10);
         output = new JLabel("Output: ");
         outtext = new JTextField(10);
-        outtext.setEditable(false);
+        outtext.setEditable(false);       // ---- initially the output text is non-editable
+
+        
 
         input.setBounds(20, 50, 100, 20);
         intext.setBounds(130, 50, 100, 20);
@@ -47,11 +55,11 @@ public class UnitConverter {
         frame.add(fromUnit);
         frame.add(toUnit);
 
-        button.addActionListener(new ConvertButtonListener());   //adding event listner in button to convert
+        button.addActionListener(new ConvertButtonListener());   //adding event listner in button to convert via anonymous inner class
         frame.setVisible(true);
     }
 
-    public UnitConverter() {
+    public UnitConverter() {       //constructor
         converter();
     }
 
@@ -61,14 +69,14 @@ public class UnitConverter {
         public void actionPerformed(ActionEvent e) {
             String fromUnitType = fromUnit.getSelectedItem().toString();
             String toUnitType = toUnit.getSelectedItem().toString();
-            double inValue = 0;
+            double inValue ;     // assigning new variable to store intext value
                         try {
                 inValue = Double.parseDouble(intext.getText());    //converting string to double
             } catch (NumberFormatException ex) {
                 JOptionPane.showMessageDialog(frame, "Invalid input. Please enter a valid number ＞﹏＜");   //JOptionPane class is used to display a message box
                 return;
             }
-            double outValue = 0;
+            double outValue = 0;      // assigning new variable to store outtext value
             switch (fromUnitType) {
                 case "Kilometer":
                     switch (toUnitType) {

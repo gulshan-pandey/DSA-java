@@ -1,4 +1,8 @@
 // import org.junit.jupiter.api.ClassOrderer.ClassName;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 interface Greeting {
     void greet();
 }
@@ -38,17 +42,42 @@ public class AnonymousInnerClass {
 
 //Example 2
 
-            Animal animal = new Animal() {     //Anonymous Inner Class for Extending a class
+            Animal dog = new Animal() {     //Anonymous Inner Class for Extending a class
                 @Override
                 void sound() {
                     System.out.println("Dog barks");
                 }
             };
             
-            animal.sound();
+            dog.sound();
         
 
+
+//EXAMPLE 3
+
+            ActionListener actionListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Perform action here
+                System.out.println("Button clicked!");         // we need to add the button,then call .addActionListener(actionListener);
+            }
+            };
+
         }
+
+
+
+//EXAMPLE 4
+
+        // Thread thread = new Thread(new Runnable() {
+        //     @Override 
+        //     public void run() {
+        //     System.out.println("Running in new thread"); 
+        //     }
+        // });
+        
+        // thread.start();
+ 
     
 }
 
