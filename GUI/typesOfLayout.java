@@ -42,27 +42,45 @@ public class typesOfLayout {
         f1.setVisible(true);
     }
     
+
+
     public static void main(String[] args) {
         // new typesOfLayout();
-        // new flowlayout();
+        new flowlayout();
         // new GridLayout();
         // new Jlayeredpane();
-        new WindowOverlay();
+        // new WindowOverlay();
 
-        // JOptionPane .showMessageDialog(null,"hello","title:",JOptionPane.INFORMATION_MESSAGE);
-        // while(true){
+        // JOptionPane .showMessageDialog(null,"hello","title:",JOptionPane.INFORMATION_MESSAGE);        // JOptionPane is used to show the message to the screen
+        
+        // int i =3;
+        // while(i>0){
         //     JOptionPane.showMessageDialog(null, "You have been hacked","Hacked warning", JOptionPane.WARNING_MESSAGE);
+        //      i--;}
+
         // JOptionPane.showMessageDialog(null,"we need to talk..","Read this",JOptionPane.PLAIN_MESSAGE);
         // JOptionPane.showMessageDialog(null,"But why???","Question",JOptionPane.QUESTION_MESSAGE);
+
+
+        //if we want to store and print theinput message  --- use .showInputDialog()
+        String userInput = JOptionPane.showInputDialog(null, "But why?", "Question", JOptionPane.QUESTION_MESSAGE);
+        System.out.println("User's input: " + userInput);
+
         // JOptionPane.showMessageDialog(null,"window crashed","Dead",JOptionPane.ERROR_MESSAGE);
+        
         // ImageIcon icon = new ImageIcon("GUI/Gemini_Generated_Image_sfuebbsfuebbsfue.jpeg");
         // JOptionPane.showMessageDialog(null, "bro do you even code", "myTitle", JOptionPane.YES_NO_CANCEL_OPTION,icon);
  
-    //     String name = JOptionPane.showInputDialog("Enter your name");    // this can be stored in string as well
-    //     JOptionPane.showMessageDialog(null, "hello "+name);
+        // String name = JOptionPane.showInputDialog("Enter your name");    // this can be stored in string
+        // JOptionPane.showMessageDialog(null, "hello "+name);
 
-    //      String[] responses ={"do","undo","redo","exit"};
-    //      JOptionPane.showOptionDialog(null,"you are awsome","Title: ",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,responses,0);
+        // String[] responses ={"do","undo","redo","exit"};
+        // JOptionPane.showOptionDialog(null,"Choose an action:","myTitle: ",JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,responses,0);      // this returns integer(0,1,2,-1)
+    
+        // JOptionPane.showConfirmDialog(null, "do you want to continue?", "myTitle", JOptionPane.YES_NO_CANCEL_OPTION);       // return type is  int(0,1,2,-1)
+
+
+
         }
 }
 
@@ -83,10 +101,14 @@ class flowlayout{
         
         JPanel panel = new JPanel();
         panel.setBackground(Color.GRAY);
-        panel.setPreferredSize(new Dimension(200,200));
+        panel.setPreferredSize(new Dimension(100,200));
         
         panel.setLayout(new FlowLayout());
-
+        
+        JCheckBox cb = new JCheckBox("do you agree?");           // introducing checkbox
+        cb.setFocusable(false);
+        cb.setFont(new Font("Consolas",Font.ITALIC,10));
+        panel.add(cb);
         panel.add(new Button("1"));
         panel.add(new Button("2"));
         panel.add(new Button("3"));
@@ -113,7 +135,7 @@ class GridLayout{
         JFrame jf = new JFrame("grid layout");
         jf.setSize(500,500);
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jf.setLayout(new java.awt.GridLayout(3,3,10,0));         // 3 rows and 3 columns , horiz-spacing , vert-spacing
+        jf.setLayout(new java.awt.GridLayout(3,3,10,10));       // 3 rows and 3 columns , horiz-spacing , vert-spacing
 
         jf.add(new JButton("1"));
         jf.add(new JButton("2"));
@@ -150,8 +172,9 @@ class Jlayeredpane{
         l3.setOpaque(true);
         l3.setBounds(150,150,200,200);
 
+
         JLayeredPane lp = new JLayeredPane();
-        lp.setBounds(0,0,600,600);
+        lp.setBounds(0,0,100,100);
         lp.add(l1);
         lp.add(l2);
         lp.add(l3);
@@ -159,6 +182,7 @@ class Jlayeredpane{
         jframe.add(lp);
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jframe.setSize(400,400);
+        jframe.setLayout(new BorderLayout());
         jframe.setVisible(true);
 
 
@@ -178,9 +202,9 @@ class WindowOverlay implements ActionListener{
  JButton buttonn = new JButton("click me");
  
  public WindowOverlay(){
-     buttonn.setBounds(50,50,100,20);
+     buttonn.setBounds(50,50,100,30);
      buttonn.setFocusable(false);
-     jframe1.setLayout(null);
+     jframe1.setLayout(null);     // by default layout is Border layout
      jframe1.add(buttonn);
      jframe1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
      jframe1.setSize(300,300);
@@ -193,7 +217,7 @@ class WindowOverlay implements ActionListener{
 
     }
 
-    public void actionPerformed(ActionEvent e){
+    public void actionPerformed(ActionEvent e){      // action listener
         if(e.getSource()== buttonn){
             buttonn.setEnabled(false);
             try {
@@ -208,7 +232,7 @@ class WindowOverlay implements ActionListener{
      }
 }
 
-class NewWindow{
+class NewWindow{        // appeared when button is clicked!
 
     public NewWindow(){
         JFrame jframe2 = new JFrame("New Window");
