@@ -1,4 +1,4 @@
-package Multithreading;
+
 class Counter {
     private int count = 0;
 
@@ -6,7 +6,7 @@ class Counter {
         count++;
     }
 
-    // by using syncronized : helps to make precise calculations and ensures that only one thread can execute a block o code at a time
+    // by using syncronized : helps to make precise calculations and ensures that only one thread can execute a block of code at a time
 
     public int getCount() {
         return count;
@@ -31,7 +31,8 @@ class Runcounter extends Thread {
 public class SyncronizeThread {
     public static void main(String[] args) throws InterruptedException {
 
-        double startTime = System.currentTimeMillis();
+        double startTime = System.currentTimeMillis();    //initial time
+        
         Counter c1 = new Counter();
 
         Runcounter c2 = new Runcounter(c1);

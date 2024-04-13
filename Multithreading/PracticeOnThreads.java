@@ -1,4 +1,4 @@
-package Multithreading;
+
 //WAP to print goodmorning and welcome continuously using Thread
 //Add a sleep method in welcome thread of q1 to delay its execution for 200ms
 //use getPriority and setPriority
