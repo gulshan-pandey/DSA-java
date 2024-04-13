@@ -54,7 +54,7 @@ interface BasicAnimal {
 
     void sleep();
 
-    default void move(){  //default method
+    default void move(){  // an interface can have default method
      System.out.println("they can move here and there");
     }
 }
