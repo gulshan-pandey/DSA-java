@@ -1,1 +1,0 @@
-Hello, Earth! This is a FileWriter example.
