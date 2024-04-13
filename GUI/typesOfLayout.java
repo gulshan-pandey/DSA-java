@@ -46,10 +46,11 @@ public class typesOfLayout {
 
     public static void main(String[] args) {
         // new typesOfLayout();
-        new flowlayout();
-        // new GridLayout();
+        // new flowlayout();
+        // new gridLayout();
         // new Jlayeredpane();
         // new WindowOverlay();
+        SwingUtilities.invokeLater(() -> new AdvanceFeatures("Food order"));
 
         // JOptionPane .showMessageDialog(null,"hello","title:",JOptionPane.INFORMATION_MESSAGE);        // JOptionPane is used to show the message to the screen
         
@@ -62,9 +63,12 @@ public class typesOfLayout {
         // JOptionPane.showMessageDialog(null,"But why???","Question",JOptionPane.QUESTION_MESSAGE);
 
 
+
         //if we want to store and print theinput message  --- use .showInputDialog()
-        String userInput = JOptionPane.showInputDialog(null, "But why?", "Question", JOptionPane.QUESTION_MESSAGE);
-        System.out.println("User's input: " + userInput);
+        // String userInput = JOptionPane.showInputDialog(null, "But why?", "Question", JOptionPane.QUESTION_MESSAGE);
+        // System.out.println("User's input: " + userInput);
+
+
 
         // JOptionPane.showMessageDialog(null,"window crashed","Dead",JOptionPane.ERROR_MESSAGE);
         
@@ -130,8 +134,8 @@ class flowlayout{
 
 
 //-------------------------grid layout --------------------
-class GridLayout{
-    public GridLayout() {
+class gridLayout{
+    public gridLayout() {
         JFrame jf = new JFrame("grid layout");
         jf.setSize(500,500);
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -245,5 +249,76 @@ class NewWindow{        // appeared when button is clicked!
         lab.setBounds(0,0,100,23);
         lab.setFont(new Font(null,Font.ITALIC,25));
         jframe2.setVisible(true);
+    }
+}
+
+
+
+
+class AdvanceFeatures extends JFrame implements ActionListener{
+
+    private JRadioButton pizzaBtn;
+    private JRadioButton burgurBtn;
+    private JRadioButton friesBtn;
+    private ButtonGroup option ;     // for grouping the radio buttons
+    private JButton btn;
+    public AdvanceFeatures(String str){
+          super(str);    // to set the title of the window
+          ImageIcon icon = new ImageIcon("GUI/Gemini_Generated_Image_sfuebbsfuebbsfue.jpeg");
+          setIconImage(icon.getImage());       // to set the image icon of the window's frame
+
+          setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+          pizzaBtn = new JRadioButton("pizza");
+          burgurBtn = new JRadioButton("burgur");
+          friesBtn = new JRadioButton("fries");
+          option = new ButtonGroup();
+          option.add(pizzaBtn);    // adding all 3 in the same group so that once can be selected at one time
+          option.add(burgurBtn);
+          option.add(friesBtn);
+          setLayout(new FlowLayout());
+          btn= new JButton("Order Now");
+
+
+        /////////// by using border layout////////
+
+        //   setLayout(new BorderLayout());
+        //   JPanel radioPanel = new JPanel(new GridLayout(3, 1));
+        //   radioPanel.add(pizzaBtn);
+        //   radioPanel.add(burgurBtn);
+        //   radioPanel.add(friesBtn);
+  
+        //   add(radioPanel, BorderLayout.CENTER);
+        //   add(btn, BorderLayout.SOUTH);
+
+
+          add(pizzaBtn);
+          add(burgurBtn);
+          add(friesBtn);
+          add(btn);
+
+          pack();
+          setVisible(true);
+          btn.addActionListener(this);
+
+        }
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == btn){
+            if(pizzaBtn.isSelected()){
+                System.out.println("your order is pizza");
+                dispose();
+            }
+            else if(burgurBtn.isSelected()){
+                System.out.println("your order is burger");
+                dispose();
+            }
+            else if(friesBtn.isSelected()){
+                System.out.println("your order is fries");
+                dispose();
+            }
+        }
+        
     }
 }
