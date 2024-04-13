@@ -29,7 +29,7 @@ public class UnitConverter {
         intext = new JTextField(10);
         output = new JLabel("Output: ");
         outtext = new JTextField(10);
-        outtext.setEditable(false);       // ---- initially the output text is non-editable
+        outtext.setEditable(false);       // ----  the output text is non-editable
 
         
 

@@ -50,7 +50,9 @@ public class typesOfLayout {
         // new gridLayout();
         // new Jlayeredpane();
         // new WindowOverlay();
-        SwingUtilities.invokeLater(() -> new AdvanceFeatures("Food order"));
+        // SwingUtilities.invokeLater(() -> new AdvanceFeatures("Food order"));
+        new AdvanceFeatures("Food order");
+        
 
         // JOptionPane .showMessageDialog(null,"hello","title:",JOptionPane.INFORMATION_MESSAGE);        // JOptionPane is used to show the message to the screen
         
@@ -262,6 +264,12 @@ class AdvanceFeatures extends JFrame implements ActionListener{
     private JRadioButton friesBtn;
     private ButtonGroup option ;     // for grouping the radio buttons
     private JButton btn;
+
+
+    // progressbar
+    JProgressBar progressbar= new JProgressBar();
+
+
     public AdvanceFeatures(String str){
           super(str);    // to set the title of the window
           ImageIcon icon = new ImageIcon("GUI/Gemini_Generated_Image_sfuebbsfuebbsfue.jpeg");
@@ -291,15 +299,34 @@ class AdvanceFeatures extends JFrame implements ActionListener{
         //   add(radioPanel, BorderLayout.CENTER);
         //   add(btn, BorderLayout.SOUTH);
 
+        progressbar.setValue(0);
+        progressbar.setStringPainted(true);
+        progressbar.setBounds(50, 100, 200, 30);
+        add(progressbar);
+        
 
           add(pizzaBtn);
           add(burgurBtn);
           add(friesBtn);
           add(btn);
-
+   
           pack();
           setVisible(true);
           btn.addActionListener(this);
+          fill();
+        }
+
+        public void fill(){
+           int progress =0;
+           while(progress<=100){
+               progressbar.setValue(progress);
+               try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+               progress+=20;
+           }
 
         }
     
