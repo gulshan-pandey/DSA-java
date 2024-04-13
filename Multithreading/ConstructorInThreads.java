@@ -1,5 +1,5 @@
 class constr extends Thread {
-    public constr(String name) {
+    public constr(String name) {    //constructor
         super(name);
     }
 
@@ -18,8 +18,8 @@ class constr extends Thread {
 public class ConstructorInThreads {
     public static void main(String[] args) {
 
-        constr c = new constr("chacha");
-        constr c2 = new constr("uncle");
+        constr c = new constr("vscode");
+        constr c2 = new constr("pycharm");
 
         c.start();
 

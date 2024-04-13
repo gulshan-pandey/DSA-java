@@ -10,7 +10,7 @@ import java.util.function.BinaryOperator;
 import java.util.function.Function;
 
 public class FnALInterfaces {
-    //functional interfaces has only one abstracted metjod,however it can have static or default methods in them ...example  runnable,callable,BinaryOperator,comparator,Consumer  interfaces,Function
+    //functional interfaces has only one abstracted method,however it can have static or default methods in them ...example  runnable,callable,BinaryOperator,comparator,Consumer  interfaces,Function
 
     public static void main(String[] args) {
 

@@ -2,11 +2,36 @@ package AdvanceJava;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.function.BinaryOperator;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
+
+
+class Movieslist{
+    private String movienames;
+    private int likes;
+    
+    public Movieslist(String movienames, int likes) {
+        this.movienames = movienames;
+        this.likes = likes;
+    }
+
+    public String getMovienames() {
+        return movienames;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    
+
+}
+
+
 
 public class Exercises {
 
@@ -96,6 +121,136 @@ public class Exercises {
                 System.out.println("list of odd numbers : " + newlist);
                 System.out.println(newlist.getClass().getName());
 
-        }
 
-}
+
+
+
+
+
+
+
+    //Que ---Sorting on the basis of wages of the labour
+                
+   
+    
+    List <Men> menwage = List.of(new Men("shivam",90000),
+                                new Men("ram",2500),
+                                new Men("kaka",2000),
+                                new Men("bravo",5000),
+                                new Men("krish",3000),
+                                new Men("kd",900),
+                                new Men("soni",6000));
+    
+    System.out.println("\n\n list of factory workers : "+ menwage);
+    
+    Comparator<? super Men> comparer = (a,b)-> a.getSal() - b.getSal() ;        // here <? super Men> is a wild card comparator(?)...
+    
+    List <Men> sortedWages = menwage.stream().sorted(comparer).collect(Collectors.toList());
+
+    
+    System.out.println("\nsorted on basis of wages : " + sortedWages);
+    
+    // System.out.println("\n\n\n  Alternate way");
+    // // menwage.stream().sorted((emp1,emp2) ->Integer.compare(emp1.getSal(),emp2.getSal())).forEach(System.out::println);
+    
+
+
+
+
+
+
+
+
+
+    // Question : Create a list of Strings represention numbers("1","2","3","4"...).Convert each string to number ,then calculate the squares of each number using the map opertion and sum up the resulting integers
+
+
+    List <String> strNumbers = List.of("1","2","3",
+    "4","5","6","7","8","9","10","11","12","13","14");
+
+    int filteredlist = strNumbers.stream().mapToInt(Integer::parseInt).map(n -> n*n).reduce(0,(a,b)->a+b);
+
+    System.out.println("\n\n the sum of the square of the elements of the list is : " + filteredlist);
+    
+    strNumbers.stream().mapToInt(str -> Integer.parseInt(str)).map(n -> n*n).reduce((a,b) -> a+b).ifPresent(System.out::println);       //final type will be optional class
+
+
+
+
+
+    
+
+
+
+    List <Movieslist> movie = List.of(              // List <Movieslist> can be replaced with "var"  as per java 10
+        new Movieslist("terminator",10),
+        new Movieslist("inception",5),
+        new Movieslist("tenet",15),
+        new Movieslist("alean",19),
+        new Movieslist("ironman",100),
+        new Movieslist("ironman2",14),
+        new Movieslist("ironman3",1),
+        new Movieslist("hulk",7),
+        new Movieslist("superman",3),
+        new Movieslist("batmen",16));
+
+
+     movie.stream()
+                  .map(movies -> movies.getMovienames()) 
+                  .forEach(name -> System.out.println(name));
+
+     System.out.println("\n\n\n" );
+
+
+     //movies more than 10 likes
+     movie.stream()
+                  .filter(movies -> movies.getLikes()>10) 
+                  .forEach(name -> System.out.println(name.getMovienames()));
+    
+   
+
+
+
+
+
+
+
+
+    
+    }
+    
+    }
+    
+
+
+
+
+
+
+
+    
+    //WAP to create a list of employees with name and salary fields,write a comparator that sorts employees by salary.then use the comparator to sort your list using the sort stream operation
+    class Men{
+        private final String name;
+        private final int sal;
+    
+        public Men(String name,int sal){
+          this.name = name;
+          this.sal = sal;
+        }
+    
+        public String getName() {
+            return name;
+        }
+    
+        public int getSal() {
+            return sal;
+        }
+    
+        
+        @Override
+        public String toString(){
+         return name + " " + sal 
+         + " ";}
+    }
+    

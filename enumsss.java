@@ -3,7 +3,7 @@
 enum Color {
     RED,
     GREEN,
-    YELLOW;
+    YELLOW, white;
   }
   
   enum Grade {

@@ -1,3 +1,4 @@
+package IOstream;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -5,10 +6,10 @@ import java.io.IOException;
 public class FileHandlingWriter {
 
     public static void main(String[] args) {
+        String fileName = "IOstream/output.txt";
 
-        String fileName = "file.txt"; //initialised the file name
-        try(FileWriter writer = new FileWriter(fileName);) { //the () inside the try use to prevent the resource leak  and it is called {try with resource},when we put the condition in () of the try then it will automatically terimate it at the end of the program
-        // creating its object can cause to the checked exception so it must be handled and should be closed to release system resoruces;
+     //initialised the file name
+        try(FileWriter writer = new FileWriter(fileName);) { //the () inside the try use to prevent the resource leak  and it is called {try with resource},when we put the condition in () of the try then it will automatically terimate it at the end of the program creating its object can cause to the checked exception so it must be handled and should be closed to release system resoruces;
 
             writer.write("hello world"); // what to write
             
@@ -18,8 +19,8 @@ public class FileHandlingWriter {
                 }
                 writer.write("\n");
             }
-            writer.flush(); // to writes all the data
-            System.out.println("the file successfully written!");
+            writer.flush(); // to writes all the data immediately
+            System.out.println("the file written successfully !");
         } catch (Throwable th) {
             System.out.println("sorry file cant be written" + th);
             th.printStackTrace();
@@ -27,10 +28,11 @@ public class FileHandlingWriter {
 
 
 
-   //using objeect method
+   //using object method
 
-    String filename = "output.txt"; // File name
-    String textToWrite = "Hello, world! This is a FileWriter example."; // Text to write to the file
+    String filename = "IOstream/output.txt";
+    
+    String textToWrite = "Hello, Earth! This is a FileWriter example."; // Text to write to the file
 
         try {
             File file = new File(filename); // Create a File object

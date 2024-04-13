@@ -11,6 +11,29 @@ interface calculation{
 }
 
 
+class Movieslist{
+    private String movienames;
+    private int likes;
+    
+    public Movieslist(String movienames, int likes) {
+        this.movienames = movienames;
+        this.likes = likes;
+    }
+
+    public String getMovienames() {
+        return movienames;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    
+
+}
+
+
+
 public class Exercise2 {
 
     public static void main(String[] args) {
@@ -101,5 +124,24 @@ public class Exercise2 {
         return Optional.empty();
        }
        return Optional.of(str.toUpperCase());
-    }
-}
+
+
+
+
+  
+
+
+
+    
+    }}
+
+
+
+
+
+
+
+
+
+
+   
