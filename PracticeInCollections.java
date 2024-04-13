@@ -83,7 +83,7 @@ System.out.println(list);
 
         int j=li.size();
         for(int i=0;i<j/2;i++){
-           PracticeInCollections.swap(li,i,j-i-1);       //recalling the swap method ,and this method will be called list.size()/2 times
+           PracticeInCollections.swap(li,i,j-i-1);         //recalling the swap method ,and this method will be called list.size()/2 times
         }
     }
 }
