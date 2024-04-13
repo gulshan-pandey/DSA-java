@@ -7,7 +7,7 @@ public class RockPaperSeassor {
         
 
         
-        // wap for ROCK PAPER SEASOR
+    // ROCK, PAPER ,SEASOR    GAME
 
         System.out.println("LETS PLAY ROCK PAPER SEASOR \n\n\n");
 
