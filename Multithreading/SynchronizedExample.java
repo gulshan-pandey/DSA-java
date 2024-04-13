@@ -1,4 +1,4 @@
-package GUI;
+
 public class SynchronizedExample {
     private int count = 0;
 
