@@ -46,11 +46,11 @@ public class TypesOfLayouts {
 
     public static void main(String[] args) {
         // new typesOfLayout();
-        // new flowlayout();
+        new flowlayout();
         // new gridLayout();
         // new Jlayeredpane();
         // new WindowOverlay();
-        SwingUtilities.invokeLater(() -> new AdvanceFeatures("Food order"));     // this  will create the confilct with EDT(event dispach thread) 
+        // SwingUtilities.invokeLater(() -> new AdvanceFeatures("Food order"));     // this  will create the confilct with EDT(event dispach thread) 
         // new AdvanceFeatures("Food order");   //---- either way is fine
         
 
@@ -102,14 +102,14 @@ class flowlayout{
     public flowlayout() {
         JFrame f = new JFrame("flow layout");
         f.setSize(400,400);
-        f.setLayout(new FlowLayout(FlowLayout.CENTER,10,10));
+        // f.setLayout(new FlowLayout(FlowLayout.CENTER,10,10));
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         JPanel panel = new JPanel();
         panel.setBackground(Color.GRAY);
         panel.setPreferredSize(new Dimension(100,200));
         
-        panel.setLayout(new FlowLayout());
+        // panel.setLayout(new FlowLayout());
         
         JCheckBox cb = new JCheckBox("do you agree?");           // introducing checkbox
         cb.setFocusable(false);
