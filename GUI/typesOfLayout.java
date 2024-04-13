@@ -50,7 +50,7 @@ public class typesOfLayout {
         // new gridLayout();
         // new Jlayeredpane();
         // new WindowOverlay();
-        // SwingUtilities.invokeLater(() -> new AdvanceFeatures("Food order"));
+        // SwingUtilities.invokeLater(() -> new AdvanceFeatures("Food order"));     // this  will create the confilct with EDT(event dispach thread) 
         new AdvanceFeatures("Food order");
         
 
@@ -301,7 +301,9 @@ class AdvanceFeatures extends JFrame implements ActionListener{
 
         progressbar.setValue(0);
         progressbar.setStringPainted(true);
-        progressbar.setBounds(50, 100, 200, 30);
+        progressbar.setFont(new Font("MV Boli",Font.BOLD,10));
+        progressbar.setForeground(Color.GREEN);
+        progressbar.setBackground(Color.BLACK);
         add(progressbar);
         
 
@@ -317,17 +319,17 @@ class AdvanceFeatures extends JFrame implements ActionListener{
         }
 
         public void fill(){
-           int progress =0;
+           int progress = 0;
            while(progress<=100){
                progressbar.setValue(progress);
                try {
-                Thread.sleep(1000);
+                Thread.sleep(10);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-               progress+=20;
+               progress++;
            }
-
+           progressbar.setString("done!");
         }
     
     @Override
