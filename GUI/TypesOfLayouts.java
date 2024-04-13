@@ -5,11 +5,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class typesOfLayout {
+public class TypesOfLayouts {
 
-    //Border layout----------------------------------------------------------------
+    //Border layout(default layout)----------------------------------------------------------------
 
-    public typesOfLayout() {
+    public TypesOfLayouts() {
         JFrame f1= new JFrame();
         f1.setSize(400,400);
         f1.setLayout(new BorderLayout(10,10));      // vertical and horizontal gap
@@ -50,8 +50,8 @@ public class typesOfLayout {
         // new gridLayout();
         // new Jlayeredpane();
         // new WindowOverlay();
-        // SwingUtilities.invokeLater(() -> new AdvanceFeatures("Food order"));     // this  will create the confilct with EDT(event dispach thread) 
-        new AdvanceFeatures("Food order");
+        SwingUtilities.invokeLater(() -> new AdvanceFeatures("Food order"));     // this  will create the confilct with EDT(event dispach thread) 
+        // new AdvanceFeatures("Food order");   //---- either way is fine
         
 
         // JOptionPane .showMessageDialog(null,"hello","title:",JOptionPane.INFORMATION_MESSAGE);        // JOptionPane is used to show the message to the screen
@@ -113,7 +113,7 @@ class flowlayout{
         
         JCheckBox cb = new JCheckBox("do you agree?");           // introducing checkbox
         cb.setFocusable(false);
-        cb.setFont(new Font("Consolas",Font.ITALIC,10));
+        cb.setFont(new Font("Consolas",Font.ITALIC,12));
         panel.add(cb);
         panel.add(new Button("1"));
         panel.add(new Button("2"));
@@ -180,7 +180,7 @@ class Jlayeredpane{
 
 
         JLayeredPane lp = new JLayeredPane();
-        lp.setBounds(0,0,100,100);
+        lp.setBounds(0,0,500,500);     // the dimensions of the layered pane
         lp.add(l1);
         lp.add(l2);
         lp.add(l3);
@@ -188,7 +188,7 @@ class Jlayeredpane{
         jframe.add(lp);
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jframe.setSize(400,400);
-        jframe.setLayout(new BorderLayout());
+        // jframe.setLayout(new BorderLayout());   --------- no need to specify coz by default layout is borderlayout
         jframe.setVisible(true);
 
 
@@ -227,7 +227,7 @@ class WindowOverlay implements ActionListener{
         if(e.getSource()== buttonn){
             buttonn.setEnabled(false);
             try {
-                Thread.sleep(2000);
+                Thread.sleep(1000);
             } catch (InterruptedException e1) {
                 
                 System.out.println("sorry!");
@@ -301,7 +301,7 @@ class AdvanceFeatures extends JFrame implements ActionListener{
 
         progressbar.setValue(0);
         progressbar.setStringPainted(true);
-        progressbar.setFont(new Font("MV Boli",Font.BOLD,10));
+        progressbar.setFont(new Font("MV Boli",Font.BOLD,12));
         progressbar.setForeground(Color.GREEN);
         progressbar.setBackground(Color.BLACK);
         add(progressbar);
@@ -315,37 +315,56 @@ class AdvanceFeatures extends JFrame implements ActionListener{
           pack();
           setVisible(true);
           btn.addActionListener(this);
-          fill();
+          
         }
 
         public void fill(){
-           int progress = 0;
-           while(progress<=100){
-               progressbar.setValue(progress);
-               try {
-                Thread.sleep(10);
+            btn.setEnabled(false); // Disable the button while filling the progress bar
+
+        Thread fillThread = new Thread(new Runnable() {     // make another thread other than EDT so that progressbar can fill in seperate thread
+        @Override
+        public void run() {
+            int progress = 0;
+            while (progress <= 100) {
+                progressbar.setValue(progress);
+                try {
+                    Thread.sleep(10);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                progress++;
+            }
+            progressbar.setString("Done!");
+
+            try {
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-               progress++;
-           }
-           progressbar.setString("done!");
+            dispose();
+            
+        }
+    });
+    fillThread.start();
         }
     
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == btn){
             if(pizzaBtn.isSelected()){
+                fill();
                 System.out.println("your order is pizza");
-                dispose();
+                
             }
             else if(burgurBtn.isSelected()){
+                fill();
                 System.out.println("your order is burger");
-                dispose();
+                
             }
             else if(friesBtn.isSelected()){
+                fill();
                 System.out.println("your order is fries");
-                dispose();
+            
             }
         }
         
