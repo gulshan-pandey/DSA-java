@@ -91,10 +91,7 @@ public class Exercises {
                                 "computer science", "motorcycle", "airplane mode", "Quaintum physics", "conspiracy");
                 System.out.println("the list of string is : " + list + "\n");
 
-                String agg = list.stream().filter(li -> li.length() > 10).reduce("", (a, b) -> a + " " + b); // reduce
-                                                                                                             // is a
-                                                                                                             // terminal
-                                                                                                             // operation!
+                String agg = list.stream().filter(li -> li.length() > 10).reduce("", (a, b) -> a + " " + b); // reduce is a terminal operation!
                 System.out.println("reduced string is : " + agg);
 
                 // method 2:
