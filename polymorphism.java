@@ -17,14 +17,13 @@ interface player {
         System.out.println("good mrng");
     }
 
-    default void play() { // this default method doesnot need to implemented in the concrete class but if u want then you can
-                          // introduced in java8
+    default void play() { // this default method doesnot need to implemented in the concrete class but if u want then you can...introduced in java8
         greetings(); //here we are calling the private mathod for good
         System.out.println("playing my favourite songs");
     }
 }
 
-class myCellPhone { //parent class
+class myCellPhone {           //parent class
     void callNumber(int number) {
         System.out.println("calling ... " + number);
     }
