@@ -46,11 +46,11 @@ public class TypesOfLayouts {
 
     public static void main(String[] args) {
         // new typesOfLayout();
-        new flowlayout();
+        // new flowlayout();
         // new gridLayout();
         // new Jlayeredpane();
         // new WindowOverlay();
-        // SwingUtilities.invokeLater(() -> new AdvanceFeatures("Food order"));     // this  will create the confilct with EDT(event dispach thread) 
+        SwingUtilities.invokeLater(() -> new AdvanceFeatures("Food order"));     // this  will create the confilct with EDT(event dispach thread) 
         // new AdvanceFeatures("Food order");   //---- either way is fine
         
 
@@ -102,14 +102,14 @@ class flowlayout{
     public flowlayout() {
         JFrame f = new JFrame("flow layout");
         f.setSize(400,400);
-        // f.setLayout(new FlowLayout(FlowLayout.CENTER,10,10));
+        f.setLayout(new FlowLayout(FlowLayout.CENTER,10,10));
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         JPanel panel = new JPanel();
         panel.setBackground(Color.GRAY);
-        panel.setPreferredSize(new Dimension(100,200));
+        panel.setPreferredSize(new Dimension(110,200));
         
-        // panel.setLayout(new FlowLayout());
+        panel.setLayout(new FlowLayout());
         
         JCheckBox cb = new JCheckBox("do you agree?");           // introducing checkbox
         cb.setFocusable(false);
@@ -249,7 +249,7 @@ class NewWindow{        // appeared when button is clicked!
         lab.setText("Hello");
         jframe2.add(lab);
         lab.setBounds(0,0,100,23);
-        lab.setFont(new Font(null,Font.ITALIC,25));
+        lab.setFont(new Font("Consolas",Font.ITALIC,25));
         jframe2.setVisible(true);
     }
 }
@@ -259,6 +259,7 @@ class NewWindow{        // appeared when button is clicked!
 
 class AdvanceFeatures extends JFrame implements ActionListener{
 
+    private JLabel l1;
     private JRadioButton pizzaBtn;
     private JRadioButton burgurBtn;
     private JRadioButton friesBtn;
@@ -273,44 +274,54 @@ class AdvanceFeatures extends JFrame implements ActionListener{
     public AdvanceFeatures(String str){
           super(str);    // to set the title of the window
           ImageIcon icon = new ImageIcon("GUI/Gemini_Generated_Image_sfuebbsfuebbsfue.jpeg");
-          setIconImage(icon.getImage());       // to set the image icon of the window's frame
+          setIconImage(icon.getImage());               // to set the image icon of the window's frame
 
           setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+          l1 = new JLabel();
+          l1.setText("let me buy the lunch <3");
           pizzaBtn = new JRadioButton("pizza");
-          burgurBtn = new JRadioButton("burgur");
+          burgurBtn = new JRadioButton("burgurs");
           friesBtn = new JRadioButton("fries");
           option = new ButtonGroup();
           option.add(pizzaBtn);    // adding all 3 in the same group so that once can be selected at one time
           option.add(burgurBtn);
           option.add(friesBtn);
-          setLayout(new FlowLayout());
           btn= new JButton("Order Now");
+
+
+////////////////////// by using flow layout////////
+
+        //   setLayout(new FlowLayout());
+        // add(progressbar);
+        
+        //   add(l1);
+        //   add(pizzaBtn);
+        //   add(burgurBtn);
+        //   add(friesBtn);
+        //   add(btn);
 
 
         /////////// by using border layout////////
 
-        //   setLayout(new BorderLayout());
-        //   JPanel radioPanel = new JPanel(new GridLayout(3, 1));
-        //   radioPanel.add(pizzaBtn);
-        //   radioPanel.add(burgurBtn);
-        //   radioPanel.add(friesBtn);
-  
-        //   add(radioPanel, BorderLayout.CENTER);
-        //   add(btn, BorderLayout.SOUTH);
+          setLayout(new BorderLayout());
+          JPanel radioPanel = new JPanel(new GridLayout(5, 1));
+          radioPanel.add(l1);
+          radioPanel.add(pizzaBtn);
+          radioPanel.add(burgurBtn);
+          radioPanel.add(friesBtn);
+          radioPanel.add(progressbar);
+          add(radioPanel, BorderLayout.CENTER);
+          add(btn, BorderLayout.SOUTH);
+
+
+
 
         progressbar.setValue(0);
         progressbar.setStringPainted(true);
         progressbar.setFont(new Font("MV Boli",Font.BOLD,12));
         progressbar.setForeground(Color.GREEN);
         progressbar.setBackground(Color.BLACK);
-        add(progressbar);
-        
-
-          add(pizzaBtn);
-          add(burgurBtn);
-          add(friesBtn);
-          add(btn);
    
           pack();
           setVisible(true);
