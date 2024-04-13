@@ -48,7 +48,7 @@ public class TestingReduce {
 
     strings.stream()
     .filter(s -> s.length() > 3)
-    .map(String::toUpperCase)                              //this line means this   .map(s -> s.toUpperCase())
+    .map(String::toUpperCase)          //this line means this   .map(s -> s.toUpperCase())
     .reduce((s1, s2) -> s1 + ", " + s2)
     .ifPresent(System.out::println);
 

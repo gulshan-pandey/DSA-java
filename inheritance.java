@@ -15,7 +15,7 @@ class base { //it is superclass
 
 }
 
-class derived extends base { // means inheriting the property of the base class ,and it is a subclass
+class derived extends base {     // means inheriting the property of the base class ,and it is a subclass
 
     int y;
     
