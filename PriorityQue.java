@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class PriQue {
+public class PriorityQue {
     
 
     public static void main(String[] args) {

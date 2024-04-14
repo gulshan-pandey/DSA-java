@@ -23,20 +23,22 @@ public class Listenerss extends JFrame implements KeyListener {
     
     @Override
     public void keyTyped(KeyEvent e) {
+        //KeyTyped - is invoked when a key is typed, uses keyChar, char output
         
-        throw new UnsupportedOperationException("Unimplemented method 'keyTyped'");
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
+        //keypressed: invoked when a physical key is pressed down, used keyCode , int output
         
-        throw new UnsupportedOperationException("Unimplemented method 'keyPressed'");
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        
-        throw new UnsupportedOperationException("Unimplemented method 'keyReleased'");
+        //keyReleases is called whenever a button is released
+        // System.out.println("you released : "+ e.getKeyChar());
+        System.out.println("you released : "+ e.getKeyCode());
+
     }
 
 

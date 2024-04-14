@@ -103,6 +103,15 @@ public class Recursions {
     }
 
 
+    //finding the number of digits in a number
+  public static int  countDig(int num){
+     if(num==0) return 0;
+     
+     return 1 + countDig(num/10);
+     
+  }
+
+
     public static void main(String[] args) {
 
         int n = 5;
@@ -135,5 +144,9 @@ public class Recursions {
                 "weclome to String palindrome checker ! \n\n please enter the word to check if it is palindrome ");
         String wrd = sc.next();
         System.out.println("your word is " + ((palinStr(wrd)) ? " palindrome" : "not a palindrome word"));
+
+
+        var num = countDig(978);
+        System.out.println("\n\n the number of digits in a number is : " + num);
     }
 }
