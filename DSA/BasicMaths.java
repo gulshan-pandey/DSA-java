@@ -34,9 +34,71 @@ class Solution {
         return res;
     }
 
+
+
+
+    /////////////PRIME CHECK////////////////////////
+    public static boolean isPrime(int n){
+        for(int i=2;i<=Math.sqrt(n);i++){      // or   for( int i=2 ; i*i<= N ; i++)
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+
+
+    //////////////////count the number of primes using sieve of eranthosnes///////////
+    public int countPrimes(int n) {
+        boolean[] isPrime = new boolean[n];   // initialize n lenth array and all value to be true
+        for (int i = 2; i < n; i++) {
+            isPrime[i] = true;
+        }
+        
+        for (int i = 2; i * i < n; i++) {     //2 to sqrt(n) loop
+            if (!isPrime[i]) {
+                continue;       // if the value is already false, then continue
+            }
+            for (int j = i * i; j < n; j += i) {     //  note here j = i * i cuz it will convert index into false starting from the square of that number because the numbers less than them have already turned itno false by the previous numbers
+                isPrime[j] = false;
+            }
+        }
+
+        int count = 0; 
+        for (int i = 2; i < n; i++) {         // count the number of true
+            if (isPrime[i]) {
+                count++;
+            }
+        }
+        
+        return count;
+    }
+    
+    
+
+
+
+
+
     public static void main(String[] args) {
           System.out.println(gcd(8,6));
           System.out.println(Solution.efficientgcd(8,6));
+
+
+          System.out.println("\n\n\n");
+          int n = 30;
+
+// Assuming this loop starts from i = 2
+        for (int i = 2; i < n; i++) {
+        System.out.println("i = " + i);
+        for (int j = i * i; j < n; j += i) {
+        System.out.println("  j = " + j);
+            }
+        }
+
+
 
     }
 }
