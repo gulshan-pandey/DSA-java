@@ -1,4 +1,9 @@
 package DSA;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class BasicMaths {
 
     ///////////////////////gcd//////////////////////////////////
@@ -78,6 +83,30 @@ class Solution {
     
     
 
+    //////////////    number of divisors//////////////
+    public static void divisor(int n){
+        List<Integer> list = new ArrayList<Integer>();
+     for(int i =1;i<=n/2;i++){
+        if(n%i==0){
+           if(!list.contains(i)){
+              list.add(i);
+  
+           }
+           if((n/i)!=i){
+              if(!list.contains(n/i)){
+                 list.add(n/i);
+     
+              }
+           }
+           
+           }
+           }
+           Collections.sort(list);
+           System.out.println(list);
+        }
+
+
+
 
 
 
@@ -90,14 +119,17 @@ class Solution {
           System.out.println("\n\n\n");
           int n = 30;
 
-// Assuming this loop starts from i = 2
-        for (int i = 2; i < n; i++) {
-        System.out.println("i = " + i);
-        for (int j = i * i; j < n; j += i) {
-        System.out.println("  j = " + j);
-            }
-        }
 
+          
+// demonstration of the sieve of erathosthenes
+        // for (int i = 2; i < n; i++) {
+        // System.out.println("i = " + i);
+        // for (int j = i * i; j < n; j += i) {
+        // System.out.println("  j = " + j);
+        //     }
+        // }
+
+        divisor(28);
 
 
     }

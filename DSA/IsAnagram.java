@@ -1,4 +1,4 @@
-package Leetcode;
+package DSA;
 
 import java.util.Arrays;
 
