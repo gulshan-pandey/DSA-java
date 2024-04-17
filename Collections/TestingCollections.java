@@ -1,3 +1,4 @@
+package Collections;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -19,7 +20,7 @@ public class TestingCollections {
 
         System.out.println(numList); //we cannot print the elements like this in conventional array!
 
-       Collections.sort(numList); //it is the Collention's static method to sort things ,obviously it will not work on sets!
+       Collections.sort(numList); //it is the Collention's static method to sort things ,it will not work on sets!
        CollectionUtility.print(numList); //after sorting happened
 
        Collections.unmodifiableList(numList);

@@ -1,3 +1,4 @@
+package Collections;
 import java.util.*;
  
 //this is the utility class to print all the elements to the specified collection and can be used by any class

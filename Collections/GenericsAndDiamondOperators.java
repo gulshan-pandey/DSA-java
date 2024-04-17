@@ -1,3 +1,4 @@
+package Collections;
 public class GenericsAndDiamondOperators {
     
     //without using generics

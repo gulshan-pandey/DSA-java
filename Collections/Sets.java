@@ -1,3 +1,4 @@
+package Collections;
 import java.util.*;
 
 public class Sets {
@@ -7,7 +8,7 @@ public class Sets {
         Set<String> names =new HashSet <>(); //Set is also an interface in java
 
         System.out.println(names.add("Rahul")); //will print true
-        System.out.println(names.add("kiran"));
+        System.out.println(names.add("tony"));
         System.out.println(names.add("dr.strange"));
         names.add("golu");
         System.out.println(names.add("golu")); //will print false as it has been already added previously
