@@ -10,11 +10,18 @@ public class TestingQueues {
         
         Queue<Integer> queue = new LinkedList<>();
 
-        queue.add(1);
-        queue.offer(2);
+        queue.add(1);    //can throw exception if the queue is full
+        queue.offer(2);    // cannot throw exception if the queue is full,just return false
+        queue.offer(5);
         queue.offer(3);
         queue.offer(4);
-        queue.offer(5);
+
+
+
+
+
+
+
 
         for(Integer i:queue){
             System.out.print(i +  " " );

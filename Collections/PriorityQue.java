@@ -7,10 +7,10 @@ public class PriorityQue {
     public static void main(String[] args) {
         
         // making the object with custom comparator
-        PriorityQueue <Student> queue = new PriorityQueue<>(new Comparator<Student>() {
+        PriorityQueue <Student> queue = new PriorityQueue<>(new Comparator<Student>() {     // anonymous inner class
 
-            public int compare(Student student , Student t1){  //this is the custom comparator
-              return student.getGrade() - t1.getGrade();
+            public int compare(Student s1 , Student s2){  //this is the custom comparator
+              return s1.getGrade() - s2.getGrade();
             }
         });
 
@@ -23,7 +23,7 @@ public class PriorityQue {
         System.out.println("to string is : " + queue);
 
         System.out.println(" \n initially the the priority queue is not organised ,but it will,when we do operation on them! \n");
-        System.out.println(queue.poll());
+        System.out.println(queue.poll());     // poll method doesnot throw exception
         System.out.println(queue.poll());
         System.out.println(queue.poll());
         System.out.println(queue.poll());
@@ -53,10 +53,7 @@ private static class Student{
     this.grade = grade;
     }
 
-    public String getName() {
-        return name;
-    }
-
+   
     public char getGrade() {
         return grade;
     }

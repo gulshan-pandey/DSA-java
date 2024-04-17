@@ -35,7 +35,7 @@ public class Arraylist {
         
         
         
-        System.out.println("\n\n" + " after removing : "+"Indian");
+        System.out.println("\n\n" + "removing : "+"Indian");
         strlist.remove("Indian");
         for(int i=0;i<strlist.size();i++){
             System.out.print(i + ":"  + strlist.get(i)+ "   ");
@@ -50,7 +50,7 @@ public class Arraylist {
 
         // for replacing the element in list
         System.out.println("\n\n replacing the element in list :-");
-        strlist.set(1,"Nepal");      //replaced league
+        strlist.set(1,"Nepal");      // .set() is used for replacing
 
         for(int i=0;i<strlist.size();i++){
             System.out.print(i + ":" + strlist.get(i) + "  ");
@@ -60,10 +60,10 @@ public class Arraylist {
         System.out.println(" \n\n " + "size of the list is : " + strlist.size());
 
 
-        System.out.println("list.contains(object): checks weather the list contains the object or not");
+        System.out.println("\n\nlist.contains(object): checks weather the list contains the object or not");
 
         if(strlist.contains("Nepal")){
-            System.out.println("Nepal exists " +  "at index = " + strlist.indexOf("Nepal"));
+            System.out.println("----Nepal exists " +  "at index = " + strlist.indexOf("Nepal"));
         }
 
 
@@ -74,7 +74,7 @@ public class Arraylist {
             
         }
    
-        System.out.println("\n\n");
+        System.out.println("\n\n another list: ");
 
         
 
@@ -101,7 +101,8 @@ public class Arraylist {
 
            // l1.addAll(l2); //it adds list witin lists
 
-           l1.addAll(0,l2); //it will add form the first
+           l1.addAll(0,l2); //   it will add form the first... however if we didnt mentuoned the index then by default it will add in the last
+
             for(int n=0;n<l1.size();n++){
                 System.out.print(n + ": " + l1.get(n) + "  ");
             }
@@ -116,7 +117,7 @@ public class Arraylist {
 
            System.out.println("\n\n");
 
-           l1.removeIf(n->(n%5==0));  //here divisible of 5 will be eleminated
+           l1.removeIf(n->(n%5==0));  //here divisible of 5 will be eleminated... lambda expression used
            for(int i : l1){
             System.out.println(i);
            }
@@ -138,6 +139,10 @@ public class Arraylist {
          numbers.forEach(System.out::println);
  // -------------------------------------OR-----------------------------
          System.out.println(numbers);
+
+
+
+         
 
 
            }
