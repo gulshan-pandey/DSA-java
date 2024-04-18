@@ -24,7 +24,7 @@ public class TestingMaps {
 
  System.out.println(" map.size() : " + map.size()); 
 
- System.out.println("getting the marks of addy : " +map.get("addy"));  // will give the value of the corresponding value
+ System.out.println("getting the marks of addy : " +map.get("addy"));  // get method will give the value of that key
 
  System.out.println("map.containsKey(\"raja\") : "  + map.containsKey("raja")); //checks if the map contanis the perticular key
 
@@ -37,6 +37,18 @@ System.out.println("\n\n all the values in the map is : ");
  for (String  key : map.keySet()) {
     System.out.printf("%s : %d \n" ,key,map.get(key));
  }
+System.out.println("\n\n");
+
+
+
+ //iterate over the map
+  for(var e : map.entrySet()){
+    System.out.printf("%s : %d     " ,e.getKey(),e.getValue());    // we can specifically print the keys or values by using entrySet()
+  }
+  
+  for(var e : map.entrySet()){
+    System.out.print(e + "  ");    // printing each entries
+  }
   
 
 

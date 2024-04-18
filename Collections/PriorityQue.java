@@ -9,7 +9,7 @@ public class PriorityQue {
         // making the object with custom comparator
         PriorityQueue <Student> queue = new PriorityQueue<>(new Comparator<Student>() {     // anonymous inner class
 
-            public int compare(Student s1 , Student s2){  //this is the custom comparator
+            public int compare(Student s1 , Student s2){  //this is the custom comparator which contains the compare method
               return s1.getGrade() - s2.getGrade();
             }
         });

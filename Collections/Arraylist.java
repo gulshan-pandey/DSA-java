@@ -134,11 +134,13 @@ public class Arraylist {
 
          // Using List.replaceAll() to update each element
          numbers.replaceAll(num -> num * 2);
- 
          // Printing the updated list
          numbers.forEach(System.out::println);
- // -------------------------------------OR-----------------------------
+         // -------------------------------------OR-----------------------------
          System.out.println(numbers);
+         
+         //  numbers.remove(Integer.valueOf(6));    // to remove the specific element without knowing its index
+        //  numbers.forEach(System.out::println);
 
 
 
