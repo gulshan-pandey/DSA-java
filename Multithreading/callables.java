@@ -82,7 +82,7 @@ class FetchFactorial implements Callable<Integer> {
 
 
 
-public class problems {
+public class callables {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
         

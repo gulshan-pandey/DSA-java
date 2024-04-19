@@ -26,12 +26,12 @@ public class DynamicMethodDispatch {
     public static void main(String[] args) {
         
         phone obj =new smartPhone(); //yes it is allowed but vice versa in not allowed
-        // smartPhone obj2 =new phone(); // not allowed as a phone cannot be called a smartphone 
+        // smartPhone obj2 =new phone(); -----not allowed as a phone cannot be called a smartphone 
 
         obj.on(); //it will on the smartphone
         obj.showTime();
 
-       // obj.music(); //Not Allowed ( u cannot say ko phone me music bjaa do!)
+       // obj.music(); //Not Allowed ( u cannot say ki phone me music bjaa do!)
 
     }
 }
