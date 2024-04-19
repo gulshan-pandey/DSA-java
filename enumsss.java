@@ -3,7 +3,7 @@
 enum Color {
     RED,
     GREEN,
-    YELLOW, white;
+    YELLOW;
   }
   
   enum Grade {
@@ -51,11 +51,11 @@ enum Color {
   
       System.out.println(cl + "\n \n"); // will print red
   
-      for (Color c : Color.values()) {  // to print all the enums
+      for (Color c : Color.values()) {  // to print(iterate) through all the enums
         System.out.print(c + "  ");
       }
   
-
+ 
 
 
       Grade gr = Grade.B;
@@ -75,10 +75,14 @@ enum Color {
 
 
 
+
+
+
       TrafficLight greenLight = TrafficLight.GREEN;
 
+      System.out.println("\n\n the signal is :"+greenLight);
       String sig = greenLight.getSignal();
-      System.out.println("\n\nthe signal is : " + sig);
+      System.out.println("you can  : " + sig);
       
 
 
@@ -88,7 +92,7 @@ enum Color {
 
 System.out.println("\n\n printing all the days in the week");
 
-      for (Day d: Day.values()) {
+      for (Day d: Day.values()) {    // iterate through all the days enum
 
         System.out.printf("%s : %s\n",d,d.getDay());  //smooth
       }
