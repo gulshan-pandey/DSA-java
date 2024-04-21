@@ -21,11 +21,10 @@ public class TestingCollections {
         System.out.println(numList); //we cannot print the elements like this in conventional array!
 
        Collections.sort(numList); //it is the Collention's static method to sort things ,it will not work on sets!
-       CollectionUtility.print(numList); //after sorting happened
+       CollectionUtility.print(numList); //after sorting happened  ( collection utility is a utility method)
 
-       Collections.unmodifiableList(numList);
-       //in order to make your list unmodifiable
-       List<Integer> unchangable = Collections.unmodifiableList(numList); //creating new list which is unmodifiable
+       Collections.unmodifiableList(numList);      //in order to make your list unmodifiable
+       List<Integer> unchangable = Collections.unmodifiableList(numList); //creating new list which is unmodifiable ... this is genereally used when we need to give the list as a read only means!
 
 
        System.out.println("the unchangable list is " + unchangable); // this list is unmodifiable/unchangable
