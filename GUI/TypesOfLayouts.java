@@ -5,9 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class TypesOfLayouts {
+public class TypesOfLayouts{
 
-    //Border layout(default layout)----------------------------------------------------------------
+    //Border layout----------------------------------------------------------------
 
     public TypesOfLayouts() {
         JFrame f1= new JFrame();
@@ -45,7 +45,7 @@ public class TypesOfLayouts {
 
 
     public static void main(String[] args) {
-        // new typesOfLayout();
+        // new TypesOfLayouts();
         // new flowlayout();
         // new gridLayout();
         // new Jlayeredpane();
@@ -96,7 +96,7 @@ public class TypesOfLayouts {
 
 
 
-//-------------------------------------------flow layout ------------------
+//-------------------------------------------flow layout (DEFAULT LAYOUT) ------------------
 class flowlayout{
 
     public flowlayout() {
@@ -188,7 +188,6 @@ class Jlayeredpane{
         jframe.add(lp);
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jframe.setSize(400,400);
-        // jframe.setLayout(new BorderLayout());   --------- no need to specify coz by default layout is borderlayout
         jframe.setVisible(true);
 
 
@@ -216,7 +215,7 @@ class WindowOverlay implements ActionListener{
      jframe1.setSize(300,300);
      jframe1.setVisible(true);
 
-     buttonn.addActionListener(this);
+     buttonn.addActionListener(this);        // addActionListener method takes an actionPerformed method which is found in the interface ActionListener
 
    
 
@@ -232,7 +231,7 @@ class WindowOverlay implements ActionListener{
                 
                 System.out.println("sorry!");
             }
-            jframe1.dispose();
+            jframe1.dispose();   
             new NewWindow ();
         }
      }
@@ -277,30 +276,34 @@ class AdvanceFeatures extends JFrame implements ActionListener{
           setIconImage(icon.getImage());               // to set the image icon of the window's frame
 
           setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+         
           l1 = new JLabel();
           l1.setText("let me buy the lunch <3");
           pizzaBtn = new JRadioButton("pizza");
           burgurBtn = new JRadioButton("burgurs");
           friesBtn = new JRadioButton("fries");
+          pizzaBtn.setFocusable(false);
+          burgurBtn.setFocusable(false);
+          friesBtn.setFocusable(false);
           option = new ButtonGroup();
           option.add(pizzaBtn);    // adding all 3 in the same group so that once can be selected at one time
           option.add(burgurBtn);
           option.add(friesBtn);
           btn= new JButton("Order Now");
+          btn.setFocusable(false);
 
 
 ////////////////////// by using flow layout////////
 
         //   setLayout(new FlowLayout());
-        // add(progressbar);
-        
+          
         //   add(l1);
         //   add(pizzaBtn);
         //   add(burgurBtn);
         //   add(friesBtn);
         //   add(btn);
-
+        //   add(progressbar);
+          
 
         /////////// by using border layout////////
 
@@ -323,7 +326,7 @@ class AdvanceFeatures extends JFrame implements ActionListener{
         progressbar.setForeground(Color.GREEN);
         progressbar.setBackground(Color.BLACK);
    
-          pack();
+          pack();      // to pack everyting
           setVisible(true);
           btn.addActionListener(this);
           
@@ -332,7 +335,7 @@ class AdvanceFeatures extends JFrame implements ActionListener{
         public void fill(){
             btn.setEnabled(false); // Disable the button while filling the progress bar
 
-        Thread fillThread = new Thread(new Runnable() {     // make another thread other than EDT so that progressbar can fill in seperate thread
+        Thread fillThread = new Thread(new Runnable() {     // make another thread other than EDT so that progressbar can fill in seperate thread!!!
         @Override
         public void run() {
             int progress = 0;
@@ -377,6 +380,7 @@ class AdvanceFeatures extends JFrame implements ActionListener{
                 System.out.println("your order is fries");
             
             }
+            
         }
         
     }

@@ -29,7 +29,7 @@ public class IsAnagram {
 
 
 
-// to calculate the frequency of the element of the array
+// to calculate the frequency of the element of the array using hashmaps
 
 class frequency{
     
