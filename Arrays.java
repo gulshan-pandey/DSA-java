@@ -67,7 +67,7 @@ public class ARRAYS {
 
 
         // Print the elements of the array using forEach loop
-        // for (int a : marks) { // that a will iterate over each elements of the array
+        // for (int a : marks) {    // that a will iterate over each elements of the array
         //     System.out.print(a + " ");
         // }
         // System.out.println("\nArray class name: " + marks.getClass().getName());

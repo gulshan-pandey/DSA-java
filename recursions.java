@@ -15,15 +15,13 @@ public class Recursions {
     // iteratively
 
     static int factIterative(int y) {
-        if (y == 0 || y == 1) {
-            return 1;
-        } else {
+        
             int product = 1;
             for (int i = 1; i <= y; i++) {
                 product = product * i;
             }
             return product;
-        }
+        
     }
 
     // WAP to find febonnaci series using loops
@@ -112,6 +110,11 @@ public class Recursions {
   }
 
 
+
+
+
+
+
     public static void main(String[] args) {
 
         int n = 5;
@@ -119,8 +122,9 @@ public class Recursions {
 
         System.out.println("the factorial by using iterative approach is : " + factIterative(n));
 
+
         int m = 7;
-        febo(m);
+        febo(m);    // 7 febonacci terms
 
         // iteraive approach
         System.out.println("enter the number upto which u want to get the fibonnac numbers...");

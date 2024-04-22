@@ -22,7 +22,7 @@ public class ArrayOperations {
         }
     }
 
-    //VARARGS
+    //VARARGS----------------------------------------------------------
     // public static int sum(int... a) {
     //     int result= 0;
     //     for (int i : a) {
@@ -31,13 +31,13 @@ public class ArrayOperations {
     //     return result;
     // }
 
-    // public static int add(int a,int b,int ...c){
-    //     int sum =0;
-    //     for(int n:c){
-    //         sum+=n;
-    //     }
-    //     return sum;
-    // }
+    public static int add(int a,int b,int ...c){
+        int sum =0;
+        for(int n:c){     // a and b will be excluded
+            sum+=n;
+        }
+        return sum;
+    }
     
     public static void main(String[] args) {
         
@@ -49,6 +49,6 @@ public class ArrayOperations {
 
         //VARARGS
     //    System.out.println(sum(4, 5, 6, 7, 8, 9)); 
-    //    System.out.println(add(56,7,3,7,4,788,74));
+       System.out.println(add(56,700,3,7,4,788,74));
     }
 }
