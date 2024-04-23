@@ -85,8 +85,8 @@ public class ARRAYS {
 
         // for (int b = 0; b < flats.length; b++) {
         //     for (int c = 0; c < flats[b].length; c++) {
-        //         System.out.print(flats[b][c]);
-        //         System.out.print(" ");
+        //         System.out.print(flats[b][c] + "  ");
+       
 
         //     }
         //     System.out.println();
@@ -111,7 +111,7 @@ public class ARRAYS {
         // System.out.println("questions-----------------------------------");
 
         // //create an array of 5 floats and calclate their sum
-
+ 
         // float [] numbs ={11.2f,34.2f,42.6f,675.7f};
         // float sum =0;
         // for(int i=0;i<numbs.length;i++){
@@ -168,22 +168,22 @@ public class ARRAYS {
 
         // Create a java program to add 2 matrix of sixe 2X3
 
-        int[][] mat1 = { { 2, 7, 3 }, // 2 rows and 3 columns
-                { 7, 4, 9 } };
-        int[][] mat2 = { { 5, 8, 3 },
-                { 9, 3, 1 } };
+        // int[][] mat1 = { { 2, 7, 3 }, // 2 rows and 3 columns
+        //                  { 7, 4, 9 } };
+        // int[][] mat2 = { { 5, 8, 3 },
+        //                  { 9, 3, 1 } };
 
-        int[][] result = { { 0, 0, 0 },
-                { 0, 0, 0 } };
+        // int[][] result = { { 0, 0, 0 },
+        //                     { 0, 0, 0 } };
 
-        for (int i = 0; i < mat1.length; i++) {
-            for (int j = 0; j < mat1[i].length; j++) {
+        // for (int i = 0; i < mat1.length; i++) {
+        //     for (int j = 0; j < mat1[i].length; j++) {
 
-                result[i][j] = mat1[i][j] + mat2[i][j];
-                System.out.print(result[i][j] + " ");
-            }
-            System.out.println();
-        }
+        //         result[i][j] = mat1[i][j] + mat2[i][j];
+        //         System.out.print(result[i][j] + " ");
+        //     }
+        //     System.out.println();
+        // }
         
         
         
@@ -207,9 +207,7 @@ public class ARRAYS {
 
         // }
 
-        // "taking input the elements of the array by using utility class: this is done
-        // by making an another utility class of array at different file and then call
-        // that class's method"
+        // "taking input the elements of the array by using utility class: this is done by making an another utility class of array at different file and then call that class's method"
 
         // int[] numArray = ArrayUtility.inputArray();
 
@@ -235,8 +233,11 @@ public class ARRAYS {
         // int a = Math.floor(5.2) => is 5.0 //this returnes the float greatest value of
         // any number
 
-        // in b =Math.floorDiv(5,2)=> is 2 it is similar to Math.floor but it gives the
-        // int value
+        // in b =Math.floorDiv(5,2)=> is 2 it is similar to Math.floor but it gives the floor value when 5 is divided by 2
+
+
+
+
 
         // WAP to reverse an array---SWAP method
 
@@ -272,7 +273,7 @@ public class ARRAYS {
         // QUestion WAP to find the maximum element in an array
 
         // int [] arr={24,6,2,89,73,90};
-        // int max= integer.MIN_VALUE;
+        // int max= Integer.MIN_VALUE;
 
         // for(int i=0;i<arr.length;i++){
         // if(arr[i]>max){
@@ -291,10 +292,8 @@ public class ARRAYS {
 
 
 
-
-
         // int [] arr={24,6,2,89,73,90};
-        // int max= integer.MIN_VALUE;
+        // int max= Integer.MIN_VALUE;
 
         // for(int i: arr){ //done by using forEach loop
         // if(i>max){
@@ -304,6 +303,7 @@ public class ARRAYS {
         // }
         // System.out.println(max);
 
+        
         // for finding the smallest in array
 
         // int [] arr={24,6,2,89,73,90};
