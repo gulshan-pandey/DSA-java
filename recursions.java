@@ -42,7 +42,7 @@ public class Recursions {
     // finding fibonacci of n numbers using recursions
 
     public static int fib(int n) {
-        System.out.print(".");
+        // System.out.print(".");
         if (n == 0) {
             return 0;
         } else if (n == 1) {
@@ -115,6 +115,9 @@ public class Recursions {
 
 
 
+
+
+
     public static void main(String[] args) {
 
         int n = 5;
@@ -122,7 +125,7 @@ public class Recursions {
 
         System.out.println("the factorial by using iterative approach is : " + factIterative(n));
 
-
+        System.out.println("\n\nfebonnaci seres upto 7 terms using iterative approach : ");
         int m = 7;
         febo(m);    // 7 febonacci terms
 
@@ -132,14 +135,14 @@ public class Recursions {
         int count = sc.nextInt();
 
         for (int i = 0; i <= count; i++) {
-            System.out.println(fib(i) + " ");
+            System.out.println(fib(i) + "  ");
         }
 
         // string palindrome
 
-        System.out.println("Enter the string to check if it is a palindrome:");
-        String word = sc.next();
-        System.out.println((isPalindromeStr(word)) ? ("It is a palindrome") : ("It is not a palindrome"));
+        // System.out.println("Enter the string to check if it is a palindrome:");
+        // String word = sc.next();
+        // System.out.println((isPalindromeStr(word)) ? ("It is a palindrome") : ("It is not a palindrome"));
 
 
         //RECURSIVE APPROACH
@@ -149,6 +152,7 @@ public class Recursions {
         String wrd = sc.next();
         System.out.println("your word is " + ((palinStr(wrd)) ? " palindrome" : "not a palindrome word"));
 
+        star(10);
 
         var num = countDig(978);
         System.out.println("\n\n the number of digits in a number is : " + num);

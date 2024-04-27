@@ -18,6 +18,8 @@ public class TestingMaps {
  map.put("rahul", 95);
  map.put("addy", 99);
 
+ map.replace("addy ", 100);   // for replacement of values { put and replace } both methods can be used
+
  System.out.println("map.KeySet() : " + map.keySet());  //will print all the keys 
 
  System.out.println("map.values() : " + map.values());  // will print all the values
@@ -42,8 +44,8 @@ System.out.println("\n\n");
 
 
  //iterate over the map
-  for(var e : map.entrySet()){
-    System.out.printf("%s : %d     " ,e.getKey(),e.getValue());    // we can specifically print the keys or values by using entrySet()
+  for(var e : map.entrySet()){   // at the place of var ->  Map.Entry<String,Integer> e : map.entrySet() can be used
+    System.out.printf("%s : %d     " ,e.getKey(),e.getValue());    // we can specifically print the keys or values by using entrySet()... also  the methods like getKey() and getValue() are only in Entry interface
   }
   
   for(var e : map.entrySet()){
@@ -71,6 +73,8 @@ System.out.println("\n\n");
 //     System.out.printf("the capital of %s is :  %s ",name,countrymap.get(name));
 //  }
 //  else System.out.printf("sorry I dont have the capital of %s",name);
+
+
 
 
 

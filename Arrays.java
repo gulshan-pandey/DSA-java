@@ -417,7 +417,7 @@ public class ARRAYS {
 
         // int maxEle = minMax[minMax.length-1];
         // int j= minMax.length-1;
-        // while(j>0){
+        // while(j>=0){
 
         // if(maxEle<minMax[j]){
         // maxEle=minMax[j];

@@ -20,13 +20,13 @@ class RomanToInt {
         s = s.replace("CD", "CCCC");
         s = s.replace("CM", "DCCCC");
         for (int i = 0; i < s.length(); i++) {
-            String value = String.valueOf(s.charAt(i));
+            String value = String.valueOf(s.charAt(i));       // of Character.toString(s.charAt(i));
             sum = sum + (map.get(value));
         }
         return sum;
     }
 
     public static void main(String[] args) {
-       System.out.println(romanToInt("CM")); 
+       System.out.println(romanToInt("IV")); 
     }
 }
