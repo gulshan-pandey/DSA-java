@@ -14,8 +14,8 @@ public static void ReverseSortSting(List<String> list){
 
 
 //WAP to swap the 2 elements of arraylist
-public static void swap(List<Integer> list,int x,int y){
- int swap =list.get(x);
+public static <T> void swap(List<T> list,int x,int y){
+ var swap =list.get(x);
  list.set(x,list.get(y));
  list.set(y,swap);
 

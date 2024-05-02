@@ -2,6 +2,7 @@ package DSA;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 
 public class IsAnagram {
@@ -61,4 +62,6 @@ class frequency{
         System.out.println("the most frequent element is : "+ key +  "  and its occurence is : " + fre);
     }
 }
+
+
 

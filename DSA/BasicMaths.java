@@ -106,6 +106,16 @@ class Solution {
         }
 
 
+        
+
+        // wap to swap two numbers without using 3rd variable
+        public static void swap(int a, int b){
+            a=a+b;
+            b=a-b;
+            a=a-b;
+
+            System.out.println(a + " " + b);
+        }
 
 
 
