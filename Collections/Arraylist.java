@@ -77,6 +77,7 @@ public class Arraylist {
         System.out.println("\n\n another list: ");
 
         
+        
 
         
         ArrayList<Integer> l1 = new ArrayList<>();  //<Integer> depects only integers are allowed

@@ -44,13 +44,24 @@ public class TestingReduce {
 
 
 
-    List<String> strings = Arrays.asList("one", "two", "three", "four", "five");
+    List<String> strings = Arrays.asList("one", "two", "three", "four", "five");     // fixed size list
 
     strings.stream()
     .filter(s -> s.length() > 3)
     .map(String::toUpperCase)          //this line means this   .map(s -> s.toUpperCase())
     .reduce((s1, s2) -> s1 + ", " + s2)
-    .ifPresent(System.out::println);
+    .ifPresent(System.out::println);    // optional class
+
+
+
+
+
+
+        List<String> stringsss = Arrays.asList("Hello", ", ", "World", "!");
+
+        // Using reduce() method
+        String concatenatedString = stringsss.stream().reduce("", (a, b) -> a + b);
+        System.out.println("Concatenated string: " + concatenatedString); // Output: Concatenated string: Hello, World!
 
         
 

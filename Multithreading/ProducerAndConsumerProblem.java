@@ -3,6 +3,7 @@ class Company{
     boolean flag =false;
     // if flag is true then produce will run
     //if flag is false then its consumer chance
+    
     synchronized public void produceItem(int i){
         if(!flag){
             try{wait();} catch(Exception e){}
