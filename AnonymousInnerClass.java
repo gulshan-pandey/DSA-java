@@ -57,8 +57,8 @@ public class AnonymousInnerClass {
 
             ActionListener actionListener = new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                // Perform action here
+            public void actionPerformed(ActionEvent e) {                // actionPerformed is an abstract method in this interface
+               
                 System.out.println("Button clicked!");         // we need to add the button,then call .addActionListener(actionListener);
             }
             };
