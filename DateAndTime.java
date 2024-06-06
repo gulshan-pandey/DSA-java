@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.Month;
 
 
@@ -6,15 +7,26 @@ public class DateAndTime {
 
     public static void main(String[] args) {
         
-        LocalDate today =LocalDate.now();      // now is a static class
+        LocalDate today = LocalDate.now();      // now is a static class
+        // var today = LocalDate.now();      // new feature of java
+
         System.out.println(today  + " \n");  // will print the current date
 
-        int day = today.getDayOfMonth();
-        int monthDay = today.getMonthValue();     
-        Month mon = today.getMonth();
-        int year = today.getYear();
+        int day = today.getDayOfMonth();        // will return the day
+        int monthDay = today.getMonthValue();     // will return the month number
+        Month mon = today.getMonth();               // will return the month class's object
+        int year = today.getYear();                 // will return the year
 
         System.out.println(" \n\n day: " + day + "   month's number : " +  monthDay+ "  month: " +  mon+ "  year is : " + year);
+
+
+
+/**
+ * LocalDate.now kr k hum aaj ki date nikaal lete hain
+ * LocalDate.of kr k hum custom date nikaal lete hain
+ */
+
+
 
 
         System.out.println("for going to specific date-----------------------------------------------"); 
@@ -31,20 +43,53 @@ public class DateAndTime {
 
 
 
-        // for going to yesterday and tomorrow's date----------------------------
+        // for going to yesterday and tomorrow's date from the current date----------------------------
 
         LocalDate yesterday = today.minusDays(1);
-        System.out.println(" the yesterday's day was: " + yesterday);
+        System.out.println("\n\n the yesterday's day was: " + yesterday);
 
+        System.out.println("previous months can be found by \" today.minusMonths(int number)\" " );
         LocalDate hundredMonthEarlier =today.minusMonths(100);
-        System.out.println("previous date can be found by \" today.minusMonths(int)\" " );
         System.out.println(" hundredMonthEarlier:  " + hundredMonthEarlier);
 
 
 
+        // some other methods
+
+        if(today.isAfter(hundredMonthEarlier)){
+            System.out.println("haa bhai!... today is after hundredMonthEarlier");
+        }
+
+
+        if(today.isAfter(yesterday)){
+            System.out.println("haa bhai!... today comes after yesterday");
+        }
+
+
+    
 
 
 
+
+
+        System.out.println("\n\n\n");
+
+        /**
+         * LOCAL TIME
+         */
+
+        LocalTime nowDate =  LocalTime.now();  // we cannot instantiate it as it doesnot have a constructor
+
+        System.out.println(nowDate);
+        for(int i=0; i<10; i++){
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+               System.out.println(e);
+            }
+            LocalTime lt = LocalTime.now();
+            System.out.println(lt);
+        }
 
         
     }

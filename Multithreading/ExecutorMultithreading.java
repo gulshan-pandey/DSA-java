@@ -15,7 +15,7 @@ class Executor implements Runnable {
         for (int i = 0; i < 20; i++) {
             for (int j = 0; j <= i; j++) {
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep(50);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -43,7 +43,7 @@ public class ExecutorMultithreading {
         // for multiple threads---------
     
 
-        // ExecutorService single = Executors.newFixedThreadPool(3);  //3 threads
+        // ExecutorService single = Executors.newFixedThreadPool(3);  //3 threads this multithreading leads to the randomization of patterns
         // single.submit(work); 
         // single.submit(work2); 
         // single.submit(work3); 
@@ -61,7 +61,8 @@ public class ExecutorMultithreading {
     
         multiple.shutdown();
 
-        multiple.awaitTermination(Long.MAX_VALUE, TimeUnit.MILLISECONDS); // this code is used as Thread.join() in exector's sence
+        multiple.awaitTermination(Long.MAX_VALUE, TimeUnit.MILLISECONDS); // this code is used as Thread.join() in exector's sense, it basically means that wait for long.Max_VALUE millisecond and let the executor service execute the program
+        
         double etim= System.currentTimeMillis();   
 
         System.out.println("total time taken by the program : " + (etim-starttim));
@@ -82,6 +83,5 @@ public class ExecutorMultithreading {
 
 
     }
-
 
 

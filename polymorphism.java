@@ -1,4 +1,22 @@
-interface camera {
+
+ 
+
+
+ 
+
+/*
+ * 
+ * Compile-Time Polymorphism (Static Polymorphism): Decisions about which method to call are made during compilation. This primarily happens through method overloading. 
+ * Method Overloading: You define multiple methods in the same class with the same name but different parameters (number or types). The compiler determines the correct method to call based on the arguments you provide.
+ * 
+ * 
+ * Runtime Polymorphism (Dynamic Polymorphism): The decision about which method to execute is made at runtime. This is achieved through method overriding.
+ * Method Overriding: You provide a specific implementation of a method that is already defined in a superclass. This allows subclasses to provide specialized behavior.
+ *
+ * 
+ */
+
+ interface camera {
     void snap(); //we cannot define the method in interface
 
     void recordVideo();
@@ -18,7 +36,7 @@ interface player {
     }
 
     default void play() { // this default method doesnot need to implemented in the concrete class but if u want then you can...introduced in java8
-        greetings(); //here we are calling the private mathod for good
+        greetings(); //here we are calling the private mathod 
         System.out.println("playing my favourite songs");
     }
 }
@@ -62,7 +80,7 @@ class SmartPhone1 extends myCellPhone implements camera, wifi, player { //child 
     }
 
 
-   // public void play(){ //however it wasnt needed to address this method ,as it was default in the interface ,but when we implement it in concrete class then the new object of that class will be running this method not the interface's code
+   // public void play(){ //however it wasnt needed to address this method ,as it was default in the interface ,but when we implement it in concrete class then the new object of that class will be running this method not the interface's code!!
   //  System.out.println("here i was playing my favourite singer\'s song...");
   //  }
 }
@@ -77,6 +95,7 @@ public class Polymorphism {
         // cam.playStore(); -> nowt allowed
         cam.recordVideo(); //now the new smartphone is being used as camera 
         cam.snap();
+        System.out.println(cam.getClass().getName());    //-----SmartPhone1
 
 
         SmartPhone1 sm = new SmartPhone1();

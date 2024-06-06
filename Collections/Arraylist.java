@@ -12,7 +12,6 @@ public class Arraylist {
       //If we want the list to contain specific type of elements then put it in <> on left side these are called "generics" and these are only exist within compiletime just to help the developer!
       // List <String> strlist = new ArrayList<>();  
 
-      
 
         strlist.add("Indian"); // this is the 0th index;
         strlist.add("league");// this is 1st index
@@ -80,7 +79,7 @@ public class Arraylist {
         
 
         
-        ArrayList<Integer> l1 = new ArrayList<>();  //<Integer> depects only integers are allowed
+        ArrayList<Integer> l1 = new ArrayList<>();  //<Integer> depects only integers are allowed... bcz we have used generics on it
         ArrayList<Integer> l2 = new ArrayList<>(5); //size can be modified by manupulating elements
             l1.add(3);
             l1.add(4);
@@ -118,12 +117,12 @@ public class Arraylist {
 
            System.out.println("\n\n");
 
-           l1.removeIf(n->(n%5==0));  //here divisible of 5 will be eleminated... lambda expression used
+           l1.removeIf(n->(n%5==0));  //here divisible of 5 will be eleminated from the list... lambda expression used
            for(int i : l1){
             System.out.println(i);
            }
            
-         CollectionUtility.print(l1);  //this is the collection utility used to print all the elements of the collection
+         CollectionUtility.print(l1);  //this is the collection utility used to print all the elements of the collection...(made by myself!)
           
 
 

@@ -5,7 +5,7 @@ import java.util.*;
 
 public class CollectionUtility {
     
-    public static <E> void print(Collection <E> collection){  //here E is generic
+    public static <E> void print(Collection <E> collection){  //here E is generic and E will be the type of the data element who is calling this method
        System.out.print("the Collection is : ");
         for (E obj : collection) {
             System.out.print(obj + "  ");

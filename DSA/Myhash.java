@@ -1,8 +1,6 @@
 package DSA;
 import java.util.*;
 
-import java.util.ArrayList;
-
 public class Myhash {
     int bucket;
     private ArrayList<LinkedList<Integer>> table;
