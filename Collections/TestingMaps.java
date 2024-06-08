@@ -28,11 +28,15 @@ public class TestingMaps {
 
  System.out.println("getting the marks of addy : " +map.get("addy"));  // get method will give the value of that key
 
- System.out.println("map.containsKey(\"raja\") : "  + map.containsKey("raja")); //checks if the map contanis the perticular key
+ System.out.println("map.containsKey(\"raju\") : "  + map.containsKey("raju")); //checks if the map contanis the perticular key
 
- System.out.println(" map.remove(\"john \" ) + : " + map.remove("john"));  //will remove the perticular record
+ System.out.println(" map.remove(\"john \" ) : " + map.remove("john"));  //will remove the perticular record
 
  System.out.println(" map.size() : " +map.size()); //the size will be reduced by 1
+
+ var keys = map.keySet();
+ System.out.println(map.keySet());   // returns the set of keys
+
 
  //to get all the values of the map
 System.out.println("\n\n all the values in the map is : ");
@@ -43,36 +47,56 @@ System.out.println("\n\n");
 
 
 
- //iterate over the map
+  System.out.println("iterating to the map: ");
   for(var e : map.entrySet()){   // at the place of var ->  Map.Entry<String,Integer> e : map.entrySet() can be used
     System.out.printf("%s : %d     " ,e.getKey(),e.getValue());    // we can specifically print the keys or values by using entrySet()... also  the methods like getKey() and getValue() are only in Entry interface
   }
   
+  System.out.println("\n\n");
+
+
   for(var e : map.entrySet()){
     System.out.print(e + "  ");    // printing each entries
   }
   
 
 
+
+  Set<Map.Entry<String, Integer>> entry = map.entrySet();
+  System.out.println("\n\n"+entry);
+
+
+
+
+  
+
+  
+
+
  // quest: WAP to ask the user for country name to get its capital and if not present ,answer accordingly
 
-//  Map <String,String> countrymap = new HashMap <> ();
+ Map <String,String> countrymap = new HashMap <> ();
 
-//  countrymap.put("India","New Delhi");
-//  countrymap.put("China","Beijing");
-//  countrymap.put("Pak","islamabad");
-//  countrymap.put("England","london");
-//  countrymap.put("France","paris");
-//  countrymap.put("Nepal","kathmandu");
+ countrymap.put("India","New Delhi");
+ countrymap.put("China","Beijing");
+ countrymap.put("Pak","islamabad");
+ countrymap.put("England","london");
+ countrymap.put("France","paris");
+ countrymap.put("Nepal","kathmandu");
 
-//  Scanner sc = new Scanner(System.in);
-//  System.out.println("enter the name of the country to get its capital: ");
-//  String name = sc.next();
+ Scanner sc = new Scanner(System.in);
+ System.out.println("\n\n\n enter the name of the country to get its capital: ");
+ String name = sc.next();
 
-//  if(countrymap.containsKey(name)){
-//     System.out.printf("the capital of %s is :  %s ",name,countrymap.get(name));
-//  }
-//  else System.out.printf("sorry I dont have the capital of %s",name);
+ if(countrymap.containsKey(name)){
+    System.out.printf("the capital of %s is :  %s ",name,countrymap.get(name));
+ }
+ else System.out.printf("sorry I dont have the capital of %s",name);
+
+
+/* Shorthand
+ * System.out.println(countrymap.getOrDefault(name, "capital not found"));
+ */
 
 
 

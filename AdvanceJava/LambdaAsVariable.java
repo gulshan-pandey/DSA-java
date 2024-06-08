@@ -18,9 +18,31 @@ public class LambdaAsVariable {
 
         System.out.println("Result 1: " + result1); // Output: Result 1: 8
         System.out.println("Result 2: " + result2); // Output: Result 2: 15
+
+
+
+//--------------------------------------------------------------------------------
+
+
+
+        MathOperation add = (a, b) -> a + b;
+        int result = add.operate(3, 5);
+        System.out.println(result);
     }
 
     public static int performOperation(int a, int b, Operation op) {
         return op.operate(a, b);
     }
 }
+
+
+
+
+
+interface MathOperation {
+    int operate(int a, int b);
+}
+
+
+       
+    

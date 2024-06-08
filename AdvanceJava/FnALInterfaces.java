@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class FnALInterfaces {
     //functional interfaces has only one abstracted method,however it can have static or default methods in them ...example  runnable,callable,BinaryOperator,comparator,Consumer  interfaces,Function
@@ -113,6 +114,50 @@ public class FnALInterfaces {
         System.out.println(strings);
 
 
+
+
+
+
+
+
+        /*
+         * filter----which uses Predicate
+         */
         
+
+
+
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        // Define a Predicate to check if a number is even
+        Predicate<Integer> isEven = num -> num % 2 == 0;
+
+        // Use the Predicate with the filter() method
+        List<Integer> evenNumbers = numbers.stream()
+                                          .filter(isEven)
+                                          .toList();
+
+        System.out.println(evenNumbers); // Outputs: [2, 4, 6, 8, 10]
+
+
+
+
+
+
+        
+//operation on the old fashioned array 
+
+int[] numberss = {1, 2, 3, 4, 5};
+
+// Using forEach to print each number
+Arrays.stream(numberss)
+     .forEach(System.out::println);
+
+System.out.println();
+
+// Using forEach to double each number
+Arrays.stream(numberss)
+     .map(n -> n * 2)
+     .forEach(System.out::println);
     }
 }
