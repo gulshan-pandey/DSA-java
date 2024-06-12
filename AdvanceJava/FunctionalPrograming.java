@@ -1,4 +1,5 @@
 package AdvanceJava;
+import java.lang.reflect.Array;
 import java.time.format.SignStyle;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,6 +13,7 @@ public class FunctionalPrograming {
       
 // functional interface:- is an interface that contains exactly one abstract method. These interfaces are used to represent functional concepts, similar to what lambda expressions can express.
 
+// Consumer only consumes, it doesnot returns anything
     public static void main(String[] args) {
         
     List <String> fruits = List.of("apple","banana","grapes","peach","orange","date");   // this list.of() method makes the immutable list!!!
@@ -55,7 +57,7 @@ System.out.println("printing using the Streams,and redefining accept method:--")
 
 
 
-    List<Integer> numbers = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6));      // this list.of() method under the ArrayList() makes the list mutable because ArrayList() produces mutable list
+    List<Integer> numbers = new ArrayList<>(List.of(1, 2, 3, 4, 8,4,2,1 ,5, 6));      // this list.of() method under the ArrayList() makes the list mutable because ArrayList() produces mutable list
 
     
     List<Integer> sqNumbers = numbers.stream()
@@ -78,8 +80,8 @@ System.out.println("printing using the Streams,and redefining accept method:--")
 
     
     ////////////////////////Sorting the list///////////////////
-    var numberList = List.of(21,35,466,353,65,23,7,9,5336);
-    List<Integer> sortedNumlist = numberList.stream().sorted().collect(Collectors.toList());
+    var numberList = List.of(21,35,466,353,65,23,7,9,21, 35,5336);
+    List<Integer> sortedNumlist = numberList.stream().sorted().distinct().collect(Collectors.toList());
     System.out.println(sortedNumlist);
 
     ///////////Distinct-ensures that no duplicates available //////
@@ -127,10 +129,53 @@ System.out.println("printing using the Streams,and redefining accept method:--")
     lis.flatMap(l -> l.stream()).forEach(System.out::print);    
 
 
+    System.out.println("\n\n");
 
 
 
 
+    // ways to create a strems of array
+
+    //1
+    // List<String> list = Arrays.asList("apple", "banana", "grapes", "peach", "orange", "date");
+
+    // Stream<String> listOfFruits= list.stream();
+
+    //2
+    // String[] list ={"apple", "banana", "grapes", "peach", "orange", "date"};
+    // Stream<String> arrayOfFruits = Arrays.stream(list);
+    // arrayOfFruits.forEach((a) -> {System.out.println(a);});
+
+    //3
+    // Stream<Integer> streama = Stream.of(1,2,3,4,5);
+    // streama.forEach(System.out::println);
+    
+
+    //4
+    Stream<Integer> streamb = Stream.iterate(0, n -> n + 1).limit(10).skip(3);      // the iterate function takes one input and one function to generate next values and the skip operation will skip the first 3 values
+    streamb.forEach(System.out::print);
+
+
+    //5
+    // Stream<Integer> streamc = Stream.generate( () -> (int)(Math.random()*100)).limit(10);
+    // streamc.forEach(System.out::println);
+
+
+
+    System.out.println("\n\n");
+
+
+    Integer integer = Stream.iterate(0, x -> x + 1)
+    .limit(101)
+    .map(x -> x / 10)
+    .distinct()
+    .peek(System.out::println)
+    .max((a,b) -> a - b)            // max() returns the Optional 
+    .get();
+
+    System.out.println(integer);
+
+    
     
     }}
     
