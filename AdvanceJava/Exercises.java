@@ -97,13 +97,13 @@ public class Exercises {
                 // method 2:
 
                 StringBuilder sb = list.stream()
-                                .filter(str -> str.length() > 10)
+                                .filter(str -> str.length() > 10)           // filter takes the predicate which(leta hai or boolean return krta hai)
                                 .reduce(new StringBuilder(), (stringBuilder, str) -> stringBuilder.append(str),StringBuilder::append);
 
                 System.out.println(sb.toString());
 
                 // method 3--------------------------------------------
-                String sol = list.stream().filter(str -> str.length() > 10).collect(Collectors.joining());
+                String sol = list.stream().filter(str -> str.length() > 10).collect(Collectors.joining());               // filter takes the predicate which(leta hai or boolean return krta hai)
 
                 System.out.println("\nusing method 3 : " + sol.toString());
 
@@ -115,7 +115,7 @@ public class Exercises {
                 System.out.println(l);
         
                 int val = l.stream()
-                        .filter(li -> li > 5)
+                        .filter(li -> li > 5)                // filter takes the predicate which(leta hai or boolean return krta hai)
                         .mapToInt(i -> i)   // no need to (Integer::intValue)
                         .sum();
 

@@ -53,10 +53,10 @@ class Producer extends Thread {
 	} 
 } 
 
-public class Consumer extends Thread { 
+public class ConsumerGFG extends Thread { 
 	Producer producer; 
 
-	Consumer(Producer p) 
+	ConsumerGFG(Producer p) 
 	{ 
 		producer = p; 
 	} 
@@ -81,6 +81,6 @@ public class Consumer extends Thread {
 	{ 
 		Producer producer = new Producer(); 
 		producer.start(); 
-		new Consumer(producer).start(); 
+		new ConsumerGFG(producer).start(); 
 	} 
 } 

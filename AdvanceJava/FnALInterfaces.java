@@ -13,6 +13,8 @@ import java.util.function.Predicate;
 public class FnALInterfaces {
     //functional interfaces has only one abstracted method,however it can have static or default methods in them ...example  runnable,callable,BinaryOperator,comparator,Consumer  interfaces,Function
 
+
+    //functional interface ACTS AS A TYPE FOR LAMBDA EXPRESSION
     public static void main(String[] args) {
 
         //runnable interface
@@ -151,7 +153,7 @@ int[] numberss = {1, 2, 3, 4, 5};
 
 // Using forEach to print each number
 Arrays.stream(numberss)
-     .forEach(System.out::println);
+     .forEach(System.out::println);          //forEach takes a consumer which(leta h but deta kuch nhi)
 
 System.out.println();
 
