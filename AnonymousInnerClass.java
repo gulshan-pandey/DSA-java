@@ -63,11 +63,31 @@ public class AnonymousInnerClass {
             }
             };
 
+
+
+
+
+            
+    //example 4 -- get employee salary
+        employee emp = new employee() {             // this is anonymous inner class of the interface employee in which there is psudo(unnamed) class has been initialized
+            @Override
+            public void getSalary() {
+                System.out.println("employee salary : 100");
+            }
+            @Override
+            public void getDesignation() {
+                System.out.println("employee designation : manager");
+            }
+        };
+
+        emp.getSalary();
+        emp.getDesignation();
+
         }
 
 
 
-//EXAMPLE 4
+//EXAMPLE 5
 
         // Thread thread = new Thread(new Runnable() {
         //     @Override 
@@ -79,7 +99,16 @@ public class AnonymousInnerClass {
         // thread.start();
  
     
+
+
+
 }
 
 
 
+
+interface employee{
+    void getSalary();
+    void getDesignation();
+
+}
