@@ -78,15 +78,17 @@ public class OptionalClasses {
         String elseGet = name.orElseGet(() -> "Selmon");         //orElseGet() method takes supplier which(deta hai, leta kuch nhi h )
         System.out.println(elseGet);
 
-        String throwExpName = name.orElseThrow(() -> new NoSuchElementException());
-        System.out.println(throwExpName);
+        
+        // String throwExpName = name.orElseThrow(() -> new NoSuchElementException());
+        // System.out.println(throwExpName);
 
     }
 
     private static Optional getName(int id){
         //get from db
-        
-        // return Optional.of("shyam");
+        String name = null;
+        String name1 = "shyam";
+        // return Optional.ofNullable(name);
 
         return Optional.empty();        // null's case encountered
     }

@@ -30,6 +30,28 @@ public class Calculations {
 
 
 
+        //interview question
+
+       
+                int i = 11;    // Initial value of i
+                i = i++ + ++i; // i++ returns 11, then i becomes 12
+                              // ++i increments 12 to 13 and returns 13
+                              // So the expression becomes 11 + 13
+                              // The result is 24
+                System.out.println(i); // Output is 24
+            
+                System.out.println("\n\n");
+        
+                int j=11, k=22, l;
+                l= j+k + j++ + k++ + ++j + ++k;
+                System.out.println(l);
+                System.out.println(j);
+                System.out.println(k);
+
+
+
+
+
 
     }
 }

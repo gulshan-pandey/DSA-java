@@ -3,8 +3,35 @@ import java.util.Scanner;
 
 public class Strings {
     public static void main(String[] args) {
-        String name = "rohan";
-        String name2 = new String("kartik"); // another way to define string
+
+
+
+        /*
+         * 3 ways to initialize the string object in java
+         * 
+         * 1 by string literal -----String str1 = "Hello, world!";
+         * 2 by new keyword--------String str2 = new String("Hello, world!");
+         * 3 by using charArray---------char[] charArray = {'H', 'e', 'l', 'l', 'o', ',', ' ', 'w', 'o', 'r', 'l', 'd', '!'};
+                                        String str3 = new String(charArray);
+         *
+         * 
+         *  
+         * Que: why string objects are immutable objects?
+        * Ans: An object can be referred by multiple reference variables in this case if
+                    string objects are mutable objects, then we change the content of object
+                    automatically other references get also modified so that string objects are given as immutable objects it
+                    means whenever any operation is done on strings it will create new object.
+         *
+         * 
+         */
+
+
+
+
+
+
+        String name = "rohan";  //---------in string constant pool
+        String name2 = new String("kartik"); // another way to define string --- in heap memory and also in constant pool both
         // System.out.print("the name is: ");
         // System.out.print(name );
         // here remember that the println is used for the printing next words with new
@@ -62,19 +89,31 @@ public class Strings {
         String str = "He@#$lloThere!*&";
         System.out.println(moveSpecialCharacters(str));
 
-
-
-
+        
+        
+        
         //WAP to find the highest number of occurences in the given string
         String strng = "hello";
-                int highestCount = findHighestOccurrence(strng);
-                System.out.println("The highest number of occurrences in '" + strng + "' is " + highestCount);
-
-
+        int highestCount = findHighestOccurrence(strng);
+        System.out.println("The highest number of occurrences in '" + strng + "' is " + highestCount);
+        
+        
         //WAP to reverse all the words in the string
-
+        
         // String str = "all Cows eat grass";
         // System.out.println(reverseEachWord(str));
+        
+        String nam ="hello world";
+    
+        System.out.println(nam.contains("world"));
+
+        String res = nam.replace("hello", "hi");
+        System.out.println(res);
+        System.out.println(res.indexOf("w"));   //------3
+        System.out.println(nam.compareTo(res));
+        System.out.println(nam.equals(res));
+        String res2 = nam.substring(1,5);
+        System.out.println(res2);
 
 
     }
@@ -101,7 +140,7 @@ public class Strings {
             String word ="" ;
             String extra ="";
             for(char ch : str.toCharArray()){
-            
+                
                 if(Character.isLetterOrDigit(ch)){
                     word += ch;
                 }else extra += ch;
@@ -162,6 +201,7 @@ public class Strings {
             //         return res;
                 
             //   }
+
 
 
 
