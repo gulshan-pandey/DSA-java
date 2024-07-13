@@ -75,23 +75,23 @@ public class CountingBits {
 // optimistt way-------Kernighan's algorithm.: is an efficient way to count the number of set bits (1-bits) in an integer's binary representation. The key insight is that the operation  k=k&(k−1) removes the lowest set bit from k
 
 
-
-
-class Solution {        
-    public int[] countBits(int n) {
-        int[] arr = new int[n + 1];
-        
-        for (int i = 1; i <= n; i++) {
-            int count =0;
-            int k=i;
-            while(k>0){
-                 k=k&(k-1);         // main part
-                 count++;
-            }
-            arr[i]=count;
-
-        }
-        
-        return arr;
-    }
-}
+//
+//
+//class Solution {
+//    public int[] countBits(int n) {
+//        int[] arr = new int[n + 1];
+//
+//        for (int i = 1; i <= n; i++) {
+//            int count =0;
+//            int k=i;
+//            while(k>0){
+//                 k=k&(k-1);         // main part
+//                 count++;
+//            }
+//            arr[i]=count;
+//
+//        }
+//
+//        return arr;
+//    }
+//}

@@ -49,24 +49,24 @@ public class CountNumberOfBadPairs {
 
 //total number of pairs =n*((n-1)/2)
 //we need to find the good pairs then substract with total number ot pairs
-
-class Solution {
-    public long countBadPairs(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
-        int n = nums.length;
-          long total = (long) n * (n - 1) / 2;
-        long goodpair = 0;
-        for (int i = 0; i < nums.length; i++) {
-           int diff = nums[i]- i;
-            if(map.containsKey(diff)){
-                goodpair+=map.get(diff);
-            }
-           map.put(diff,map.getOrDefault(diff,0)+1);
-
-        }
-        return total- goodpair;
-    }
-}
+//
+//class Solution {
+//    public long countBadPairs(int[] nums) {
+//        Map<Integer, Integer> map = new HashMap<>();
+//        int n = nums.length;
+//          long total = (long) n * (n - 1) / 2;
+//        long goodpair = 0;
+//        for (int i = 0; i < nums.length; i++) {
+//           int diff = nums[i]- i;
+//            if(map.containsKey(diff)){
+//                goodpair+=map.get(diff);
+//            }
+//           map.put(diff,map.getOrDefault(diff,0)+1);
+//
+//        }
+//        return total- goodpair;
+//    }
+//}
 
 
 

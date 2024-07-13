@@ -10,11 +10,11 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 
-class Movieslist{
+class Movilist{
     private String movienames;
     private int likes;
     
-    public Movieslist(String movienames, int likes) {
+    public Movilist(String movienames, int likes) {
         this.movienames = movienames;
         this.likes = likes;
     }
@@ -195,17 +195,17 @@ public class Exercises {
 
 
 
-    List <Movieslist> movie = List.of(              // List <Movieslist> can be replaced with "var"  as per java 10
-        new Movieslist("terminator",10),
-        new Movieslist("inception",5),
-        new Movieslist("tenet",15),
-        new Movieslist("alean",19),
-        new Movieslist("ironman",100),
-        new Movieslist("ironman2",14),
-        new Movieslist("ironman3",1),
-        new Movieslist("hulk",7),
-        new Movieslist("superman",3),
-        new Movieslist("batmen",16));
+    List <Movilist> movie = List.of(              // List <Movilist> can be replaced with "var"  as per java 10
+        new Movilist("terminator",10),
+        new Movilist("inception",5),
+        new Movilist("tenet",15),
+        new Movilist("alean",19),
+        new Movilist("ironman",100),
+        new Movilist("ironman2",14),
+        new Movilist("ironman3",1),
+        new Movilist("hulk",7),
+        new Movilist("superman",3),
+        new Movilist("batmen",16));
 
 
      movie.stream()

@@ -23,11 +23,11 @@ public class LengthOfLastWord {
 //         return count;
 //     }
 // }
-
-class Solution {
-    public int lengthOfLastWord(String s) {
-        String[] arr = s.split(" ");
-        String value =arr[arr.length- 1];
-        return value.length();
-    }
-}
+//
+//class Solution {
+//    public int lengthOfLastWord(String s) {
+//        String[] arr = s.split(" ");
+//        String value =arr[arr.length- 1];
+//        return value.length();
+//    }
+//}

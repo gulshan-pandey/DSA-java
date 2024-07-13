@@ -36,23 +36,23 @@ public class SquaresOfASortedArray {
 
 
 //O(n) approach
-
-class Solution {
-    public int[] sortedSquares(int[] nums) {
-        int [] arr = new int[nums.length];
-        int left =0;
-        int right =nums.length-1;
-        int i=right;
-        while(right>=left){
-            if(Math.abs(nums[left])>Math.abs(nums[right])){
-                arr[i] = nums[left]*nums[left];
-                left++;
-            }else{
-                arr[i] =nums[right]*nums[right];
-                right--;
-            }
-            i--;
-        }
-        return arr;
-    }
-}
+//
+//class Solution {
+//    public int[] sortedSquares(int[] nums) {
+//        int [] arr = new int[nums.length];
+//        int left =0;
+//        int right =nums.length-1;
+//        int i=right;
+//        while(right>=left){
+//            if(Math.abs(nums[left])>Math.abs(nums[right])){
+//                arr[i] = nums[left]*nums[left];
+//                left++;
+//            }else{
+//                arr[i] =nums[right]*nums[right];
+//                right--;
+//            }
+//            i--;
+//        }
+//        return arr;
+//    }
+//}

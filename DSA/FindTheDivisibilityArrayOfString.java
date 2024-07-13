@@ -56,22 +56,23 @@ public class FindTheDivisibilityArrayOfString {
 // }
 
 
-class Solution {
-    public int[] divisibilityArray(String word, int m) {
-        int n = word.length();
-        int[] div = new int[n];
-        long currentNumber = 0;
-        
-        for (int i = 0; i < n; i++) {
-            currentNumber = currentNumber * 10 + (word.charAt(i) - '0');    // Convert first digit to int directly by substracting the ASCII value of 'O' from the character gives the numerical value of the number
-            if (currentNumber % m == 0) {
-                div[i] = 1;
-            } else {
-                div[i] = 0;
-            }
-            currentNumber %= m; // To avoid overflow, keep currentNumber as a remainder
-        }
-        
-        return div;
-    }
-}
+//
+//class Solution {
+//    public int[] divisibilityArray(String word, int m) {
+//        int n = word.length();
+//        int[] div = new int[n];
+//        long currentNumber = 0;
+//
+//        for (int i = 0; i < n; i++) {
+//            currentNumber = currentNumber * 10 + (word.charAt(i) - '0');    // Convert first digit to int directly by substracting the ASCII value of 'O' from the character gives the numerical value of the number
+//            if (currentNumber % m == 0) {
+//                div[i] = 1;
+//            } else {
+//                div[i] = 0;
+//            }
+//            currentNumber %= m; // To avoid overflow, keep currentNumber as a remainder
+//        }
+//
+//        return div;
+//    }
+//}

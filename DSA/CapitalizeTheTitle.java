@@ -17,27 +17,27 @@ public class CapitalizeTheTitle {
 
 
 
-
-
-class Solution {
-    public String capitalizeTitle(String title) {
-        StringBuilder sb = new StringBuilder();
-        String[] words = title.split(" ");
-        for (int i = 0; i < words.length; i++) {
-            if (words[i].length() > 2) {
-                sb.append(Character.toUpperCase(words[i].charAt(0))); // Capitalize the first character
-                sb.append(words[i].substring(1).toLowerCase()); // Append the rest of the word in lowercase
-            } else {
-                sb.append(words[i].toLowerCase()); // Append the whole word in lowercase
-            }
-            if (i < words.length - 1) {
-                sb.append(" "); // Add space between words
-            }
-        }
-        return sb.toString();
-    }
-}
-
+//
+//
+//class Solution {
+//    public String capitalizeTitle(String title) {
+//        StringBuilder sb = new StringBuilder();
+//        String[] words = title.split(" ");
+//        for (int i = 0; i < words.length; i++) {
+//            if (words[i].length() > 2) {
+//                sb.append(Character.toUpperCase(words[i].charAt(0))); // Capitalize the first character
+//                sb.append(words[i].substring(1).toLowerCase()); // Append the rest of the word in lowercase
+//            } else {
+//                sb.append(words[i].toLowerCase()); // Append the whole word in lowercase
+//            }
+//            if (i < words.length - 1) {
+//                sb.append(" "); // Add space between words
+//            }
+//        }
+//        return sb.toString();
+//    }
+//}
+//
 
 
 
