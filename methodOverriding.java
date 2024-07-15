@@ -51,7 +51,10 @@ public class MethodOverriding {
 
     public static void main(String[] args) {
 
-        A a = new A();
+        // method overriding --> same method name + same para + same return type(covarient)
+
+
+        A a = new A();      //objects are made at runtime
         a.meth2();
 
         B b = new B();
@@ -60,7 +63,7 @@ public class MethodOverriding {
 
 
 
-        Animal animal = new Animal();
+        Animal animal = new Animal();           //objects are made at runtime
         animal.makeSound(); // Output: Some generic sound
 
         Dog dog = new Dog();

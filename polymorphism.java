@@ -98,7 +98,7 @@ public class Polymorphism {
         System.out.println(cam.getClass().getName());    //-----SmartPhone1
 
 
-        SmartPhone1 sm = new SmartPhone1();
+        SmartPhone1 sm = new SmartPhone1();         //objects are made at runtime
         sm.playStore();
         sm.callNumber(817820134);
         sm.getNetwork();

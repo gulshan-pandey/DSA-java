@@ -24,6 +24,7 @@ class smartPhone extends phone{
 public class DynamicMethodDispatch {
     
     public static void main(String[] args) {
+        //objects are made at runtime
         
         phone obj =new smartPhone(); //yes it is allowed but vice versa in not allowed
         // smartPhone obj2 =new phone(); -----not allowed as a phone cannot be called a smartphone 
