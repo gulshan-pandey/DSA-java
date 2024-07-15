@@ -6,6 +6,7 @@ public class Strings {
 
 
 
+
         /*
          * 3 ways to initialize the string object in java
          * 
@@ -25,7 +26,9 @@ public class Strings {
          * 
          */
 
-
+         char arr[] ={'a','s','h','w','a','n','i'};
+         String s=new String(arr);      //another way to make string
+         System.out.println(s);
 
 
 
