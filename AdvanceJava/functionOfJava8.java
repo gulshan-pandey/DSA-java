@@ -46,6 +46,23 @@ public class functionOfJava8 {
         Function<String,String> function3 = s -> s.toUpperCase();
         System.out.println(function3.andThen(function2).apply("cruise"));           // makking a function madeup of two functions
         
+
+
+        //Interview question--- to find the frequency of an element in a string using java 8
+
+        String input = "WEHFBWDJADMAJFNWFI";
+        char elementToFind = 'A';
+
+        long count = input.chars()
+                          .filter(ch -> ch == elementToFind)
+                          .count();
+        System.out.println(count);
+
+
+
+
+
+
        
     }
 
