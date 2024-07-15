@@ -59,6 +59,13 @@ public class functionOfJava8 {
         System.out.println(count);
 
 
+        
+        // long count = input.chars()
+        // .mapToObj(ch -> (char) ch)
+        // .filter(ch -> ch == elementToFind)
+        // .count();
+
+
 
 
 
