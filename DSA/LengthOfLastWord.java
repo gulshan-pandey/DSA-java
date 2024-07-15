@@ -1,12 +1,11 @@
 package DSA;
 public class LengthOfLastWord {
-    
+ 
 }
 
 
 
 //optimal approaches!
-
 
 // class Solution {
 //     public int lengthOfLastWord(String s) {
@@ -15,7 +14,7 @@ public class LengthOfLastWord {
 //         if(s.charAt(i)!=' '){
 //             count++;
 //         }
-//         if(count!=0 && s.charAt(i)==' '){
+//         if(count>0 && s.charAt(i)==' '){
 //             return count;
 //         }
 
@@ -23,7 +22,9 @@ public class LengthOfLastWord {
 //         return count;
 //     }
 // }
-//
+
+
+
 //class Solution {
 //    public int lengthOfLastWord(String s) {
 //        String[] arr = s.split(" ");
