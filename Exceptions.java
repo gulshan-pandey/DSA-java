@@ -29,37 +29,37 @@ public class Exceptions{
 
         // handling multiple Exceptions
 
-        // int [] marks = new int [3];
-        // marks[0]=44;
-        // marks[1]=44;
-        // marks[2]=44;
+        int [] marks = new int [3];
+        marks[0]=44;
+        marks[1]=44;
+        marks[2]=44;
 
         Scanner sc = new Scanner(System.in);
         
-        // try{
-        // System.out.println("enter the index of the Array : " );
-        // int i=sc.nextInt();
+        try{
+        System.out.println("enter the index of the Array : " );
+        int i=sc.nextInt();
 
-        // System.out.println("enter the number U want to divide the value with : " );
-        // int num= sc.nextInt();
+        System.out.println("enter the number U want to divide the value with : " );
+        int num= sc.nextInt();
 
 
         
-        // System.out.println("your value is : " + marks[i]);
-        // System.out.println("your divided value is : " + marks[i]/num);
-        // }
+        System.out.println("your value is : " + marks[i]);
+        System.out.println("your divided value is : " + marks[i]/num);
+        }
      
 
-        // catch(InputMismatchException e ){
-        //     System.out.println("Input mismatch "  + e);
-        //     sc.next();
-        // }
-        // catch(ArrayIndexOutOfBoundsException e ){
-        //     System.out.println("Array out of bound  "  + e);
-        // }
-        // catch(Exception e){ // this it the generic exception which can collect all the exceptins
-        //     System.out.println("other error occured");
-        // }
+        catch(InputMismatchException e ){
+            System.out.println("Input mismatch "  + e);
+            sc.next();
+        }
+        catch(ArrayIndexOutOfBoundsException e ){
+            System.out.println("Array out of bound  "  + e);
+        }
+        catch(Exception e){ // this it the generic exception which can collect all the exceptins
+            System.out.println("other error occured");
+        }
     
 
 
@@ -87,7 +87,8 @@ public class Exceptions{
                     System.out.println("exception occured " + e);
                     i++; //there are only 5 wrong inputs allowed
                 }
-            } catch (Exception e) {
+            } 
+            catch (Exception e) {
                 System.out.println("other exception occured level 1 " + e);
                 i++;
                 sc.next(); //it prevents the infinite loop 
@@ -98,34 +99,35 @@ public class Exceptions{
             }
         } //while loop ended
         System.out.println("thanks for coding");
-    }
-
-    
-            // for(int i =0;i<5;i++){
+        
+        
+        
+            for(int k =0;k<5;k++){
             
-            // System.out.println("enter the number1 : ");
-            // try{
-            // int x = sc.nextInt();
-            // System.out.println("enter the second number : ");
-            // int y = sc. nextInt();
+            System.out.println("enter the number1 : ");
+            try{
+            int x = sc.nextInt();
+            System.out.println("enter the second number : ");
+            int y = sc. nextInt();
         
-            // int caluclate = a/b;
+            int caluclate = x/y;
         
-            // System.out.println("the vlaue is : " + caluclate);}
-            // catch(InputMismatchException Exception ){
-            //     System.out.println("please provide required input!");
-            //     sc.next();
+            System.out.println("the vlaue is : " + caluclate);}
+            catch(InputMismatchException Exception ){
+                System.out.println("please provide required input!");
+                sc.next();
         
-            // }
-            // catch(ArithmeticException Exception){
-            //     System.out.println("oops you divdied it by zero!");
-            // }
-        
-            // }
+            }
+            catch(ArithmeticException Exception){
+                System.out.println("oops you divdied it by zero!");
+            }
+            
+            }
 
 
         }
         
         
-
-    
+        
+        
+    }
