@@ -6,7 +6,7 @@ class met1 extends Thread {
         for (int i = 0; i < 500; i++) {
             System.out.println("hello and welcome ");
             try {
-                Thread.sleep(400); //will stop this method inn 400 ms by using error handling
+                Thread.sleep(10); //will stop this method inn 400 ms by using error handling
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -37,13 +37,13 @@ public class MethodsOfThreads {
      
 
         m1.start(); 
-         //here now i want to run the m1 until its done so we will have to use error handiling
-        // try {  
-        //     m1.join();
-        // } catch (Exception e) { //catch will run inn the case of the error //here try is use to try what we want to do with pgogram,if something unexpected happens then catch will runn
+        //  here now i want to run the m1 until its done so we will have to use error handiling
+        try {  
+            m1.join();      // this will wait for the m1 to finish
+        } catch (Exception e) { //catch will run inn the case of the error //here try is use to try what we want to do with pgogram,if something unexpected happens then catch will runn
             
-        //     System.out.println(e);
-        // }
+            System.out.println(e);
+        }
 
         m2.start();
 

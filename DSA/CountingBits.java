@@ -3,11 +3,18 @@ package DSA;
 public class CountingBits {
 
 
+    // to unset the ith bit
+    public static int unsetIthBit(int n, int i) {
+        int mask = ~(1 << (i - 1));
+        return n & mask;
+    }
+
 /*
  * Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.
  */
 
 //  Example 1:
+
 // Input: n = 2
 // Output: [0,1,1]
 // Explanation:
@@ -95,3 +102,12 @@ public class CountingBits {
 //        return arr;
 //    }
 //}
+
+
+
+
+
+
+// to remove ith set bit of the number
+
+// num= num-(num & -num);                   ---> this approach is used in fenvick tree
