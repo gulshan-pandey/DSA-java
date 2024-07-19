@@ -11,12 +11,14 @@ class RunnThread implements Runnable {
 class RunnThread2 implements Runnable {
     public void run() {
         for (int i = 0; i < 40; i++) {
-            System.out.println("here we implemented the another thread in winter");
+            System.out.println("here we implemented the another thread");
         }
     }
 }
 
-// pattern through multithreading: note:- a real multithreading will ruin the patterns
+// pattern through multithreading:- a real multithreading will ruin the patterns
+
+
 
 class patterns implements Runnable{
     private String name;

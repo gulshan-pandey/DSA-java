@@ -1,6 +1,6 @@
 package DSA;
 
-public class FindTheMiddleIndexInTheArray {
+public class FindPivotIndex {
     /*
      * program to find and returns the index where the sum of the elements on the left is equal to the sum of the elements on the right in an integer array. If no such index exists, it returns -1.
      * 

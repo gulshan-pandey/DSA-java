@@ -19,8 +19,8 @@ public class CapitalizeTheTitle {
 
 
 
-//
-//
+
+
 //class Solution {
 //    public String capitalizeTitle(String title) {
 //        StringBuilder sb = new StringBuilder();
@@ -39,7 +39,7 @@ public class CapitalizeTheTitle {
 //        return sb.toString();
 //    }
 //}
-
+//
 
 
 
