@@ -1,3 +1,7 @@
+// When a method or block is declared as synchronized, only one thread is allowed to execute that method or block at a time on the given object.
+// The primary advantage of the synchronized keyword is that it helps resolve date inconsistency problems
+// However, a major drawback of the synchronized keyword is that it increases the waiting time of the thread and negatively impacts the performance of the system.
+// Internally, the synchronization concept is implemented using locks
 
 class Counter {
     private int count = 0;

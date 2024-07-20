@@ -1,4 +1,4 @@
-class farzi {
+class modify {
     public int x = 5;   //public modifier
     protected int y = 45; //protected modifier
     int z = 6;            // default
@@ -15,16 +15,16 @@ class farzi {
 public class Accessmodifiers {
  public static void main(String[] args) {
     
-    farzi f =new farzi();
-    f.meth();
+    modify m =new modify();
+    m.meth();
 
 System.out.println("\n\n");
 
 
-    System.out.println( f.x);
-    System.out.println( f.y);
-    System.out.println( f.z);
-    // System.out.println( f.a);  is private so wont work
-    // System.out.println( f.a); --> this is not allowed ,the private variavles are not allowed in same package
+    System.out.println( m.x);
+    System.out.println( m.y);
+    System.out.println( m.z);
+    // System.out.println( m.a);  is private so wont work
+    // System.out.println( m.a); --> this is not allowed ,the private variavles are not allowed in same package
  }
 }

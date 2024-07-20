@@ -1,4 +1,11 @@
 
+//protected :
+//remember: protected modifier(class) is never used independently and throws compile time error, bcz it is used in nested class same happens with private (class)
+// usage of protected: variable,method,nested class
+
+//private:
+// usage: variable, methods, nested class
+
 class Employee {
 
     private String name;
@@ -22,7 +29,7 @@ class Employee {
 }
 
 public class AccessModifiers1 {
-    public static void main(String[] args) {
+ {
 
         Employee chetan = new Employee();
         // chetan.name="chetan_yadav"; --> this will give error due to private access modifier
@@ -35,3 +42,4 @@ public class AccessModifiers1 {
     }
 
 }
+
