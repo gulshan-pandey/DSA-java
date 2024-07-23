@@ -1,5 +1,6 @@
 package Collections;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Arraylist {
@@ -143,6 +144,22 @@ public class Arraylist {
         //  numbers.forEach(System.out::println);
 
 
+
+        System.out.println("\n\n");
+
+
+        List<Integer> demo = new ArrayList<>();
+        for(int i = 50; i<60; i=i+2){
+            demo.add(i);
+        }
+
+
+        Iterator<Integer> it = demo.iterator();         // traversing using Iterator method
+
+        while(it.hasNext()){
+
+            System.out.print(it.next() + "--");
+        }
 
          
 
