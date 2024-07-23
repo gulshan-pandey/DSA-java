@@ -76,6 +76,10 @@ System.out.println("\n\n");
   }
 
 
+  System.out.println("\n\n using stream:-");
+  map.keySet().stream().forEach(n -> System.out.print(n + "     "));
+
+
 
 
   
