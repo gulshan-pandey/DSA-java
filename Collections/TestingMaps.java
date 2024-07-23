@@ -67,6 +67,16 @@ System.out.println("\n\n");
 
 
 
+  System.out.println("\n\n iterating to the map KEYS BY USING ITERATOR: ");
+
+  Iterator <String> iter = map.keySet().iterator();
+
+  while(iter.hasNext()){
+    System.out.print(iter.next() + "     ");
+  }
+
+
+
 
   
 
