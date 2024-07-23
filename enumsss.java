@@ -21,7 +21,7 @@ enum Color {
     SATURDAY("weekend"),
     SUNDAY("weekend");
 
-   private final String ocassion ;
+   private final String ocassion ;    // make everything final as much as possible in enums
 
    private Day(String dayz){
      this.ocassion = dayz;

@@ -17,18 +17,18 @@
 
 // WAP to start the Thread and print its each state(creation,starting and termination) use Thread.sleep() to simulate long running tasks and Thread.getState to print the thread's state
 
-// class ques2 extends Thread {
+class ques2 extends Thread {
 
-//     public void run() {
-//         try {
-//             Thread.sleep(3000);
-//         } catch (InterruptedException e) {
-//             throw new RuntimeException(e);
-//         }
-//         System.out.println("from inside the run: " + getState());
-//     }
+    public void run() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("from inside the run: " + getState());
+    }
 
-// }
+}
 
 // ques3: wap to ensure that the 2nd thread starts only after the first thread ends and the third thread starts only after second thread ends using the join mehtod.Each thread should print its start and end along with its name
 
@@ -52,7 +52,7 @@ class ques3 extends Thread {
 }
 
 
-// ques4 : WAP to create 3 threads representing 3 signals RED ,GREEN,BLUE .Each signal should be for a cretain time,then switch to next signal in order.Use sleep fot timing and syncronize to kae sure only one sgnal is active at a time
+// ques4 : WAP to create 3 threads representing 3 signals RED ,GREEN,BLUE .Each signal should be for a cretain time,then switch to next signal in order.Use sleep for timing and syncronize to make sure only one sgnal is active at a time
 
 class Ques4 extends Thread{
    public final TrafficColor tr; //TrafficColor is an enum type
@@ -110,23 +110,23 @@ public class practiceOnThread2 {
 
 
         // ques3
-        // ques3 q3 = new ques3(1);
-        // ques3 q32 = new ques3(2);
-        // ques3 q33 = new ques3(3);
-        // System.out.printf("creation of thread-%d : %s \n" ,q3.y,q3.getState());
-        // q3.start();
-        // q3.join();
-        // System.out.println(q3.getState());
+        ques3 q3 = new ques3(1);
+        ques3 q32 = new ques3(2);
+        ques3 q33 = new ques3(3);
+        System.out.printf("creation of thread-%d : %s \n" ,q3.y,q3.getState());
+        q3.start();
+        q3.join();
+        System.out.println(q3.getState());
 
-        // System.out.printf("creation of thread-%d : %s \n" ,q32.y,q32.getState());
-        // q32.start();
-        // q32.join();
-        // System.out.println(q3.getState() );
+        System.out.printf("creation of thread-%d : %s \n" ,q32.y,q32.getState());
+        q32.start();
+        q32.join();
+        System.out.println(q3.getState() );
 
-        // System.out.printf("creation of thread-%d : %s \n" ,q33.y,q33.getState());
-        // q33.start();
-        // q33.join();
-        // System.out.println(q3.getState());
+        System.out.printf("creation of thread-%d : %s \n" ,q33.y,q33.getState());
+        q33.start();
+        q33.join();
+        System.out.println(q3.getState());
 
 
 
