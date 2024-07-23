@@ -72,7 +72,8 @@ System.out.println("\n\n");
   Iterator <String> iter = map.keySet().iterator();
 
   while(iter.hasNext()){
-    System.out.print(iter.next() + "     ");
+    String temp =iter.next();
+    System.out.print(temp + "=" + map.get(temp) + "    ");
   }
 
 
