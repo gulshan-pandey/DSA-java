@@ -104,31 +104,31 @@ public class SortCharactersByFrequency {
 
 //optimal solution
 
-class Solution {                                  
-    public String frequencySort(String s) {
-        Map<Character, Integer> map = new HashMap<>();
-        for(char elem : s.toCharArray()){
-            map.put(elem,map.getOrDefault(elem,0)+1);
-        }
-        List<Character>[] arr = new List[s.length() +1];
-        for(Character key : map.keySet()){
-            int freq = map.get(key);
-            if(arr[freq]== null){
-                arr[freq]= new ArrayList<>();
-            }
-            arr[freq].add(key);
-        }
-        StringBuilder sb = new StringBuilder();
-        for(int j = arr.length-1; j>0; j--){
-            if(arr[j] != null){
-                for( char c : arr[j]){
-                    for(int k =0; k<map.get(c); k++){
-                        sb.append(c);
-                    }
-                }
-            }
-        }
+// class Solution {                                  
+//     public String frequencySort(String s) {
+//         Map<Character, Integer> map = new HashMap<>();
+//         for(char elem : s.toCharArray()){
+//             map.put(elem,map.getOrDefault(elem,0)+1);
+//         }
+//         List<Character>[] arr = new List[s.length() +1];
+//         for(Character key : map.keySet()){
+//             int freq = map.get(key);
+//             if(arr[freq]== null){
+//                 arr[freq]= new ArrayList<>();
+//             }
+//             arr[freq].add(key);
+//         }
+//         StringBuilder sb = new StringBuilder();
+//         for(int j = arr.length-1; j>0; j--){
+//             if(arr[j] != null){
+//                 for( char c : arr[j]){
+//                     for(int k =0; k<map.get(c); k++){
+//                         sb.append(c);
+//                     }
+//                 }
+//             }
+//         }
 
-        return sb.toString();
-    }
-}
+//         return sb.toString();
+//     }
+// }
