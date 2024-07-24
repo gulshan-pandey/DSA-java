@@ -33,7 +33,6 @@ public class SortCharactersByFrequency {
 
 
 
-
 // the idea is to store the characters with its frequency in map and then create the  array of the list of characters of size gerater than 1 of the string(so that is can store the optimum frequency of the characters into that array) ,then iterate into the keyset of the map using streams and then add the characters into the Array of the list at the index of the frequency of the character from the map, then add the characters into the stringbuilder in reverse order so that we dont have to sort the string by the frequency of the characters 
 
 
@@ -101,3 +100,35 @@ public class SortCharactersByFrequency {
 //         return sb.toString();
 //     }
 // }
+
+
+//optimal solution
+
+class Solution {                                  
+    public String frequencySort(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        for(char elem : s.toCharArray()){
+            map.put(elem,map.getOrDefault(elem,0)+1);
+        }
+        List<Character>[] arr = new List[s.length() +1];
+        for(Character key : map.keySet()){
+            int freq = map.get(key);
+            if(arr[freq]== null){
+                arr[freq]= new ArrayList<>();
+            }
+            arr[freq].add(key);
+        }
+        StringBuilder sb = new StringBuilder();
+        for(int j = arr.length-1; j>0; j--){
+            if(arr[j] != null){
+                for( char c : arr[j]){
+                    for(int k =0; k<map.get(c); k++){
+                        sb.append(c);
+                    }
+                }
+            }
+        }
+
+        return sb.toString();
+    }
+}
