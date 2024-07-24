@@ -21,7 +21,7 @@ public class SortArrayByIncreasingFrequency {
             Output: [1,3,3,2,2]
             Explanation: '2' and '3' both have a frequency of 2, so they are sorted in decreasing order.
 
-            
+
             Example 3:
 
             Input: nums = [-1,1,-6,4,5,-6,1,4,1]
@@ -29,7 +29,6 @@ public class SortArrayByIncreasingFrequency {
 
      */
 }
-
 
 
 
@@ -46,7 +45,19 @@ public class SortArrayByIncreasingFrequency {
 //             int freqB = map.get(b);
 //             // Sort by frequency, and then by value in descending order
 //             return freqA == freqB ? b - a : freqA - freqB;
-//         });
+//         });                                 
+
+
+//        /* PriorityQueue<Integer> q = new PriorityQueue<>((a, b) -> {
+//             int freqA = map.get(a);
+//             int freqB = map.get(b);
+//             if (freqA != freqB) {
+//                 return freqA - freqB; // Sort by increasing frequency
+//             } else {
+//                 return b - a; // If frequencies are the same, sort by decreasing value
+//             }
+//         });  */
+
 
 //         for(var elem : map.keySet()){
 //            q.offer(elem);
@@ -64,3 +75,4 @@ public class SortArrayByIncreasingFrequency {
 //     return arr;
 //     }
 // }
+
