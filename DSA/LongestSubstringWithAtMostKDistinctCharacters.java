@@ -1,6 +1,8 @@
 package DSA;
 
-public class  LongestSubstringWithAtMostKDistinctCharacters{
+//SUIMILAR PROBLEM TO THE FruitsIntoBaskets
+public class  LongestSubstringWithAtMostKDistinctCharacters{    
+   
 
 /*
  * You are given a string 'str' and an integer ‘K’. Your task is to find the length of the largest substring with at most ‘K’ distinct characters.
