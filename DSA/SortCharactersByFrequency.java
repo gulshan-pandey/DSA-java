@@ -34,6 +34,7 @@ public class SortCharactersByFrequency {
 
 
 
+
 // the idea is to store the characters with its frequency in map and then create the  array of the list of characters of size gerater than 1 of the string(so that is can store the optimum frequency of the characters into that array) ,then iterate into the keyset of the map using streams and then add the characters into the Array of the list at the index of the frequency of the character from the map, then add the characters into the stringbuilder in reverse order so that we dont have to sort the string by the frequency of the characters 
 
 
