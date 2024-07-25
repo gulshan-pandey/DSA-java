@@ -2,6 +2,7 @@ package DSA;
 
 public class SortCharactersByFrequency {
     
+
     /*
      * Example 1:
 
@@ -78,7 +79,7 @@ public class SortCharactersByFrequency {
 
 // class Solution {                                  
 //     public String frequencySort(String s) {
-//         Map <Character, Integer> map = new HashMap<>();
+//         HashMap <Character, Integer> map = new HashMap<>();
 //         PriorityQueue<Character> q = new PriorityQueue<>((x,y) -> (map.get(y) - map.get(x)));
 //         StringBuilder sb = new StringBuilder();
 //         for(char elem : s.toCharArray()){
@@ -88,7 +89,7 @@ public class SortCharactersByFrequency {
 //         for(char c : map.keySet()){
 //             q.offer(c);
 //         }
-
+        
 //         while(!q.isEmpty()){
 //             char temp =q.poll();
 //             for(int i =0; i<map.get(temp);i++){
@@ -96,7 +97,6 @@ public class SortCharactersByFrequency {
 //             sb.append(temp);
 //             }
 //         }
-
 //         return sb.toString();
 //     }
 // }
