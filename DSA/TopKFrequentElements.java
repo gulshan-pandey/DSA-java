@@ -18,8 +18,6 @@ public class TopKFrequentElements {
      * 
      */
 }
-
-
 // class Solution {
 //     public int[] topKFrequent(int[] nums, int k) {
 
@@ -44,14 +42,10 @@ public class TopKFrequentElements {
 //         }
 //         return arr;
 //     }
-
 // }
 
 
 
-
-
-//  priority queue approach
 
 // class Solution {
 //     public int[] topKFrequent(int[] nums, int k) {
@@ -72,4 +66,109 @@ public class TopKFrequentElements {
 //         }
 //         return arr;
 //     }
+// }
+
+
+
+
+
+
+
+// class Solution {
+//     public int[] topKFrequent(int[] nums, int k) {
+
+//         HashMap<Integer, Integer> map = new HashMap<>();
+
+//         int[] arr = new int[k];
+//         for (int num : nums) {
+//             map.put(num, map.getOrDefault(num, 0) + 1);
+//         }
+
+//         // PriorityQueue to sort keys based on their frequencies
+//         PriorityQueue<Integer> q = new PriorityQueue<>((a, b) -> map.get(b) - map.get(a));
+
+//         // Add all keys into the PriorityQueue
+//         for (int key : map.keySet()) {
+//             q.add(key);
+//         }
+
+//         for (int i = 0; i < k; i++) {
+//             arr[i] = q.poll();
+//         }
+        
+//         return arr;
+//     }
+// }
+
+
+
+// class Solution {
+//     public int[] topKFrequent(int[] nums, int k) {
+
+//         HashMap<Integer, Integer> map = new HashMap<>();
+
+//         int[] arr = new int[k];
+//         for (int num : nums) {
+//             map.put(num, map.getOrDefault(num, 0) + 1);
+//         }
+
+//         // PriorityQueue to sort keys based on their frequencies... in java priority queue is the implementation of heap
+//         PriorityQueue<Integer> minheap = new PriorityQueue<>((a, b) -> map.get(a) - map.get(b));
+
+//         // Add all keys into the PriorityQueue
+//         for (int key : map.keySet()) {
+//             minheap.add(key);
+//             if(minheap.size()>k){
+//                 minheap.poll();
+//             }
+//         }
+
+//        while(k-- >0){
+//         arr[k]=minheap.poll();
+//        }
+        
+//         return arr;
+//     }
+// }
+
+
+
+
+// class Solution {            //bucket sort  O(n) approach  MOST OPTIMAL SOLUTION
+//    public int[] topKFrequent(int[] nums, int k){
+       
+//        Map<Integer,Integer> map = new HashMap<>();
+
+//        for(int elem : nums){
+//            map.put(elem,map.getOrDefault(elem,0)+1);
+//        }
+
+//        List<Integer> [] arr = new ArrayList[nums.length+1];
+
+//        for(int key : map.keySet()){
+//            int freq = map.get(key);
+//            if(arr[freq]==null){
+//                arr[freq] = new ArrayList<>();
+//            }
+//            arr[freq].add(key);
+//        }
+
+//        int [] ans = new int[k];
+//        int index=0;
+       
+
+
+   
+
+//     for(int i= arr.length-1; i>=0 && index< k; i--){
+//            if(arr[i]!=null){
+//                for(int j =0; j< arr[i].size()&& index<k; j++){
+//                    ans[index++] = arr[i].get(j);
+//                }
+//            }
+//        }
+   
+   
+//    return ans;
+//    }
 // }
