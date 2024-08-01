@@ -19,6 +19,7 @@ public class ThreeConsecutiveOdds {
 
 
 
+
 // class Solution {
 //     public boolean threeConsecutiveOdds(int[] arr) {
 //         int x =0;
