@@ -14,6 +14,7 @@ public class FindPivotIndex {
 }
 
 
+
 // class Solution {
 //     public int findMiddleIndex(int[] nums) {
 //         int sum = 0;
