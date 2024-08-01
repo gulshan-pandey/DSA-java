@@ -6,6 +6,7 @@ import java.util.List;
 
 public class BasicMaths {
 
+    
     ///////////////////////gcd//////////////////////////////////
     public static int gcd(int a, int b){       // greatest common dinominator
         int res = Math.min(a,b);
