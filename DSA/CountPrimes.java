@@ -8,6 +8,7 @@ public class CountPrimes {
 
 
 
+
 class Solution {        //sieve of erathosenes
     public int countPrimes(int n) {  
         boolean[] isPrime = new boolean[n];  
