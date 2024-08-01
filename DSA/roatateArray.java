@@ -33,6 +33,7 @@ public class roatateArray {
 
 
 
+
 // better than brute force
 // the idea is to reverse the whole array and then reverse the first k elements and then reverse the rest of the elements
 
