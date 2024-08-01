@@ -1,4 +1,4 @@
-package DSA;
+ package DSA;
 
 //SUIMILAR PROBLEM TO THE FruitsIntoBaskets
 public class  LongestSubstringWithAtMostKDistinctCharacters{    
