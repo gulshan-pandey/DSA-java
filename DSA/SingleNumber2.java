@@ -15,6 +15,7 @@ public class SingleNumber2 {
 }
 
 
+
 //optimized
 
 // class Solution {
