@@ -28,6 +28,7 @@ Output: false
 
 
 
+
 //  number has exactly one bit set in its binary representation using the bitwise operation (n & -n) == n
 
 
