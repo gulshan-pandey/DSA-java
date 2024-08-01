@@ -1,6 +1,6 @@
 package DSA;
 
-public class CountNumberofNiceSubarrays {
+public class CountNumberOfNiceSubarrays {
     
     /*
      * 
