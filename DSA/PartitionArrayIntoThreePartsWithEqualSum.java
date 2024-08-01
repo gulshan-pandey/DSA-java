@@ -29,8 +29,6 @@ public class PartitionArrayIntoThreePartsWithEqualSum {
 
 
 
-
-
 // class Solution {
 //     public boolean canThreePartsEqualSum(int[] arr) {
 //         int sum = 0;
