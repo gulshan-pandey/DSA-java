@@ -19,6 +19,7 @@ public class StringCompression {
 
 
 
+
 // class Solution {
 //     public int compress(char[] chars) {
 //         if (chars.length == 0)
