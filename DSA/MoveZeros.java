@@ -36,6 +36,4 @@ public class MoveZeros {
 //         nums[i]= 0;
 //        }
 //     }
-
-
 // }
