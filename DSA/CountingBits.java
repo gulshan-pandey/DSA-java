@@ -79,6 +79,7 @@ public class CountingBits {
 
 
 
+
 // optimistt way-------Kernighan's algorithm.: is an efficient way to count the number of set bits (1-bits) in an integer's binary representation. The key insight is that the operation  k=k&(k−1) removes the lowest set bit from k
 
 
