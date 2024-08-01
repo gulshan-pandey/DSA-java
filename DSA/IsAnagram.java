@@ -50,7 +50,6 @@ class frequency{
         //System.out.println("the most frequent element is : "+ map.entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey());    //using stream
 
 
-
         int fre = 0;
         int key = 0;
         for(var e : map.entrySet()){       // traversing through the map's entryset(each entries)
