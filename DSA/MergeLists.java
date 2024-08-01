@@ -1,7 +1,6 @@
 package DSA;
 public class MergeLists {
     public static void main(String[] args) {
-        
     }
 }
     // class LinkedList
