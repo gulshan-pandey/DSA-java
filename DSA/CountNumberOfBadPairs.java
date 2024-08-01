@@ -23,6 +23,7 @@ public class CountNumberOfBadPairs {
         There are a total of 5 bad pairs, so we return 5.
      */
 
+     
      public static void main(String[] args) {
         boolean value = true;
         int val = value ? 1 : 0;
