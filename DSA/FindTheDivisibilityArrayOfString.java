@@ -56,7 +56,8 @@ public class FindTheDivisibilityArrayOfString {
 // }
 
 
-//
+
+
 //class Solution {
 //    public int[] divisibilityArray(String word, int m) {
 //        int n = word.length();
