@@ -9,6 +9,7 @@ public class findXorOfEveryIndex {
 
 
 
+
 // class Solution {
 //     public int[] findArray(int[] pref) {
 //         if(pref.length==1) return new int[] {pref[0]};
