@@ -26,6 +26,7 @@ public class MaximumPointsYouCanObtainFromCards {
 
 
 
+
 class Solution {
     public int maxScore(int[] cardPoints, int k) {
         int sumLeft=0;
