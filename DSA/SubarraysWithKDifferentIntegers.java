@@ -34,10 +34,6 @@ public class SubarraysWithKDifferentIntegers {
 
 
 
-
-
-
-
 // class Solution {        //brute force (generate all the possible subarrays)--> TLE
 //     public int subarraysWithKDistinct(int[] nums, int k) {
 //         int count=0;
@@ -56,42 +52,92 @@ public class SubarraysWithKDifferentIntegers {
 
 
 
+
+
+
+
 // the idea behind this approach is to use two ptr ans sliding window for the problem where we need to find all the subarrays with subarrays <=k ... then my modifying the solution to  calculate the function for  {subarrays<=k - subarrays<=k-1} by returning this function.
 
 
-class Solution {       
-    public int subarraysWithKDistinct(int[] nums, int k) {
+// class Solution {       
+//     public int subarraysWithKDistinct(int[] nums, int k) {
 
 
-        return fun(nums,k) -fun(nums,k-1);
+//         return fun(nums,k) -fun(nums,k-1);
 
-    }
+//     }
 
-    public int fun(int[] nums, int k) {
+//     public int fun(int[] nums, int k) {
 
-        HashMap<Integer,Integer> map = new HashMap<>();
-        int left=0;
-        int count=0;
+//         HashMap<Integer,Integer> map = new HashMap<>();
+//         int left=0;
+//         int count=0;
 
-        if(k<0) return 0;
-        for(int end =0; end<nums.length;end++){
-            map.put(nums[end],map.getOrDefault(nums[end],0)+1);
+//         if(k<0) return 0;
+//         for(int end =0; end<nums.length;end++){
+//             map.put(nums[end],map.getOrDefault(nums[end],0)+1);
             
-            while(map.size()>k){
-                //shrink the window
-                map.put(nums[left],map.get(nums[left])-1);
-                if(map.get(nums[left])==0){
-                    map.remove(nums[left]);
-                }
-                left++;
-            }
+//             while(map.size()>k){
+//                 //shrink the window
+//                 map.put(nums[left],map.get(nums[left])-1);
+//                 if(map.get(nums[left])==0){
+//                     map.remove(nums[left]);
+//                 }
+//                 left++;
+//             }
            
-                count+=(end-left+1);
+//                 count+=(end-left+1);
             
 
-        }
+//         }
 
-        return count;
-    }
-}
+//         return count;
+//     }
+// }
 
+
+
+
+
+//tricky approach------> most optimal------(codeWitMik Approach2)
+
+
+class Solution {       
+    public int subarraysWithKDistinct(int[] nums, int k) {       
+           int n = nums.length;
+           int i =0;
+           int j=0;
+           int iMost=0;
+           int count=0;
+           HashMap<Integer,Integer> map = new HashMap<>();
+   
+   
+           while(j<n){
+               map.put(nums[j],map.getOrDefault(nums[j], 0) + 1);
+   
+               while(map.size()>k){
+                   map.put(nums[i],map.get(nums[i])-1);
+                   if(map.get(nums[i])==0){
+                       map.remove(nums[i]);
+                   }
+                   i++;
+                   iMost =i;
+               }
+   
+               while(map.get(nums[i]) > 1) {
+                   map.put(nums[i], map.get(nums[i]) - 1);
+                   i++;
+               }
+               
+   
+               if(map.size()==k){
+                   count+= i-iMost+1;
+               }
+   
+   
+               j++;
+           }
+   
+           return count;
+       }
+   }
