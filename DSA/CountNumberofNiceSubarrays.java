@@ -93,3 +93,35 @@ public class CountNumberOfNiceSubarrays {
 1,1,2,1,1  --> og array
 1,2,2,3,4  --> count of odds
 */ 
+
+
+
+
+
+
+
+
+
+// array approach same as hashmap approach
+
+
+// class Solution {
+//     public int numberOfSubarrays(int[] nums, int k) {
+//         int count = 0;
+//         int odds = 0;
+//         int[] prefix = new int[nums.length + 1];
+//         prefix[0] = 1;
+ 
+//         for (int num : nums) {
+//             odds += num % 2;
+//             if (odds >= k) {
+//                 count += prefix[odds - k];
+//             }
+//             prefix[odds]++;
+//         }
+ 
+//         return count;
+//     }
+//  }
+ 
+ 
