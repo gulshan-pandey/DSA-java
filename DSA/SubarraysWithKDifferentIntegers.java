@@ -19,7 +19,7 @@ public class SubarraysWithKDifferentIntegers {
         Output: 7
         Explanation: Subarrays formed with exactly 2 different integers: [1,2], [2,1], [1,2], [2,3], [1,2,1], [2,1,2], [1,2,1,2]
 
-        
+
         Example 2:
 
         Input: nums = [1,2,1,3,4], k = 3
@@ -78,6 +78,7 @@ class Solution {
             map.put(nums[end],map.getOrDefault(nums[end],0)+1);
             
             while(map.size()>k){
+                //shrink the window
                 map.put(nums[left],map.get(nums[left])-1);
                 if(map.get(nums[left])==0){
                     map.remove(nums[left]);
