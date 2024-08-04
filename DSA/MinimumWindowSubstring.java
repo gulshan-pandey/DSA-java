@@ -44,7 +44,6 @@ public class MinimumWindowSubstring {
 
 
 
-
 class Solution {
     public String minWindow(String s, String t) {
         HashMap<Character, Integer> map = new HashMap<>();
@@ -79,6 +78,56 @@ class Solution {
         return sind == -1 ? "" : s.substring(sind, sind + minlen);
     }
 }
+
+
+
+
+//slightly different approach
+
+
+
+// class Solution {
+//     public String minWindow(String s, String t) {
+//         int count=0;
+//         HashMap<Character, Integer> map = new HashMap<>();
+//         int l=0;
+//         int minlen=Integer.MAX_VALUE;
+//         int sidx=-1;
+//         for(char ch : t.toCharArray()){
+//             map.put(ch,map.getOrDefault(ch,0)+1);
+//             count++;
+//         }
+
+//         for(int r =0; r<s.length(); r++){
+//             char temp= s.charAt(r); 
+//             if(map.containsKey(temp) && map.get(temp)>0){
+//                 count--;
+//             }
+//             map.put(temp,map.getOrDefault(temp,0)-1);
+
+//             while(count==0){
+//                 if(r-l+1<minlen){
+//                     minlen= r-l+1;
+//                     sidx=l;
+//                 }
+//                 char temp2= s.charAt(l);
+//                 map.put(temp2,map.get(temp2)+1);
+//                 if(map.get(temp2)>0) count++;
+//                 l++;
+//             }
+//         }
+//         System.out.println(map);
+//         return sidx==-1?"":s.substring(sidx,sidx+minlen);
+
+//     }
+// }
+
+
+
+
+
+
+
 
 
 
