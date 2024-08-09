@@ -30,6 +30,14 @@ public class LongestNiceSubarray {
 
 
 
+// the approach is that we cannot find each and every pair's AND operation in the subarray(it will be too lengthy) so we will make the OR operation of all the elements(union) in the subarray and take AND with the next element , 
+// taking union of elements makes easy will do the same as we do AND with all the pairs in the subarray, 
+//also if the next element is not in the subarray then we will keep removing the elements form the left by using xor operation on the union(xor operation will remove the occurence of the left element as it makes the bits 0 of duplicate number)
+
+
+// for further explanation check tutorial : https://www.youtube.com/watch?v=DrRuCsxb6CI
+
+
 class Solution {
     public int longestNiceSubarray(int[] nums) {
         int l = 0;
