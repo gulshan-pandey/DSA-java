@@ -37,62 +37,58 @@ public class LemonadeChange {
 }
 
 
-
 //greedy approach
 
-class Solution {
-    public boolean lemonadeChange(int[] bills) {
+// class Solution {
+//     public boolean lemonadeChange(int[] bills) {
         
-        int fives=0;
-        int tens =0;
+//         int fives=0;
+//         int tens =0;
     
-        for(int elem : bills){
-            if(elem==5){
-                fives++;
-            }else if(elem==10 && fives>0){
-                tens++;
-                fives--;
-            }else if(elem==20 &&(tens>0 && fives>0)){
-                fives--;
-                tens--;
-            }else if(elem==20 && fives>2){
-                fives-=3;
-            }else return false;
+//         for(int elem : bills){
+//             if(elem==5){
+//                 fives++;
+//             }else if(elem==10 && fives>0){
+//                 tens++;
+//                 fives--;
+//             }else if(elem==20 &&(tens>0 && fives>0)){
+//                 fives--;
+//                 tens--;
+//             }else if(elem==20 && fives>2){
+//                 fives-=3;
+//             }else return false;  
+//         }
+//         return true;
 
-            
-        }
-        return true;
+//     }
+// }
 
-    }
-}
 
 
 
 // most efficient version of greedy
 
-// class Solution {
-//     public boolean lemonadeChange(int[] bills) {
-//      int five = 0,ten = 0;
-//       for(int x : bills){
-//        if(x == 5) five++;
-//        else if(x == 10){
-//         if(five > 0){
-//          five--;
-//          ten++;
-//         }
-//         else return false;
-//        }
-//        else{
-//         if(five >0 && ten >0){
-//           ten--;
-//           five--;
-//         }
-//         else if(five >= 3)
-//          five = five-3;
-//         else
-//          return false;
-//        }
-//       } 
-//       return true;   
-//     }
-// }
+
+
+class Solution {
+    public boolean lemonadeChange(int[] bills) {
+     int five = 0,ten = 0;
+      for(int x : bills){
+        if(x == 5) five++;
+        else if(x==10){
+            if(five>0){
+                five--;
+                ten++;
+            }else return false;
+        }
+        else{
+            if(ten>0 && five>0){
+                ten--;
+                five--;
+            }else if(five>2) five-=3;
+            else return false;
+        }
+      }
+      return true;
+    }
+}
