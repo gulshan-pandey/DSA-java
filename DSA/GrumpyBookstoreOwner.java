@@ -32,31 +32,31 @@ public class GrumpyBookstoreOwner {
 }
 
 
-// class Solution {
-//     public int maxSatisfied(int[] customers, int[] grumpy, int m) {
-//         HashMap<Integer,Integer> map = new HashMap<>();
-//         int un =0;
-//         int maxunset=0;
-//         int satsum =0;
-//         int res=0;
-//         for(int i=0; i<customers.length;i++){
-//             satsum+=customers[i]*(1-grumpy[i]);
-//             if(i<m){
-//             un+=customers[i]*grumpy[i];
-//             }
-//         }
-//         maxunset=un;
+class Solution {
+    public int maxSatisfied(int[] customers, int[] grumpy, int m) {
+        HashMap<Integer,Integer> map = new HashMap<>();
+        int un =0;
+        int maxunset=0;
+        int satsum =0;
+        int res=0;
+        for(int i=0; i<customers.length;i++){
+            satsum+=customers[i]*(1-grumpy[i]);
+            if(i<m){
+            un+=customers[i]*grumpy[i];
+            }
+        }
+        maxunset=un;
 
-//         for(int j =m; j<grumpy.length;j++){
-//                 un += (customers[j]*grumpy[j]) - customers[j-m]*grumpy[j-m];
-//                 maxunset= Math.max(un,maxunset);
+        for(int j =m; j<grumpy.length;j++){
+                un += (customers[j]*grumpy[j]) - customers[j-m]*grumpy[j-m];
+                maxunset= Math.max(un,maxunset);
             
 
-//         }
-//         return satsum + maxunset;
+        }
+        return satsum + maxunset;
         
-//     }
-// }
+    }
+}
 
 
 
@@ -65,26 +65,26 @@ public class GrumpyBookstoreOwner {
 //next approach
 
 
-class Solution {
-    public int maxSatisfied(int[] customers, int[] grumpy, int minutes) {
-        int total = 0;
-        int maxIncrease = 0;
-        int windowSum = 0;
+// class Solution {
+//     public int maxSatisfied(int[] customers, int[] grumpy, int minutes) {
+//         int total = 0;
+//         int maxIncrease = 0;
+//         int windowSum = 0;
         
-        for (int i = 0; i < customers.length; i++) {
-            if (grumpy[i] == 0) {
-                total += customers[i];
-            } else {
-                windowSum += customers[i];
-            }
+//         for (int i = 0; i < customers.length; i++) {
+//             if (grumpy[i] == 0) {
+//                 total += customers[i];
+//             } else {
+//                 windowSum += customers[i];
+//             }
             
-            if (i >= minutes) {
-                windowSum -= customers[i - minutes] * grumpy[i - minutes];
-            }
+//             if (i >= minutes) {
+//                 windowSum -= customers[i - minutes] * grumpy[i - minutes];
+//             }
             
-            maxIncrease = Math.max(maxIncrease, windowSum);
-        }
+//             maxIncrease = Math.max(maxIncrease, windowSum);
+//         }
         
-        return total + maxIncrease;
-    }
-}
+//         return total + maxIncrease;
+//     }
+// }
