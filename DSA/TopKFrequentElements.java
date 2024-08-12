@@ -18,7 +18,10 @@ public class TopKFrequentElements {
      * 
      */
 }
-// class Solution {
+
+
+
+// class Solution {                                          // O(nlongn)------> but required time is O(n) hence wrong answer
 //     public int[] topKFrequent(int[] nums, int k) {
 
 //         HashMap<Integer, Integer> map = new HashMap<>();
@@ -47,7 +50,7 @@ public class TopKFrequentElements {
 
 
 
-// class Solution {
+// class Solution {                                             //priority queue approach O(nlongn)------> but required time is O(n) hence wrong answer
 //     public int[] topKFrequent(int[] nums, int k) {
 
 //         HashMap<Integer, Integer> map = new HashMap<>();
@@ -69,12 +72,10 @@ public class TopKFrequentElements {
 // }
 
 
+//OR-------------------------------------------------------------------
 
 
-
-
-
-// class Solution {
+// class Solution {                                             // O(nlogn)
 //     public int[] topKFrequent(int[] nums, int k) {
 
 //         HashMap<Integer, Integer> map = new HashMap<>();
@@ -102,7 +103,12 @@ public class TopKFrequentElements {
 
 
 
-// class Solution {
+
+
+
+
+
+// class Solution {                                                   // O(nlogk) ----> slightly better approach
 //     public int[] topKFrequent(int[] nums, int k) {
 
 //         HashMap<Integer, Integer> map = new HashMap<>();
@@ -112,7 +118,7 @@ public class TopKFrequentElements {
 //             map.put(num, map.getOrDefault(num, 0) + 1);
 //         }
 
-//         // PriorityQueue to sort keys based on their frequencies... in java priority queue is the implementation of heap
+//         // PriorityQueue to sort keys based on their frequencies... in java priority queue is the implementation of heap-----> and have log n time complexity
 //         PriorityQueue<Integer> minheap = new PriorityQueue<>((a, b) -> map.get(a) - map.get(b));
 
 //         // Add all keys into the PriorityQueue
@@ -122,6 +128,7 @@ public class TopKFrequentElements {
 //                 minheap.poll();
 //             }
 //         }
+//          System.out.println(minheap);
 
 //        while(k-- >0){
 //         arr[k]=minheap.poll();
@@ -130,6 +137,8 @@ public class TopKFrequentElements {
 //         return arr;
 //     }
 // }
+
+
 
 
 
@@ -156,9 +165,6 @@ public class TopKFrequentElements {
 //        int [] ans = new int[k];
 //        int index=0;
        
-
-
-   
 
 //     for(int i= arr.length-1; i>=0 && index< k; i--){
 //            if(arr[i]!=null){
