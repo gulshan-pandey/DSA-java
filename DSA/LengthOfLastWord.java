@@ -32,3 +32,25 @@ public class LengthOfLastWord {
 //        return value.length();
 //    }
 //}
+
+
+
+
+// class Solution {
+//     public int lengthOfLastWord(String s) {
+//     int count = 0;
+//     int n = s.length() - 1; 
+//     // Skip trailing spaces
+//     while (n >= 0 && s.charAt(n) == ' ') {
+//         n--;
+//     }
+
+//     // Count the length of the last word
+//     while (n >= 0 && s.charAt(n) != ' ') {
+//         count++;
+//         n--;
+//     }
+
+//     return count;
+//     }
+// }
