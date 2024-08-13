@@ -46,7 +46,7 @@ class Compute {
     {
         
         ArrayList<Long> list = new ArrayList<>();
-        long[] ans = new long[N-K+1];
+        long[] ans = new long[N-K+1];               // N-K+1 meaning the number of possible windows(of size k) in the given array 
         int i =0;
         int j=0;
         int index=0;
@@ -56,7 +56,7 @@ class Compute {
                 list.add(A[j]);
             }
             
-            if(j-i+1 > K){
+            if(j-i+1 > K){          // we are checking if the window size is greater than k
                 if(A[i]<0){
                     list.remove(0);
                 }
