@@ -7,6 +7,8 @@ import java.util.Stack;
 // Use a deque to efficiently keep track of the maximum element within each sliding window by removing elements that are no longer useful or outside the window's range
 
 
+// whenever you need the greatest or smallest element in the current window in a constant complexity/window ,you should think of monotonic stack   ~Striver
+
 public class SlidingWindowMaximum {
     /*
      * You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.
