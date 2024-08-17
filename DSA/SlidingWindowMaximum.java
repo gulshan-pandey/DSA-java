@@ -47,11 +47,15 @@ public class SlidingWindowMaximum {
 
 
 
+// 1st approach   ---> Maintaing a decreasing monotonic queue to track the maximum in each sliding window.
+
+
+
 // class Solution {
 //     public int[] maxSlidingWindow(int[] nums, int k) {
 //         int n = nums.length; int index=0;
 //         int []ans= new int[n-k+1];
-//         ArrayDeque<Integer> q= new ArrayDeque<>();
+//         ArrayDeque<Integer> q= new ArrayDeque<>();           //its a monotonic queue
 
 //         int i =0;
 //         int j =0;
@@ -87,6 +91,38 @@ public class SlidingWindowMaximum {
 
 
 
+// public class Solution {                                  // same solution but changed few lines and made concize
+//     public int[] maxSlidingWindow(int[] nums, int k) {
+//         int n = nums.length;
+//         ArrayDeque<Integer> q= new ArrayDeque<>(); 
+//         int index=0;
+//         int [] ans = new int[n-k+1];
+//         int l =0;
+//         int r =0;
+//         while(r<n){
+//             while(!q.isEmpty() && q.peekLast()<nums[r]){
+//                 q.pollLast();
+//             }
+//             q.add(nums[r]);
+
+//             if(r-l+1==k){
+//                 ans[index++]= q.peek();
+
+//                 if(nums[l]==q.peek()) q.pollFirst();
+
+//                 l++;
+//             }
+//                 r++;
+//         }
+//         return ans;
+//     }
+// }
+
+
+
+
+
+//Approach 2 ---->  using stack to save next greater element or every element of the nums array
 
 class Solution {
     public int[] maxSlidingWindow(int[] nums, int k) {
