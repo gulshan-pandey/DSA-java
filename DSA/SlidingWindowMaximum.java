@@ -124,6 +124,9 @@ public class SlidingWindowMaximum {
 
 //Approach 2 ---->  using stack to save next greater element or every element of the nums array
 
+// https://www.youtube.com/watch?v=tCVOQX3lWeI    ----> for explanation
+
+
 class Solution {
     public int[] maxSlidingWindow(int[] nums, int k) {
 
@@ -165,40 +168,3 @@ class Solution {
 
 
 
-
-
-
-
-
-//Arraylist approach
-
-//  class Solution {
-//     public int[] maxSlidingWindow(int[] A, int B) {
-//         int n = A.length;
-//         int[] result = new int[n - B + 1];
-//         ArrayList<Integer> list = new ArrayList<>();
-
-//         for (int i = 0; i < n; i++) {
-//             // Remove indices that are out of the current window
-//             if (!list.isEmpty() && list.get(0) < i - B + 1) {
-//                 list.remove(0);
-//             }
-
-//             // Remove elements that are smaller than the current element
-//             // since they are not useful anymore
-//             while (!list.isEmpty() && A[list.get(list.size() - 1)] <= A[i]) {
-//                 list.remove(list.size() - 1);
-//             }
-
-//             // Add the current element's index to the list
-//             list.add(i);
-
-//             // The first element in the list is the largest in the current window
-//             if (i >= B - 1) {
-//                 result[i - B + 1] = A[list.get(0)];
-//             }
-//         }
-
-//         return result;
-//     }
-// }
