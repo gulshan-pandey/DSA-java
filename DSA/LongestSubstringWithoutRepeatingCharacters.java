@@ -108,3 +108,40 @@ public class LongestSubstringWithoutRepeatingCharacters {
 // }
 
 
+
+
+
+
+
+// map.size() == right - left + 1   approach
+
+
+// class Solution {
+//     public int lengthOfLongestSubstring(String s) {
+//         HashMap<Character, Integer> map = new HashMap<>();
+//         int maxLength = 0;
+//         int left = 0;
+
+//         for (int right = 0; right < s.length(); right++) {
+//             // Add the current character to the map or update its index
+//             map.put(s.charAt(right), map.getOrDefault(s.charAt(right), 0) + 1);
+
+//             // Shrink the window from the left until the window size equals the number of distinct characters
+//             while (map.size() < right - left + 1) {
+//                 char leftChar = s.charAt(left);
+//                 map.put(leftChar, map.get(leftChar) - 1);
+//                 if (map.get(leftChar) == 0) {
+//                     map.remove(leftChar);
+//                 }
+//                 left++;
+//             }
+
+//             // Update maxLength if the current window is larger
+//             maxLength = Math.max(maxLength, right - left + 1);
+//         }
+
+//         return maxLength;
+//     }
+// }
+
+
