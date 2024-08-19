@@ -83,3 +83,37 @@ class Solution {
         return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
     }
 }
+
+
+
+
+// smaller and concise solution
+
+// class Solution {
+//     public int countVowelSubstrings(String word) {
+//         int count =0; 
+//         for(int i=0; i<word.length(); i++){
+//             if(isVovel(word.charAt(i))){
+//                 int acount = 0, ecount = 0, icount = 0, ocount = 0,ucount = 0;
+//                 for(int end = i; end<word.length(); end++){
+//                     char temp = word.charAt(end);
+//                     if(temp == 'a') acount++;
+//                     else if( temp == 'e') ecount++;
+//                     else if( temp == 'i') icount++;
+//                     else if( temp == 'o') ocount++;
+//                     else if( temp == 'u') ucount++;
+//                     else break;
+
+//                     if(acount>0 && ecount>0 && icount>0 && ocount>0 && ucount>0) count++;
+
+//                 }
+//             }
+
+//         }
+//         return count;
+
+//     }
+//     private boolean isVovel(char ch){
+//         return ch=='a' || ch =='e' || ch =='i' || ch== 'o' || ch=='u';
+//     }
+// }
