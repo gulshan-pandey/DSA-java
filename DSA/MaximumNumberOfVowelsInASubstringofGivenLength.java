@@ -31,7 +31,7 @@ public class MaximumNumberOfVowelsInASubstringofGivenLength {
 
 
 
-
+//HashMap Approach
 
 // class Solution {
 //     public int maxVowels(String s, int k) {
@@ -67,6 +67,8 @@ public class MaximumNumberOfVowelsInASubstringofGivenLength {
 //          return maxcount;
 //     }
 // }
+
+
 
 
 //Set approach
