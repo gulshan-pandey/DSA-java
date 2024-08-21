@@ -1,5 +1,7 @@
 package DSA;
 
+import java.util.HashMap;
+
 public class LengthOfLongestSubarrayWithAtMostKFrequency {
     
     /*
@@ -37,3 +39,29 @@ public class LengthOfLongestSubarrayWithAtMostKFrequency {
      * 
      */
 }
+
+
+
+
+
+
+class Solution {
+    public int maxSubarrayLength(int[] nums, int k) { 
+        var map = new HashMap<Integer,Integer>();
+        int  l=0; 
+        int maxlen=0;
+
+        for(int r =0; r<nums.length; r++){
+            map.put(nums[r],map.getOrDefault(nums[r],0)+1);
+            while(map.get(nums[r])>k){
+                map.put(nums[l],map.get(nums[l])-1);
+                // if(map.get(nums[l])==0) map.remove(nums[l]);
+                l++;
+            }
+            maxlen= Math.max(maxlen,r-l+1);
+
+        }
+        return maxlen;
+    }
+}
+
