@@ -32,29 +32,28 @@ public class GrumpyBookstoreOwner {
 }
 
 
-class Solution {
-    public int maxSatisfied(int[] customers, int[] grumpy, int m) {
-        int un =0;
-        int maxunset=0;
-        int satsum =0;
-        for(int i=0; i<customers.length;i++){
-            satsum+=customers[i]*(1-grumpy[i]);
-            if(i<m){
-            un+=customers[i]*grumpy[i];
-            }
-        }
-        maxunset=un;
 
-        for(int j =m; j<grumpy.length;j++){
-                un += (customers[j]*grumpy[j]) - customers[j-m]*grumpy[j-m];
-                maxunset= Math.max(un,maxunset);
-            
 
-        }
-        return satsum + maxunset;
-        
-    }
-}
+// class Solution {
+//     public int maxSatisfied(int[] customers, int[] grumpy, int m) {
+//         int un =0;
+//         int maxunset=0;
+//         int satsum =0;
+//         for(int i=0; i<customers.length;i++){
+//             satsum+=customers[i]*(1-grumpy[i]);
+//             if(i<m){
+//             un+=customers[i]*grumpy[i];
+//             }
+//         }
+//         maxunset=un;
+
+//         for(int j =m; j<grumpy.length;j++){
+//                 un += (customers[j]*grumpy[j]) - customers[j-m]*grumpy[j-m];
+//                 maxunset= Math.max(un,maxunset);
+//         }
+//         return satsum + maxunset;
+//     }
+// }
 
 
 
