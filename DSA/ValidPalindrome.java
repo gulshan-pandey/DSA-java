@@ -35,11 +35,20 @@ public class ValidPalindrome {
 }
 
 
-//here remember the digits are also counted as characters
+/**
+ * here remember the digits are also counted as characters
+
+ * the main crux of this question is to check the character is in between  (a-z) and (0-9) by checking as  :
+
+ * (char)c>='a' &&(char)c<='z' or (char)c>='0' &&(char)c<='9'
+ * 
+ */
 
 
 
 
+
+//  useing regular expression
 
 // class Solution {
 //     public boolean isPalindrome(String s) {
@@ -50,7 +59,10 @@ public class ValidPalindrome {
 //         int r =words.length()-1;
 
 //         while(r>l){
-//          if (  words.charAt(l)!= words.charAt(r)) return false;
+//          if (  words.charAt(l)!= words.charAt(r)){
+//           System.out.println( words.charAt(l) + " " + words.charAt(r));
+//           return false;
+//          }
 //         r--;
 //         l++;
 //         } 
@@ -61,6 +73,7 @@ public class ValidPalindrome {
 
 
 
+//using stringbuilder
 
 
 // class Solution {
@@ -68,20 +81,27 @@ public class ValidPalindrome {
 //         var sb = new StringBuilder();
 //         for(char c : s.toLowerCase().toCharArray()){
 
-//             if((c>='a' && c<='z') ||(c>='A'&& c<='Z')) sb.append(c);
+//             if((c>='a' && c<='z') || ((char)c>='0' &&(char)c<='9')) sb.append(c);
 
 //         }
 //         System.out.println(sb.toString() +""+sb.reverse().toString());
-//         return sb.toString()==sb.reverse().toString();
+//         return sb.toString().equals(sb.reverse().toString());
 //     }
 // }
+
+
+
+
+
+//by using char array and string builder
+
 
 // class Solution {
 //  public boolean isPalindrome(String s) {
 //         StringBuilder sb = new StringBuilder();
 //         for(char c : s.toCharArray()){
             
-//             if( (c>='a'&&c<='z') || (c>='A'&&c<='Z') ){
+//             if( (c>='a'&&c<='z') || (c>='A'&&c<='Z') || (c>='0'&&c<='9')  ){
 //                 sb.append(c);
 //             }
 //         }
@@ -101,6 +121,10 @@ public class ValidPalindrome {
 //     }
 // }
 
+
+
+
+//using inbuilt method
 
 
 // class Solution {
@@ -131,30 +155,33 @@ public class ValidPalindrome {
 
 
 
-// class Solution {
-//     public boolean isPalindrome(String s) {
-//         if(s.length() <= 1) return true;
-//         s = s.toLowerCase();
+//straight manual solution and optimal
 
-//         int l = 0;
-//         int r = s.length() - 1;
 
-//         while(r > l) {
-//             if(!isAlphanumeric(s.charAt(l))) {
-//                 l++;
-//             } else if(!isAlphanumeric(s.charAt(r))) {
-//                 r--;
-//             } else if(s.charAt(l) != s.charAt(r)) {
-//                 return false;
-//             } else {
-//                 l++;
-//                 r--;
-//             }
-//         }
-//         return true;
-//     }
+class Solution {
+   public boolean isPalindrome(String s) {
+       if(s.length() <= 1) return true;
+       s = s.toLowerCase();
 
-//     public boolean isAlphanumeric(char c) {
-//         return (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9');
-//     }
-// }
+       int l = 0;
+       int r = s.length() - 1;
+
+       while(r > l) {
+           if(!isAlphanumeric(s.charAt(l))) {
+               l++;
+           } else if(!isAlphanumeric(s.charAt(r))) {
+               r--;
+           } else if(s.charAt(l) != s.charAt(r)) {
+               return false;
+           } else {
+               l++;
+               r--;
+           }
+       }
+       return true;
+   }
+
+   public boolean isAlphanumeric(char c) {
+       return (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9');
+   }
+}
