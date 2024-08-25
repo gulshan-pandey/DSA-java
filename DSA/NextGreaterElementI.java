@@ -101,7 +101,7 @@ class Solution {
         for (int num : nums2) {
             // Ensure the stack remains decreasing; pop elements from the stack that are smaller
             // than the current element because the current element is the next greater element for them
-            while (!stack.isEmpty() && stack.peek() <=num) {
+            while (!stack.isEmpty() && stack.peek() <num) {
                 map.put(stack.pop(), num);
             }
             // Push the current element onto the stack
