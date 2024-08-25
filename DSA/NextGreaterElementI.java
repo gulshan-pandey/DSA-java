@@ -101,7 +101,7 @@ class Solution {
         for (int num : nums2) {
             // Ensure the stack remains decreasing; pop elements from the stack that are smaller
             // than the current element because the current element is the next greater element for them
-            while (!stack.isEmpty() && stack.peek() <num) {                 //remember this "<" plays crucial role here bcz in 0->n order we cannot pop the stack().peek<=num , this will cause problem to find the nge of the popped element 
+            while (!stack.isEmpty() && stack.peek() <num) {                 //remember this "<" plays crucial role here bcz in 0->n order we cannot pop the stack().peek<=num , this will cause problem to find the nge of the popped element {also the same elements may have future greater element so preserve them, dont pop them... thats is entirely opposite to the n --->0 case}
                 map.put(stack.pop(), num);
             }
             // Push the current element onto the stack
