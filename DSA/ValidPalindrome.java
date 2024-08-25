@@ -99,16 +99,16 @@ public class ValidPalindrome {
 // class Solution {
 //  public boolean isPalindrome(String s) {
 //         StringBuilder sb = new StringBuilder();
-//         for(char c : s.toCharArray()){
+//         for(char c : s.toLowerCase().toCharArray()){
             
-//             if( (c>='a'&&c<='z') || (c>='A'&&c<='Z') || (c>='0'&&c<='9')  ){
+//             if( (c>='a'&&c<='z')  || (c>='0'&&c<='9')  ){
 //                 sb.append(c);
 //             }
 //         }
 //         if(sb.toString().length()<=1) return true;
 //         int i = 0, j = sb.length()-1;
 //         while(i < j){
-//             if(Character.toLowerCase(sb.charAt(i)) != Character.toLowerCase(sb.charAt(j))){
+//             if(sb.charAt(i) != sb.charAt(j)){
 //                 System.out.println(sb);
 //                 return false;
 //             }
