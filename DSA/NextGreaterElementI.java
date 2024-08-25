@@ -60,7 +60,7 @@ public class NextGreaterElementI {
 //                 map.put(nums2[i],-1);
 //                 stack.push(nums2[i]);
 //             }else{
-//                 while(stack.size()>0&&stack.peek()<=nums2[i]){
+//                 while(stack.size()>0&&stack.peek()<=nums2[i]){               //remember this "<=" plays crucial role here bcz in n--> 0 order we cannot pop the {stack().peek<num()} (else 2 same greatest elements will suffer from this) , this will cause problem to find the nge of the two same greatest element 
 //                     stack.pop();
 //                 }
 //                 if(stack.isEmpty()){
@@ -101,7 +101,7 @@ class Solution {
         for (int num : nums2) {
             // Ensure the stack remains decreasing; pop elements from the stack that are smaller
             // than the current element because the current element is the next greater element for them
-            while (!stack.isEmpty() && stack.peek() <num) {
+            while (!stack.isEmpty() && stack.peek() <num) {                 //remember this "<" plays crucial role here bcz in 0->n order we cannot pop the stack().peek<=num , this will cause problem to find the nge of the popped element 
                 map.put(stack.pop(), num);
             }
             // Push the current element onto the stack
