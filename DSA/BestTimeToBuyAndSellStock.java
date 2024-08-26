@@ -29,6 +29,20 @@ class Solution {
 
 // class Solution {
 //     public int maxProfit(int[] prices) {
+//         int max = Integer.MIN_VALUE;
+//         int min=Integer.MAX_VALUE;
+//         for(int elem : prices){
+//             min = Math.min(elem,min);
+//             max = Math.max(max,elem-min);
+//         }
+//         return max;
+//     }
+// }
+
+
+
+// class Solution {
+//     public int maxProfit(int[] prices) {
        
 
 //         int left=0, right=1; 
