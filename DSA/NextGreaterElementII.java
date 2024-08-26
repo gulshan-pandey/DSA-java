@@ -105,8 +105,6 @@ class Solution {
 //                 stack.push(i); // Push index onto stack
 //             }
 //         }
-        
-//         // Map the results back to the original array (though not needed in this version)
 //         return ans;
 //     }
 // }
