@@ -10,7 +10,6 @@ public class NextGreaterElementII {
 
         The next greater number of a number x is the first greater number to its traversing-order next in the array, which means you could search circularly to find its next greater number. If it doesn't exist, return -1 for this number.
 
-        
 
         Example 1:
 
