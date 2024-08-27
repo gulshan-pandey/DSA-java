@@ -76,11 +76,11 @@ System.out.println("printing using the Streams,and redefining accept method:--")
                                     .map(num -> num * num).collect(Collectors.toList()));  
 
     System.out.println("\n using only forEach:");
-    numbers.stream().forEach(number->System.out.println(number*2));
+    numbers.stream().forEach(number->System.out.print(number*2));
 
     
     ////////////////////////Sorting the list///////////////////
-    var numberList = List.of(21,35,466,353,65,23,7,9,21, 35,5336);
+    var numberList = List.of(21,35,466,353,65,23,7,9,21,35,5336);
     List<Integer> sortedNumlist = numberList.stream().sorted().distinct().collect(Collectors.toList());
     System.out.println(sortedNumlist);
 
@@ -97,7 +97,7 @@ System.out.println("printing using the Streams,and redefining accept method:--")
     System.out.println("printing random numbers using stream: ");
     var stream = Stream.generate(()->Math.random());       // var was introduced in java 10    also ,here Stream.generate generates the infinite data items but we have to limit it!
 
-    stream.limit(5).forEach((n)-> System.out.println(n));           //forEach takes a consumer which(leta h but deta kuch nhi)
+    stream.limit(5).forEach((n)-> System.out.println(n));           //forEach takes a consumer for which(leta h but deta kuch nhi)
 
 
     //Alternatively
