@@ -11,6 +11,11 @@ public class CountingBits {
 
 /*
  * Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.
+ * 
+ * 
+ * 
+ * to remove ith set bit of the number
+ * num= num-(num & -num);                   ---> this approach is used in fenvick tree
  */
 
 //  Example 1:
@@ -122,6 +127,3 @@ public class CountingBits {
 
 
 
-// to remove ith set bit of the number
-
-// num= num-(num & -num);                   ---> this approach is used in fenvick tree
