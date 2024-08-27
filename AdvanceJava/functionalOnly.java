@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.TreeMap;
 
 
@@ -93,7 +95,13 @@ class functionalOnly {
 
 
 
-      
+        Function<String,Integer> f  =(String str) -> str.length();          //function takes 2 generics, one depicts input type and other depects output type
+		System.out.println(f.apply("apple"));
+
+
+        Predicate<Integer> p = (x) -> x%2==0;           //predicate takes 1 generic and returns boolean
+
+        System.out.println(p.test(5));
     }
 }
 
