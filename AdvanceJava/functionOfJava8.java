@@ -35,6 +35,7 @@ public class functionOfJava8 {
 
 
         System.out.println(NameStartsWithAnuPrefix.apply(students));
+        System.out.println(result);
 
         // System.out.println(students);            // will print the default toString method unless we define one
         
