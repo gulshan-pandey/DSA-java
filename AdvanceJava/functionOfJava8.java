@@ -13,7 +13,7 @@ public class functionOfJava8 {
          Function <String,String> function2 = x-> x.substring(0,3);
          System.out.println(function2.apply("chotabheem"));
 
-         List<Student> result = new ArrayList<>();
+         List<Student> result = new ArrayList<>();              // initializing an empty list for future use
 
 
         Function<List<Student>, List<Student>> NameStartsWithAnuPrefix = li -> {
