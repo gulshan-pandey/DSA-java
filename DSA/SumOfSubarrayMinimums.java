@@ -73,7 +73,7 @@ public class SumOfSubarrayMinimums {
 
         // Calculate nsl (previous smaller element)
         for(int i=0; i<n; i++){
-            while(!stack.isEmpty() && arr[stack.peek()]>=arr[i]){                   // >= important for handling duplicates while procession
+            while(!stack.isEmpty() && arr[stack.peek()]>=arr[i]){                   // >= important for handling duplicates while procession        https://youtu.be/v0e8p9JCgRc?si=f0u7N4qBqzi7hcFk --> explanation at 17:15 min
                 stack.pop();
             }
             nsl[i] = stack.isEmpty()? -1:stack.peek();
