@@ -4,6 +4,23 @@ import java.util.Stack;
 
 public class SumOfSubarrayMinimums {
     
+    
+    /**
+     * NOTE: note: before doing this question please complete  the problems : Nearest Smaller Element  ---> https://www.interviewbit.com/problems/nearest-smaller-element/
+     * and complete Next greater element of leetcode --> https://leetcode.com/problems/next-greater-element-i/
+     * and also solve Trapping rainwater problem --> https://leetcode.com/problems/trapping-rain-water/
+     * 
+     * 
+     * tutorial for this problem : https://youtu.be/HRQB7-D2bi0?si=7zO4DBdWVP4AYzYD
+     * Find Previous Smaller Element (PSE) for each element (left boundary).
+     * Find Next Smaller Element (NSE) for each element (right boundary).
+     * Calculate subarray size = left * right.
+     * 
+     * Sum each element's min contribution = element * subarray size, modulo 10^9 + 7.
+     * 
+     */
+
+    
 /*
  * Given an array of integers arr, find the sum of min(b), where b ranges over every (contiguous) subarray of arr. Since the answer may be large, return the answer modulo 109 + 7.
 
@@ -52,14 +69,6 @@ public class SumOfSubarrayMinimums {
 
 
 
-/**
- * Find Previous Smaller Element (PSE) for each element (left boundary).
- * Find Next Smaller Element (NSE) for each element (right boundary).
- * Calculate subarray size = left * right.
- * 
- * Sum each element's min contribution = element * subarray size, modulo 10^9 + 7.
- * 
- */
 
  class Solution {
     public int sumSubarrayMins(int[] arr) {
