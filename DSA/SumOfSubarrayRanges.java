@@ -168,7 +168,7 @@ class Solution {
 
 
 
-    public long subArrayRanges(int[] nums) {
+    public long subArrayRanges(int[] nums) {            // main function starts here
 
         long max =sumOfSubarrayMaxs(nums);
         long min =sumOfSubarrayMinimums(nums);
