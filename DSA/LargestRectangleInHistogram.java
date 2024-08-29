@@ -2,6 +2,19 @@ package DSA;
 
 import java.util.*;
 
+
+/**
+ * Befor doing this question , complete Next smaller element, previous smaller element, sum of subarray minimums --->  https://leetcode.com/problems/sum-of-subarray-minimums/ 
+ * 
+ * 
+ * for this question tutorial -> https://youtu.be/Bzat9vgD0fs?si=K64Pi3VLM5hZzIDl
+ * 
+ * The intuition behind is we need to form the largest area in the rectangle by the help of the width(indexs) and the heigths of the bars, the key is to find the next smaller in the left and in the right for every element, bcz thats where till the rectangle will be formed , after finding it height * ( (i- nsl[i]) + (nsr[i] - i-1) ) take out the maximum for every of the element.
+ * 
+ *   Approach: Calculate left and right boundaries where heights are smaller using stacks, then compute max area for each bar as height * (leftH + rightH).
+ * 
+
+ */
 public class LargestRectangleInHistogram {
     /**
      * Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.
@@ -25,12 +38,9 @@ public class LargestRectangleInHistogram {
 
 }
 
-    /**
-     * The intuition behind is we need to form the largest area in the rectangle by the help of the width(indexs) and the heigths of the bars, the key is to find the next smaller in the left and in the right for every element, bcz thats where till the rectangle will be formed , after finding it height * ( (i- nsl[i]) + (nsr[i] - i-1) ) take out the maximum for every of the element.
-     */
+    
 
 
-    // Approach: Calculate left and right boundaries where heights are smaller using stacks, then compute max area for each bar as height * (leftH + rightH).
 
 
 
