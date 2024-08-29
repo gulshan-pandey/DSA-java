@@ -81,6 +81,38 @@ public class AsteroidCollision {
 
 
 
+// class Solution {
+//     public int[] asteroidCollision(int[] nums ){
+//         var stack = new Stack<Integer>();
+//         for(int i=0 ;i<nums.length; i++){
+//             while((!stack.isEmpty() )&& (stack.peek()>0) && (nums[i]<0)){
+//                 if(Math.abs(nums[i])>Math.abs(stack.peek())) {
+//                     stack.pop();
+//                 }else if(Math.abs(stack.peek())>Math.abs(nums[i])){
+//                     nums[i] = 0;
+//                 }  
+//                 else{
+//                     stack.pop();
+//                     nums[i] = 0;
+//                 }
+//             }
+//                 if(nums[i]!=0){
+//                 stack.push(nums[i]);
+//                 }
+//         }
+
+       
+//             int[] ans = new int[stack.size()];
+//             for(int i =ans.length-1; i>=0; i--){
+//                 ans[i] = stack.pop();
+//             }
+//              return ans;
+        
+//     }
+// }
+
+
+
 
 
 
