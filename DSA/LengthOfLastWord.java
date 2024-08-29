@@ -38,19 +38,32 @@ public class LengthOfLastWord {
 
 // class Solution {
 //     public int lengthOfLastWord(String s) {
-//     int count = 0;
-//     int n = s.length() - 1; 
-//     // Skip trailing spaces
-//     while (n >= 0 && s.charAt(n) == ' ') {
-//         n--;
-//     }
+//         int count =0; 
+//         for(int i =s.length()-1; i>=0; i--){
+//             if(count==0&& s.charAt(i)==' ') continue;
+//             else if(count!=0 && s.charAt(i)==' ') break;
+//             else count++;
 
-//     // Count the length of the last word
-//     while (n >= 0 && s.charAt(n) != ' ') {
-//         count++;
-//         n--;
+            
+//         }
+//         return count;
 //     }
+// }
 
-//     return count;
+
+
+// class Solution {
+//     public int lengthOfLastWord(String s) {
+//         s=s.trim();
+//         int count=0;
+//         for(int i=s.length()-1; i>=0; i--){
+//             if(s.charAt(i) == ' '){
+//                 return count;
+//             }
+//             else{
+//                 count++;
+//             }
+//         }
+//         return count;
 //     }
 // }
