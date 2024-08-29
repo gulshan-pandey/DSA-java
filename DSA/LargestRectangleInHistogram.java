@@ -75,7 +75,8 @@ public class LargestRectangleInHistogram {
 
 
 
-class Solution {
+
+class Solution {                    // near about O(5n) ---> O(n)
 
     public int[] nsr(int[] arr, Stack<Integer> stack){
         int n = arr.length;
@@ -173,3 +174,40 @@ class Solution {
 // }
 
 
+
+
+//Most optimal solution-------> O(n) in single traversal
+
+/**
+ * this approach travers the the array only once and maintains the increasing order monotonic stack, 
+ * once the element is popped out means that the element that popped it is the next smaller element of the popped element and the element which is currently remains in the stack is the previous smaller element of the popped element.
+ * now the nse and pse is found we can do the operation --> {heights[element]*(nse- pse-1)} , this will give the rectangle area occupied by that element 
+ * we will do this to every element in the array and find the maximum of its area
+ */
+
+
+// class Solution {
+//     public int largestRectangleArea(int[] heights) {
+//         int maxArea=0;
+//         var stack = new Stack<Integer>();
+//         int n = heights.length;
+
+//         for(int i =0; i<n; i++){
+
+//             while(!stack.isEmpty() && heights[stack.peek()]>heights[i]){
+//                 int element= stack.pop();
+//                 int pse = stack.empty()? -1: stack.peek();
+//                 int nse =i;
+//                 maxArea = Math.max(maxArea,heights[element]*(nse- pse-1));
+//             }
+//             stack.push(i);
+//         }
+//         while(!stack.isEmpty()){
+//             int nse =n;
+//             int element = stack.pop();
+//             int pse = stack.isEmpty()? -1:stack.peek();
+//             maxArea = Math.max(maxArea,heights[element]*(nse- pse-1));
+//         }
+//         return maxArea;
+//     }
+// }
