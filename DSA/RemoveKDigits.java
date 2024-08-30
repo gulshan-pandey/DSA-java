@@ -56,7 +56,7 @@ class Solution {
             }
         }
 
-        // If k is still greater than 0, remove the remaining digits from the stack
+        // If k is still greater than 0, remove the remaining digits from the stack-------EDGE CASE---
         while(k>0 && !stack.isEmpty()){
             stack.pop();
             k--;
