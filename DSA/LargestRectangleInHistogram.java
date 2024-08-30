@@ -176,7 +176,7 @@ class Solution {                    // near about O(5n) ---> O(n)
 
 
 
-//Most optimal solution-------> O(n) in single traversal
+//Most optimal solution-------> O(2n) in one traversal in array and one in stack
 
 /**
  * this approach travers the the array only once and maintains the increasing order monotonic stack, 
