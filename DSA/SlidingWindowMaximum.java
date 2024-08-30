@@ -151,22 +151,18 @@ class Solution {
 
         int[] result = new int[n - k + 1];
         int j=0;
-        for(int i =0; i<=n -k ; i++){
-       // enter the loop to find the maximum number in the window starting at i
-            if(j<i){
-                j=i;
+        for (int i = 0; i <= n - k; i++) {
+            // Find maximum number in the window starting at i
+            int windowMaxIndex = i;
+            while (arr[windowMaxIndex] <= i + k - 1) {
+                windowMaxIndex = arr[windowMaxIndex];
             }
-            while(arr[j]<i+k){
-                j=arr[j];
-            }
-
-            result[i] = nums[j];
+            result[j++] = nums[windowMaxIndex];
         }
-
 
         return result;
     }
-}
 
+}
 
 
