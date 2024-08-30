@@ -73,9 +73,9 @@ public class SlidingWindowMaximum {
 //                 j++;
 //             }
 //             else if(j-i+1==k){
-//                 ans[index++]=q.peek();
+//                 ans[index++]=q.peekFirst();
 
-//                 if(nums[i]==q.peek()){
+//                 if(nums[i]==q.peekFirst()){
 //                     q.pollFirst();
 //                 }
 
