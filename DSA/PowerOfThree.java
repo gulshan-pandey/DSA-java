@@ -26,7 +26,6 @@ public class PowerOfThree {
 }
 
 
-
 // class Solution {
 //     public boolean isPowerOfThree(int n) {
 //         if(n <= 0) return false;
@@ -37,6 +36,8 @@ public class PowerOfThree {
 // }
 
 
+//without loop / resursion
+
 class Solution {
     public boolean isPowerOfThree(int n) {
     return n > 0 && 1162261467 % n == 0;
@@ -44,4 +45,14 @@ class Solution {
 } 
 
 
+
+// class Solution {
+//     public boolean isPowerOfThree(int n) {
+//            if  ( n<=0){
+//             return false;
+//         }
+//         double logResult = Math.log10(n) / Math.log10(3);
+//         return (logResult - Math.floor(logResult)) == 0;
+//     }
+// }
 
