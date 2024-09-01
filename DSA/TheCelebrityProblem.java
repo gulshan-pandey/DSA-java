@@ -116,8 +116,59 @@ class Solution {
 // }
         
         
+      
+
+
+
+// Stack based approach        
         
+      
+// class Solution {
+    
+//     // Function to check if a knows b
+//     private boolean knows(int[][] mat, int a, int b) {
+//         return mat[a][b] == 1;
+//     }
+    
+//     public int celebrity(int mat[][]) {
+//         Stack<Integer> stack = new Stack<>();
         
-        
-        
+//         int n=mat.length;
+//         // Step 1: Push all people to the stack
+//         for (int i = 0; i < n; i++) {
+//             stack.push(i);
+//         }
+
+//         // Step 2: Find the potential celebrity
+//         while (stack.size() > 1) {
+//             int A = stack.pop();
+//             int B = stack.pop();
+            
+//             if (knows(mat, A, B)) {
+//                 // A knows B, so A cannot be a celebrity, push B
+//                 stack.push(B);
+//             } else {
+//                 // A doesn't know B, so B cannot be a celebrity, push A
+//                 stack.push(A);
+//             }
+//         }
+
+//         // Step 3: Verify the potential celebrity
+//         int C = stack.pop();
+
+//         // C should not know anyone, and everyone should know C
+//         for (int i = 0; i < n; i++) {
+//             if (i != C && (knows(mat, C, i) || !knows(mat, i, C))) {
+//                 return -1; // No celebrity found
+//             }
+//         }
+
+//         // Step 4: Return the celebrity
+//         return C;
+//     }
+// }
+
+      
+      
+          
 
