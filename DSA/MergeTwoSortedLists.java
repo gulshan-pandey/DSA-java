@@ -40,8 +40,18 @@ public class MergeTwoSortedLists {
  */
 
 
- 
-//  class Solution {
+ /**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+
+// class Solution {
 //     public ListNode mergeTwoLists(ListNode a, ListNode b) {
 //         //if one of the ll is empty
 //         if(a==null) return b;
@@ -101,6 +111,31 @@ public class MergeTwoSortedLists {
 
 //         if(list1!=null) temp.next =list1;
 //         if(list2!=null) temp.next =list2;
+        
 //        return returnhead.next;
+//     }
+// }
+
+
+
+
+
+// class Solution {                    // recursive way
+//     public ListNode mergeTwoLists(ListNode a, ListNode b) {
+//         if (a == null)
+//             return b;
+//         if (b == null)
+//             return a;
+
+            
+//         ListNode result;
+//         if(a.val<b.val){
+//             result =a;
+//             result.next =mergeTwoLists(a.next,b);
+//         }else{
+//             result =b;
+//             result.next =mergeTwoLists(a,b.next);
+//         }
+//         return result;
 //     }
 // }
