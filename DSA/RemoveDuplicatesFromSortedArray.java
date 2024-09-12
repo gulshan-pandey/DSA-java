@@ -45,11 +45,8 @@ public class removeDuplicates {
         
 //         for(int i=1 ; i<nums.length; i++){
 //             if(nums[j] ==nums[i]){
-        
 //             } else{
-                
 //                 nums[j+1]=nums[i];
-                
 //                 j++;
 //             }
 //         }
