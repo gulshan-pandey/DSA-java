@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-class RomanToInt {
+class Solution{
     public static int romanToInt(String s) {
         Map<String, Integer> map = new HashMap<>();
         int sum = 0;
@@ -27,11 +27,8 @@ class RomanToInt {
         return sum;
     }
 
-    public static void main(String[] args) {
-       System.out.println(romanToInt("IV")); 
-    }
-}
 
+}
 
 
 
