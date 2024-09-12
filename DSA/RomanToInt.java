@@ -31,3 +31,35 @@ class RomanToInt {
        System.out.println(romanToInt("IV")); 
     }
 }
+
+
+
+
+// more optimized
+
+// class Solution {
+//     public int romanToInt(String s) {
+//         // Map of Roman numerals to their integer values
+//         int[] values = new int[128];
+//         values['I'] = 1;
+//         values['V'] = 5;
+//         values['X'] = 10;
+//         values['L'] = 50;
+//         values['C'] = 100;
+//         values['D'] = 500;
+//         values['M'] = 1000;
+
+//             int total =0;
+//             int prev =0;
+//             for(int i =s.length()-1; i>=0; i--){
+//                 int currval = values[s.charAt(i)];
+                
+//                 if(currval<prev) total-=currval;
+//                 else{
+//                     total+=currval;
+//                     prev=currval;
+//                 }
+//             }
+//             return total;
+//     }
+// }
