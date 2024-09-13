@@ -57,6 +57,15 @@ class Solution {
 
 // opposite approach
 
+
+/**
+ the idea is that to check that the n-1th index is reachable or not by n-2th indexed number if yes then then goal becomes n-2th element else goal becomes n-1th element 
+ and in the end we reached 0th index means the goal is reachable if the goal not becam 0th index meand we cannot reach the goal form the 0th index
+
+ for full explanation --->  https://www.youtube.com/watch?v=Yan0cv2cLy8
+ *  */
+
+
 // class Solution {
 //     public boolean canJump(int[] nums) {
 //         int goal = nums.length - 1;
