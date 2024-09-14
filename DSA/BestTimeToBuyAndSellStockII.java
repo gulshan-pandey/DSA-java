@@ -37,22 +37,41 @@ public class BestTimeToBuyAndSellStockII {
 
 
 
+
+// class Solution {
+//     public int maxProfit(int[] p) {
+//         int n = p.length;
+//         int cost = 0;
+//         int curr = p[0]; // Buying price
+        
+//         for (int i = 1; i < n; i++) {
+//             if (p[i] < p[i-1]) { // Price dropped, sell previous stock
+//                 cost += p[i-1] - curr; // Profit from the previous high
+//                 curr = p[i]; // Buy at new lower price
+//             }
+//         }
+
+//         // Handle case for the last day
+//         if (p[n-1] > curr) {
+//             cost += p[n-1] - curr; // Sell at the last day's price
+//         }
+        
+//         return cost;
+//     }
+// }
+
+
+
+
 class Solution {
     public int maxProfit(int[] p) {
         int n = p.length;
         int cost = 0;
-        int curr = p[0]; // Buying price
         
         for (int i = 1; i < n; i++) {
-            if (p[i] < p[i-1]) { // Price dropped, sell previous stock
-                cost += p[i-1] - curr; // Profit from the previous high
-                curr = p[i]; // Buy at new lower price
+            if (p[i] > p[i-1]) { 
+                cost += p[i]-p[i-1]; 
             }
-        }
-
-        // Handle case for the last day
-        if (p[n-1] > curr) {
-            cost += p[n-1] - curr; // Sell at the last day's price
         }
         
         return cost;
