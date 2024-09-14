@@ -37,7 +37,6 @@ class Solution {
             else pos.add(i);
         }
         int i=0,j=0,idx=0;
-        boolean f =false;
         int n= pos.size(), m=neg.size();
         while(idx<arr.size()){
             if(i<n){
