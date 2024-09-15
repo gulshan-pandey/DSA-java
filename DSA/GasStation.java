@@ -39,6 +39,8 @@ public class GasStation {
 }
 
 
+// tutorial -> https://www.youtube.com/watch?v=tcOcmNHFTTM
+
 
 
 // Brute force
@@ -47,9 +49,9 @@ public class GasStation {
 // class Solution {
 //     public int canCompleteCircuit(int[] gas, int[] cost) {
 //         int n =gas.length;
-//         int j=0;
-//         for( ; j<gas.length; j++){
-//              int ggas=0;
+        
+//         for( int j=0; j<gas.length; j++){
+//              int ggas=0;                     // gas in the journey
 //              boolean can=true;
 //             for(int i =0; i<n; i++){
 //                int temp = (i+j)%n;      // Circular traversal
@@ -84,9 +86,9 @@ class Solution {
         int totalGas = 0; // Total gas available
         int totalCost = 0; // Total cost required
         int currentGas = 0; // Current gas balance
-        int startIndex = 0; // Starting index of the valid circuit
+        int Index = 0; // Starting index of the valid circuit
         
-        // Iterate through each gas station
+       
         for (int i = 0; i < gas.length; i++) {
             totalGas += gas[i];
             totalCost += cost[i];
@@ -95,12 +97,15 @@ class Solution {
             // If currentGas becomes negative, the current start index won't work
             if (currentGas < 0) {
                 // Reset currentGas and set startIndex to the next station
-                startIndex = i + 1;
+                Index = i + 1;
                 currentGas = 0;
             }
         }
         
         // Check if the total gas is sufficient to complete the circuit
-        return totalGas >= totalCost ? startIndex : -1;
+        return totalGas >= totalCost ? Index : -1;
     }
 }
+
+
+
