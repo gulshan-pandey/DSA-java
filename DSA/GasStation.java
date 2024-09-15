@@ -41,7 +41,6 @@ public class GasStation {
 
 
 
-
 // Brute force
 
 
@@ -77,8 +76,7 @@ public class GasStation {
 
 
 
-
-
+// Optimized
 
 
 class Solution {
