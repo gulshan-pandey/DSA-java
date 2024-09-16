@@ -43,7 +43,7 @@ class Solution{
                     if(stack.isEmpty()){
                         len = Math.max(len,i-lastInvalid);          // this will constantly updating the max length, if the consecuent opening and closings are found
                     }else{
-                        len = Math.max(len,i-stack.peek());
+                        len = Math.max(len,i-stack.peek());          // this case will run if the stack contains the opening brackets like (((((())))))
                     }
                 }
             }
