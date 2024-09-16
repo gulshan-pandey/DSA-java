@@ -41,7 +41,7 @@ class Solution{
                 else{
                     stack.pop();
                     if(stack.isEmpty()){
-                        len = Math.max(len,i-lastInvalid);
+                        len = Math.max(len,i-lastInvalid);          // this will constantly updating the max length, if the consecuent opening and closings are found
                     }else{
                         len = Math.max(len,i-stack.peek());
                     }
