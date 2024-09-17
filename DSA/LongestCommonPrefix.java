@@ -31,6 +31,7 @@ public class LongestCommonPrefix {
 class Solution {
     public String longestCommonPrefix(String[] strs) {
         Arrays.sort(strs);
+        // System.out.println(Arrays.toString(strs));
         String s1 = strs[0];
         String s2 = strs[strs.length-1];
         int idx = 0;
@@ -87,27 +88,3 @@ class Solution {
 // }
 
 
-
-
-
-// class Solution {
-//     public String longestCommonPrefix(String[] strs) {
-//         if (strs == null || strs.length == 0) {
-//             return "";
-//         }
-
-//         String longestCommonPrefix = strs[0];
-
-//         for(int i=1; i<strs.length; i++) {
-//             // Reduce the prefix while it's not a prefix of strs[i]
-//             while (strs[i].indexOf(longestCommonPrefix) != 0) {
-//                 longestCommonPrefix = longestCommonPrefix.substring(0, longestCommonPrefix.length() - 1);
-//                 if (longestCommonPrefix.isEmpty()) {
-//                     return ""; // No common prefix found
-//                 }
-//             }
-//         }
-
-//         return longestCommonPrefix;
-//     }
-// }
