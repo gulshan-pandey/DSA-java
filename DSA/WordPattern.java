@@ -87,3 +87,32 @@ class Solution {
 
 
 
+
+
+// optimized
+
+// class Solution {
+//     public boolean wordPattern(String pattern, String s) {
+//         HashMap<Character, String> map = new HashMap<>();
+
+//         String[] words = s.split(" ");
+//         if (words.length != pattern.length()) return false;
+
+//         for (int i = 0; i < words.length; i++) {
+//             char ch = pattern.charAt(i);
+//             String str = words[i];
+            
+//             if (map.containsKey(ch)) {
+//                 // Use equals to compare the strings
+//                 if (!map.get(ch).equals(str)) return false;
+//             } else {
+//                 // Ensure no two different pattern characters map to the same word
+//                 if (map.containsValue(str)) return false;
+//                 map.put(ch, str);
+//             }
+//         }
+//         return true;  // All checks passed
+//     }
+// }
+
+
