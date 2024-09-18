@@ -44,9 +44,6 @@ public class IsomorphicStrings {
 
 
 
-
-
-
 // class Solution {
 //     public boolean isIsomorphic(String s, String t) {
 //         HashMap<Character, Character> map = new HashMap<>();
@@ -81,68 +78,69 @@ public class IsomorphicStrings {
 // optimized approach
 
 
+// class Solution {
+//     public boolean isIsomorphic(String s, String t) {
+//         HashMap<Character, Character> map = new HashMap<>();
+
+//         for(int i =0; i<s.length(); i++){
+//             char c1 = s.charAt(i);
+//             char c2 = t.charAt(i);
+//             if((map.containsKey(c1) && map.get(c1)!=c2) ||
+//                 (!map.containsKey(c1)&& map.values().contains(c2))){
+//                  return false;
+//             }else{
+//                 map.put(c1,c2);
+//             }
+
+//         }
+//         return true;
+
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
 class Solution {
     public boolean isIsomorphic(String s, String t) {
-        HashMap<Character, Character> map = new HashMap<>();
 
-        for(int i =0; i<s.length(); i++){
-            char c1 = s.charAt(i);
-            char c2 = t.charAt(i);
-            if((map.containsKey(c1) && map.get(c1)!=c2) ||
-                (!map.containsKey(c1)&& map.values().contains(c2))){
-                 return false;
-            }else{
-                map.put(c1,c2);
+        int [] c1 = new int[256];
+        int [] c2 = new int[256];
+
+        Arrays.fill(c1,-1);
+        Arrays.fill(c2,-1);
+        for(int i=0; i<s.length();i++){
+            char st  =s.charAt(i);
+            char ts  =t.charAt(i);
+
+
+            if(c1[st] ==-1 && c2[ts]==-1){
+                 c1[st]=ts;
+                c2[ts]=st;
+            }else if(c1[st]!=ts && c2[ts]!=st){
+                return false;
             }
 
-        }
-        return true;
+            // if((c1[st]!=-1 && c1[st]!=(int)ts)) return false;
+            // else if((c2[ts]!=-1 && c2[ts]!=(int)st)) return false;
+            // else{
 
+            //     c1[st]=ts;
+            //     c2[ts]=st;
+            // }
+
+
+        }
+
+    return true;
     }
 }
 
-
-
-
-
-
-
-// most optimized
-
-
-// class Solution {
-  
-    // Method to check if two strings are isomorphic.
-    // Two strings are isomorphic if the characters in string 's' can be replaced to get string 't'.
-//     public boolean isIsomorphic(String s, String t) {
-      
-//         // Create two arrays to store the last seen positions of characters
-//         int[] lastSeenPositionInS = new int[256]; // Assuming extended ASCII
-//         int[] lastSeenPositionInT = new int[256]; // Assuming extended ASCII
-      
-//         // Length of the input strings
-//         int length = s.length();
-      
-//         // Iterate through each character in the strings
-//         for (int i = 0; i < length; ++i) {
-//             // Get the current characters from each string
-//             char charFromS = s.charAt(i);
-//             char charFromT = t.charAt(i);
-          
-//             // If the last seen position of the respective characters
-//             // in the two strings are not the same, then they are not isomorphic
-//             if (lastSeenPositionInS[charFromS] != lastSeenPositionInT[charFromT]) {
-//                 return false; // Not isomorphic
-//             }
-          
-//             // Update the last seen position of the characters
-//             // i + 1 is used because default value in int arrays is 0, 
-//             // and we are using the index as a check (can't use 0 as it is the default)
-//             lastSeenPositionInS[charFromS] = i + 1;
-//             lastSeenPositionInT[charFromT] = i + 1;
-//         }
-      
-//         // If all characters in 's' can be replaced to get 't', return true, as the strings are isomorphic
-//         return true;
-//     }
-// }
