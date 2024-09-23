@@ -31,7 +31,9 @@ public class ShortestJobFirst {
      */
 }
 
+// the approach is that, we will count the waiting time of each process and then we will calculate the average waiting time of all the processes
 
+// tutorial --> https://www.youtube.com/watch?v=3-QbX1iDbXs&list=PLgUwDviBIf0rF1w2Koyh78zafB0cz7tea&index=5
 
 class Solution {
     static int solve(int bt[] ) {
