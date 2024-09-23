@@ -1,4 +1,7 @@
 package DSA;
+
+import java.util.Arrays;
+
 public class ShortestJobFirst {
     /**
      * Geek is a software engineer. He is assigned with the task of calculating average waiting time of all the processes by following shortest job first policy.
