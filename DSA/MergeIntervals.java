@@ -39,7 +39,6 @@ public class MergeIntervals {
         
 //         for(int i=1; i<intervals.length; i++){
 
-         
 //                int sf=intervals[i][0];
 //                 if(sf<=fl){
 //                     fl =Math.max(intervals[i][1],fl);
