@@ -42,21 +42,22 @@ public class MinimumNumberOfArrowsToBurstBalloons {
 
 
 
+
 class Solution {
     public int findMinArrowShots(int[][] points) {
         
         Arrays.sort(points,(a,b) -> Integer.compare(a[1],b[1]));
         int count =1;
-        int fl=points[0][1];
+        int firstLast=points[0][1];
 
         for(int i =1;i<points.length;i++){
-            int sf = points[i][0];
+            int secondFirst = points[i][0];
 
-            if(sf<=fl){
+            if(secondFirst<=firstLast){
                 continue;
             }else{
                 count++;
-                fl= points[i][1];
+                firstLast= points[i][1];
             }
         }
 
