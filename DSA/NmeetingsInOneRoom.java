@@ -24,8 +24,6 @@ public class NmeetingsInOneRoom {
 
 
 class Solution {
-    // Function to find the maximum number of meetings that can
-    // be performed in a meeting room.
     public int maxMeetings(int n, int start[], int end[]) {
         int count =1;
         
