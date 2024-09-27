@@ -43,7 +43,6 @@ class Solution {
                 curr=res[i][1];
             }
         }
-        
         return count;
     }
 }
