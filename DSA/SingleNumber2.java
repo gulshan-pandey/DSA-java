@@ -3,20 +3,20 @@ package DSA;
 
 public class SingleNumber2 {
     
-//     Example 1:
+    //     Example 1:
 
-// Input: nums = [2,2,3,2]
-// Output: 3
-// Example 2:
+    // Input: nums = [2,2,3,2]
+    // Output: 3
+    // Example 2:
 
-// Input: nums = [0,1,0,1,0,1,99]
-// Output: 99
+    // Input: nums = [0,1,0,1,0,1,99]
+    // Output: 99
 
 }
 
 
 
-//optimized
+
 
 // class Solution {
 //     public int singleNumber(int[] nums) {
@@ -37,22 +37,31 @@ public class SingleNumber2 {
 
 
 
-// another O(n) solution that uses bit manipulation
+
+
+
+// O(n) solution that uses bit manipulation
 
 // class Solution {
 //     public int singleNumber(int[] nums) {
 //         int ans = 0;
 //         for (int bitInd = 0; bitInd < 32; bitInd++) {
-//             int count = 0; 
+//             int ones = 0; 
 //             for (int j = 0; j < nums.length; j++) {
 //                 if ((nums[j] & (1 << bitInd)) != 0) { 
-//                     count++;
+//                     ones++;
 //                 }
 //             }
-//             if (count % 3 == 1) { 
-//                 ans |= (1 << bitInd);
+//             if (ones % 3 == 1) { 
+//                 ans = ans | (1 << bitInd);
 //             }
 //         }
 //         return ans;
 //     }
 // }
+
+
+
+
+
+
