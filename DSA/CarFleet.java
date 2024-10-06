@@ -93,6 +93,32 @@ public class CarFleet {
 
 
 
+// Slightly better, uses one less loop and less space but time is same
+
+
+// class Solution {
+//     public int carFleet(int target, int[] position, int[] speed) {
+//         Map<Integer,Double> map = new HashMap<>();
+//         for(int i=0; i< position.length; i++){
+//             map.put(position[i],(double)(target-position[i])/speed[i]);
+//         }
+//         Arrays.sort(position);
+//         int count=1;
+//         int n=position.length;
+//         double temp=map.get(position[n-1]);
+//         for(int i=n-2; i>=0; i--){
+//             if(map.get(position[i])>temp) {
+//                 temp = map.get(position[i]);
+//                 count++;
+//             }
+//         }
+//         return count;
+//     }
+// }
+
+
+
+
 // in O(n) time and space  using aray to store time of vehicles
 
 class Solution {
@@ -115,3 +141,4 @@ class Solution {
         return fleet;
     }
 }
+
