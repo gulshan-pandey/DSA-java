@@ -20,6 +20,9 @@ public class FractionalKnapsack {
      */
 }
 
+
+
+
 /*
 class Item {
     int value, weight;
@@ -35,9 +38,16 @@ class Item {
 class Solution {
     // Function to get the maximum total value in the knapsack.
     double fractionalKnapsack(int w, Item arr[], int n) {
-        // Your code here
         double ans=0;
-         Arrays.sort(arr, (a, b) -> Double.compare(
+        // Arrays.sort(arr, new Comparator<Object>() {              
+        //     @Override
+        //     public int compare(Object a, Object b) {
+        //         double ratioA = (double) a.value / a.weight;
+        //         double ratioB = (double) b.value / b.weight;
+        //         return Double.compare(ratioB, ratioA);
+        //     }
+        // });
+         Arrays.sort(arr, (a, b) -> Double.compare(                 // either way is fine
             (double)b.value / b.weight, 
             (double)a.value / a.weight
         ));
