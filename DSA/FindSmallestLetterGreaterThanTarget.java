@@ -12,11 +12,13 @@ public class FindSmallestLetterGreaterThanTarget {
         Input: letters = ["c","f","j"], target = "a"
         Output: "c"
         Explanation: The smallest character that is lexicographically greater than 'a' in letters is 'c'.
+        
         Example 2:
 
         Input: letters = ["c","f","j"], target = "c"
         Output: "f"
         Explanation: The smallest character that is lexicographically greater than 'c' in letters is 'f'.
+       
         Example 3:
 
         Input: letters = ["x","x","y","y"], target = "z"
@@ -25,6 +27,7 @@ public class FindSmallestLetterGreaterThanTarget {
      * 
      */
 }
+
 
 
 class Solution {
@@ -41,6 +44,8 @@ class Solution {
             }
 
         }
-        return low == letters.length? letters[0] :letters[low];
+        // return low == letters.length? letters[0] :letters[low];
+        low =low % letters.length;
+        return letters[low];
     }
 }
