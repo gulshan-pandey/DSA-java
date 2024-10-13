@@ -45,7 +45,7 @@ class Solution {
 
         }
         // return low == letters.length? letters[0] :letters[low];
-        low =low % letters.length;
-        return letters[low];
+        
+        return letters[low % letters.length];
     }
 }
