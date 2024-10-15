@@ -55,7 +55,7 @@ class Solution {
             s2 = temp;
         }
 
-        List<String> vec1 = new ArrayList<>();
+        List<String> vec1 = new ArrayList<>();              // can also be done using Arrays
         List<String> vec2 = new ArrayList<>();
 
         // Splitting strings by spaces
