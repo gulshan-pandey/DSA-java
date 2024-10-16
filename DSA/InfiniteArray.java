@@ -1,5 +1,15 @@
 package DSA;
 public class InfiniteArray {
+
+/**
+ * 
+ * Find the element in the Infinitely length  sorted Array
+ * 
+ * problem -- https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/#:~:text=Since%20array%20is%20sorted%20we,2%20and%20apply%20binary%20search%20.
+ * 
+ *the approach is to apply reverse binary search
+ */
+
     public static void main(String[] args) {
         int[] arr = {3, 5, 7, 9, 10, 90,
                 100, 130, 140, 160, 170};
