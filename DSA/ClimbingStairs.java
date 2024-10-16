@@ -65,3 +65,19 @@ class Solution {
 // return arr[n];
 // }
 // }
+
+
+
+// class Solution {            // uses O(1) space-----bottom up approach
+
+//     public int climbStairs(int n) {
+//         int one = 1, two = 1;
+//         for (int i = 0; i < n - 1; i++) {
+//             int temp = one;
+//             one = one + two;
+//             two = temp;
+//         }
+//         return one;
+//     }
+// }
+
