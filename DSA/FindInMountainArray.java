@@ -38,7 +38,6 @@ public class FindInMountainArray {
 
 
 
-
 /**
  * // This is MountainArray's API interface.
  * // You should not implement it, or speculate about its implementation
@@ -48,8 +47,12 @@ public class FindInMountainArray {
  * }
  */
 
- // the intution is to find the peak index of the mountain array
- // then we can apply binary search on the left and right half of the peak index
+ 
+/**
+ * the intution is to find the peak index of the mountain array
+ * then we can apply binary search on the left and right half of the peak index
+ * 
+ */
  
 
 
