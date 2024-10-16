@@ -48,8 +48,12 @@ public class PeakIndexInAMountainArray {
 //         while(low<=high){
 //             int mid = low + (high-low)/2;
 //             if(mid!=0 && arr[mid-1]>arr[mid]){
+//                 // means you(mid) are on the decreasing part
+//                 // so update high
 //                 high =mid-1;
 //             }else{
+//                 // means you(mid) are on the increasing part
+//                 // so update low
 //                 low =mid+1;
 //             }
 //         }
