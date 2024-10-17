@@ -2,6 +2,8 @@ package DSA;
 
 public class FloorInASortedArray {
     /**
+     * 
+     * link ->  https://www.geeksforgeeks.org/problems/floor-in-a-sorted-array-1587115620/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card
      * Given a sorted array arr[] of size n without duplicates, and given a value x. Floor of x is defined as the largest element k in arr[] such that k is smaller than or equal to x. Find the index of k(0-based indexing).
 
         Examples
