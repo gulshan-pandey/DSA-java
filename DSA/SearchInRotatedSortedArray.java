@@ -59,3 +59,77 @@ class Solution {
         return -1;
     }
 }
+
+
+
+
+
+
+//using peak element
+
+
+class Solution {
+    public int search(int[] a, int key) {
+        if (a == null || a.length == 0) return -1;
+        
+        int n = a.length - 1;
+        int low = 0, high = a.length - 1;
+        
+        // Check if array is not rotated
+        if (a[low] <= a[high]) {
+            return binary(a, key, 0, high);
+        }
+        
+        // Find peak element
+        int peak = -1;
+        while (low < high) {
+            int mid = low + (high - low) / 2;
+            
+            if (a[mid] > a[mid + 1]) {
+                peak = mid;
+                break;
+            }
+            
+            if (a[low] <= a[mid]) {
+                // Left half is sorted, pivot must be in right half
+                if (a[low] > a[high]) {
+                    low = mid + 1;
+                } else {
+                    high = mid - 1;
+                }
+            } else {
+                // Right half is sorted, pivot must be in left half
+                high = mid;
+            }
+        }
+        
+        if (peak == -1) peak = low;
+        
+        // If key is the peak element
+        if (key == a[peak]) return peak;
+        
+        // If key is greater than or equal to first element, search in left half
+        if (key >= a[0]) {
+            return binary(a, key, 0, peak - 1);
+        }
+        
+        // Otherwise, search in right half
+        return binary(a, key, peak + 1, n);
+    }
+    
+    private int binary(int[] a, int target, int low, int high) {
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (a[mid] == target) {
+                return mid;
+            }
+            
+            if (target < a[mid]) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+        return -1;
+    }
+}
