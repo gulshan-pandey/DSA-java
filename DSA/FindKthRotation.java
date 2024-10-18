@@ -54,6 +54,40 @@ class Solution {
 
 
 
+// another approach    --->  https://youtu.be/W9QJ8HaRvJQ?si=Mz-WnF7_41MMu6YB&t=12460
+
+class Solution {
+    public int findKRotation(List<Integer> arr) {
+        int n = arr.size();
+        int l=0,h=n-1;
+         if (arr.get(0) <= arr.get(h)) {
+            return 0;
+        }
+        while(l<=h){
+            int mid = l +(h-l)/2;
+            
+            if(mid<h && arr.get(mid) > arr.get(mid+1)){
+                return mid+1;
+            }
+            if(mid>l && arr.get(mid)< arr.get(mid-1)){
+                return mid;
+            }
+            if(arr.get(mid) <=arr.get(l)){
+                h= mid-1;
+            }else{
+                l = mid+1;
+            }
+        }
+        return 0;
+    }
+}
+
+
+
+
+
+
+
 
 
 
