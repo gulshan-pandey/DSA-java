@@ -1,4 +1,9 @@
 package DSA;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class SentenceSimilarityIII {
     
     /**
