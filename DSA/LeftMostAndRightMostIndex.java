@@ -55,53 +55,53 @@ public class LeftMostAndRightMostIndex {
     */
     
 
-    class Solution {
+    // class Solution {
         
-        public pair indexes(long v[], long x)
-        {
-            // Your code goes here
-            long first=-1;
-            long second=-1 ;
-            int n=v.length;
-            int l=0;
-           int r=n-1;
+    //     public pair indexes(long v[], long x)
+    //     {
+    //         // Your code goes here
+    //         long first=-1;
+    //         long second=-1 ;
+    //         int n=v.length;
+    //         int l=0;
+    //        int r=n-1;
             
-            while(l<=r){
-                int mid =l+(r-l)/2;
-                if(v[mid]==x){
-                    first =mid;
-                    r=mid-1;
-                    continue;
-                }
-                if(v[mid]<x){
-                    l=mid+1;
-                }else{
-                    r=mid-1;
-                }
-            }
-            
-            
-            l=0;
-            r=n-1;
-            while(l<=r){
-                int mid =l+(r-l)/2;
-                if(v[mid]==x){
-                    second =mid;
-                    l=mid+1;
-                    continue;
-                }
-                if(v[mid]<x){
-                    l=mid+1;
-                }else{
-                    r=mid-1;
-                }
-            }
+    //         while(l<=r){
+    //             int mid =l+(r-l)/2;
+    //             if(v[mid]==x){
+    //                 first =mid;
+    //                 r=mid-1;
+    //                 continue;
+    //             }
+    //             if(v[mid]<x){
+    //                 l=mid+1;
+    //             }else{
+    //                 r=mid-1;
+    //             }
+    //         }
             
             
-            return new pair(first,second);
+    //         l=0;
+    //         r=n-1;
+    //         while(l<=r){
+    //             int mid =l+(r-l)/2;
+    //             if(v[mid]==x){
+    //                 second =mid;
+    //                 l=mid+1;
+    //                 continue;
+    //             }
+    //             if(v[mid]<x){
+    //                 l=mid+1;
+    //             }else{
+    //                 r=mid-1;
+    //             }
+    //         }
             
-        }
+            
+    //         return new pair(first,second);
+            
+    //     }
         
             
         
-    }
+    // }
