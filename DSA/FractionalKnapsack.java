@@ -1,4 +1,7 @@
 package DSA;
+
+import java.util.Arrays;
+
 public class FractionalKnapsack {
     /**
      * problem -> https://www.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1
@@ -35,30 +38,30 @@ class Item {
 
 
 
-class Solution {
-    // Function to get the maximum total value in the knapsack.
-    double fractionalKnapsack(int w, Item arr[], int n) {
-        double ans=0;
-        // Arrays.sort(arr, new Comparator<Object>() {              
-        //     @Override
-        //     public int compare(Object a, Object b) {
-        //         double ratioA = (double) a.value / a.weight;
-        //         double ratioB = (double) b.value / b.weight;
-        //         return Double.compare(ratioB, ratioA);
-        //     }
-        // });
-         Arrays.sort(arr, (a, b) -> Double.compare(                 // either way is fine
-            (double)b.value / b.weight, 
-            (double)a.value / a.weight
-        ));
-        for(int i =0; i<arr.length; i++){
-            int min = Math.min(w,arr[i].weight);
-            ans +=((double)arr[i].value/arr[i].weight)*min;
-            w-=min;
-            if(w==0) break;
-        }
+// class Solution {
+//     // Function to get the maximum total value in the knapsack.
+//     double fractionalKnapsack(int w, Item arr[], int n) {
+//         double ans=0;
+//         // Arrays.sort(arr, new Comparator<Object>() {              
+//         //     @Override
+//         //     public int compare(Object a, Object b) {
+//         //         double ratioA = (double) a.value / a.weight;
+//         //         double ratioB = (double) b.value / b.weight;
+//         //         return Double.compare(ratioB, ratioA);
+//         //     }
+//         // });
+//          Arrays.sort(arr, (a, b) -> Double.compare(                 // either way is fine
+//             (double)b.value / b.weight, 
+//             (double)a.value / a.weight
+//         ));
+//         for(int i =0; i<arr.length; i++){
+//             int min = Math.min(w,arr[i].weight);
+//             ans +=((double)arr[i].value/arr[i].weight)*min;
+//             w-=min;
+//             if(w==0) break;
+//         }
         
-        return ans;
+//         return ans;
         
-    }
-}
+//     }
+// }
