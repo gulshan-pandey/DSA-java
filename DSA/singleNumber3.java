@@ -1,5 +1,7 @@
 package DSA;
 
+import java.util.HashMap;
+
 public class singleNumber3 {
     /*
     Given an integer array nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. You can return the answer in any order.
@@ -78,29 +80,29 @@ class Solution {
 
 // java 8
 
-class Solution {
-    public int[] singleNumber(int[] nums) {
-        // Create a HashMap to store the frequency of each number
-        HashMap<Integer, Integer> map = new HashMap<>();
+// class Solution {
+//     public int[] singleNumber(int[] nums) {
+//         // Create a HashMap to store the frequency of each number
+//         HashMap<Integer, Integer> map = new HashMap<>();
         
-        // Iterate through the array and count the occurrences of each number
-        for (int num : nums) {
-            map.put(num, map.getOrDefault(num, 0) + 1);
-        }
+//         // Iterate through the array and count the occurrences of each number
+//         for (int num : nums) {
+//             map.put(num, map.getOrDefault(num, 0) + 1);
+//         }
 
-        // Using stream to filter the numbers that appear once and collect them
-        int[] result = map.entrySet().stream()
-                .filter(entry -> entry.getValue() == 1)  // Only keep elements with value 1
-                .map(Map.Entry::getKey)  // Extract the key (the number)
-                .collect(Collectors.toList())  // Collect into a list
-                .stream()
-                .mapToInt(i -> i)  // Convert to int array
-                .toArray();
+//         // Using stream to filter the numbers that appear once and collect them
+//         int[] result = map.entrySet().stream()
+//                 .filter(entry -> entry.getValue() == 1)  // Only keep elements with value 1
+//                 .map(Map.Entry::getKey)  // Extract the key (the number)
+//                 .collect(Collectors.toList())  // Collect into a list
+//                 .stream()
+//                 .mapToInt(i -> i)  // Convert to int array
+//                 .toArray();
 
-        // Return the result array containing the two single numbers
-        return result;
-    }
-}
+//         // Return the result array containing the two single numbers
+//         return result;
+//     }
+// }
 
 
 
