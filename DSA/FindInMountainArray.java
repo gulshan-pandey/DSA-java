@@ -115,46 +115,46 @@ public class FindInMountainArray {
 
 // In terms of functions
 
-class Solution {
-   public int findInMountainArray(int target, MountainArray mountainArr) {
-       int n = mountainArr.length();
-       int peakIndex = findPeakIndex(mountainArr, 0, n - 1);
+// class Solution {
+//    public int findInMountainArray(int target, MountainArray mountainArr) {
+//        int n = mountainArr.length();
+//        int peakIndex = findPeakIndex(mountainArr, 0, n - 1);
        
-       // Search in the left half (ascending)
-       int leftResult = binarySearch(mountainArr, target, 0, peakIndex, true);
-       if (leftResult != -1) return leftResult;
+//        // Search in the left half (ascending)
+//        int leftResult = binarySearch(mountainArr, target, 0, peakIndex, true);
+//        if (leftResult != -1) return leftResult;
        
-       // Search in the right half (descending)
-       return binarySearch(mountainArr, target, peakIndex, n - 1, false);
-   }
+//        // Search in the right half (descending)
+//        return binarySearch(mountainArr, target, peakIndex, n - 1, false);
+//    }
    
-   private int findPeakIndex(MountainArray mountainArr, int low, int high) {
-       while (low < high) {
-           int mid = low + (high - low) / 2;
-           if (mountainArr.get(mid) < mountainArr.get(mid + 1)) {
-               low = mid + 1;
-           } else {
-               high = mid;
-           }
-       }
-       return low;
-   }
+//    private int findPeakIndex(MountainArray mountainArr, int low, int high) {
+//        while (low < high) {
+//            int mid = low + (high - low) / 2;
+//            if (mountainArr.get(mid) < mountainArr.get(mid + 1)) {
+//                low = mid + 1;
+//            } else {
+//                high = mid;
+//            }
+//        }
+//        return low;
+//    }
    
-   private int binarySearch(MountainArray mountainArr, int target, int low, int high, boolean ascending) {
-       while (low <= high) {
-           int mid = low + (high - low) / 2;
-           int midVal = mountainArr.get(mid);
+//    private int binarySearch(MountainArray mountainArr, int target, int low, int high, boolean ascending) {
+//        while (low <= high) {
+//            int mid = low + (high - low) / 2;
+//            int midVal = mountainArr.get(mid);
            
-           if (midVal == target) return mid;
+//            if (midVal == target) return mid;
            
-           if (ascending) {
-               if (midVal < target) low = mid + 1;
-               else high = mid - 1;
-           } else {
-               if (midVal > target) low = mid + 1;
-               else high = mid - 1;
-           }
-       }
-       return -1;
-   }
-}
+//            if (ascending) {
+//                if (midVal < target) low = mid + 1;
+//                else high = mid - 1;
+//            } else {
+//                if (midVal > target) low = mid + 1;
+//                else high = mid - 1;
+//            }
+//        }
+//        return -1;
+//    }
+// }'
