@@ -1,3 +1,7 @@
+package DSA;
+
+import java.util.Arrays;
+
 public class Candy {
     /**
      * 
