@@ -76,37 +76,37 @@ class Solution {
 
 
 
-class Solution {
-    int count(int[] arr, int n, int x) {
-        int first = findOccurrence(arr, n, x, true);
-        if (first == -1) return 0; // x not found in array
+// class Solution {
+//     int count(int[] arr, int n, int x) {
+//         int first = findOccurrence(arr, n, x, true);
+//         if (first == -1) return 0; // x not found in array
         
-        int last = findOccurrence(arr, n, x, false);
+//         int last = findOccurrence(arr, n, x, false);
         
-        return last - first + 1;
-    }
+//         return last - first + 1;
+//     }
 
-    int findOccurrence(int[] arr, int n, int x, boolean findFirst) {
-        int result = -1;
-        int left = 0, right = n - 1;
+//     int findOccurrence(int[] arr, int n, int x, boolean findFirst) {
+//         int result = -1;
+//         int left = 0, right = n - 1;
         
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
+//         while (left <= right) {
+//             int mid = left + (right - left) / 2;
             
-            if (arr[mid] == x) {
-                result = mid;
-                if (findFirst) {
-                    right = mid - 1; // Move left to find first occurrence
-                } else {
-                    left = mid + 1;  // Move right to find last occurrence
-                }
-            } else if (arr[mid] < x) {
-                left = mid + 1;
-            } else {
-                right = mid - 1;
-            }
-        }
+//             if (arr[mid] == x) {
+//                 result = mid;
+//                 if (findFirst) {
+//                     right = mid - 1; // Move left to find first occurrence
+//                 } else {
+//                     left = mid + 1;  // Move right to find last occurrence
+//                 }
+//             } else if (arr[mid] < x) {
+//                 left = mid + 1;
+//             } else {
+//                 right = mid - 1;
+//             }
+//         }
         
-        return result;
-    }
-}
+//         return result;
+//     }
+// }
