@@ -86,6 +86,54 @@ public class BinaryTrees {
     }
 
 
+    // Traversals
+
+    //PreOrder 
+    public void preOrder(){
+        preOrder(root);
+    }
+    public void preOrder(Node node){
+        if(node==null){
+            return;
+        }
+
+        System.out.println(node.value + " ");
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
+
+     //InOrder 
+     public void inOrder(){
+        preOrder(root);
+    }
+    public void inOrder(Node node){
+        if(node==null){
+            return;
+        }
+
+        preOrder(node.left);
+        System.out.println(node.value + " ");
+        preOrder(node.right);
+    }
+
+
+
+     //PostOrder 
+     public void postOrder(){
+        preOrder(root);
+    }
+    public void postOrder(Node node){
+        if(node==null){
+            return;
+        }
+
+        preOrder(node.left);
+        preOrder(node.right);
+        System.out.println(node.value + " ");
+    }
+
+
 
     public static void main(String[] args) {
 
