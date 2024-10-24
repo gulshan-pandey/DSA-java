@@ -26,6 +26,34 @@ public class FindTheSmallestDivisorGivenAThreshold {
 
 
 
+
+//BRUTE FORCE
+
+// class Solution {
+//     public int smallestDivisor(int[] nums, int threshold) {
+//         int min =1;
+//         int max = 0;
+//         for(int i : nums){
+//             max = Math.max(i, max);
+//         }
+//         for(int i=1; i<=max; i++){
+//             int sum =0;
+//             for(int j =0; j<nums.length; j++){
+//                 sum+=((nums[j] + i - 1) / i);
+//             }
+//             if(sum<= threshold) return i;
+//         }
+
+//         return -1;
+
+//     }
+// }
+
+
+
+
+
+
 class Solution {
     public int smallestDivisor(int[] nums, int threshold) {
         int min =1;
