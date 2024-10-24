@@ -52,6 +52,8 @@ public class FindTheSmallestDivisorGivenAThreshold {
 
 
 
+//BINARY SEARCH ON ANSWER
+
 
 
 class Solution {
