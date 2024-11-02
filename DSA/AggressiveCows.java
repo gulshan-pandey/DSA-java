@@ -61,7 +61,7 @@ public class AggressiveCows {
     - Minimum distance possible = 0
     - Maximum distance possible = lastStall - firstStall
     
-    c) For each mid value in binary search:
+    c) For each mid value in binary search:     (Can be done by linear search too)
     - Check if it's possible to place K cows with 'mid' as minimum distance
     - If possible: 
         - This could be answer, store it
@@ -76,46 +76,102 @@ public class AggressiveCows {
 
  */
 
- 
 
-class Solution {
+
+
+
+ // Brute force approach
+
+ class Solution {
     public static int aggresiveCows(int[] stalls, int k) {
-        // code here
         Arrays.sort(stalls);
-        int min=0;
         int n = stalls.length;
-        int max =stalls[n-1] - stalls[0];
+        int maxDistance = stalls[n-1] - stalls[0];
+        int result = -1;
         
-       
-        int minSpace=-1;
-    
-        
-        while(min<=max){
-            int mid = min+(max-min)/2;
-            if(canSit(mid,k,stalls)){
-                minSpace= mid;
-                min= mid+1;
-            }else{
-                max = mid-1;
+        // Try every possible distance from 1 to maxDistance
+        for (int distance = 1; distance <= maxDistance; distance++) {
+            if (canPlaceCows(stalls, k, distance)) {
+                result = distance;
+            } else {
+                // If we can't place cows at this distance,
+                // we won't be able to place them at greater distances
+                break;
             }
         }
-        return minSpace;
+        
+        return result;
     }
     
-    static boolean canSit(int mid, int k,int[] stalls ){
-        int lastPosition = stalls[0];       
-        int cowsPlaced=1;
-        for(int i =1; i<stalls.length; i++){
-            
-            if(stalls[i]-lastPosition >=mid){
-                lastPosition = stalls[i];
+    static boolean canPlaceCows(int[] stalls, int k, int minDistance) {
+        int cowsPlaced = 1;  // Place first cow at the first stall
+        int lastPosition = stalls[0];
+        
+        // Try to place remaining cows
+        for (int i = 1; i < stalls.length; i++) {
+            // If current stall is at least minDistance away from last placed cow
+            if (stalls[i] - lastPosition >= minDistance) {
                 cowsPlaced++;
+                lastPosition = stalls[i];
             }
             
-            if(cowsPlaced>=k) return true;
+            // If we successfully placed all cows
+            if (cowsPlaced >= k) {
+                return true;
+            }
         }
+        
+        // Couldn't place all cows with this minimum distance
         return false;
     }
-    
-  
 }
+
+
+
+
+
+
+
+// Optimal approach(binary search)
+ 
+
+// class Solution {
+//     public static int aggresiveCows(int[] stalls, int k) {
+//         // code here
+//         Arrays.sort(stalls);
+//         int min=0;
+//         int n = stalls.length;
+//         int max =stalls[n-1] - stalls[0];
+        
+       
+//         int minSpace=-1;
+    
+        
+//         while(min<=max){
+//             int mid = min+(max-min)/2;
+//             if(canSit(mid,k,stalls)){
+//                 minSpace= mid;
+//                 min= mid+1;
+//             }else{
+//                 max = mid-1;
+//             }
+//         }
+//         return minSpace;
+//     }
+    
+//     static boolean canSit(int mid, int k,int[] stalls ){
+//         int lastPosition = stalls[0];       
+//         int cowsPlaced=1;
+//         for(int i =1; i<stalls.length; i++){
+            
+//             if(stalls[i]-lastPosition >=mid){
+//                 lastPosition = stalls[i];
+//                 cowsPlaced++;
+//             }
+            
+//             if(cowsPlaced>=k) return true;
+//         }
+//         return false;
+//     }
+    
+// }
