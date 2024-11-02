@@ -53,9 +53,9 @@ class Solution {
         
         if(m*k>n || m>n || k>n) return -1;
         int min = Integer.MAX_VALUE;
-        int max = Integer.MIN_VALUE;
+        int max = 1;                    //can also be int max = Integer.MIN_VALUE;
         for(int i : arr){
-            min = Math.min(min, i);
+            // min = Math.min(min, i);
             max = Math.max(max,i);
         }
         while(min<=max){
@@ -81,7 +81,7 @@ class Solution {
             if(arr[i]<=target){
                 temp++;
             }else{
-                temp=0;
+                temp=0;             // if array is non continuous then set temp to 0
             }
             if(temp ==k){
                 count++;
