@@ -49,6 +49,27 @@ public class LinkedListCycleII {
  */
 
 
+ 
+ // Brute force
+
+// public class Solution {
+//    public ListNode detectCycle(ListNode head) {
+//        ListNode temp =head;
+//        var map = new HashSet<Object>();
+//          while(temp!=null){
+//            if(!map.add(temp)){
+//             return temp;
+//            }
+//            temp= temp.next;
+//        }
+//        return null;
+//    }
+// }
+
+
+
+
+
 
 //  class Solution {
 //     public ListNode detectCycle(ListNode head) {
