@@ -37,6 +37,8 @@ public class RemoveNthNodeFromEndOfList {
  */
 
 
+ //Brute Force  --> find the size of the LL by traversing it and then delete the node at the given index.
+
 //  class Solution {
 //     public ListNode removeNthFromEnd(ListNode head, int n) {
 
@@ -63,4 +65,42 @@ public class RemoveNthNodeFromEndOfList {
 
 //         return head;
 //     }
+// }
+
+
+
+
+//Optimized   --> In one traversal
+
+/*
+ * approach- make a nummy list and make it's next as head 
+ * make 2 ptrs fast and slow point to dummy
+ * Move the fast pointer n+1 steps ahead to create a gap of n nodes between fast and slow.
+ * then skip the nth node and return the dummy.next
+ */
+
+
+
+// class Solution {
+//    public ListNode removeNthFromEnd(ListNode head, int n) {
+
+//        if(head.next==null)return null;
+//        ListNode dummy = new ListNode(0);
+//        dummy.next =head;
+
+//        ListNode slow = dummy;
+//        ListNode fast =dummy;
+//        for(int i =0; i<=n; i++){
+//            fast = fast.next;
+//        }
+
+//        while(fast!=null){
+//            slow  =slow.next;
+//            fast =fast.next;
+//        }
+//        slow.next =slow.next.next;
+//        return dummy.next;
+
+
+//    }
 // }
