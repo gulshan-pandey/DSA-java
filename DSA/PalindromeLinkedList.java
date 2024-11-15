@@ -38,6 +38,7 @@ public class PalindromeLinkedList {
 
 // Brute force   --> by revesing the LL and comparing with the original LL
 
+
 // class Solution {
 //     public boolean isPalindrome(ListNode head) {
 //         // If list is empty or has single node, it's a palindrome
@@ -87,6 +88,10 @@ public class PalindromeLinkedList {
 
 
 
+/*
+ * Intuition -> find the middle node of the LL and reverse the LL from the middle node to the end node.
+ * then compare the Linkedlist from the start to the middle node with the reversed LL from the middle node to the end node
+ */
 
 
  
