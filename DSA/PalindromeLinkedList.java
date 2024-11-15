@@ -36,6 +36,59 @@ public class PalindromeLinkedList {
  */
 
 
+// Brute force   --> by revesing the LL and comparing with the original LL
+
+// class Solution {
+//     public boolean isPalindrome(ListNode head) {
+//         // If list is empty or has single node, it's a palindrome
+//         if (head == null || head.next == null) {
+//             return true;
+//         }
+   
+//         // Create a copy of the original list
+//         ListNode temp = head;
+//         ListNode head1 = new ListNode(-1);
+//         ListNode t1 = head1;
+//         while (temp != null) {
+//             ListNode t = new ListNode(temp.val);
+//             t1.next = t;
+//             temp = temp.next;
+//             t1 = t1.next;
+//         }
+//         head1 = head1.next;  // Skip the dummy node
+
+//         // Reverse the copied list
+//         ListNode prev = null;
+//         ListNode curr = head1;
+//         while (curr != null) {
+//             ListNode next = curr.next;
+//             curr.next = prev;
+//             prev = curr;
+//             curr = next;
+//         }
+
+//         // Compare original list with reversed copy
+//         ListNode tempo = head;
+//         ListNode reversed = prev;  // Use prev instead of head1
+//         while (tempo != null) {
+//             if (tempo.val != reversed.val) {
+//                 return false;
+//             }
+//             tempo = tempo.next;
+//             reversed = reversed.next;
+//         }
+ 
+//         return true;
+//     }
+// }
+
+
+
+
+
+
+
+
  
 // class Solution {
 //     public boolean isPalindrome(ListNode head) {
@@ -83,6 +136,8 @@ public class PalindromeLinkedList {
 //         return prev;
 //     }
 // }
+
+
 
 
 

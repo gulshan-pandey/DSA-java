@@ -84,10 +84,10 @@ public class ReverseLinkedList {
 //         ListNode prev = null;
 //         ListNode curr = head;
 //         while(curr!=null){
-//             ListNode temp =curr.next;
+//             ListNode Next =curr.next;
 //             curr.next=prev;
 //             prev=curr;
-//             curr= temp;
+//             curr= Next;
 //         }
 //     return prev;
 //     }
