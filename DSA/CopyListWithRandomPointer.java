@@ -132,3 +132,80 @@ class Node {
 //         return map.get(head);
 //     }
 // }
+
+
+
+
+
+// O(1) space solution          -- most Optimized solution
+
+/*
+ * APPROACH
+ * 1 -- create deep copy by making new nodes
+ * 2 --then make a dummy node then make alternate connections(connect both the list intertwined)
+ * 3 -- assign random pointers of the new LL
+ * 4 -- in the end Seperating the lists
+ * 5 -- return the head of the copied list
+ * 
+ * Tutorial --> https://youtu.be/FrGKsNBaq_4?si=QHcdwDkI3rFar2uI&t=17172
+ */
+
+
+// class Solution {
+//     public Node copyRandomList(Node head) {
+//         if (head == null) return null;
+//         Node head2 = new Node(head.val);
+//         Node temp =head;
+//         Node temp2= head2;
+        
+//         while(temp.next!=null){             // Creating deep copy
+//             temp= temp.next;
+//             temp2.next = new Node(temp.val);
+//             temp2=temp2.next;
+//         }
+//         Node t = new Node(-1);          // dummy node
+//         Node head3=t;
+//         Node t1 =head;
+//         Node t2=head2;
+
+//         while(t2!=null){               // connect both the list intertwined---> making alternate connections
+//             t.next = t1;
+//             t1=t1.next;
+//             t=t.next;
+//             t.next=t2;
+//             t2=t2.next;
+//             t=t.next;
+//         }
+
+//         t=head3;
+//         t1=head;
+//         t2=head2;
+
+//         while(t1!=null){                // assigning random pointers
+//             if(t1.random==null) t2.random=null;
+//             else{
+//                 t2.random=t1.random.next;
+//             }
+//             t1=t1.next.next;
+//             if(t1==null) break;
+//             t2=t2.next.next;
+//         }
+
+//         t1=head;
+//         t2=head2;
+
+//         while(t1!=null && t2!=null){            // Seperating the lists
+//             t1.next=t2.next;
+//             t1=t1.next;
+//             if(t1==null){
+//                  t2.next=null;
+//                  break;
+//             }
+//             t2.next=t1.next;
+//             t2=t2.next;
+//         }
+
+//         return head2;
+
+//     }
+// }
