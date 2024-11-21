@@ -40,32 +40,29 @@ public class PartitionList {
 
 
 
+// class Solution {
+//    public ListNode partition(ListNode head, int x) {
+//       ListNode dummy1 = new ListNode(0);
+//       dummy1.next = head;
+//       ListNode dummy2 = new ListNode(0);
+//       ListNode temp2 = dummy2; // for storing <x
+//       ListNode temp1 = dummy1; // for storing >=x
+//       while (temp1.next != null) {
+//          if (temp1.next.val < x) {
+//             temp2.next = temp1.next;
+//             temp1.next = temp1.next.next;
+//             temp2 = temp2.next;
+//          } else {
+//             temp1 = temp1.next;
+//          }
 
-//  class Solution {
-//     public ListNode partition(ListNode head, int x) {
-//         ListNode dummy1= new ListNode(0);
-//         dummy1.next = head;
-//         ListNode dummy2=new ListNode(0);
-//         ListNode temp2 = dummy2;
-//         ListNode temp1 = dummy1;
-//         while(temp1.next!=null){
-//             if(temp1.next.val<x){
-//                 temp2.next=temp1.next;
-//                 if(temp1.next==null)  temp1.next=null;
-//                 else temp1.next = temp1.next.next;
-//                 temp2 = temp2.next;
-//             }else{
-//                 temp1=temp1.next;
-//             }
+//       }
+//       temp2.next = dummy1.next;
 
-//         }
-//         temp2.next=dummy1.next;
+//       return dummy2.next;
 
-//         return dummy2.next;
-        
-//     }
+//    }
 // }
-
 
 
 
