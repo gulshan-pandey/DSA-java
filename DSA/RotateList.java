@@ -68,3 +68,44 @@ public class RotateList {
 //         return dummy.next;
 //     }
 // }
+
+
+
+// class Solution {
+//    public ListNode rotateRight(ListNode head, int k) {
+//        if (head == null || head.next == null || k == 0) return head;
+       
+//        // Calculate the size of the list
+//        ListNode temp = head;
+//        int size = 0;
+//        while (temp != null) {
+//            temp = temp.next;
+//            size++;
+//        }
+       
+//        // Adjust k to avoid unnecessary rotations
+//        k = k % size;
+//        if (k == 0) return head; // No rotation needed
+       
+//        // Find the new tail (size - k - 1)
+//        ListNode temp2 = head;
+//        for (int i = 0; i < size - k - 1; i++) {
+//            temp2 = temp2.next;
+//        }
+       
+//        // Split the list and rearrange pointers
+//        ListNode newHead = temp2.next;
+//        temp2.next = null;
+       
+//        // Find the end of the rotated part
+//        ListNode temp3 = newHead;
+//        while (temp3.next != null) {
+//            temp3 = temp3.next;
+//        }
+       
+//        // Connect the old head to the end
+//        temp3.next = head;
+       
+//        return newHead;
+//    }
+// }
