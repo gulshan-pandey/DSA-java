@@ -113,24 +113,29 @@ class Solution {
 
 //using xor most efficient 
 
+
+
 // class Solution {
 //     public int[] singleNumber(int[] nums) {
-        
-//         long xorr = 0;
-//         for(int i = 0; i < nums.length; i++){
-//             xorr = xorr ^ nums[i];
+//         int xor = 0;
+//         for (int num : nums) {
+//             xor ^= num; // XOR all numbers
 //         }
-//         long rightShift = (xorr & (xorr - 1)) ^ xorr;        // this variable is taken for separating the numbers in 2 groups
-
-//         long b1 = 0;
-//         long b2 = 0;
-//         for(int j = 0; j < nums.length; j++){
-//             if ((nums[j] & rightShift) != 0){
-//                 b1 = b1 ^ nums[j];
-//             } else{
-//                 b2 = b2 ^ nums[j];
+        
+//         // Find the rightmost set bit in xor
+//         int rightmostSetBit = xor & -xor;           // or  (xorr & (xorr - 1)) ^ xorr;        // this variable is taken for separating the numbers in 2 groups
+        
+//         int[] result = new int[2];
+//         for (int num : nums) {
+//             // Divide numbers into two groups based on the rightmost set bit
+//             if ((num & rightmostSetBit) == 0) {
+//                 result[0] ^= num; // Group 1
+//             } else {
+//                 result[1] ^= num; // Group 2
 //             }
 //         }
-//         return new int[] { (int)b1, (int)b2 };
+        
+//         return result; // The two unique numbers
 //     }
 // }
+
