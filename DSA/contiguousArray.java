@@ -21,6 +21,35 @@ public class contiguousArray {
 }
 
 
+// BRUTE FORCE`
+
+class Solution {
+    public int findMaxLength(int[] nums) {
+        int maxLength = 0;
+
+        // Iterate through all possible starting points
+        for (int start = 0; start < nums.length; start++) {
+            int count0 = 0;
+            int count1 = 0;
+
+            // Iterate through all possible ending points
+            for (int end = start; end < nums.length; end++) {
+                if (nums[end] == 0) {
+                    count0++;
+                } else {
+                    count1++;
+                }
+
+                // Check if counts are equal
+                if (count0 == count1) {
+                    maxLength = Math.max(maxLength, end - start + 1);
+                }
+            }
+        }
+
+        return maxLength;
+    }
+}
 
 
 
