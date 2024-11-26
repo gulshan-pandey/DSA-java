@@ -1,6 +1,6 @@
 package DSA;
 
-public class FindXorOfTwice {
+public class FindTheXOROfNumbersWhichAppearTwice {
     
 }
 
