@@ -40,6 +40,10 @@ public class SubarraySumsDivisiblebyK {
 
 
 
+/* Approach: is to take a (modulo, frequency)map, and make the prefix sum form the start and find the modulo with k at every iteration , save in the hashmap as the key and its frequency as the value, 
+    on another occurrence of that modulo, add the existing value of the key tot he count, and return the count
+    */
+
 
 
 // class Solution {                     // optimized
