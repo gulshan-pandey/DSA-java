@@ -52,7 +52,6 @@ class Solution {
 
 // Another Sliding window Approach
 
-
 class Solution {
     public int maxScore(int[] nums, int k) {
         int sum = 0;
@@ -62,8 +61,6 @@ class Solution {
             sum += i;
         }
 
-        int l = 0;
-        int r = 0;
         int windowSum = 0;
         for(int i =0; i<size; i++){
             windowSum+=nums[i];
@@ -76,4 +73,3 @@ class Solution {
         return sum-res;
     }
 }
-    
