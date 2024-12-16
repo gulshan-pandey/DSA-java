@@ -47,7 +47,7 @@ public class SubarraySumEqualsK {
 
 //optimized----The approach uses a cumulative sum and a hashmap to find subarrays that sum to ( k) by tracking the frequency of sums encountered so far and checking if the difference between the current sum and ( k ) has occurred before.
 
-
+//APPRAOCH -- for subarray sum we use prefix sum and put the sum ,frequency into the map, but for subarray divisible by k we use to store the modulo into the map and its frequency!--- Remember that
 
 // class Solution {
 //     public int subarraySum(int[] nums, int k) {

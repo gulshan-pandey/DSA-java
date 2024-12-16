@@ -46,3 +46,30 @@ class Solution {
         return maxsum;
     }
 }
+
+
+
+
+// Another Sliding window Approach
+
+class Solution {
+    public int maxScore(int[] nums, int k) {
+        int sum = 0;
+        int size = nums.length - k;
+
+        for (int i : nums) {
+            sum += i;
+        }
+
+        int windowSum = 0;
+        for(int i =0; i<size; i++){
+            windowSum+=nums[i];
+        }
+        int res = windowSum;
+        for(int i = size; i < nums.length; i++) {
+            windowSum += nums[i]-nums[i-size];
+            res = Math.min(res,windowSum);
+        }
+        return sum-res;
+    }
+}

@@ -3,48 +3,42 @@ public class Anagram {
     
 
     /*
-     * Given two strings a and b consisting of lowercase characters. The task is to check whether two given strings are an anagram of each other or not. An anagram of a string is another string that contains the same characters, only the order of characters can be different. For example, act and tac are an anagram of each other. Strings a and b can only contain lower case alphabets.
+    Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+            
+            Example 1:
+            
+            Input: s = "anagram", t = "nagaram"
+            
+            Output: true
+
+
+            
+            Example 2:
+            
+            Input: s = "rat", t = "car"
+            
+            Output: false
      */
 }
 
 
 
 class Solution {
-    // Function is to check whether two strings are anagram of each other or not.
-    public static boolean isAnagram(String a, String b) {
+    public boolean isAnagram(String s, String t) {
+        if(s.length()!= t.length()) return false;
 
-        if (a.length() != b.length()) {
-            return false;
+        int[] arr=  new int[26];
+        for(char ch : s.toCharArray()){
+            arr[ch-'a']++;
         }
-        
-        // Create an array to count the frequency of each character
-        int[] charCount = new int[26]; // 26 for each letter in the alphabet
-        
-        // Increment the count for each character in string a
-        for (int i = 0; i < a.length(); i++) {
-            charCount[a.charAt(i) - 'a']++;
+        for(char ch : t.toCharArray()){
+            arr[ch-'a']--;
+            if(arr[ch-'a']<0) return false;
         }
-        
-        // Decrement the count for each character in string b
-        for (int i = 0; i < b.length(); i++) {
-            charCount[b.charAt(i) - 'a']--;
-        }
-        
-        // If all counts are zero, then a and b are anagrams
-        for (int count : charCount) {
-            if (count != 0) {
-                return false;
-            }
-        }
-        
         return true;
-        
+
     }
 }
-
-
-
-
 
 
 //shortcut
