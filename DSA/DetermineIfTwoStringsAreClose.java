@@ -79,8 +79,43 @@ class Solution {
           Arrays.sort(freq1);
         Arrays.sort(freq2);
         return Arrays.equals(freq1, freq2);
-
-
-
     }
 }
+
+
+
+
+
+//Most Optimal Solution
+
+
+
+// class Solution {
+//    public boolean closeStrings(String word1, String word2) {
+
+//     if(word1.length()!= word2.length()) return false;
+
+//     int[] arr1 = new int[26];
+//     int[] arr2 = new int[26];
+
+//     for(char ch : word1.toCharArray() ){
+//        arr1[ch-97]++;
+//     }
+//       for(char ch : word2.toCharArray() ){
+//        arr2[ch-97]++;
+//     }
+
+//        for(int i =0 ;i < 26 ; i++){
+//            if(arr1[i]>0 && !(arr2[i]>0)){
+//                return false;
+//            }
+//        }
+//    Arrays.sort(arr1);
+//    Arrays.sort(arr2);
+       
+//        return Arrays.equals(arr1,arr2);
+
+//    }
+// }
+
+
