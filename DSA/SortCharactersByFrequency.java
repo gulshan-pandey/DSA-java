@@ -33,11 +33,26 @@ public class SortCharactersByFrequency {
 
 
 
+/*
+- Create a HashMap to store each character and its frequency count
+- Iterate through the string to populate the frequency map
 
+Step 2: Create Bucket Array
+- Initialize an array of Lists with size = string.length() + 1
+- Each index represents a frequency
+- Each element will be a List<Character> to store characters with that frequency
 
+Step 3: Populate Bucket Array
+- Iterate through the frequency map's keyset
+- For each character, get its frequency from the map
+- Add the character to the bucket array at index = frequency
 
-
-// the idea is to store the characters with its frequency in map and then create the  array of the list of characters of size gerater than 1 of the string(so that is can store the optimum frequency of the characters into that array) ,then iterate into the keyset of the map using streams and then add the characters into the Array of the list at the index of the frequency of the character from the map, then add the characters into the stringbuilder in reverse order so that we dont have to sort the string by the frequency of the characters 
+Step 4: Build Result String
+- Create a StringBuilder for the result
+- Iterate through bucket array in reverse order (from highest frequency to lowest)
+- For each character in a bucket, append it to result repeated by its frequency
+- This gives us characters sorted by frequency without explicit sorting
+*/
 
 
 // class Solution {                                    //most optimized 
