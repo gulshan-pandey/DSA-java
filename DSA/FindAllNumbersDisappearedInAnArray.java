@@ -51,12 +51,26 @@ public class  FindAllNumbersDisappearedInAnArray {
 
 
 /*
- * O(n) and O(1) time and space respectively
- * most optimal solution
- * 
- * approach -> we mark the numbers present in the array as negative
- * then we return the positive numbers
- */
+Approach to find missing numbers (1 to n) in array:
+
+Step 1: Mark Numbers as Seen
+- Iterate through array
+- For each number n, mark the number at index (n-1) as negative
+- This marks that we've seen number n in the array
+- We use Math.abs() to handle already negative numbers
+
+Step 2: Find Missing Numbers
+- Iterate through array again
+- If a number is still positive, it means its index+1 was never seen
+- Example: if nums[2] is positive, then 3 was never in original array
+
+Step 3: Build Result
+- Add all (index+1) values to result list where nums[index] is positive
+- These are the numbers that never appeared in original array
+
+Time Complexity: O(n), Space Complexity: O(1) excluding output list
+
+*/
 
 
 class Solution {
