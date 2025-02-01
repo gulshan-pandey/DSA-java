@@ -97,3 +97,35 @@ class Solution {
 }
 
 
+
+
+// Striver's approach
+
+
+// class Solution {
+//     public int findMin(int[] nums) {
+//         int n = nums.length;
+//         int l=0,h=n-1;
+//         int min = Integer.MAX_VALUE;
+
+//         if (nums[0] <= nums[h]) {
+//            return nums[0];
+//         }
+
+//         while(l<= h){
+//             int m =  l + (h-l)/2;
+//             if(nums[l]<= nums[m]){
+//                 min = Math.min(min,nums[l]);
+//                 l=m+1;
+//             }else{
+//                 min = Math.min(min,nums[m]);
+//                 h=m-1;
+//             }
+
+//         }
+
+//         return min;
+
+//     }
+// }
+
