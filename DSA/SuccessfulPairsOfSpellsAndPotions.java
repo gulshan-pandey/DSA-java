@@ -95,3 +95,44 @@ class Solution {
         return ans;
     }
 }
+
+
+
+// MOST OPTIMIZED    by precomputing the needed value and then do binary search
+
+// class Solution {
+//     public int[] successfulPairs(int[] spells, int[] potions, long success) {
+//         int n = spells.length, m = potions.length;
+//         int[] ans = new int[n];
+        
+//         Arrays.sort(potions);
+        
+//         for (int i = 0; i < n; i++) {
+//             // For each spell, compute the minimum required potion value.
+//             // This is essentially the ceiling of (success / spell).
+//             long needed = (success + spells[i] - 1) / spells[i];
+            
+//             // Use binary search to find the first index in potions
+//             // where potion value is >= needed.
+//             int idx = lowerBound(potions, needed);
+            
+//             ans[i] = m - idx;
+//         }
+        
+//         return ans;
+//     }
+    
+
+//     private int lowerBound(int[] potions, long target) {
+//         int low = 0, high = potions.length;
+//         while (low < high) {
+//             int mid = low + (high - low) / 2;
+//             if (potions[mid] < target) {
+//                 low = mid + 1;
+//             } else {
+//                 high = mid;
+//             }
+//         }
+//         return low;
+//     }
+// }
