@@ -26,7 +26,30 @@ public class TheCelebrityProblem {
 
 
 // NOTE : there can be only one celebrity
-
+// Brute force
+// class Solution {
+// int [] knowsme= new int[mat.length];
+//         int [] Iknow= new int[mat.length];
+    
+    
+//         for(int i =0; i<mat.length; i++){
+//             for(int j = 0; j<mat[0].length;j++){
+//                 if(i==j) continue;
+//                 if(mat[i][j]==1){
+//                     Iknow[i]+=1;
+//                     knowsme[j]+=1;
+//                 }
+//             }
+            
+            
+//         }
+//         for(int i =0; i<Iknow.length; i++){
+//             if((Iknow[i]==0) && (knowsme[i] == mat.length-1)) return i;
+//         }
+        
+//         return -1;
+//     }
+// }
 
 class Solution {
     // Function to find if there is a celebrity in the party or not.
