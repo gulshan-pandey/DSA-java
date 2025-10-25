@@ -28,46 +28,45 @@ public class TheCelebrityProblem {
 // NOTE : there can be only one celebrity
 
 
-
 class Solution {
     // Function to find if there is a celebrity in the party or not.
     public int celebrity(int mat[][]) {
-        // code here
-        int []ans = new int[mat.length];
-        int res=-1;
-        
-        for(int i =0; i<mat.length; i++){
-            
-            for(int j =0; j<mat[0].length; j++){
-                if (mat[i][j]==1){
-                    
-                    ans[i] =1;
-                    break;
-                } 
+        int n = mat.length;
+        int candidate = 0;
+
+        // Step 1: Find a potential candidate
+        for (int i = 1; i < n; i++) {
+            // If candidate knows i, then candidate can't be celebrity
+            if (mat[candidate][i] == 1) {
+                candidate = i;
             }
         }
-        
-        for(int i =0; i<ans.length; i++){
-            if(ans[i]==0) {
-                if(checker(mat,i)){
-                    return i;       // the celebrity is found
-                }
-            }
+
+        // Step 2: Verify the candidate
+        if (isCelebrity(mat, candidate)) {
+            return candidate;
         }
-        
+
         return -1;
     }
 
-     // Helper function to verify if a person is a celebrity
-    public boolean checker(int mat[][] ,int idx){
+    // Helper function to verify if a person is a celebrity
+    private boolean isCelebrity(int[][] mat, int idx) {
         int n = mat.length;
-        for(int i=0; i<n; i++){
-             if (i != idx &&  mat[i][idx]!=1) return false;     // A celebrity should be known by everyone and should not know anyone else
+
+        for (int i = 0; i < n; i++) {
+            if (i == idx) continue;
+
+            // Celebrity should not know i
+            if (mat[idx][i] == 1) return false;
+
+            // Everyone should know celebrity
+            if (mat[i][idx] == 0) return false;
         }
+
         return true;
     }
 }
-
 
 
 
