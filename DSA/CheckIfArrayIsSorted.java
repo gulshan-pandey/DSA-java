@@ -30,5 +30,14 @@ public class CheckIfArrayIsSorted {
             }
             return helper(arr,s+1);
         }
+
+
+        // or the helper function can be written as :
+        // public boolean helper(int[] arr, int s){
+        
+        //     if(s>=arr.length-1) return true;
+            
+        //     return arr[s]<=arr[s+1] && helper(arr,s+1);
+        // }
     }
 }
