@@ -14,6 +14,7 @@ Explanation: The given array is not sorted.
  */
 public class CheckIfArrayIsSorted {
     
+    // doing it using recursion
     class Solution {
         public boolean isSorted(int[] arr) {
             // code here
