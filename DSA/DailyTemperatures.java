@@ -70,3 +70,27 @@ class Solution {
       
 //     }
 // }
+
+
+
+// most efficient approach which is using the array instead of stack by doing the same operartion as stack using the counter variable to keep track of the top of the stack 
+
+
+// class Solution {
+//     public int[] dailyTemperatures(int[] t) {
+//         int [] st = new int[t.length];
+//         int[] ans = new int[t.length];
+//         int counter = -1;
+//         for(int i =0; i<t.length; i++){
+//             while(counter>=0 && t[st[counter]]<t[i]){
+//                 int val = st[counter];
+//                 counter--;
+//                 ans[val] = i-val;
+//             }
+//             counter++;
+//             st[counter]=i;
+//         }
+
+//         return ans;
+//     }
+// }
