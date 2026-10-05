@@ -46,7 +46,6 @@ enum Color {
       col = Color.GREEN;
   
       System.out.println("col :" + col);
-  
       System.out.println(" {cl.values()} will print the hashcodes: " + cl.values()); // it willprint some hashcodes but all the values of the enum can be assessed by iterations on the .values() method
   
       System.out.println(cl + "\n \n"); // will print red
@@ -97,7 +96,19 @@ System.out.println("\n\n printing all the days in the week");
         System.out.printf("%s : %s\n",d,d.getDay());  //smooth
       }
 
-  
+
+      Day day = Day.MONDAY;
+
+      String dayName = switch (day) {
+        case MONDAY-> "M";
+        case TUESDAY-> "T";
+        case WEDNUSDAY-> "W";
+        case THURSDAY-> "T";
+        case FRIDAY-> "F";
+        default-> "Weekend";
+      };
+
+      System.out.println("the day USING SWITCH CASE EXPRESSION is : " + dayName);
     }
   
 
