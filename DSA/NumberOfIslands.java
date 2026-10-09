@@ -36,7 +36,6 @@ public class NumberOfIslands {
 
 
 
-
 class Solution {
 
         public void bfs(char [][] grid, int r, int c, int [][] dirs){
@@ -118,3 +117,57 @@ class Solution {
     return countIslands;
     }
 }
+
+
+
+
+// DFS Approach
+
+
+// class Solution {
+
+//     public void dfs(char[][] grid, int i, int j, int[][] dirs) {
+
+//         // Mark current land as visited
+//         grid[i][j] = '0';
+
+//         for (int[] dir : dirs) {
+
+//             int nR = i + dir[0];
+//             int nC = j + dir[1];
+
+//             if ((nR >= 0 && nR < grid.length) &&
+//                 (nC >= 0 && nC < grid[0].length) &&
+//                 grid[nR][nC] == '1') {
+
+//                 dfs(grid, nR, nC, dirs);
+//             }
+//         }
+//     }
+
+//     public int numIslands(char[][] grid) {
+
+//         int countIslands = 0;
+
+//         int[][] dir = {
+//             {0, 1},   // right
+//             {1, 0},   // bottom
+//             {0, -1},  // left
+//             {-1, 0}   // top
+//         };
+
+//         for (int i = 0; i < grid.length; i++) {
+//             for (int j = 0; j < grid[0].length; j++) {
+
+//                 if (grid[i][j] == '1') {
+
+//                     countIslands++;
+
+//                     dfs(grid, i, j, dir);
+//                 }
+//             }
+//         }
+
+//         return countIslands;
+//     }
+// }
