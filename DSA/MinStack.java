@@ -108,3 +108,45 @@ public int getMin() {
     return min;
 }
 }
+
+
+
+
+
+
+
+// most readbale approach and 2n space complexity and O(1) time complexity  
+
+
+
+class MinStack {
+    Stack<Integer> stack;
+
+    public MinStack() {
+        stack = new Stack<>();
+    }
+
+    public void push(int value) {
+        int minval = value;
+
+        if (!stack.isEmpty()) {
+            minval = Math.min(value, stack.peek());
+        }
+
+        stack.push(value);
+        stack.push(minval);
+    }
+
+    public void pop() {
+        stack.pop(); // Remove minimum value
+        stack.pop(); // Remove actual value
+    }
+
+    public int top() {
+        return stack.get(stack.size() - 2);
+    }
+
+    public int getMin() {
+        return stack.peek();
+    }
+}
