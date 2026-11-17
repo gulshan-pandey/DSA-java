@@ -110,7 +110,7 @@ class Solution {
             node = stack.pop();
             ans.add(node.val);
 
-            node= node.right;
+            node= node.right;          // the first while loop will take care of the Right side in case you are wondering about the right side of the tree. It will go to the left most node of the right subtree and then pop it and add it to the ans list.
 
         }
         return ans;
