@@ -79,14 +79,15 @@ class MyCircularQueue {
             }
         } 
 
+        // if there is no space in the queue then return false
         if(!flag) return false;
 
 
-        if(front ==-1){
+        if(front ==-1){     // if the queue is empty then set front and rear to 0 and add val in Q
             front++;
             queue[front] = value;
             rear = front;
-        }else{
+        }else{          // if the queue is not empty then add val in Q and update rear pointer
 
             rear = (rear+1)% n ;
             queue[rear]= value;
@@ -104,15 +105,15 @@ class MyCircularQueue {
             }
         } 
 
-        if(!flag) return false;
+        // if there is no element in the queue then return false
+        if(!flag) return false;   
 
-        if(front == rear ){
+        if(front == rear ){        // if there is only one element in the queue then set front and rear to -1 and remove the element from Q
             queue[front] = -1;
             front =-1;
             rear =-1;
         }
-        else{
-
+        else{                        //normal case
             queue[front]= -1;
             front = (front+1) % n;
         }
