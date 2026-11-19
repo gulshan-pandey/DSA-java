@@ -6,39 +6,40 @@
 //how  do you get the refrence to the curren thread in java
 
 
-class gm extends Thread{
-    public void run(){
-        for(int i= 0;i<200;i++){
+// class gm extends Thread{
+//     public void run(){
+//         for(int i= 0;i<200;i++){
 
-            System.out.println("good morning!");
-        }
-    }
-}
+//             System.out.println("good morning!");
+//         }
+//     }
+// }
 
-class wlcm extends Thread {
+// class wlcm extends Thread {
 
-  public void run(){
-      for(int i= 0;i<200;i++){
-      System.out.println("welcome");
-      }
-  }
+//   public void run(){
+//       for(int i= 0;i<200;i++){
+//       System.out.println("welcome");
+//       }
+//   }
 
 
-}
+// }
 
-class que2 extends Thread{
+class que2 extends Thread {
 
-    public void run(){ 
-        int i =0;
-        while(true){
-            try{
-                Thread.sleep(400); // just to  delay the output of this 
+    @Override
+    public void run() {
+
+        while (true) {
+            try {
+                Thread.sleep(400);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                return;
             }
-            catch(Exception e){
-                System.out.println(e);
-            }
+
             System.out.println("gooooood morningggggg");
-           i++;
         }
     }
 }
@@ -64,9 +65,9 @@ class que21 extends Thread{
 public class PracticeOnThreads {
     public static void main(String[] args) {
         
-        gm g = new gm();
+        // gm g = new gm();
 
-        wlcm w = new wlcm();
+        // wlcm w = new wlcm();
 
         // g.start();
         // w.start();
