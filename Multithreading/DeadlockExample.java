@@ -126,4 +126,7 @@ now In the fixed version:
 - Student 1: Pen → Paper
 - Student 2: Pen → Paper
 
+
+
+SO AGAR HUM CONSISTENT ORDER KRR DEN LOCKS KO ACQUIRE KRNE KI TOH DEADLOCK KO HUM RESOLVE KRR PAYENGE
 */
