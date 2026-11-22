@@ -8,7 +8,9 @@ class Counter {
 
     public synchronized void increment() {
         count++;
-        this.notify();
+        if (count == 20000) {
+            this.notify();
+        }
     }
 
     // by using syncronized : helps to make precise calculations and ensures that only one thread can execute a block of code at a time
@@ -74,3 +76,16 @@ public class SyncronizeThread {
     }
 
 }
+
+
+
+/*
+There is one important detail:
+
+notify() does NOT immediately transfer the lock to the waiting thread.
+
+The worker thread must first finish its synchronized method and release the lock.
+
+Then the main thread can reacquire the lock and continue.
+
+*/
