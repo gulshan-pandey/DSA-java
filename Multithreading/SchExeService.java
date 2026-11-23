@@ -1,3 +1,4 @@
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
@@ -93,7 +94,55 @@ public class SchExeService {
 
 
 
+
+
+    // NewCahcedThreadPool -- newCachedThreadPool() is a factory method of the Executors class that creates an ExecutorService with dynamically created and reusable worker threads.
+    
+    /*
+    Core pool size = 0
+    Maximum pool size = Integer.MAX_VALUE
+    Keep-alive time = 60 seconds
+    Work queue = SynchronousQueue
+    Idle threads are reused.
+
+    */
+    ExecutorService executor = Executors.newCachedThreadPool();
+
+    for (int i = 1; i <= 3; i++) {
+
+        int taskId = i;
+
+        executor.submit(() -> {
+
+            System.out.println(
+                "Task " + taskId +
+                " executed by " + Thread.currentThread().getName()
+            );
+
+        });
+    }
+
+    try {
+        Thread.sleep(1000);
+    } catch (InterruptedException e) {
+        Thread.currentThread().interrupt();
+    }
+
+    executor.submit(() -> {
+
+        System.out.println(
+            "New task executed by " + Thread.currentThread().getName()
+        );
+
+    });
+
+    executor.shutdown();
+
+
     }
 }
+
+
+
 
 
