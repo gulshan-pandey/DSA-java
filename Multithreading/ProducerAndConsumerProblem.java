@@ -1,4 +1,3 @@
-import AdvanceJava.Producer;
 
 class Company{
     int n;
