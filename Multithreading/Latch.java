@@ -201,7 +201,7 @@ public class Latch {
         CyclicBarrier startupBarrier = new CyclicBarrier(numberOfSubsystems, new Runnable() {
             @Override
             public void run() {
-                System.out.println("\nAll subsystems are up and running. System startup complete.");
+                System.out.println("\nAll subsystems are up and running. System startup complete.");    // This will be executed once all 4 subsystems reach the barrier.
             }
         });
 
@@ -271,7 +271,6 @@ class Subsystem implements Runnable {
             // Wait until all four subsystems complete initialization.
             barrier.await();
 
-            System.out.println(name + " proceeding with application startup.");
 
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
@@ -367,3 +366,179 @@ class DependentService2 implements Callable<String> {
         return "Done";
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class MatrixMultiplicationCyclicBarrier {
+
+    static int[][] A = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16}
+    };
+
+    static int[][] B = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16}
+    };
+
+    static int[][] C = new int[4][4];
+
+    public static void main(String[] args) throws InterruptedException {
+
+        int numberOfWorkers = 2;
+        int totalRounds = 2;
+
+        AtomicInteger roundCounter = new AtomicInteger(0);
+
+        // Both workers must finish their current round
+        // before moving to the next round.
+        CyclicBarrier barrier = new CyclicBarrier(numberOfWorkers, () -> {
+
+            int completedRound = roundCounter.incrementAndGet();
+
+            System.out.println(
+                    "\n========== ROUND " + completedRound
+                            + " COMPLETED =========="
+            );
+        });
+
+        Thread worker1 = new Thread(
+                new MatrixWorker(0, numberOfWorkers, totalRounds, barrier),
+                "Worker-1"
+        );
+
+        Thread worker2 = new Thread(
+                new MatrixWorker(1, numberOfWorkers, totalRounds, barrier),
+                "Worker-2"
+        );
+
+        worker1.start();
+        worker2.start();
+
+        // Main thread waits for both workers to finish.
+        worker1.join();
+        worker2.join();
+
+        System.out.println("\nFinal Result Matrix:");
+
+        printMatrix(C);
+    }
+
+    static void printMatrix(int[][] matrix) {
+
+        for (int[] row : matrix) {
+            for (int value : row) {
+                System.out.print(value + "\t");
+            }
+            System.out.println();
+        }
+    }
+
+    static class MatrixWorker implements Runnable {
+
+        private int workerId;
+        private int numberOfWorkers;
+        private int totalRounds;
+        private CyclicBarrier barrier;
+
+        public MatrixWorker(
+                int workerId,
+                int numberOfWorkers,
+                int totalRounds,
+                CyclicBarrier barrier
+        ) {
+            this.workerId = workerId;
+            this.numberOfWorkers = numberOfWorkers;
+            this.totalRounds = totalRounds;
+            this.barrier = barrier;
+        }
+
+        @Override
+        public void run() {
+
+            try {
+
+                for (int round = 0; round < totalRounds; round++) {
+
+                    // Each worker gets a different row in each round.
+                    int row = round * numberOfWorkers + workerId;
+
+                    System.out.println(
+                            Thread.currentThread().getName()
+                                    + " started calculating row " + row
+                    );
+
+                    // Calculate one complete row of the result matrix.
+                    for (int col = 0; col < B[0].length; col++) {
+
+                        int sum = 0;
+
+                        for (int k = 0; k < B.length; k++) {
+
+                            sum += A[row][k] * B[k][col];
+
+                        }
+
+                        C[row][col] = sum;
+                    }
+
+                    System.out.println(
+                            Thread.currentThread().getName()
+                                    + " completed row " + row
+                    );
+
+                    // Wait until every worker completes its current round.
+                    System.out.println(
+                            Thread.currentThread().getName()
+                                    + " waiting at CyclicBarrier..."
+                    );
+
+                    barrier.await();
+
+                    System.out.println(
+                            Thread.currentThread().getName()
+                                    + " proceeding to next round."
+                    );
+                }
+
+            } catch (InterruptedException e) {
+
+                Thread.currentThread().interrupt();
+                e.printStackTrace();
+
+            } catch (BrokenBarrierException e) {
+
+                System.out.println(
+                        Thread.currentThread().getName()
+                                + " encountered a broken barrier."
+                );
+            }
+        }
+    }
+}
+
+
+
+
+*/
