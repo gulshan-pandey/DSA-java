@@ -46,7 +46,7 @@ public class ReturningFutures {
         System.out.println(name2.get());
         System.out.println(name3.get());
         System.out.println(name4.get());
-
+        System.out.println("All task completed");
         services.shutdown();
     }
 }
