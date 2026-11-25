@@ -1,4 +1,5 @@
 
+import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -169,6 +170,59 @@ class ReadWriteCounter{
         readThread2.start();
         writeThread.start();
 
+
+
+
+        // Semaphore Lock
+        /*
+
+        A Semaphore controls how many threads can access a resource simultaneously.
+        For example, imagine your application has only 3 database connections available for a particular operation.
+        You have 10 threads trying to access that resource.
+        A Semaphore with 3 permits ensures that at most 3 threads access it simultaneously.
+        
+        */
+
+        SharedResource resource = new SharedResource();
+
+        for (int i = 1; i <= 10; i++) {
+
+        new Thread(resource::accessResource, "Thread-" + i).start();
+
+
+        }
     }
 
 }
+
+
+
+
+
+// Semaphor lock
+
+class SharedResource {
+
+    private final Semaphore semaphore = new Semaphore(3);
+
+    public void accessResource() {
+
+        try {
+            semaphore.acquire();
+
+            System.out.println(
+                    Thread.currentThread().getName()
+                    + " accessing resource"
+            );
+
+            Thread.sleep(2000);
+
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+
+        } finally {
+            semaphore.release();
+        }
+    }
+}
+
