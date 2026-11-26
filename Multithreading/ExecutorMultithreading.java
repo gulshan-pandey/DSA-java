@@ -179,3 +179,101 @@ public class ExecutorMultithreading {
 
     }
 }
+
+
+
+
+// A dummy Industry standard code for implementing threadPool
+
+/* 
+
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class ThreadPoolExample {
+
+    public static void main(String[] args) {
+
+        ThreadFactory threadFactory = new ThreadFactory() {
+
+            private final AtomicInteger counter = new AtomicInteger(1);
+
+            @Override
+            public Thread newThread(Runnable task) {
+                return new Thread(
+                    task,
+                    "worker-" + counter.getAndIncrement()
+                );
+            }
+        };
+
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(
+            4,                              // Core pool size
+            8,                              // Maximum pool size
+            60,                             // Keep alive time
+            TimeUnit.SECONDS,
+            new ArrayBlockingQueue<>(200),  // Bounded task queue
+            threadFactory,
+            new ThreadPoolExecutor.AbortPolicy()
+        );
+
+        try {
+            // Submit tasks
+            for (int i = 1; i <= 10; i++) {
+
+                final int taskId = i;
+
+                Future<?> future = executor.submit(() -> {
+
+                    System.out.println(
+                        "Executing task " + taskId +
+                        " on " + Thread.currentThread().getName()
+                    );
+
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
+
+                    System.out.println("Task " + taskId + " completed");
+                });
+            }
+
+            // Pool monitoring
+            System.out.println("Active threads: " +
+                    executor.getActiveCount());
+
+            System.out.println("Pool size: " +
+                    executor.getPoolSize());
+
+            System.out.println("Queued tasks: " +
+                    executor.getQueue().size());
+
+            System.out.println("Completed tasks: " +
+                    executor.getCompletedTaskCount());
+
+        } catch (RejectedExecutionException e) {
+            System.err.println("Task rejected: " + e.getMessage());
+
+        } finally {
+
+            // Graceful shutdown
+            executor.shutdown();
+
+            try {
+                if (!executor.awaitTermination(30, TimeUnit.SECONDS)) {
+                    executor.shutdownNow();
+                }
+
+            } catch (InterruptedException e) {
+                executor.shutdownNow();
+                Thread.currentThread().interrupt();
+            }
+        }
+    }
+}
+
+
+
+*/
